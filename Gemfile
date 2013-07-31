@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 #bootstrap
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap_helper'
 gem 'pg'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :production do
+	ruby "1.9.3"
+end
 
 group :development, :test do
 	gem 'rspec-rails', '2.9.0'
