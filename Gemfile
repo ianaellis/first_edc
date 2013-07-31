@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+#bootstrap
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
 gem 'pg'
