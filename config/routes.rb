@@ -5,7 +5,8 @@ FirstEdc::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-
+  match '/edit', to: 'users#edit'
+  
   root to: 'static_pages#home'
 
   match '/help', to: 'static_pages#help'

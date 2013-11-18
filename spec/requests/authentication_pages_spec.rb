@@ -117,6 +117,11 @@ describe "Authentication" do
 				before { delete user_path(user) }
 				specify { response.should redirect_to(users_path) }
 			end
+
+			# describe "submitting an EDIT request to the Users#edit action" do
+			# 	before { visit edit_user_path(user) }
+			# 	specify { response.should_not redirect_to(user_path) }
+			# end
 		end
 	end
 end

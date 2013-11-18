@@ -11,3 +11,8 @@
 
 <%= f.label :password_confirmation, "Confirm Password" %>
 <%= f.password_field :password_confirmation %>
+
+<%= if current_user.admin? && !current_user?(user) %>
+	<%= f.label :admin %>
+	<%= f.toggle :admin %>
+<% end %>
