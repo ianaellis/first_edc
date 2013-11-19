@@ -1,5 +1,5 @@
 <%= render 'shared/error_messages' %>
-
+<h2>User Information</h2>
 <%= f.label :name %>
 <%= f.text_field :name %>
 
@@ -12,7 +12,3 @@
 <%= f.label :password_confirmation, "Confirm Password" %>
 <%= f.password_field :password_confirmation %>
 
-<%= if current_user.admin? && !current_user?(user) %>
-	<%= f.label :admin %>
-	<%= f.toggle :admin %>
-<% end %>

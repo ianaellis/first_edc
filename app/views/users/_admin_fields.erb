@@ -1,0 +1,15 @@
+<div class="admin_fields">
+	<h2>Admin Variables</h2>
+		<b>Site Study Coordinator</b>
+		<%= f.select :site_study_coordinator, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.site_study_coordinator %>
+		<b>Project Coordinator</b>
+		<%= f.select :project_coordinator, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.project_coordinator %>
+		<b>Site PI</b>
+		<%= f.select :site_pi, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.site_pi %>
+		<b>Lead PI SC</b>
+		<%= f.select :lead_pi_sc, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.lead_pi_sc %>
+		<b>VetPALS Facilitator</b>
+		<%= f.select :vetpals_facilitator, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.vetpals_facilitator %>
+		<b>Other Site Investigators</b>
+		<%= f.select :other_site_investigators, ([['',nil], ['true', true], ['false', false]]), :include_blank => @user.other_site_investigators %>
+</div>
