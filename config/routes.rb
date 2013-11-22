@@ -1,6 +1,16 @@
 FirstEdc::Application.routes.draw do
+  # get "subject/index"
+
+  # get "subject/new"
+
+  # get "subject/create"
+
+  # get "subject/show"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :subjects, only: [:new, :create, :destroy]
+  resources :subjects
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
@@ -12,6 +22,15 @@ FirstEdc::Application.routes.draw do
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+
+  match '/subjects', to: 'subjects#show'
+  match '/newsubject', to: 'subjects#new'
+  match '/subjects', to: 'subjects#index'
+  match '/showsubject', to: 'subjects#show'
+  match '/editsubject', to: 'subjects#edit'
+
+
+
   
  
 

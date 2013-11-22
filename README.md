@@ -7,8 +7,8 @@ This project is the first undertaking by Spectrum Research to create an
 Electronic Data Capture (EDC) website, for the purpose of hosting our 
 up-coming study in coordination with VetPALS. The purpose of the website 
 will be to allow for the creation, storage, manipulation, and review of all 
-subjects enrolled into this study. The information will be collected for 
-these subjects will be collected from several different locations.
+subject enrolled into this study. The information will be collected for 
+these subject will be collected from several different locations.
 
 
 == Console

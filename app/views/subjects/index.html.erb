@@ -1,0 +1,25 @@
+<h1>Subject</h1>
+<p>Find me in app/views/subject/index.html.erb</p>
+<p>With this table, you can view all currently enter subject and quickly view or search for any number of variable values. This table automatically sorts itself as you do so.</p>
+<div>
+  <table id="subject_test" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Edit</th>
+        <th>Subject ID</th>
+        <th>Study Site</th>
+        <th>Treatment Group</th>
+      </tr>
+    </thead> 
+    <tbody>
+      <% @subjects.each do |sub| %>
+        <tr>
+          <td><%= link_to "edit", edit_subject_path(sub) %></td>
+          <td><%= sub.subject_id %></td>
+          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Portland" : "nil"%></td>
+          <td><%= sub.treatment_group %></td>
+        </tr> 
+      <% end %>
+    </tbody>
+  </table>
+<div>
