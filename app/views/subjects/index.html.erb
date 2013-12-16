@@ -5,18 +5,22 @@
   <table id="subject_test" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>Edit</th>
         <th>Subject ID</th>
         <th>Study Site</th>
+        <th>Edit</th>
+        <th>Screening Log</th>
+        <th>Baseline</th>
         <th>Treatment Group</th>
       </tr>
     </thead> 
     <tbody>
       <% @subjects.each do |sub| %>
         <tr>
-          <td><%= link_to "edit", edit_subject_path(sub) %></td>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Portland" : "nil"%></td>
+          <td><%= link_to "edit", edit_subject_path(sub) %></td>
+          <td><%= link_to "edit", subject_screening_path(sub) %></td>
+          <td><%= link_to "edit", subject_baseline_path(sub) %></td>
           <td><%= sub.treatment_group %></td>
         </tr> 
       <% end %>

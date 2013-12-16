@@ -1,0 +1,145 @@
+<%= form_for(@subject) do |f| %>
+	<h2> 1.0 Short Portable Mental Status Questionnaire (SPMSQ)</h2>
+	<table border="1">
+		<tr>
+			<th>#</th>
+			<th>Questions</th>
+			<th>Correct/Incorrect</th>
+			<th>Instructions</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>What is the date today?</td>
+			<td><%= select(:subject, :sc_smpsq_1, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct only when the month, date, and year are all correct.</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>What day of the week is it?</td>
+			<td><%= select(:subject, :sc_smpsq_2, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct only when the day is correct.</i></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>What is the name of this place?</td>
+			<td><%= select(:subject, :sc_smpsq_3, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct if any of the description of the location is given.</i></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>What is your telephone number</td>
+			<td><%= select(:subject, :sc_smpsq_4, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct when the number can be verified or the subject can repeat the number at some other time.</i></td>
+		</tr>
+		<tr>
+			<td>4a</td>
+			<td>What is your street address?</td>
+			<td><%= select(:subject, :sc_smpsq_4a, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Ask only if the subject does not have a telephone.</i></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>How old are you?</td>
+			<td><%= select(:subject, :sc_smpsq_5, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct when the age corresponds with the date of birth.</i></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>When were you born?</td>
+			<td><%= select(:subject, :sc_smpsq_6, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Correct only when the month, data, and year are correct.</i></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Who is the president of the United States now?</td>
+			<td><%= select(:subject, :sc_smpsq_7, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Requires only the correct last name.</i></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Who was the president just before him?</td>
+			<td><%= select(:subject, :sc_smpsq_8, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Requires only the correct last name.</i></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>What was your mother's maiden name?</td>
+			<td><%= select(:subject, :sc_smpsq_9, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Needs no verification; it only requires a female first name plus a last name other than the subject's.</i></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Subtract 3 from 20 and keep subtracting 3 from each new number, all the way down</td>
+			<td><%= select(:subject, :sc_smpsq_10, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Any error in the series-or an unwillingness to attempt the series is scored as incorrect.</i></td>
+		</tr>
+	</table>
+
+	<h2>2.0 Inclusion Criteria</h2>
+	<strong><i>Indicate whether the patient met each criterion</i></strong>
+
+	<ol>
+		<li>Is the patient older than 18 years of age? <%= select(:subject, :sc_inc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %></li> 
+		<li>Is this patient within 6 months of a major unilateral amputation surgery? <%= select(:subject, :sc_inc_2,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+			<ol>
+				<li>If yes, please mark which surgery level: (check only one)</li><%= select(:subject, :sc_inc_2a,[["",nil],["Transmetatarsal", 1],["Midfoot",2],["Symes/ankle disarticulation",3],["Transtibial",4],["Knee disarticulation",5],["Transfemoral",6]], {}, :style => "width:200px") %>
+				<li>If Yes, please mark the surgery type: (<i>check only one</i>)</li><%= select(:subject, :sc_inc_2b,[["", nil],["Initial", 1],["Revision", 2]], {}, :style => "width:200px") %>
+			</ol>
+		</li>
+		<li>Is the primary cause for amputation diabetes or peripheral vascular disease? (<i>minor trauma leading to complications resulting from diabetes/peripheral vascular disease is ok to recruit; e.g., stepping on a nail</i>)<%= select(:subject, :sc_inc_3,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %></li>
+		<li>Does the patient have a contact address and phone number so that they can be reached during the course of the study? <%= select(:subject, :sc_inc_4,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %></li>
+		<li>Can the patient speak and comprehend English? <%= select(:subject, :sc_inc_5,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %></li>
+	</ol>
+
+	<strong><i>INCLUSION CRITERIA - All inclusion criteria must be marked yes to continue.</i></strong>
+	<h2>3.0 Exclusion Criteria</h2>
+	<ol>
+		<li>Does the patient have *inadequate cognitive or language function to consent or participate in the study or by medical record review? (e.g. diagnosed dementia or Alzheimer's disease?)</li><%= select(:subject, :sc_exc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+		<li>Does the patient have an active substance use disorder identified by chart review and initial screening? (OK if actively engaged in treatment)</li><%= select(:subject, :sc_exc_2,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+		<li>Does the patient have a major uncontrolled psychiatric illness (bipolar disorder, psychosis, severe suicidality) identified by chart review and confirmed, if necessary, with a provider or investigator?</li><%= select(:subject, :sc_exc_3,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+	</ol>
+	<strong><i>EXCLUSION CRITERIA - All exclusion criteria must be marked no to continue.</i></strong>
+
+	<h2>4.0 Participant Demographics</h2>
+	<ol>
+		<li>
+			Age(years):  <%= number_field(:subject, :sc_pd_1,:style => "width:70px") %>
+		</li>
+		<li>Gender <%= select(:subject, :sc_pd_2,[["", nil],["Male", 1],["Female", 2]], {}, :style => "width:70px") %></li>
+		<li>Ethnicity <%= select(:subject, :sc_pd_3,[["", nil],["Hispanic or Latino", 1],["Not Hispanic or Latino", 2],["Unknown", 3]], {}, :style => "width:200px") %></li>
+		<li>Race <%= select(:subject, :sc_pd_4,[["", nil],["White", 1],["Black or African American", 2],["Asian or Asian American", 3], ["Native Hawaiian or other Pacific Islander", 4],["American Indian or Alaska Native", 5],["Other", 6]], {}, :style => "width:200px") %></li>
+		Other: <%= text_field(:subject, :sc_pd_4o, :style => "width:200px") %>
+		<li>Current Martial Status <%= select(:subject, :sc_pd_5,[["", nil],["Single, never married", 1],["Married/Domestic partnership", 2],["Separated", 3], ["Divorced", 4],["Widowed", 5]], {}, :style => "width:200px") %></li>
+		<li>Approximate driving distance from home to study site <%= select(:subject, :sc_pd_5,[["", nil],["Less than one hour", 1],["1-2 hours", 2],["2-4 hours", 3], ["4-6 hours", 4],["6-8 hours", 5],["More than 8 hours", 6]], {}, :style => "width:200px") %></li>
+	</ol>
+
+	<h2>5.0 Participant Eligibility</h2>
+	<ol>
+		<li>Did the patient meet all of the inclusion criteria?</li><%= select(:subject, :sc_pe_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+		<li>Did the patient meet all of the exclusion criteria?</li><%= select(:subject, :sc_pe_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+		<strong><i>5.1 must be answered "Yes" and 5.2 answered "No" for the subjec to be eligible.</i></strong>
+		<li>Is the patient eligible for this study?</li><%= select(:subject, :sc_pe_3,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+		<li>Was a waiver granted for any deviations from the inclusion/exclusion criteria?</li><%= select(:subject, :sc_pe_4,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %><br/>
+		<strong><i>If a waiver was granted, please state by whom and reasoning:</i></strong>
+		<%= text_field(:subject, :sc_pe_4a, :style => "width:200px") %>
+		<li>If the subject was ineligible, please check the primary reason for ineligibility:</li>
+		<%= select(:subject, :sc_pe_5,[["", nil],["Meets criteria but not interested", 0], ["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
+		<br/> Other: <%= text_field(:subject, :sc_pe_5o, :style => "width:200px") %>
+	</ol>
+
+	<h2>6.0 Informed Consent</h2>
+	<ol>
+		<li>Has the patient signed the informed consent prior ot any study related procedures?</li>
+		<%= select(:subject, :sc_ic_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+		<li>Was the patient given a copy of their signed informed consent?</li>
+		<%= select(:subject, :sc_ic_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+		<li>Date Informed Consent and HIPAA were signed</li>
+		<%= date_select(:subject, :sc_ic_3, :style => "width:140px") %>
+		<li>Subject Number (e.g. 001, 002, 003)</li>
+		<%= number_field(:subject, :sc_ic_4, :style => "width:70px") %>
+		<li>Site Number</li>
+		<%= select(:subject, :sc_ic_5,[["", nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa",4]],{}, :style => "width:70px") %>
+	</ol>
+
+	<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+<% end %>

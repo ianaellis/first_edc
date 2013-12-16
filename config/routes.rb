@@ -9,8 +9,14 @@ FirstEdc::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :subjects, only: [:new, :create, :destroy]
+  # resources :subjects, only: [:new, :create, :destroy]
+  resources :subjects do
+    match '/screening', to: 'subjects#screening', as: :screening
+    match '/baseline', to: 'subjects#baseline', as: :baseline
+  end
   resources :subjects
+  
+
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
@@ -28,6 +34,8 @@ FirstEdc::Application.routes.draw do
   match '/subjects', to: 'subjects#index'
   match '/showsubject', to: 'subjects#show'
   match '/editsubject', to: 'subjects#edit'
+
+  # match '/populate_values', to: 'subjects#screening'
 
 
 

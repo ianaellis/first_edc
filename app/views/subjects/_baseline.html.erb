@@ -1,0 +1,1936 @@
+<%= form_for(@subject) do |f| %>
+<h2>Short Musculoskeletal Function Assessment</h2>
+<p><i>We are interested in finding out how you are managing with your injury or arthritis this week. We would like to know about any problems you may be having with your daily activities because of your injury or arthritis.
+</i></p>
+<p><i>Please answer each question by putting a check in the box corresponding to the choice that best describes you.</i></p>
+<p><i>These questions are about how much difficulty you may be having this week with your daily activities because of your injury or arthritis.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1. I feel afraid when I have important problems.</td>
+			<td><%= select(:subject, :base_smfa_1,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>2. How difficult is it for you to open medicine bottles or jars?</td>
+			<td><%= select(:subject, :base_smfa_2,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>3. How difficult is it for you to shop for groceries or other things?</td>
+			<td><%= select(:subject, :base_smfa_3,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>4. How difficult is it for you to climb stairs?</td>
+			<td><%= select(:subject, :base_smfa_4,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>5. How difficult is it for you to make a tight fist?</td>
+			<td><%= select(:subject, :base_smfa_5,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>6. How difficult is it for you to get in or out of the bathtub or shower?</td>
+			<td><%= select(:subject, :base_smfa_6,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>7. How difficult is it for you to get comfortable to sleep?</td>
+			<td><%= select(:subject, :base_smfa_7,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>8. How difficult is it for you to bend to kneel down?</td>
+			<td><%= select(:subject, :base_smfa_8,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>9. How difficult is it for you to use buttons, snaps, hooks, or zippers?</td>
+			<td><%= select(:subject, :base_smfa_9,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>10. How difficult is it for you to cut your own fingernails?</td>
+			<td><%= select(:subject, :base_smfa_10,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>11. How difficult is it for you to dress yourself?</td>
+			<td><%= select(:subject, :base_smfa_11,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>12. How difficult is it for you to walk?</td>
+			<td><%= select(:subject, :base_smfa_12,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>13. How difficult is it for you to get moving after you have been sitting or lying down?</td>
+			<td><%= select(:subject, :base_smfa_13,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>14. How difficult is it for you to go out by yourself?</td>
+			<td><%= select(:subject, :base_smfa_14,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>15. How difficult is it for you to drive?</td>
+			<td><%= select(:subject, :base_smfa_15,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>16. How difficult is it for you to clean yourself after going to the bathroom?</td>
+			<td><%= select(:subject, :base_smfa_16,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>17. How difficult is it for you to turn knobs or levers (for example, to open doors or to roll down car windows)?</td>
+			<td><%= select(:subject, :base_smfa_17,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>18. How difficult is it for you to write or type?</td>
+			<td><%= select(:subject, :base_smfa_18,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>19. How difficult is it for you to pivot?</td>
+			<td><%= select(:subject, :base_smfa_19,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>20. How difficult is it for you to do your usual physical recreational activities, such as bicycling, jogging, or walking?</td>
+			<td><%= select(:subject, :base_smfa_20,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>21. How difficult is it for you to do your usual leisure activities, such as hobbies, crafts, gardening, card-playing, or going out with friends?</td>
+			<td><%= select(:subject, :base_smfa_21,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>22. How difficult is it for you to having with sexual activity?</td>
+			<td><%= select(:subject, :base_smfa_22,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>23. How difficult is it for you to light housework or yard work, such as dusting, washing dishes, or watering plants?</td>
+			<td><%= select(:subject, :base_smfa_23,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>24. How difficult is it for you to do heavy housework or yard work, such as washing floors, vacuuming, or mowing lawns?</td>
+			<td><%= select(:subject, :base_smfa_24,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>25. How difficult is it for you to do your usual work, such as a paid job, housework, or volunteer activities?</td>
+			<td><%= select(:subject, :base_smfa_25,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+	</table>
+	<p><i>These next questions ask how often you are experiencing problems this week because of your injury or arthritis.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>26. How often do you walk with a limp?</td>
+			<td><%= select(:subject, :base_smfa_26,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>27. How often do you avoid using your painful limb(s) or back?</td>
+			<td><%= select(:subject, :base_smfa_27,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>28. How often does your leg lock or give-way?</td>
+			<td><%= select(:subject, :base_smfa_28,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>29. How often do you have problems with concentration?</td>
+			<td><%= select(:subject, :base_smfa_29,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>30. How often does doing too much in one day affect what you do the next day?</td>
+			<td><%= select(:subject, :base_smfa_30,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>31. How often do you act irritable toward those around you (for example, snap at people, give sharp answers, or criticize easily?)</td>
+			<td><%= select(:subject, :base_smfa_31,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>32. How often are you tired?</td>
+			<td><%= select(:subject, :base_smfa_32,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>33. How often do you feel disabled?</td>
+			<td><%= select(:subject, :base_smfa_33,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>34. How often do you feel angry or frustrated that you have this injury or arthritis?</td>
+			<td><%= select(:subject, :base_smfa_34,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+	</table>
+	<p><i>These questions are about how much you are bothered by problems you are having this week because of your injury or arthritis.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>35. How much are you bothered by problems using your hands, arms, or legs?</td>
+			<td><%= select(:subject, :base_smfa_35,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>36. How much are you bothered by problems using your back?</td>
+			<td><%= select(:subject, :base_smfa_36,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>37. How much are you bothered by problems doing work around your home?</td>
+			<td><%= select(:subject, :base_smfa_37,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>38. How much are you bothered by problems with bathing, dressing, toileting, or other personal care?</td>
+			<td><%= select(:subject, :base_smfa_38,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>39. How much are you bothered by problems with sleep and rest?</td>
+			<td><%= select(:subject, :base_smfa_39,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>40. How much are you bothered by problems with leisure or recreational activities?</td>
+			<td><%= select(:subject, :base_smfa_40,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>41. How much are you bothered by problems with your friends, family, or other important people in your life?</td>
+			<td><%= select(:subject, :base_smfa_41,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>42. How much are you bothered by problems with thinking, concentrating, or remembering?</td>
+			<td><%= select(:subject, :base_smfa_42,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>43. How much are you bothered by problems adjusting or coping with your injury or arthritis?</td>
+			<td><%= select(:subject, :base_smfa_43,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>44. How much are you bothered by problems doing your usual work?</td>
+			<td><%= select(:subject, :base_smfa_44,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>45. How much are you bothered by problems with feeling dependent on others?</td>
+			<td><%= select(:subject, :base_smfa_45,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>46. How much are you bothered by problems with stiffness and pain?</td>
+			<td><%= select(:subject, :base_smfa_46,
+				[["",nil],
+				["Not at all true of me",1],
+				["Slightly true of me",2],
+				["Moderately true of me",3],
+				["Very true of me",4],
+				["Extremely true of me",5]]) %>
+			</td>
+		</tr>
+	</table>
+	<h2>Patient Health Questionnaire</h2>
+	<p><i>Over the last 2 weeks, how often have you been bothered by any of the following problems?</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1. Little interest or pleasure in doing things</td>
+			<td><%= select(:subject, :base_phq_1,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>2. Feeling down, depressed, or hopeless</td>
+			<td><%= select(:subject, :base_phq_2,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>3. Trouble falling or staying asleep, or sleeping too much</td>
+			<td><%= select(:subject, :base_phq_3,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>4. Feeling tired or having little energy</td>
+			<td><%= select(:subject, :base_phq_4,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>5. Poor appetite or overeating</td>
+			<td><%= select(:subject, :base_phq_5,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</td>
+			<td><%= select(:subject, :base_phq_6,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>7. Trouble concentrating on things, such as reading the newspaper or watching television</td>
+			<td><%= select(:subject, :base_phq_7,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>8. Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</td>
+			<td><%= select(:subject, :base_phq_8,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>9. Thoughts that you would be better off dead, or of hurting yourself in some way</td>
+			<td><%= select(:subject, :base_phq_9,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+		<tr>
+			<td>10. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?</td>
+			<td><%= select(:subject, :base_phq_10,
+				[["",nil],
+				["Not at all",0],
+				["Slightly true of me",1],
+				["Moderately true of me",2],
+				["Very true of me",3],
+				["Extremely true of me",4]]) %>
+			</td>
+		</tr>
+	</table>
+	<h2>WHOQOL - BREF</h2>
+	<p><i>Please read each question, assess your feelings, and circle the number on the scale for each question that gives the best answers for you.</i></p>
+	<ol>
+		<li>How would you rate your quality of life? <%= select(:subject, :base_whoqol_1,
+			[["",nil],
+			["Very Poor",1],
+			["Poor",2],
+			["Neither poor nor good",3],
+			["Good",4],
+			["Very good",5]],{}, :style =>"width:200px")%></li>
+		<li>How satisfied are you with your health? <%= select(:subject, :base_whoqol_2,
+			[["",nil],
+			["Very dissatisfied",1],
+			["Dissatisfied",2],
+			["Neither satisfied nor dissatisfied",3],
+			["Satisfied",4],
+			["Very satisfied",5]],{}, :style =>"width:200px")%></li>
+	</ol>
+
+	<h2>The Positive and Negative Affect Schedule</h2>
+	<p><i>This scale consists of a number of words that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+			<th>--------</th>
+			<th>Question</th>
+			<th>Response</th>
+			
+		</tr>
+		<tr>
+			<td>1. Interested</td>
+			<td><%= select(:subject, :base_panas_1,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>2. Distressed</td>
+			<td><%= select(:subject, :base_panas_2,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>3. Excited</td>
+			<td><%= select(:subject, :base_panas_3,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>4. Upset</td>
+			<td><%= select(:subject, :base_panas_4,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>5. Strong</td>
+			<td><%= select(:subject, :base_panas_5,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>6. Guilty</td>
+			<td><%= select(:subject, :base_panas_6,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>7. Scared</td>
+			<td><%= select(:subject, :base_panas_7,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>8. Hostile</td>
+			<td><%= select(:subject, :base_panas_8,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>9. Enthusiastic</td>
+			<td><%= select(:subject, :base_panas_9,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>10. Proud</td>
+			<td><%= select(:subject, :base_panas_10,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>11. Irritable</td>
+			<td><%= select(:subject, :base_panas_11,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>12. Alert</td>
+			<td><%= select(:subject, :base_panas_12,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>13. Ashamed</td>
+			<td><%= select(:subject, :base_panas_13,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>14. Inspired</td>
+			<td><%= select(:subject, :base_panas_14,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>15. Nervous</td>
+			<td><%= select(:subject, :base_panas_15,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>16. Determined</td>
+			<td><%= select(:subject, :base_panas_16,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>17. Attentive</td>
+			<td><%= select(:subject, :base_panas_17,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>18. Jittery</td>
+			<td><%= select(:subject, :base_panas_18,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+		<tr>
+			<td>19. Active</td>
+			<td><%= select(:subject, :base_panas_19,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+			<td></td>
+			<td>20. Afraid</td>
+			<td><%= select(:subject, :base_panas_20,
+			[["",nil],
+			["Very slightly or not at all",1],
+			["A little",2],
+			["Moderately",3],
+			["Quite a bit",4],
+			["Extremely",5]])%></td>
+		</tr>
+	</table>
+	<h2>MSES Self-Efficacy</h2>
+	<p><i>For the following questions, please tell me how certain are you that you can now perform the stated task using a scale of 0 to 10 where 0 means you are very uncertain, 5 means you are neither certain nor uncertain you can do the task, and 10 means you are very certain.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1. On a scale of 0 to 10, how certain are you that you can deal with problems that come up with family and friends?</td>
+			<td><%= select(:subject, :base_mses_1,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>2. On a scale of 0 to 10, how certain are you that you can maintain a positive mood or keep yourself feeling good?</td>
+			<td><%= select(:subject, :base_mses_2,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>3. On a scale of 0 to 10, how certain are you that you can do something to help yourself feel better if you are feeling blue?</td>
+			<td><%= select(:subject, :base_mses_3,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>4. On a scale of 0 to 10, how certain are you that you can manage pain during your daily activities?</td>
+			<td><%= select(:subject, :base_mses_4,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>5. On a scale of 0 to 10, how certain are you that you can manage problems related to the amputation so that you can do things you enjoy doing?</td>
+			<td><%= select(:subject, :base_mses_5,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>6. On a scale of 0 to 10, how certain are you that you can deal with the frustration related to your limb loss?</td>
+			<td><%= select(:subject, :base_mses_6,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>7. On a scale of 0 to 10, how certain are you that you can work with your prosthetist to manage your prosthetic needs?</td>
+			<td><%= select(:subject, :base_mses_7,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>8. On a scale of 0 to 10, how certain are you that you can solve problems related to your limb loss?</td>
+			<td><%= select(:subject, :base_mses_8,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+		<tr>
+			<td>9. On a scale of 0 to 10, how certain are you that you can access community resources that you need?</td>
+			<td><%= select(:subject, :base_mses_9,
+			[["",nil],
+			["0",0],
+			["1",1],
+			["2",2],
+			["3",3],
+			["4",4],
+			["5",5],
+			["6",6],
+			["7",7],
+			["8",8],
+			["9",9],
+			["10",10],
+			["Refused",11],
+			["Don't know",12]])%></td>
+		</tr>
+	</table>
+
+	<h2>Patient Activation Measure</h2>
+	<p><i>I now would like to talk with you about your personal style for managing health problems.</i></p>
+	<p><i>For each question, I'm going to read you a statement that might describe how someone might describe the way that they manage their health problems. After I read each statement, I would like you to tell me if you agree or disagree with the statement.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>	
+		<tr>
+			<td>1. When all is said and done, I am the person who is responsible for managing my health condition. Do you…</td>
+			<td><%= select(:subject, :base_pam_1,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>2. Taking an active role in my own healthcare is the most important factor in determining my health and ability to function.</td>
+			<td><%= select(:subject, :base_pam_2,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>3. I am confident that I can take actions that will help prevent or minimize some symptoms or problems associated with my health condition.</td>
+			<td><%= select(:subject, :base_pam_3,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>4. I know what each of my prescribed medications does.</td>
+			<td><%= select(:subject, :base_pam_4,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>5. I am confident that I can tell when I need to get medical care and when I can handle a health problem myself.</td>
+			<td><%= select(:subject, :base_pam_5,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>6. I am confident I can tell my health care provider concerns I have even when he or she does not ask.</td>
+			<td><%= select(:subject, :base_pam_6,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>7. I am confident that I can follow through on medical treatments I need to do at home.</td>
+			<td><%= select(:subject, :base_pam_7,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>8. I understand the nature and causes of my health condition(s).</td>
+			<td><%= select(:subject, :base_pam_8,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>9. I know the different medical treatment options available for my health condition.</td>
+			<td><%= select(:subject, :base_pam_9,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>10. I have been able to maintain the lifestyle changes for my health that I have made.</td>
+			<td><%= select(:subject, :base_pam_10,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>11. I know how to prevent further problems with my health condition.</td>
+			<td><%= select(:subject, :base_pam_11,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>12. I am confident I can figure out solutions when new situations or problems arise with my health conditon.</td>
+			<td><%= select(:subject, :base_pam_12,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>13. I am confident that I can maintain lifestyle changes like diet and exercise even during times of stress.</td>
+			<td><%= select(:subject, :base_pam_13,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+	</table>
+	<h2>SPSI-R - Problem Solving</h2>
+	<p><i>Below are some ways that you might think, feel, and act when faced with PROBLEMS in everyday living. We are not talking about the common hassles and pressures that you handle successfully every day. In this questionnaire, a problem is something important in your life that bothers you a lot but you don't immediately know how to make it better or stop it from bothering you so much. The problem could be something about yourself (such as your thoughts, feelings, behavior, appearance, or health), your relationships with other people (such as your family, friends, teachers, or boss), or your environment and the things that you own (such as your house, car, property, money). Please Read each statement carefully and choose one of the numbers below which shows how much the statement is true of you. See yourself as yo uusually think, feel and act when you are faced with important problems in your life these days. Put the number that you choose on the line before the statement.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1. I feel afraid when I have important problems.</td>
+			<td><%= select(:subject, :base_spsi_1,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>2. When making decisions, I do not carefully check all my options.</td>
+			<td><%= select(:subject, :base_spsi_2,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>3. I feel unsure of myself when making important decisions.</td>
+			<td><%= select(:subject, :base_spsi_3,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>4. When my first attempt to solve a problem fails, I believe if I don't give up, I will eventually succeed.</td>
+			<td><%= select(:subject, :base_spsi_4,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>5. I try to see my problems as challenges.</td>
+			<td><%= select(:subject, :base_spsi_5,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>6. I wait to see if a problem goes away before trying to solve it myself.</td>
+			<td><%= select(:subject, :base_spsi_6,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>7. When my first efforts to solve a problem fail, I get very frustrated.</td>
+			<td><%= select(:subject, :base_spsi_7,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>8. I doubt that I can solve difficult problems no matter how hard I try.</td>
+			<td><%= select(:subject, :base_spsi_8,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>9. I believe that my problems can be solved.</td>
+			<td><%= select(:subject, :base_spsi_9,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>10. I go out of my way to avoid dealing with problems.</td>
+			<td><%= select(:subject, :base_spsi_10,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>11. Difficult problems make me very upset.</td>
+			<td><%= select(:subject, :base_spsi_11,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>12. When making decisions, I try to predict the pros and cons of each option.</td>
+			<td><%= select(:subject, :base_spsi_12,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>13. I like to deal with problems as soon as possible.</td>
+			<td><%= select(:subject, :base_spsi_13,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>14. When solving problems, I go with the first good idea that comesto mind.</td>
+			<td><%= select(:subject, :base_spsi_14,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>15. I believe I can solve difficult problems on my own if I try hard enough.</td>
+			<td><%= select(:subject, :base_spsi_15,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>16. When I have a problem, I get as many facts about it as possible.</td>
+			<td><%= select(:subject, :base_spsi_16,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>17. I put off solving problems for as long as possible.</td>
+			<td><%= select(:subject, :base_spsi_17,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>18. I spend more time avoiding my problems than solving them.</td>
+			<td><%= select(:subject, :base_spsi_18,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>19. Before trying to solve a problem, I set a goal so that I know exactly where I am going.</td>
+			<td><%= select(:subject, :base_spsi_19,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>20. When making decisions, I do not take the time to think about the pros and cons of each option.</td>
+			<td><%= select(:subject, :base_spsi_20,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>21. After I carry out a solution, I check to see how much the problem has gotten better.</td>
+			<td><%= select(:subject, :base_spsi_21,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>22. I put off solving problems, I think of many different options.</td>
+			<td><%= select(:subject, :base_spsi_22,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>23. When solving problems, I think of many different options.</td>
+			<td><%= select(:subject, :base_spsi_23,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>24. When making decisions, I go with my "gut feeling" without thinking about what will happen.</td>
+			<td><%= select(:subject, :base_spsi_24,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+		<tr>
+			<td>25. I am too quick to act when making decisions.</td>
+			<td><%= select(:subject, :base_spsi_25,
+			[["",nil],
+			["Not at all true of me",0],
+			["Slightly true of me",1],
+			["Moderately true of me",2],
+			["Very true of me",3],
+			["Extremely true of me",4]]) %></td>
+		</tr>
+	</table>
+	<h2>Singel Statement Stages of Change Questionnaire</h2>
+	<p><i>These next questions help us better understand the way you view your amputation-related problems. Each statement describes how you may feel about these particular problems. After I read the statement, please tell me if you agree or disagree with the statement. Okay?</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1. There is nothing I can do to manage my amputation-related problems without medication or other medical intervention.</td>
+			<td><%= select(:subject, :base_soc_1,
+			[["",nil],
+			["Strongly disagree",1],
+			["Disagree",2],
+			["Undecided",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>2. I'm not sure whether I should rely on medical solutions for my amputation-related problems, or should realize that I need to manage the problems.</td>
+			<td><%= select(:subject, :base_soc_2,
+			[["",nil],
+			["Strongly disagree",1],
+			["Disagree",2],
+			["Undecided",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>3. While my doctor can help, managing my amputation-related problems is up to me, and I am ready to begin to learn to deal with it.</td>
+			<td><%= select(:subject, :base_soc_3,
+			[["",nil],
+			["Strongly disagree",1],
+			["Disagree",2],
+			["Undecided",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>4. I am actively learning to manage my amputation-related problems, but I still have a long way to go.</td>
+			<td><%= select(:subject, :base_soc_4,
+			[["",nil],
+			["Strongly disagree",1],
+			["Disagree",2],
+			["Undecided",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>5. I am sure about my ability to manage my amputation-related problems myself.</td>
+			<td><%= select(:subject, :base_soc_5,
+			[["",nil],
+			["Strongly disagree",1],
+			["Disagree",2],
+			["Undecided",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>6. Now, of the five statements I just read, please pick the one statement that best describes how you feel right now. Would you like me to read the statements again?</td>
+			<td><%= select(:subject, :base_soc_6,
+			[["",nil],
+			["Question 1",1],
+			["Question 2",2],
+			["Question 3",3],
+			["Question 4",4],
+			["Question 5",5]]) %></td>
+		</tr>
+	</table>
+	<h2>Prosthesis Use</h2>
+	<p><i>Now I would like to ask you some questions about prosthesis use.</i></p>
+	<ol>
+		<li>Do you currently have an artificial limb or prosthesis, even if it is not used regularly?</li>
+		<%= select(:subject, :base_pu_1, [["",nil],["Yes",1],["No",0]],{}, :style => "width:70px")%>
+		<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
+		<%= f.number_field :base_pu_2, :style => "width:70px" %>
+		<li>In the past week, on average, how many days a week did yo uwear the prosthesis?</li>
+		<%= f.number_field :base_pu_3, :style => "width:70px" %>
+		<li>How often in the past week have you used a wheelchair? Would you say:</li>
+		<%= select(:subject, :base_pu_4,
+		[["",nil],
+		["All of the time",1],
+		["Most of the time",2],
+		["Some of the time",3],
+		["None of the time",4],
+		["Refused",5],
+		["Dont know",6]],{}, :style => "width:200px")%>
+	</ol>
+	<h2>Cognitive Tests</h2>
+	<h3>RBANS-List Learning(Verbal Memory)</h3>
+	<p><i>Trial 1: I am going to read you a list of words. I want you to listen carefully and, when I finish, repeat back as many words as you can. You don't have to say them in the same order that I do - just repeat back as many words as you can remember, in any order. Okay?</i></p>
+	<p><i>Trials 2-4: I am going to read the list again. When I finish, repeat back as many words as yo ucan, even if you have already said them before. Okay?</i></p>
+	<table>
+		<tr>
+			<th>List</th>
+			<th>Trial 1</th>
+			<th>Trial 2</th>
+			<th>Trial 3</th>
+			<th>Trial 4</th>
+		</tr>
+		<tr>
+			<td>Market</td>
+			<td><%= select(:subject, :base_rbans_t1_1,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_1,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_1,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_1,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Package</td>
+			<td><%= select(:subject, :base_rbans_t1_2,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_2,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_2,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_2,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Elbow</td>
+			<td><%= select(:subject, :base_rbans_t1_3,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_3,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_3,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_3,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Apple</td>
+			<td><%= select(:subject, :base_rbans_t1_4,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_4,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_4,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_4,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Story</td>
+			<td><%= select(:subject, :base_rbans_t1_5,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_5,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_5,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_5,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Carpet</td>
+			<td><%= select(:subject, :base_rbans_t1_6,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_6,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_6,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_6,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Bubble</td>
+			<td><%= select(:subject, :base_rbans_t1_7,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_7,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_7,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_7,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Highway</td>
+			<td><%= select(:subject, :base_rbans_t1_8,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_8,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_8,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_8,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Saddle</td>
+			<td><%= select(:subject, :base_rbans_t1_9,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_9,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_9,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_9,[["",nil],["Yes",1]])%></td>
+		</tr>
+		<tr>
+			<td>Powder</td>
+			<td><%= select(:subject, :base_rbans_t1_10,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t2_10,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t3_10,[["",nil],["Yes",1]])%></td>
+			<td><%= select(:subject, :base_rbans_t4_10,[["",nil],["Yes",1]])%></td>
+		</tr>
+	</table>
+
+	<h3>Controlled Word Association Test</h3>
+	<p>Not sure how to make this form in a useful manner.</p>
+
+	<h3>WAIS-III Digit Span</h3>
+	<p><strong>A. Instructions for Digists Forward</strong></p>
+	<p><i>Say "I am going to say some numbers. Listen carefully, and when I am through, I want you to say them right after me. Just say what I say."</i></p>
+	<p><i>Discontinue when the examinee scores 0 on BOTH trials of any item.</i></p>
+	<p><i><strong>Note: It is helpful to write down the subject's response for each trial to ensure correct scoring.</strong></i></p>
+
+	<table border="1">
+		<tr>
+			<th>#</th>
+			<th>Trial Item/Response</th>
+			<th>Trial 1 Score</th>
+			<th>Trial 2 Score</th>
+		</tr>
+		<tr>
+			<td>1. </td>
+			<td>Trial 1 <strong>1 - 7</strong><hr>Trial 2 <strong>6 - 3</strong></td>
+			<td><%= select(:subject, :base_wais_a_1_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_1_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>2. </td>
+			<td>Trial 1 <strong>5 - 8 - 2</strong><hr>Trial 2 <strong>6 - 9 - 4</strong></td>
+			<td><%= select(:subject, :base_wais_a_2_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_2_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>3. </td>
+			<td>Trial 1 <strong>6 - 4 - 3 - 9</strong><hr>Trial 2 <strong>7 - 2 - 8 - 6</strong></td>
+			<td><%= select(:subject, :base_wais_a_3_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_3_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>4. </td>
+			<td>Trial 1 <strong>4 - 2 - 7 - 3 - 1</strong><hr>Trial 2 <strong>7 - 5 - 8 - 3 - 6</strong></td>
+			<td><%= select(:subject, :base_wais_a_4_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_4_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>5. </td>
+			<td>Trial 1 <strong>6 - 1 - 9 - 4 - 7 - 3</strong><hr>Trial 2 <strong>3 - 9 - 2 - 4 - 8 - 7</strong></td>
+			<td><%= select(:subject, :base_wais_a_5_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_5_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>6. </td>
+			<td>Trial 1 <strong>5 - 9 - 1 - 7 - 4 - 2 - 8</strong><hr>Trial 2 <strong>4 - 1 - 7 - 9 - 3 - 8 - 6</strong></td>
+			<td><%= select(:subject, :base_wais_a_6_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_6_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>7. </td>
+			<td>Trial 1 <strong>5 - 8 - 1 - 9 - 2 - 6 - 4 - 7</strong><hr>Trial 2 <strong>3 - 8 - 2 - 9 - 5 - 1 - 7 - 4</strong></td>
+			<td><%= select(:subject, :base_wais_a_7_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_7_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>8. </td>
+			<td>Trial 1 <strong>2 - 7 - 5 - 8 - 6 - 2 - 5 - 8 - 4</strong><hr>Trial 2 <strong>7 - 1 - 3 - 9 - 4 - 2 - 5 - 6 - 8</strong></td>
+			<td><%= select(:subject, :base_wais_a_8_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_a_8_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+	</table>
+
+	<p><strong>B. Instructions for Digits Backward:</strong></p>
+	<p><i>Now I am going to say some more numbers. But this time when I stop, I want you to say them backward. For example, if I say 7-1-9, what would you say? If the examinee responds correctly (9-1-7) then say "That's right" and proceed to Trial 1 of item 1. If the examinee responds incorrectly, provide the correct response and say:</i></p>
+	<p><i>"No, you would say 9-1-7. I said 7-1-9, so to say it backward, you would say 9-1-7. Now try these numbers. Remember you are to say them backward: 3-4-8. Do not provide any assistance on this example or any of the items. Whether the examinee responds correctly (8-4-3) or not, proceed to Trial 1 of Item 1.</i></p>
+	<p><i>Discontinue when the examinee scores 0 on BOTH trials of any item.</i></p>
+	<p><i><strong>Note: It is helpful to write down the subject's response for each trial to ensure correct scoring.</strong></i></p>
+	<table border="1">
+		<tr>
+			<th>#</th>
+			<th>Trial Item/Response</th>
+			<th>Trial 1 Score</th>
+			<th>Trial 2 Score</th>
+		</tr>
+		<tr>
+			<td>1. </td>
+			<td>Trial 1 <strong>2 - 4</strong><hr>Trial 2 <strong>5 - 7</strong></td>
+			<td><%= select(:subject, :base_wais_b_1_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_1_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>2. </td>
+			<td>Trial 1 <strong>6 - 2 - 9</strong><hr>Trial 2 <strong>4 - 1 - 5</strong></td>
+			<td><%= select(:subject, :base_wais_b_2_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_2_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>3. </td>
+			<td>Trial 1 <strong>3 - 2 - 7 - 9</strong><hr>Trial 2 <strong>4 - 9 - 6 - 8</strong></td>
+			<td><%= select(:subject, :base_wais_b_3_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_3_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>4. </td>
+			<td>Trial 1 <strong>1 - 5 - 2 - 8 - 6</strong><hr>Trial 2 <strong>6 - 1 - 8 - 4 - 3</strong></td>
+			<td><%= select(:subject, :base_wais_b_4_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_4_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>5. </td>
+			<td>Trial 1 <strong>5 - 3 - 9 - 4 - 1 - 8</strong><hr>Trial 2 <strong>7 - 2 - 4 - 8 - 5 - 6</strong></td>
+			<td><%= select(:subject, :base_wais_b_5_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_5_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>6. </td>
+			<td>Trial 1 <strong>8 - 1 - 2 - 9 - 3 - 6 - 5</strong><hr>Trial 2 <strong>4 - 7 - 3 - 9 -1 - 2 - 8</strong></td>
+			<td><%= select(:subject, :base_wais_b_6_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_6_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+		<tr>
+			<td>7. </td>
+			<td>Trial 1 <strong>9 - 4 - 3 - 7 - 6 - 2 - 5 - 8</strong><hr>Trial 2 <strong>7 - 2 - 8 - 1 - 9 - 6 - 5 - 3</strong></td>
+			<td><%= select(:subject, :base_wais_b_7_t1,[["",nil],["Yes",1],["No",0]])%></td>
+			<td><%= select(:subject, :base_wais_b_7_t2,[["",nil],["Yes",1],["No",0]])%></td>
+		</tr>
+	</table>
+	<h3>RBANS List Recall</h3>
+	<p><i>"Do you remember the list of words that I read to you several times in the beginning of the testing? Tell me as many of those words as you can remember now."</i></p>
+	<p><i>Place an 'x' in the box next to the word if it is recalled.</i></p>
+	<table border="1">
+		<tr>
+			<th>List (Do not read aloud)</th>
+			<th>Responses</th>
+		</tr>
+		<tr>
+			<td>Market</td>
+			<td><%= select(:subject, :base_rbans_re_1, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Package</td>
+			<td><%= select(:subject, :base_rbans_re_2, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Elbow</td>
+			<td><%= select(:subject, :base_rbans_re_3, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Apple</td>
+			<td><%= select(:subject, :base_rbans_re_4, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Story</td>
+			<td><%= select(:subject, :base_rbans_re_5, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Carpet</td>
+			<td><%= select(:subject, :base_rbans_re_6, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Bubble</td>
+			<td><%= select(:subject, :base_rbans_re_7, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Highway</td>
+			<td><%= select(:subject, :base_rbans_re_8, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Saddle</td>
+			<td><%= select(:subject, :base_rbans_re_9, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+		<tr>
+			<td>Powder</td>
+			<td><%= select(:subject, :base_rbans_re_10, [["",nil],["Yes",1],["No",0]]) %></td>
+		</tr>
+	</table>
+	<h2>Comorbidity Questions</h2>
+	<p><i>Information will be verified in the medical record.</i></p>
+	<ol>
+		<li>Has the patient had (or have now):
+			<ol type="a">
+				<li>Dialysis <%= select(:subject, :base_cq_1a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>Lower Extremity Arterial Reconstruction (stents, angioplasty, bypass, etc.)? <%= select(:subject, :base_cq_1b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<ol type="i"><li>Side: <%= select(:subject, :base_cq_1b_side, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li></ol>
+				</li>
+				<li>Traumatic Head Injury/Brian Injury(loss of conscious > 1 minute)? <%= select(:subject, :base_cq_1c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>Joint Replacement <%= select(:subject, :base_cq_1d, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<ol type="i"><li>Joint: <%= select(:subject, :base_cq_1d_joint, [["",nil],["Hip",1],["Knee",2],["Both",3]], {}, :style => "width:70px") %></li></ol>
+				</li>
+				<li>Hypertension <%= select(:subject, :base_cq_1e, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+				<li>PTSD <%= select(:subject, :base_cq_1f, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+				<li>Cancer <%= select(:subject, :base_cq_1g, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+			</ol>
+		</li>
+		<li>Did patient answer yes to previous question on diabetes? <%= select(:subject, :base_cq_2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+		<ol type="a">
+			<li>If Yes, for how many years have you had diabetes? <%= select(:subject, :base_cq_2a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+		</ol>
+		<li>Psychological Factors</li>
+		<ol type="a">
+			<li>Have you ever been treated for depression or anxiety? <%= select(:subject, :base_cq_3a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Have you participated in any therapy (individual or group) with a psychologist, psychiatrist, counselor, or social worker in the last 3 months? <%= select(:subject, :base_cq_3b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Have you participated in any peer visits? <%= select(:subject, :base_cq_3c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Are you taking any medications for your mood? <%= select(:subject, :base_cq_3d, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+		</ol>
+		<li>General Health. In general, would you say your health is: <%= select(:subject, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5]], {}, :style => "width:70px") %></li>
+		<li>Quality of Life (QoL). All things considered in the last month, how would you rate your overall quality of life? <%= select(:subject, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
+		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:subject, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li>
+		<li>What level is (or was) the amputation? <%= select(:subject, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:70px") %></li>
+		<li>Was the surgery an initial or revision amputation? <%= select(:subject, :base_cq_7, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
+		<li>Time since amputation: <%= number_field(:subject, :base_cq_8, :style => "width:70px") %> (days)</li>
+		<li>Contralateral limb side (limb without recent amputation surgery)
+			<ol type="a">
+				<li>In the limb not awaiting surgery, does the subject have:
+					<ol type="1">
+						<li>Claudication: Do you have pain in the calf while walking? <%= select(:subject, :base_cq_10_a1, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have poor circulation (foot always cold and discolored)? <%= select(:subject, :base_cq_10_a2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have pain in the joints when you walk? <%= select(:subject, :base_cq_10_a3, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Loss of sensation: do you have numbness in your foot? <%= select(:subject, :base_cq_10_a4, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have a wound or sores on your foot? <%= select(:subject, :base_cq_10_a5, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have any other condition affecting your leg not being operated on? <%= select(:subject, :base_cq_10_a6, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>None of the above? <%= select(:subject, :base_cq_10_a7, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+					</ol>
+				</li>
+				<li>If YES to any of the above, do these conditions affect your ability to walk? <%= select(:subject, :base_cq_10_b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>If patient responds YES to item 6, ask - "Do you have an amputation on your other leg?" <%= select(:subject, :base_cq_10_c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<br/><i>If yes, mark previous contralateral amputation type and level.</i>
+					<br/>Level: <%= select(:subject, :base_cq_10_c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:auto") %></li>
+					<br/>Type: <%= select(:subject, :base_cq_10_c_type, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
+				</li>
+			</ol>
+		</li>
+
+	</ol>
+	<h2>Chronic Pain Grade</h2>
+	<ol>
+		<li>How would you rate your pain on a 0-10 scale at the present time, this is right now, where 0 is 'No Pain' and 10 is 'Pain as bad as it could be'?</li>
+		<br/><%= select(:subject, :base_cpg_1, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>In the past 6 months, how intense was your worse pain rated on a 0-10 scale (rated as above)?</li>
+		<br/><%= select(:subject, :base_cpg_2, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>In the past 6 months, on average, how intense was your pain rated on a 0-10 scale (rated as above)?</li>
+		<br/><%= select(:subject, :base_cpg_3, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>About how many days in the last 6 months have you been kept from your usual activities (work, school, housework) because of this pain?</li>
+		<br/><%= select(:subject, :base_cpg_4, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>In the past 6 months, how much has this pain interfered with your daily activities on a 0-10 scale where 0 is 'no interference' and 10 is 'extreme change'?</li>
+		<br/><%= select(:subject, :base_cpg_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>In the past 6 months, how much has this pain changed your ability to take part in recreational, social and family activities where 0 is 'no change' and 10 is 'extreme change'?</li>
+		<br/><%= select(:subject, :base_cpg_6, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+		<li>In the past 6 months, how has this pain changed your ability to work (including housework) where 0 is 'no change' and 10 is 'extreme change'?</li>
+		<br/><%= select(:subject, :base_cpg_7, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %>
+	</ol>
+	<h2>Multidimensional Scale of Perceived Social Support</h2>
+	<p><i>Instructions: We are interested in how you feel about the following statements. Read each statement carefully. Indicate how you feel about each statement.</i></p>
+	<table>
+		<tr>
+			<th>#</th>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>There is a special person who is around when I am in need.</td>
+			<td><%= select(:subject,:base_mspss_1, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>2.</td>
+			<td>There is a special person with whom I can share my joys and sorrows.</td>
+			<td><%= select(:subject,:base_mspss_2, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>My family really tries to help me.</td>
+			<td><%= select(:subject,:base_mspss_3, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>I get the emotional help and support I need from my family.</td>
+			<td><%= select(:subject,:base_mspss_4, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td>I have a special person who is a real source of comfort to me.</td>
+			<td><%= select(:subject,:base_mspss_5, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>6.</td>
+			<td>My friends really try to help me.</td>
+			<td><%= select(:subject,:base_mspss_6, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>7.</td>
+			<td>I can count on my friends when things go wrong.</td>
+			<td><%= select(:subject,:base_mspss_7, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>8.</td>
+			<td>I can talk about my problems with my family.</td>
+			<td><%= select(:subject,:base_mspss_8, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>9.</td>
+			<td>I have friends with whom I can share my joys and sorrows.</td>
+			<td><%= select(:subject,:base_mspss_9, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>10.</td>
+			<td>There is a special person in my life who cares about my feelings.</td>
+			<td><%= select(:subject,:base_mspss_10, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>11.</td>
+			<td>My family is willing to help me make decisions.</td>
+			<td><%= select(:subject,:base_mspss_11, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+		<tr>
+			<td>12.</td>
+			<td>I can talk about my problems with my friends.</td>
+			<td><%= select(:subject,:base_mspss_12, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7]],{}, :style => "width:auto") %></td>
+		</tr>
+	</table>
+	<h2>Audit-C Questionnaire</h2>
+	<ol>
+		<li>How often do you have a drink containing alcohol?
+			<%= select(:subject, :base_audit_1,[["",nil],["Never",0],["Monthly or Less",1],["2-3 times a month",2],["2-3 times a week",3],["4 or more times a week",4]],{}, :style => "width:auto")%></li>
+		<li>How many standard drinks containing alcohol do you have on a typical day?
+			<%= select(:subject, :base_audit_2,[["",nil],["1 or 2",1],["3 or 4",2],["5 or 6",3],["7 or 9",4],["10 or more",5]],{}, :style => "width:auto")%></li>
+		<li>How often do you have six or more drinks on one occasion?
+			<%= select(:subject, :base_audit_1,[["",nil],["Never",0],["Less than monthly",1],["Monthly",2],["Weekly",3],["Daily or almost daily",4]],{}, :style => "width:auto")%></li>
+	</ol>
+	<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+
+<% end %>

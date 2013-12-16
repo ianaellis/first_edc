@@ -2,23 +2,28 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all
+    # @subjects = Subject.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @subjects }
-    end
+    # respond_to do |format|
+    #   format.html # index.html.erb
+    #   format.json { render json: @subjects }
+    # end
+    @subjects = Subject.paginate(page: params[:page])
   end
 
+  # def screening
+  #   @subject = Subject.find(params[:id])
+  # end
+  
   # GET /subjects/1
   # GET /subjects/1.json
   def show
     @subject = Subject.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @subject }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @subject }
+    # end
   end
 
   # GET /subjects/new
@@ -26,10 +31,10 @@ class SubjectsController < ApplicationController
   def new
     @subject = Subject.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @subject }
-    end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @subject }
+    # end
   end
 
   # GET /subjects/1/edit
@@ -67,6 +72,23 @@ class SubjectsController < ApplicationController
         format.json { render json: @subject.errors, status: :unprocessable_entity }
       end
     end
+
+    # if @subject.update_attributes(params[:subject])
+    #   flash[:success] = "Profile updated"
+    #   sign_in @subject
+    #   redirect_to @subject
+    # else
+    #   render 'edit'
+    # end
+  end
+
+  # GET /subjects/1/screening
+  def screening
+    @subject = Subject.find(params[:subject_id])
+  end
+
+  def baseline
+    @subject = Subject.find(params[:subject_id])
   end
 
   # DELETE /subjects/1
@@ -80,4 +102,11 @@ class SubjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
+
+  # def populate_values
+  #   @subject_id = params[:subject_id]
+  #   redirect_to screening_path(@subject_id)
+  # end
 end
