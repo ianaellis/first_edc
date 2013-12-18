@@ -19,7 +19,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1.json
   def show
     @subject = Subject.find(params[:id])
-
+    render 'baseline'
     # respond_to do |format|
     #   format.html # show.html.erb
     #   format.json { render json: @subject }
@@ -46,6 +46,10 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = Subject.new(params[:subject])
+    # @subject.current_step = session[:subject_step]
+    # @subject.next_step
+    # session[:subject_step] = @subject.current_step
+    # render 'new'
 
     respond_to do |format|
       if @subject.save
@@ -62,16 +66,38 @@ class SubjectsController < ApplicationController
   # PUT /subjects/1.json
   def update
     @subject = Subject.find(params[:id])
-
-    respond_to do |format|
-      if @subject.update_attributes(params[:subject])
-        format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @subject.errors, status: :unprocessable_entity }
-      end
+    (params[:step] == 'Back') ? @subject.previous_step : @subject.next_step
+    if @subject.update_attributes(params[:subject])
+      # redirect_to subject_path, :notice => 'update successfull'
+      # @subject.next_step
+       render 'baseline'
+    else
+      render @subject.reload.current_step
     end
+
+
+    # session[:subject_params].deep_merge!(params[:subject])
+
+    # @subject = Subject.find(params[:id])
+    # @subject.current_step = session[:subject_step]
+    # if params[:back_button]
+    #   @subject.previous_step
+    # else
+    #   @subject.next_step
+    # end
+    # session[:subject_step] = @subject.current_step
+    # render 'baseline'
+
+    # respond_to do |format|
+    #   if @subject.update_attributes(params[:subject])
+    #     format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
+    #     format.json { head :no_content }
+    #   else
+    #     format.html { render action: "edit" }
+    #     format.json { render json: @subject.errors, status: :unprocessable_entity }
+    #   end
+
+    # end
 
     # if @subject.update_attributes(params[:subject])
     #   flash[:success] = "Profile updated"
@@ -89,6 +115,7 @@ class SubjectsController < ApplicationController
 
   def baseline
     @subject = Subject.find(params[:subject_id])
+    session[:subject_params] ||= {}
   end
 
   # DELETE /subjects/1

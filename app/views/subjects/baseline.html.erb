@@ -5,6 +5,11 @@
 			
 	</div>
 </div>
-<%= render :partial => 'baseline' %>
+<%= form_for(@subject) do |f| %>
+	
+	<%= render "base_#{@subject.current_step}", :f => f %>
+	<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'step' unless @subject.first_step? %>
+	<%= f.submit "Next", class: "btn btn-large btn-primary", :name => 'step' unless @subject.last_step? %>
+<% end %>
 <%= link_to 'Show', @subject %> |
 <%= link_to 'Back', subjects_path %>
