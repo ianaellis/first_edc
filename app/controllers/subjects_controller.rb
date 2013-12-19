@@ -72,7 +72,9 @@ class SubjectsController < ApplicationController
       # @subject.next_step
        render 'baseline'
     else
-      render @subject.reload.current_step
+      
+      render @subject.reload.current_step, :notice => 'Is this what is happening?'
+      
     end
 
 
