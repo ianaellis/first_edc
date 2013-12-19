@@ -1,0 +1,531 @@
+<h2>Short Musculoskeletal Function Assessment</h2>
+<p><i>We are interested in finding out how you are managing with your injury or arthritis this week. We would like to know about any problems you may be having with your daily activities because of your injury or arthritis.</i></p>
+<p><i>Please answer each question by putting a check in the box corresponding to the choice that best describes you.</i></p>
+<p><i>These questions are about how much difficulty you may be having this week with your daily activities because of your injury or arthritis.</i></p>
+
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Response</th>
+	</tr>
+	<tr>
+		<td>1. How difficult is it for you to get in or out of a low chair?</td>
+		<td><%= select(:subject, :fu6month_smfa_1,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>2. How difficult is it for you to open medicine bottles or jars?</td>
+		<td><%= select(:subject, :fu6month_smfa_2,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>3. How difficult is it for you to shop for groceries or other things?</td>
+		<td><%= select(:subject, :fu6month_smfa_3,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>4. How difficult is it for you to climb stairs?</td>
+		<td><%= select(:subject, :fu6month_smfa_4,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>5. How difficult is it for you to make a tight fist?</td>
+		<td><%= select(:subject, :fu6month_smfa_5,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>6. How difficult is it for you to get in or out of the bathtub or shower?</td>
+		<td><%= select(:subject, :fu6month_smfa_6,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>7. How difficult is it for you to get comfortable to sleep?</td>
+		<td><%= select(:subject, :fu6month_smfa_7,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>8. How difficult is it for you to bend to kneel down?</td>
+		<td><%= select(:subject, :fu6month_smfa_8,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>9. How difficult is it for you to use buttons, snaps, hooks, or zippers?</td>
+		<td><%= select(:subject, :fu6month_smfa_9,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>10. How difficult is it for you to cut your own fingernails?</td>
+		<td><%= select(:subject, :fu6month_smfa_10,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>11. How difficult is it for you to dress yourself?</td>
+		<td><%= select(:subject, :fu6month_smfa_11,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>12. How difficult is it for you to walk?</td>
+		<td><%= select(:subject, :fu6month_smfa_12,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>13. How difficult is it for you to get moving after you have been sitting or lying down?</td>
+		<td><%= select(:subject, :fu6month_smfa_13,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>14. How difficult is it for you to go out by yourself?</td>
+		<td><%= select(:subject, :fu6month_smfa_14,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>15. How difficult is it for you to drive?</td>
+		<td><%= select(:subject, :fu6month_smfa_15,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>16. How difficult is it for you to clean yourself after going to the bathroom?</td>
+		<td><%= select(:subject, :fu6month_smfa_16,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>17. How difficult is it for you to turn knobs or levers (for example, to open doors or to roll down car windows)?</td>
+		<td><%= select(:subject, :fu6month_smfa_17,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>18. How difficult is it for you to write or type?</td>
+		<td><%= select(:subject, :fu6month_smfa_18,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>19. How difficult is it for you to pivot?</td>
+		<td><%= select(:subject, :fu6month_smfa_19,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>20. How difficult is it for you to do your usual physical recreational activities, such as bicycling, jogging, or walking?</td>
+		<td><%= select(:subject, :fu6month_smfa_20,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>21. How difficult is it for you to do your usual leisure activities, such as hobbies, crafts, gardening, card-playing, or going out with friends?</td>
+		<td><%= select(:subject, :fu6month_smfa_21,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>22. How difficult is it for you to having with sexual activity?</td>
+		<td><%= select(:subject, :fu6month_smfa_22,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>23. How difficult is it for you to light housework or yard work, such as dusting, washing dishes, or watering plants?</td>
+		<td><%= select(:subject, :fu6month_smfa_23,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>24. How difficult is it for you to do heavy housework or yard work, such as washing floors, vacuuming, or mowing lawns?</td>
+		<td><%= select(:subject, :fu6month_smfa_24,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>25. How difficult is it for you to do your usual work, such as a paid job, housework, or volunteer activities?</td>
+		<td><%= select(:subject, :fu6month_smfa_25,
+				[["",nil],
+				["Not at all difficult",1],
+				["A little difficult",2],
+				["Moderately difficult",3],
+				["Very difficult",4],
+				["Unable to do",5]]) %>
+		</td>
+	</tr>
+</table>
+<p><i>These next questions ask how often you are experiencing problems this week because of your injury or arthritis.</i></p>
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Response</th>
+	</tr>
+	<tr>
+		<td>26. How often do you walk with a limp?</td>
+		<td><%= select(:subject, :fu6month_smfa_26,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>27. How often do you avoid using your painful limb(s) or back?</td>
+		<td><%= select(:subject, :fu6month_smfa_27,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>28. How often does your leg lock or give-way?</td>
+		<td><%= select(:subject, :fu6month_smfa_28,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>29. How often do you have problems with concentration?</td>
+		<td><%= select(:subject, :fu6month_smfa_29,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>30. How often does doing too much in one day affect what you do the next day?</td>
+		<td><%= select(:subject, :fu6month_smfa_30,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>31. How often do you act irritable toward those around you (for example, snap at people, give sharp answers, or criticize easily?)</td>
+		<td><%= select(:subject, :fu6month_smfa_31,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>32. How often are you tired?</td>
+		<td><%= select(:subject, :fu6month_smfa_32,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>33. How often do you feel disabled?</td>
+		<td><%= select(:subject, :fu6month_smfa_33,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>34. How often do you feel angry or frustrated that you have this injury or arthritis?</td>
+		<td><%= select(:subject, :fu6month_smfa_34,
+				[["",nil],
+				["None of the time",1],
+				["A little of the time",2],
+				["Some of the time",3],
+				["Most of the time",4],
+				["All of the time",5]]) %>
+		</td>
+	</tr>
+</table>
+<p><i>These questions are about how much you are bothered by problems you are having this week because of your injury or arthritis.</i></p>
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Response</th>
+	</tr>
+	<tr>
+		<td>35. How much are you bothered by problems using your hands, arms, or legs?</td>
+		<td><%= select(:subject, :fu6month_smfa_35,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>36. How much are you bothered by problems using your back?</td>
+		<td><%= select(:subject, :fu6month_smfa_36,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>37. How much are you bothered by problems doing work around your home?</td>
+		<td><%= select(:subject, :fu6month_smfa_37,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>38. How much are you bothered by problems with bathing, dressing, toileting, or other personal care?</td>
+		<td><%= select(:subject, :fu6month_smfa_38,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>39. How much are you bothered by problems with sleep and rest?</td>
+		<td><%= select(:subject, :fu6month_smfa_39,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>40. How much are you bothered by problems with leisure or recreational activities?</td>
+		<td><%= select(:subject, :fu6month_smfa_40,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>41. How much are you bothered by problems with your friends, family, or other important people in your life?</td>
+		<td><%= select(:subject, :fu6month_smfa_41,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>42. How much are you bothered by problems with thinking, concentrating, or remembering?</td>
+		<td><%= select(:subject, :fu6month_smfa_42,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>43. How much are you bothered by problems adjusting or coping with your injury or arthritis?</td>
+		<td><%= select(:subject, :fu6month_smfa_43,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>44. How much are you bothered by problems doing your usual work?</td>
+		<td><%= select(:subject, :fu6month_smfa_44,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>45. How much are you bothered by problems with feeling dependent on others?</td>
+		<td><%= select(:subject, :fu6month_smfa_45,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>46. How much are you bothered by problems with stiffness and pain?</td>
+		<td><%= select(:subject, :fu6month_smfa_46,
+				[["",nil],
+				["Not at all bothered",1],
+				["A little bothered",2],
+				["Moderately bothered",3],
+				["Very bothered",4],
+				["Extremely bothered",5]]) %>
+		</td>
+	</tr>
+</table>

@@ -123,6 +123,26 @@ class SubjectsController < ApplicationController
   def tc
     @subject = Subject.find(params[:subject_id])
   end
+  
+  def fu3week
+    @subject = Subject.find(params[:subject_id])
+  end
+
+  def fu6week
+    @subject = Subject.find(params[:subject_id])
+  end
+
+  def fu18week
+    @subject = Subject.find(params[:subject_id])
+  end
+  
+  def fu6month
+    @subject = Subject.find(params[:subject_id])
+  end
+
+  def fu1year
+    @subject = Subject.find(params[:subject_id])
+  end
 
   # DELETE /subjects/1
   # DELETE /subjects/1.json

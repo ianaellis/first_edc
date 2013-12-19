@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="span6 offset3">
+		<h1>6-Month Follow Up</h1>
+		<!-- http://railscasts.com/episodes/217-multistep-forms -->
+		<%= form_for(@subject) do |f| %>
+			<%= render 'fu6month_smfa' %>
+			<%= render 'fu6month_phq' %>
+			<%= render 'fu6month_whoqol_bref' %>
+			<%= render 'fu6month_positive_negative' %>
+			<%= render 'fu6month_mses_self' %>
+			<%= render 'fu6month_pam' %>
+			<%= render 'fu6month_spsir' %>
+			<%= render 'fu6month_ssscq' %>
+			<%= render 'fu6month_prosthesis', :f => f %>
+			<%= render 'fu6month_pain' %>
+			<%= render 'fu6month_complications', :f => f %>
+			<%= render 'fu6month_mspss' %>
+			<%= render 'fu6month_audit' %>
+
+			<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>
+
+<%= link_to 'Show', @subject %> |
+<%= link_to 'Back', subjects_path %>

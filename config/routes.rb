@@ -14,6 +14,11 @@ FirstEdc::Application.routes.draw do
     match '/screening', to: 'subjects#screening', as: :screening
     match '/baseline', to: 'subjects#baseline', as: :baseline
     match '/tc', to: 'subjects#tc', as: :tc
+    match '/fu3week', to: 'subjects#fu3week', as: :fu3week
+    match '/fu6week', to: 'subjects#fu6week', as: :fu6week
+    match '/fu18week', to: 'subjects#fu18week', as: :fu18week
+    match '/fu6month', to: 'subjects#fu6month', as: :fu6month
+    match '/fu1year', to: 'subjects#fu1year', as: :fu1year
   end
   resources :subjects
   
