@@ -36,5 +36,5 @@ FirstEdc::Application.configure do
   config.assets.debug = true
 
   # Allows for local precompilling --added by Ian
-  config.assets.prefix = 'dev-assets'
+  config.assets.prefix = '/dev-assets'
 end
