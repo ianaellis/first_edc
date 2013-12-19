@@ -4,6 +4,20 @@
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<%= form_for(@subject) do |f| %>
 			<%= render 'tc_smfa'%>
+			<%= render 'tc_phq' %>
+			<%= render 'tc_whoqol_bref' %>
+			<%= render 'tc_positive_negative' %>
+			<%= render 'tc_pam' %>
+			<%= render 'tc_spsir' %>
+			<%= render 'tc_ssscq' %>
+			<%= render 'tc_prosthesis', :f => f %>
+			<%= render 'tc_pain' %>
+			<%= render 'tc_complications', :f => f %>
+			<%= render 'tc_mspss' %>
+			<%= render 'tc_audit' %>
+			<%= render 'tc_ptcs' %>
+			<%= render 'tc_accessing_resources', :f => f %>
+			<%= render 'tc_satisfaction', :f => f %>
 			<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>

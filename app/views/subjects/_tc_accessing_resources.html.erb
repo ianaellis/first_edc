@@ -1,0 +1,46 @@
+<h2>Accessing Resources</h2>
+<p><i>Which of the following resources have you reviewed, participated in, or made use of in the past six months</i></p>
+
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Number of time Resource has been used</th>
+	</tr>
+	<tr>
+		<td>Amputee Coalition Website</td>
+		<td><%= select(:subject, :tc_ar_1, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Other amputation-related website</td>
+		<td><%= select(:subject, :tc_ar_2, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Amputee Coalition Publication First Step</td>
+		<td><%= select(:subject, :tc_ar_3, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Amputee Coalition Publication Side Step</td>
+		<td><%= select(:subject, :tc_ar_4, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>InMotion Magazine</td>
+		<td><%= select(:subject, :tc_ar_5, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Received a Peer Visit</td>
+		<td><%= select(:subject, :tc_ar_6, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Attended an amputation support group</td>
+		<td><%= select(:subject, :tc_ar_7, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Amputation-related online (chat) group</td>
+		<td><%= select(:subject, :tc_ar_8, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+	<tr>
+		<td>Other (name): <%= f.text_field :tc_ar_9, :style => "width:auto" %></td>
+		<td><%= select(:subject, :tc_ar_9o, [["",nil],["1",1],["2",2],["3",3],["4",4],["5",5],["5+",6]],{}, :style => "width:auto") %></td>
+	</tr>
+
+</table>
