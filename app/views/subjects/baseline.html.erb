@@ -7,7 +7,21 @@
 </div>
 <%= form_for(@subject) do |f| %>
 	
-	<%= render "base_#{@subject.current_step}", :f => f %>
+	<!-- <%= render "base_#{@subject.current_step}", :f => f %>  -->
+	<%= render 'base_sfmfa' %>
+	<%= render 'base_phq' %>
+	<%= render 'base_whoqol_bref' %>
+	<%= render 'base_positive_negative' %>
+	<%= render 'base_mses_self' %>
+	<%= render 'base_pam' %>
+	<%= render 'base_spsir' %>
+	<%= render 'base_change_questionnaire' %>
+	<%= render 'base_prosthesis', :f => f %>
+	<%= render 'base_cognitive' %>
+	<%= render 'base_comorbidity' %>
+	<%= render 'base_pain' %>
+	<%= render 'base_mspss' %>
+	<%= render 'base_audit' %>
 	<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'step' unless @subject.first_step? %>
 	<%= f.submit "Next", class: "btn btn-large btn-primary", :name => 'step' unless @subject.last_step? %>
 <% end %>
