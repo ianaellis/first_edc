@@ -27,4 +27,5 @@ class Subject < ActiveRecord::Base
    def last_step?
    	current_step == steps.last
    end
+
 end
