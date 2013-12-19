@@ -13,6 +13,7 @@ FirstEdc::Application.routes.draw do
   resources :subjects do
     match '/screening', to: 'subjects#screening', as: :screening
     match '/baseline', to: 'subjects#baseline', as: :baseline
+    match '/tc', to: 'subjects#tc', as: :tc
   end
   resources :subjects
   

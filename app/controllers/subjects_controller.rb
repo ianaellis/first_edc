@@ -19,7 +19,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1.json
   def show
     @subject = Subject.find(params[:id])
-    render 'baseline'
+     
     # respond_to do |format|
     #   format.html # show.html.erb
     #   format.json { render json: @subject }
@@ -70,7 +70,7 @@ class SubjectsController < ApplicationController
     if @subject.update_attributes(params[:subject])
       # redirect_to subject_path, :notice => 'update successfull'
       # @subject.next_step
-       render 'baseline'
+       redirect_to subject_path, :notice => 'update successfull'
     else
       
       render @subject.reload.current_step, :notice => 'Is this what is happening?'
@@ -118,6 +118,10 @@ class SubjectsController < ApplicationController
   def baseline
     @subject = Subject.find(params[:subject_id])
     session[:subject_params] ||= {}
+  end
+
+  def tc
+    @subject = Subject.find(params[:subject_id])
   end
 
   # DELETE /subjects/1

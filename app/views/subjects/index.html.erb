@@ -10,6 +10,7 @@
         <th>Edit</th>
         <th>Screening Log</th>
         <th>Baseline</th>
+        <th>Treatment Completion</th>
         <th>Treatment Group</th>
       </tr>
     </thead> 
@@ -21,6 +22,7 @@
           <td><%= link_to "edit", edit_subject_path(sub) %></td>
           <td><%= link_to "edit", subject_screening_path(sub) %></td>
           <td><%= link_to "edit", subject_baseline_path(sub) %></td>
+          <td><%= link_to "edit", subject_tc_path(sub) %></td>
           <td><%= sub.treatment_group %></td>
         </tr> 
       <% end %>
