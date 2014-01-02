@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 # gem 'ruby', '1.9.3'
 gem 'rails', '3.2.15' #3.2.3
 gem 'heroku', "~> 3.0.1"
-gem 'bootstrap-sass', "~> 3.0.2.1"
-gem 'bootstrap_helper'
+gem 'sass-rails', '>= 3.2'
+gem 'bootstrap-sass', "~> 3.0.3.0"
+# gem 'bootstrap_helper'
 gem 'pg', '0.12.2'
 #Password encrypter
 gem 'bcrypt-ruby', '3.0.1'
@@ -13,6 +14,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0' #3.0.3
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 # group :production do
@@ -37,7 +39,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'sass-rails', '3.2.5'
+	gem 'sass-rails', '>= 3.2'
 	gem 'coffee-rails', '3.2.2'
 	gem 'uglifier', '1.2.3'
 	gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails' 

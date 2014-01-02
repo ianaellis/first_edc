@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require jquery-ui
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.bootstrap3
+//= require bootstrap
+//= require bootstrap/dropdown
 //= require_tree .
 
+
+$('#baselineForm').formToWizard();

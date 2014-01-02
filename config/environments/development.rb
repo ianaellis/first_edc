@@ -37,4 +37,5 @@ FirstEdc::Application.configure do
 
   # Allows for local precompilling --added by Ian
   # config.assets.prefix = '/dev-assets'
+  config.serve_static_assets = false
 end

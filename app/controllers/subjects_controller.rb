@@ -65,30 +65,27 @@ class SubjectsController < ApplicationController
   # PUT /subjects/1
   # PUT /subjects/1.json
   def update
+    session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
     @subject = Subject.find(params[:id])
-    (params[:step] == 'Back') ? @subject.previous_step : @subject.next_step
-    if @subject.update_attributes(params[:subject])
-      # redirect_to subject_path, :notice => 'update successfull'
-      # @subject.next_step
-       redirect_to subject_path, :notice => 'update successfull'
+    @subject.current_step = session[:subject_step]
+    if params[:back_button]
+      @subject.previous_step
     else
-      
-      render @subject.reload.current_step, :notice => 'Is this what is happening?'
-      
+      @subject.next_step
+    end
+    # Maintaines current position in array of steps
+    session[:subject_step] = @subject.current_step
+
+    if params[:submit_button]
+      @subject.update_attributes(params[:subject])
+      session[:subject_step] = session[:subject_params] = nil
+      flash[:notice] = "Subject Information Saved"
+      redirect_to @subject
+    else
+      @subject.update_attributes(params[:subject])
+      render 'baseline'
     end
 
-
-    # session[:subject_params].deep_merge!(params[:subject])
-
-    # @subject = Subject.find(params[:id])
-    # @subject.current_step = session[:subject_step]
-    # if params[:back_button]
-    #   @subject.previous_step
-    # else
-    #   @subject.next_step
-    # end
-    # session[:subject_step] = @subject.current_step
-    # render 'baseline'
 
     # respond_to do |format|
     #   if @subject.update_attributes(params[:subject])
@@ -101,13 +98,6 @@ class SubjectsController < ApplicationController
 
     # end
 
-    # if @subject.update_attributes(params[:subject])
-    #   flash[:success] = "Profile updated"
-    #   sign_in @subject
-    #   redirect_to @subject
-    # else
-    #   render 'edit'
-    # end
   end
 
   # GET /subjects/1/screening
@@ -118,10 +108,13 @@ class SubjectsController < ApplicationController
   def baseline
     @subject = Subject.find(params[:subject_id])
     session[:subject_params] ||= {}
+
+    
   end
 
   def tc
     @subject = Subject.find(params[:subject_id])
+    session[:subject_params] ||= {}
   end
   
   def fu3week
@@ -155,6 +148,7 @@ class SubjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   
 
