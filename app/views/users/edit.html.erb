@@ -2,7 +2,7 @@
 <h1>Update your profile</h1>
 
 	<div class="row">
-		<div class="span6 offset3">
+		<div class="span6 offset3" style="width:300px; margin:auto;">
 			<%= form_for(@user) do |f| %>
 				<%= render 'fields', f: f %>
 				<% if current_user.admin? %>
@@ -12,7 +12,7 @@
 			<% end %>
 
 			<%= gravatar_for @user %>
-			<a href="http://gravatar.com/emails">change</a>
+			<a href="http://gravatar.com/emails">change gravitar image</a>
 		</div>
 	</div>
 

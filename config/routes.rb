@@ -40,6 +40,7 @@ FirstEdc::Application.routes.draw do
   match '/subjects', to: 'subjects#index'
   match '/showsubject', to: 'subjects#show'
   match '/editsubject', to: 'subjects#edit'
+  match '/randomize', to: 'subjects#randomize'
 
   # match '/populate_values', to: 'subjects#screening'
 
