@@ -20,4 +20,4 @@
 //= require_tree .
 
 
-$('#baselineForm').formToWizard();
+// $('#baselineForm').formToWizard();
