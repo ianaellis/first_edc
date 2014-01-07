@@ -94,7 +94,7 @@
 	<strong><i>INCLUSION CRITERIA - All inclusion criteria must be marked yes to continue.</i></strong>
 	<h2>3.0 Exclusion Criteria</h2>
 	<ol>
-		<li>Does the patient have *inadequate cognitive or language function to consent or participate in the study or by medical record review? (e.g. diagnosed dementia or Alzheimer's disease?)</li><%= select(:subject, :sc_exc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+		<li>Does the patient have inadequate cognitive or language function to consent or participate in the study or by medical record review? (e.g. diagnosed dementia or Alzheimer's disease?)</li><%= select(:subject, :sc_exc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 		<li>Does the patient have an active substance use disorder identified by chart review and initial screening? (OK if actively engaged in treatment)</li><%= select(:subject, :sc_exc_2,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 		<li>Does the patient have a major uncontrolled psychiatric illness (bipolar disorder, psychosis, severe suicidality) identified by chart review and confirmed, if necessary, with a provider or investigator?</li><%= select(:subject, :sc_exc_3,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 	</ol>
@@ -117,13 +117,13 @@
 	<ol>
 		<li>Did the patient meet all of the inclusion criteria?</li><%= select(:subject, :sc_pe_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 		<li>Did the patient meet all of the exclusion criteria?</li><%= select(:subject, :sc_pe_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
-		<strong><i>5.1 must be answered "Yes" and 5.2 answered "No" for the subjec to be eligible.</i></strong>
+		<strong><i>5.1 must be answered "Yes" and 5.2 answered "No" for the subject to be eligible.</i></strong>
 		<li>Is the patient eligible for this study?</li><%= select(:subject, :sc_pe_3,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 		<li>Was a waiver granted for any deviations from the inclusion/exclusion criteria?</li><%= select(:subject, :sc_pe_4,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %><br/>
 		<strong><i>If a waiver was granted, please state by whom and reasoning:</i></strong>
 		<%= text_field(:subject, :sc_pe_4a, :style => "width:200px") %>
 		<li>If the subject was ineligible, please check the primary reason for ineligibility:</li>
-		<%= select(:subject, :sc_pe_5,[["", nil],["Meets criteria but not interested", 0], ["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
+		<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
 		<br/> Other: <%= text_field(:subject, :sc_pe_5o, :style => "width:200px") %>
 	</ol>
 
@@ -135,7 +135,7 @@
 		<%= select(:subject, :sc_ic_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 		<li>Date Informed Consent and HIPAA were signed</li>
 		<%= date_select(:subject, :sc_ic_3, :style => "width:140px") %>
-		<li>Subject Number (e.g. 001, 002, 003)</li>
+		<li>Subject Number (e.g. 1001, 1002, 2003)</li>
 		<%= number_field(:subject, :sc_ic_4, :style => "width:70px") %>
 		<li>Site Number</li>
 		<%= select(:subject, :sc_ic_5,[["", nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa",4]],{}, :style => "width:70px") %>

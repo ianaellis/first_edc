@@ -1,18 +1,16 @@
-
+<% provide(:title, 'Baseline') %>
 <div class="row">
 	<div class="span6 offset3">
 		<h1>Baseline</h1>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 			<%= form_for(@subject) do |f| %>
 	
-				  <%= render "base_#{@subject.current_step}", :f => f %>
-
-				
- 
-				<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @subject.first_step? %>
-				<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @subject.last_step? %>
-				<%= f.submit "Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
-
+				<%= render "base_#{@subject.current_step}", :f => f %>
+				<div style="width:300px; margin:auto;">
+					<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @subject.first_step? %>
+					<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @subject.last_step? %>
+					<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
+				<div>
 			<% end %>
 	</div>
 </div>

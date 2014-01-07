@@ -1,8 +1,10 @@
+<% provide(:title, 'Treatment Completion') %>
 <div class="row">
 	<div class="span6 offset3">
 		<h1>Treatment Completion</h1>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<%= form_for(@subject) do |f| %>
+
 			<%= render 'tc_smfa'%>
 			<%= render 'tc_phq' %>
 			<%= render 'tc_whoqol_bref' %>
@@ -18,6 +20,15 @@
 			<%= render 'tc_ptcs' %>
 			<%= render 'tc_accessing_resources', :f => f %>
 			<%= render 'tc_satisfaction', :f => f %>
+		<!--	
+			<div style="width:300px; margin:auto;">
+				<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @subject.first_step? %>
+				<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @subject.last_step? %>
+				<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
+			<div>
+
+			-->
+
 			<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>

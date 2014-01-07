@@ -18,7 +18,7 @@
 		</li>
 		<li>Did patient answer yes to previous question on diabetes? <%= select(:subject, :base_cq_2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
 		<ol type="a">
-			<li>If Yes, for how many years have you had diabetes? <%= select(:subject, :base_cq_2a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>If Yes, for how many years have you had diabetes? <%= number_field(:subject, :base_cq_2a, :style => "width:70px") %></li>
 		</ol>
 		<li>Psychological Factors</li>
 		<ol type="a">
@@ -27,8 +27,10 @@
 			<li>Have you participated in any peer visits? <%= select(:subject, :base_cq_3c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
 			<li>Are you taking any medications for your mood? <%= select(:subject, :base_cq_3d, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
 		</ol>
-		<li>General Health. In general, would you say your health is: <%= select(:subject, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5]], {}, :style => "width:70px") %></li>
-		<li>Quality of Life (QoL). All things considered in the last month, how would you rate your overall quality of life? <%= select(:subject, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
+		<h3>General Health</h3>
+		<li>In general, would you say your health is: <%= select(:subject, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5]], {}, :style => "width:70px") %></li>
+		<h3>Quality of Life (QoL)</h3>
+		<li>All things considered in the last month, how would you rate your overall quality of life? <%= select(:subject, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
 		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:subject, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li>
 		<li>What level is (or was) the amputation? <%= select(:subject, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:70px") %></li>
 		<li>Was the surgery an initial or revision amputation? <%= select(:subject, :base_cq_7, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
@@ -47,7 +49,7 @@
 					</ol>
 				</li>
 				<li>If YES to any of the above, do these conditions affect your ability to walk? <%= select(:subject, :base_cq_10_b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
-				<li>If patient responds YES to item 6, ask - "Do you have an amputation on your other leg?" <%= select(:subject, :base_cq_10_c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+				<li>If patient responds YES to item 10.a.6, ask - "Do you have an amputation on your other leg?" <%= select(:subject, :base_cq_10_c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
 					<br/><i>If yes, mark previous contralateral amputation type and level.</i>
 					<br/>Level: <%= select(:subject, :base_cq_10_c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:auto") %></li>
 					<br/>Type: <%= select(:subject, :base_cq_10_c_type, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>

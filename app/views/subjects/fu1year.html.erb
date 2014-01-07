@@ -11,7 +11,7 @@
 						<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu1year_fuq_2a, :style => "width:auto" %> <i>(days)</i></li>
 					</ol>
 				</li>
-				<li>3. Has there been a revision to a higher level (e.g. TM to TT or TT to TF)?
+				<li>Has there been a revision to a higher level (e.g. TM to TT or TT to TF)?
 					<%= select(:subject, :fu1year_fuq_3, [["",nil],["Yes",1],["No",0]],{}, :style => "width:auto") %>
 					<ol type="a">
 						<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu1year_fuq_3a, :style => "width:auto" %> <i>(days)</i></li>

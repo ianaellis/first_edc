@@ -65,26 +65,67 @@ class SubjectsController < ApplicationController
   # PUT /subjects/1
   # PUT /subjects/1.json
   def update
-    session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
-    @subject = Subject.find(params[:id])
-    @subject.current_step = session[:subject_step]
-    if params[:back_button]
-      @subject.previous_step
-    else
-      @subject.next_step
-    end
-    # Maintaines current position in array of steps
-    session[:subject_step] = @subject.current_step
+    # Update function for Baseline
+    if @title = 'Baseline'
+      session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
+      @subject = Subject.find(params[:id])
+      @subject.current_step = session[:subject_step]
+      if params[:back_button]
+        @subject.previous_step
+      else
+        @subject.next_step
+      end
+      # Maintaines current position in array of steps
+      session[:subject_step] = @subject.current_step
 
-    if params[:submit_button]
-      @subject.update_attributes(params[:subject])
-      session[:subject_step] = session[:subject_params] = nil
-      flash[:notice] = "Subject Information Saved"
-      redirect_to @subject
+      if params[:submit_button]
+        @subject.update_attributes(params[:subject])
+        session[:subject_step] = session[:subject_params] = nil
+        flash[:notice] = "Subject Information Saved"
+        redirect_to subjects_url
+      else
+        @subject.update_attributes(params[:subject])
+        render 'baseline'
+        flash[:notice] = "You are here!"
+      end
+    # Update function for Treatment Completion
+    elsif @title = 'Treatment Completion'
+      redirect_to subjects_path
     else
-      @subject.update_attributes(params[:subject])
-      render 'baseline'
+
     end
+
+
+
+    # For lack of a better method, I'm putting all of my update parameters in this function.
+    # The Following is a working update method for Baseline, but nothing else.
+
+    # session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
+    # @subject = Subject.find(params[:id])
+    # @subject.current_step = session[:subject_step]
+    # if params[:back_button]
+    #   @subject.previous_step
+    # else
+    #   @subject.next_step
+    # end
+    # # Maintaines current position in array of steps
+    # session[:subject_step] = @subject.current_step
+
+    # if params[:submit_button]
+    #   @subject.update_attributes(params[:subject])
+    #   session[:subject_step] = session[:subject_params] = nil
+    #   flash[:notice] = "Subject Information Saved"
+    #   redirect_to subjects_url
+    # else
+    #   @subject.update_attributes(params[:subject])
+    #   if @title = 'Baseline'
+    #     render 'baseline'
+    #     flash[:notice] = "You are here!"
+    #   elsif @title = 'Treatment Completion'
+    #     redurect_ti subjects_url
+    #     flash[:notice] = "You are here!"
+    #   end
+    # end
 
 
     # respond_to do |format|

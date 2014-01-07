@@ -17,12 +17,25 @@ class Subject < ActiveRecord::Base
 
    attr_writer :current_step
 
+   # VALIDATIONS
+   # Screening Validations
+   
+
    def current_step
    	@current_step || steps.first
    end
 
    def steps
-   	%w[sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis cognitive comorbidity pain mspss audit ]
+      # if @title == 'Baseline'
+   	  #  %w[sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis cognitive comorbidity pain mspss audit ]
+      # elsif @title == 'Treatment Completion'
+      #    %w[smfa phq whoqol_bref positive_negative pam spsir ssscq prosthesis pain complications mspss audit ptcs accessing_resources satisfaction ]
+      # else
+      #     # %w[sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis cognitive comorbidity pain mspss audit ]
+      #    %w[]
+      # end
+      %w[sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis cognitive comorbidity pain mspss audit ]
+
    end
 
    def next_step
