@@ -66,7 +66,7 @@ class SubjectsController < ApplicationController
   # PUT /subjects/1.json
   def update
     # Update function for Baseline
-    if @title = 'Baseline'
+    if @past_title = 'Baseline'
       session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
       @subject = Subject.find(params[:id])
       @subject.current_step = session[:subject_step]
