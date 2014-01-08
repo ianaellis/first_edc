@@ -86,7 +86,7 @@ class SubjectsController < ApplicationController
       else
         @subject.update_attributes(params[:subject])
         render 'baseline'
-        flash[:notice] = "You are here!"
+        # flash[:notice] = "You are here!"
       end
     # Update function for Treatment Completion
     elsif @title = 'Treatment Completion'
