@@ -19,5 +19,3 @@
 //= require bootstrap/dropdown
 //= require_tree .
 
-
-// $('#baselineForm').formToWizard();
