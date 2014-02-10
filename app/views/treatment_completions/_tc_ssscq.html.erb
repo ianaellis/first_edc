@@ -1,0 +1,77 @@
+<h2>Single Statement Stages of Change Questionnaire</h2>
+<p><i>These next questions help us better understand the way you view your amputation-related problems. Each statement describes how you may feel about these particular problems. After I read the statement, please tell me if you agree or disagree with the statement. Okay?</i></p>
+
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Response</th>
+	</tr>
+	<tr>
+		<td>There is nothing I can do to manage my amputation-related problems without medication or other medical intervention.</td>
+		<td><%= select(:tc, :tc_soc_1,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+
+	<tr>
+		<td>I'm not sure whether I should rely on medical solutions for my amputation-related problems, or should realize that I need to manage the problems.</td>
+		<td><%= select(:tc, :tc_soc_2,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>While my doctor can help, managing my amputation-related problems is up to me, and I am ready to begin to learn to deal with it.</td>
+		<td><%= select(:tc, :tc_soc_3,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>I am actively learning to manage my amputation-related problems, but I still have a long way to go.</td>
+		<td><%= select(:tc, :tc_soc_4,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>I am sure about my ability to manage my amputation-related problems myself.</td>
+		<td><%= select(:tc, :tc_soc_5,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+	<tr>
+		<td>Now, of the five statements I just read, please pick the one statement that best describes how you feel right now. Would you like me to read the statements again?</td>
+		<td><%= select(:tc, :tc_soc_6,
+			[["",nil],
+			["Strongly Disagree",1],
+			["Disagree",2],
+			["Undecided or Unsure",3],
+			["Agree",4],
+			["Strongly Disagree",5]]) %>
+		</td>
+	</tr>
+
+</table>

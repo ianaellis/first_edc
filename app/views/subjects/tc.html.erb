@@ -5,31 +5,14 @@
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<%= form_for(@subject) do |f| %>
 
-			<%= render 'tc_smfa'%>
-			<%= render 'tc_phq' %>
-			<%= render 'tc_whoqol_bref' %>
-			<%= render 'tc_positive_negative' %>
-			<%= render 'tc_pam' %>
-			<%= render 'tc_spsir' %>
-			<%= render 'tc_ssscq' %>
-			<%= render 'tc_prosthesis', :f => f %>
-			<%= render 'tc_pain' %>
-			<%= render 'tc_complications', :f => f %>
-			<%= render 'tc_mspss' %>
-			<%= render 'tc_audit' %>
-			<%= render 'tc_ptcs' %>
-			<%= render 'tc_accessing_resources', :f => f %>
-			<%= render 'tc_satisfaction', :f => f %>
-		<!--	
+			<%= render "tc_#{@subject.current_step}", :f => f %>
+
 			<div style="width:300px; margin:auto;">
 				<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @subject.first_step? %>
 				<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @subject.last_step? %>
 				<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
 			<div>
 
-			-->
-
-			<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 		<% end %>
 	</div>
 </div>

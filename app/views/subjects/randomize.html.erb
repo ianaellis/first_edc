@@ -3,12 +3,16 @@
 		<h2>Create New Group</h2>
 			<center>Here you can create a new group by entering a group size (6-10) and selecting the correct study site.</center>
 			<br/>
-		<div class="span6 offset3 center" style="width:300px; margin:auto;">
-			
-			<div>
-				Enter Group Size: <%= number_field_tag(:group_size)%>
-				Select Study Site: <%= select %>
+
+		<%= form_tag({controller: "subjects", action: "randomize"}, method: "post") do %>
+			<div class="span6 offset3 center" style="width:300px; margin:auto;">
+				<div>
+					Enter Group Size: <%= number_field_tag(:group_size_input)%>
+					Select Study Site: <%= number_field_tag(:site_input) %>
+					Group Name: <%= text_field_tag(:treatment_group_name) %>
+				</div>
 			</div>
-		</div>
+			<%= submit_tag "hi" %>
+		<% end %>
 	</div>
 </div>	

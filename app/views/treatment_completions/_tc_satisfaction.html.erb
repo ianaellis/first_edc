@@ -1,0 +1,29 @@
+<h2>Satisfaction</h2>
+<p><i>I would like to begin by asking you some questions about your satisfaction with the PALS group meetings.</i></p>
+
+<ol>
+	<p><i>0 means the classes were not at all helpful and 10 means the classes were very helpful.</i></p>
+	<li>On a scale of 0 to 10, how helpful were the PALS classes?</li>
+	<%= select(:tc, :tc_sat_1, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused",11],["Don't know",12]], {}, :style => "width:auto") %>
+	<p><i>0 means not at all successful and 10 means extremely successful</i></p>
+	<li>On a scale of 0 to 10, how successful do you feel the PALS course is in helping you manage your mood?</li>
+	<%= select(:tc, :tc_sat_2, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused",11],["Don't know",12]], {}, :style => "width:auto") %>
+	<li>On a scale of 0 to 10, how successful do you feel the PALS course is in helping you manage the pain related to limb loss?</li>
+	<%= select(:tc, :tc_sat_3, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused",11],["Don't know",12]], {}, :style => "width:auto") %>
+	<li>On a scale of 0 to 10, how successful do you feel the PALS course is in helping you manage other problems related to your limb loss?</li>
+	<%= select(:tc, :tc_sat_4, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused",11],["Don't know",12]], {}, :style => "width:auto") %>
+	<li>How confident are you that the PALS course will be successful in helping you improve the quality of your life?</li>
+	<%= select(:tc, :tc_sat_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused",11],["Don't know",12]], {}, :style => "width:auto") %>
+	<li>How would you rate the overall benefit you received from participating in the PALS classes, taking into account the effort you put into it? Would you say…</li>
+	<%= select(:tc, :tc_sat_6, [["",nil],["The benefits far outweighed the effort",1],["The benefits somewhat outweighed the effort",2],["The benefits equaled the effort you put into it",3],["The effort somewhat outweighed the benefits",4],["The effort far outweighed the benefits",5]], {}, :style => "width:auto") %> <i>(Read options)</i>
+	<li>Would you recommend participating in the PALS classes to a friend with limb loss?</li>
+	<%= select(:tc, :tc_sat_7,[["",nil],["Yes",1],["No",0]],{}, :style => "width:auto") %>
+	<li>Based on your experience with limb loss, when do you think it would be most helpful for others to take the PALS course. Would you say it would be most helpful…</li>
+	<%= select(:tc, :tc_sat_8, [["",nil],["In the first 3 months following limb loss",1],["3-6 months following limb loss",2],["6-12 months following limb loss",3],["After one year or more",4],["It would not be helpful",5]], {}, :style => "width:auto") %> <i>(Read responses)</i>
+	<li>Compared to the benefit of participating in a typical Peer Support Group, how helpful is a course like PALS? Would you say it is…</li>
+	<%= select(:tc, :tc_sat_9, [["",nil],["Much more helpful",1],["Somewhat more helpful",2],["As helpful",3],["Somewhat less helpful",4],["Much less helpful",5],["Have you never attended a peer support group outside of PALS",6]], {}, :style => "width:auto") %>
+	<li>When you think about other services available to help people manage the loss of a limb, how would you rank the importance of a course like PALS? Would you say it is…</li>
+	<%= select(:tc, :tc_sat_10, [["",nil],["Much more important",1],["Somewhat more important",2],["As important",3],["Somewhat less important",4],["Much less important",5]], {}, :style => "width:auto") %>
+	<li>In the year prior to joining the study, about how many times altogether did you attend meetings of a peer support group for people with limb loss?</li>
+	<%= f.number_field :tc_sat_11, :style => "width:auto" %>
+</ol>

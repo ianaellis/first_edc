@@ -1,18 +1,15 @@
 FirstEdc::Application.routes.draw do
-  # get "subject/index"
 
-  # get "subject/new"
-
-  # get "subject/create"
-
-  # get "subject/show"
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  # resources :subjects, only: [:new, :create, :destroy]
+  resources :baselines
+  resources :treatment_completions
   resources :subjects do
+    resources :baselines
+    resources :treatment_completions
     match '/screening', to: 'subjects#screening', as: :screening
-    match '/baseline', to: 'subjects#baseline', as: :baseline
+    match '/baseline', to: 'baselines#baseline', as: :baseline #Allows for display of Subjects? Why?
     match '/tc', to: 'subjects#tc', as: :tc
     match '/fu3week', to: 'subjects#fu3week', as: :fu3week
     match '/fu6week', to: 'subjects#fu6week', as: :fu6week
@@ -20,7 +17,7 @@ FirstEdc::Application.routes.draw do
     match '/fu6month', to: 'subjects#fu6month', as: :fu6month
     match '/fu1year', to: 'subjects#fu1year', as: :fu1year
   end
-  resources :subjects
+  # match '/newbaseline', to: 'baselines#new'
   
 
 
@@ -41,6 +38,8 @@ FirstEdc::Application.routes.draw do
   match '/showsubject', to: 'subjects#show'
   match '/editsubject', to: 'subjects#edit'
   match '/randomize', to: 'subjects#randomize'
+  match '/screening_log', to: 'subjects#screening_log'
+
 
   # match '/populate_values', to: 'subjects#screening'
 

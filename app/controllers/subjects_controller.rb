@@ -9,14 +9,13 @@ class SubjectsController < ApplicationController
     #   format.json { render json: @subjects }
     # end
     @subjects = Subject.paginate(page: params[:page])
+    # @baselines = Baseline.all
   end
 
-  # def screening
-  #   @subject = Subject.find(params[:id])
-  # end
-  
-  # GET /subjects/1
-  # GET /subjects/1.json
+  def screening_log 
+    @subjects = Subject.paginate(page: params[:page])
+  end
+
   def show
     @subject = Subject.find(params[:id])
      
@@ -46,10 +45,6 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = Subject.new(params[:subject])
-    # @subject.current_step = session[:subject_step]
-    # @subject.next_step
-    # session[:subject_step] = @subject.current_step
-    # render 'new'
 
     respond_to do |format|
       if @subject.save
@@ -65,79 +60,14 @@ class SubjectsController < ApplicationController
   # PUT /subjects/1
   # PUT /subjects/1.json
   def update
-    # Update function for Baseline
-    if @past_title = 'Baseline'
-      session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
-      @subject = Subject.find(params[:id])
-      @subject.current_step = session[:subject_step]
-      if params[:back_button]
-        @subject.previous_step
-      else
-        @subject.next_step
-      end
-      # Maintaines current position in array of steps
-      session[:subject_step] = @subject.current_step
+    @subject = Subject.find(params[:id])
 
-      if params[:submit_button]
-        @subject.update_attributes(params[:subject])
-        session[:subject_step] = session[:subject_params] = nil
-        flash[:notice] = "Subject Information Saved"
-        redirect_to subjects_url
-      else
-        @subject.update_attributes(params[:subject])
-        render 'baseline'
-        # flash[:notice] = "You are here!"
-      end
-    # Update function for Treatment Completion
-    elsif @title = 'Treatment Completion'
-      redirect_to subjects_path
+    if @subject.update_attributes(params[:subject])
+      flash[:success] = "Subject Screening Log Submitted."
+      redirect_to @subject
     else
-
+      render 'edit'
     end
-
-
-
-    # For lack of a better method, I'm putting all of my update parameters in this function.
-    # The Following is a working update method for Baseline, but nothing else.
-
-    # session[:subject_params].deep_merge!(params[:subject]) if params[:subject_id]
-    # @subject = Subject.find(params[:id])
-    # @subject.current_step = session[:subject_step]
-    # if params[:back_button]
-    #   @subject.previous_step
-    # else
-    #   @subject.next_step
-    # end
-    # # Maintaines current position in array of steps
-    # session[:subject_step] = @subject.current_step
-
-    # if params[:submit_button]
-    #   @subject.update_attributes(params[:subject])
-    #   session[:subject_step] = session[:subject_params] = nil
-    #   flash[:notice] = "Subject Information Saved"
-    #   redirect_to subjects_url
-    # else
-    #   @subject.update_attributes(params[:subject])
-    #   if @title = 'Baseline'
-    #     render 'baseline'
-    #     flash[:notice] = "You are here!"
-    #   elsif @title = 'Treatment Completion'
-    #     redurect_ti subjects_url
-    #     flash[:notice] = "You are here!"
-    #   end
-    # end
-
-
-    # respond_to do |format|
-    #   if @subject.update_attributes(params[:subject])
-    #     format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
-    #     format.json { head :no_content }
-    #   else
-    #     format.html { render action: "edit" }
-    #     format.json { render json: @subject.errors, status: :unprocessable_entity }
-    #   end
-
-    # end
 
   end
 
@@ -146,12 +76,6 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:subject_id])
   end
 
-  def baseline
-    @subject = Subject.find(params[:subject_id])
-    session[:subject_params] ||= {}
-
-    
-  end
 
   def tc
     @subject = Subject.find(params[:subject_id])
@@ -190,7 +114,45 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def randomize
+    # puts params.inspect
+    @site = params[:site_input]
+    @group_size = params[:group_size_input]
+    # @treatment_group_name = params[:treatment_group_name]
+    @rand_num = rand(999)
+    @treatment = '0'
 
+    # Create random assignment variable
+    if @rand_num < 500
+      @treatment = '1'
+    else
+      @treatment = '2'
+    end
+    flash[:notice] = "Made it to the randomize block"
+    if (@group.to_i >= 6) || (@group.to_i <= 10)
+      # Subject.find_by_sql("SELECT * FROM Subject WHERE ")
+      
+      flash[:notice] = "We are at the database level."
+      # @new_group = Subject.where("study_site = ?  AND treatment_group is null", params[:site_input].to_i).order('created_at ASC').limit(@group_size)
+      # flash[:notice] = @new_group.inspect
+      # @new_group.update_all(["treatment_group = ? AND pref_rand = ?", params[:treatment_group_name].to_i, @treatment.to_i])
+      # @new_group.treatment_group.inspect
+      
+      
+      # SELECT * FROM Subject WHERE subject_id >= 1000 
+      #                             and subject_id < 2000
+      #                             and group_variable == nill
+      #                       ORDER BY created_at ASC
+      #                       LIMIT @group
+
+      # retreive @group from database
+      # select @group from subjects where date is the oldest and subject does not already have a group number
+      # assign each record in @group a @treatment and @group_name
+    else
+      flash[:notice] = @group
+      # bad range of numbers entered
+    end
+  end
   
 
   # def populate_values

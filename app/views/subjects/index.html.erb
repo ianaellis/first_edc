@@ -26,8 +26,20 @@
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Portland" : "nil"%></td>
           <td><%= link_to "edit", edit_subject_path(sub) %></td>
           <td><%= link_to "edit", subject_screening_path(sub) %></td>
-          <td><%= link_to "edit", subject_baseline_path(sub) %></td>
-          <td><%= link_to "edit", subject_tc_path(sub) %></td>
+
+
+          <% if Baseline.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", baseline_path([Baseline.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= Baseline.create(subject_id: sub.subject_id) %>
+          <% end %> 
+
+          <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", treatment_completion_path([TreatmentCompletion.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= TreatmentCompletion.create(subject_id: sub.subject_id) %>
+          <% end %>
+
           <td><%= link_to "edit", subject_fu3week_path(sub) %></td>
           <td><%= link_to "edit", subject_fu6week_path(sub) %></td>
           <td><%= link_to "edit", subject_fu18week_path(sub) %></td>

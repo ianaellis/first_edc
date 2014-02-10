@@ -1,0 +1,60 @@
+<h2>Comorbidity Questions</h2>
+	<p><i>Information will be verified in the medical record.</i></p>
+	<ol>
+		<li>Has the patient had (or have now):
+			<ol type="a">
+				<li>Dialysis <%= select(:baseline, :base_cq_1a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>Lower Extremity Arterial Reconstruction (stents, angioplasty, bypass, etc.)? <%= select(:baseline, :base_cq_1b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<ol type="i"><li>Side: <%= select(:baseline, :base_cq_1b_side, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li></ol>
+				</li>
+				<li>Traumatic Head Injury/Brian Injury(loss of conscious > 1 minute)? <%= select(:baseline, :base_cq_1c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>Joint Replacement <%= select(:baseline, :base_cq_1d, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<ol type="i"><li>Joint: <%= select(:baseline, :base_cq_1d_joint, [["",nil],["Hip",1],["Knee",2],["Both",3]], {}, :style => "width:70px") %></li></ol>
+				</li>
+				<li>Hypertension <%= select(:baseline, :base_cq_1e, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+				<li>PTSD <%= select(:baseline, :base_cq_1f, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+				<li>Cancer <%= select(:baseline, :base_cq_1g, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+			</ol>
+		</li>
+		<li>Did patient answer yes to previous question on diabetes? <%= select(:baseline, :base_cq_2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+		<ol type="a">
+			<li>If Yes, for how many years have you had diabetes? <%= number_field(:baseline, :base_cq_2a, :style => "width:70px") %></li>
+		</ol>
+		<li>Psychological Factors</li>
+		<ol type="a">
+			<li>Have you ever been treated for depression or anxiety? <%= select(:baseline, :base_cq_3a, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Have you participated in any therapy (individual or group) with a psychologist, psychiatrist, counselor, or social worker in the last 3 months? <%= select(:baseline, :base_cq_3b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Have you participated in any peer visits? <%= select(:baseline, :base_cq_3c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+			<li>Are you taking any medications for your mood? <%= select(:baseline, :base_cq_3d, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+		</ol>
+		<h3>General Health</h3>
+		<li>In general, would you say your health is: <%= select(:baseline, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5]], {}, :style => "width:70px") %></li>
+		<h3>Quality of Life (QoL)</h3>
+		<li>All things considered in the last month, how would you rate your overall quality of life? <%= select(:baseline, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
+		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:baseline, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li>
+		<li>What level is (or was) the amputation? <%= select(:baseline, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:70px") %></li>
+		<li>Was the surgery an initial or revision amputation? <%= select(:baseline, :base_cq_7, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
+		<li>Time since amputation: <%= number_field(:baseline, :base_cq_8, :style => "width:70px") %> (days)</li>
+		<li>Contralateral limb side (limb without recent amputation surgery)
+			<ol type="a">
+				<li>In the limb not awaiting surgery, does the subject have:
+					<ol type="1">
+						<li>Claudication: Do you have pain in the calf while walking? <%= select(:baseline, :base_cq_10_a1, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have poor circulation (foot always cold and discolored)? <%= select(:baseline, :base_cq_10_a2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have pain in the joints when you walk? <%= select(:baseline, :base_cq_10_a3, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Loss of sensation: do you have numbness in your foot? <%= select(:baseline, :base_cq_10_a4, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have a wound or sores on your foot? <%= select(:baseline, :base_cq_10_a5, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>Do you have any other condition affecting your leg not being operated on? <%= select(:baseline, :base_cq_10_a6, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+						<li>None of the above? <%= select(:baseline, :base_cq_10_a7, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+					</ol>
+				</li>
+				<li>If YES to any of the above, do these conditions affect your ability to walk? <%= select(:baseline, :base_cq_10_b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %></li>
+				<li>If patient responds YES to item 10.a.6, ask - "Do you have an amputation on your other leg?" <%= select(:baseline, :base_cq_10_c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:70px") %>
+					<br/><i>If yes, mark previous contralateral amputation type and level.</i>
+					<br/>Level: <%= select(:baseline, :base_cq_10_c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:auto") %></li>
+					<br/>Type: <%= select(:baseline, :base_cq_10_c_type, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
+				</li>
+			</ol>
+		</li>
+
+	</ol>

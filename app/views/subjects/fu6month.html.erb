@@ -1,23 +1,18 @@
+<% provide(:title, '6 Month') %>
 <div class="row">
 	<div class="span6 offset3">
 		<h1>6-Month Follow Up</h1>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<%= form_for(@subject) do |f| %>
-			<%= render 'fu6month_smfa' %>
-			<%= render 'fu6month_phq' %>
-			<%= render 'fu6month_whoqol_bref' %>
-			<%= render 'fu6month_positive_negative' %>
-			<%= render 'fu6month_mses_self' %>
-			<%= render 'fu6month_pam' %>
-			<%= render 'fu6month_spsir' %>
-			<%= render 'fu6month_ssscq' %>
-			<%= render 'fu6month_prosthesis', :f => f %>
-			<%= render 'fu6month_pain' %>
-			<%= render 'fu6month_complications', :f => f %>
-			<%= render 'fu6month_mspss' %>
-			<%= render 'fu6month_audit' %>
 
-			<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+			<%= render "fu6month_#{@subject.current_step}", :f => f %>
+
+			<div style="width:300px; margin:auto;">
+				<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @subject.first_step? %>
+				<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @subject.last_step? %>
+				<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
+			<div>
+
 		<% end %>
 	</div>
 </div>

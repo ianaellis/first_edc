@@ -1,0 +1,15 @@
+<h1>Add Treatment Completion</h1>
+<div class="row">
+	<div class="span6 offset3">
+		<div class="span6 offset3" style="width:300px; margin:auto;">
+			<%= form_for @tc do |f| %>
+			    <p>Subject Number:</p>
+			    <%= f.number_field :subject_id %>
+			    <%= f.submit "Save Subject", class: "btn btn-large btn-primary" %>
+			<% end %> 
+		</div>
+	</div>
+</div>
+
+
+<%= link_to 'Back', subjects_path %>

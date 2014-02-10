@@ -1,0 +1,2 @@
+module TreatmentCompletionsHelper
+end

@@ -1,0 +1,139 @@
+<h2>Patient Activation Measure</h2>
+	<p><i>I now would like to talk with you about your personal style for managing health problems.</i></p>
+	<p><i>For each question, I'm going to read you a statement that might describe how someone might describe the way that they manage their health problems. After I read each statement, I would like you to tell me if you agree or disagree with the statement.</i></p>
+	<table>
+		<tr>
+			<th>Question</th>
+			<th>Response</th>
+		</tr>	
+		<tr>
+			<td>1. When all is said and done, I am the person who is responsible for managing my health condition.</td>
+			<td><%= select(:baseline, :base_pam_1,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>2. Taking an active role in my own healthcare is the most important factor in determining my health and ability to function.</td>
+			<td><%= select(:baseline, :base_pam_2,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>3. I am confident that I can take actions that will help prevent or minimize some symptoms or problems associated with my health condition.</td>
+			<td><%= select(:baseline, :base_pam_3,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>4. I know what each of my prescribed medications does.</td>
+			<td><%= select(:baseline, :base_pam_4,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>5. I am confident that I can tell when I need to get medical care and when I can handle a health problem myself.</td>
+			<td><%= select(:baseline, :base_pam_5,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>6. I am confident I can tell my health care provider concerns I have even when he or she does not ask.</td>
+			<td><%= select(:baseline, :base_pam_6,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>7. I am confident that I can follow through on medical treatments I need to do at home.</td>
+			<td><%= select(:baseline, :base_pam_7,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>8. I understand the nature and causes of my health condition(s).</td>
+			<td><%= select(:baseline, :base_pam_8,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>9. I know the different medical treatment options available for my health condition.</td>
+			<td><%= select(:baseline, :base_pam_9,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>10. I have been able to maintain the lifestyle changes for my health that I have made.</td>
+			<td><%= select(:baseline, :base_pam_10,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>11. I know how to prevent further problems with my health condition.</td>
+			<td><%= select(:baseline, :base_pam_11,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>12. I am confident I can figure out solutions when new situations or problems arise with my health conditon.</td>
+			<td><%= select(:baseline, :base_pam_12,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+		<tr>
+			<td>13. I am confident that I can maintain lifestyle changes like diet and exercise even during times of stress.</td>
+			<td><%= select(:baseline, :base_pam_13,
+			[["",nil],
+			["Not applicable",1],
+			["Strongly disagree",2],
+			["Disagree",3],
+			["Agree",4],
+			["Strongly agree",5]]) %></td>
+		</tr>
+	</table>
