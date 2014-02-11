@@ -16,7 +16,6 @@
         <th>18 Week Follow Up</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Follow Up</th>
-        <th>Treatment Group</th>
       </tr>
     </thead> 
     <tbody>
@@ -40,12 +39,35 @@
             <%= TreatmentCompletion.create(subject_id: sub.subject_id) %>
           <% end %>
 
-          <td><%= link_to "edit", subject_fu3week_path(sub) %></td>
-          <td><%= link_to "edit", subject_fu6week_path(sub) %></td>
-          <td><%= link_to "edit", subject_fu18week_path(sub) %></td>
-          <td><%= link_to "edit", subject_fu6month_path(sub) %></td>
-          <td><%= link_to "edit", subject_fu1year_path(sub) %></td>
-          <td><%= sub.treatment_group %></td>
+          <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", follow_up3_week_path([FollowUp3Week.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= FollowUp3Week.create(subject_id: sub.subject_id) %>
+          <% end %>
+
+          <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", follow_up6_week_path([FollowUp6Week.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= FollowUp6Week.create(subject_id: sub.subject_id) %>
+          <% end %>
+
+          <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", follow_up18_week_path([FollowUp18Week.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= FollowUp18Week.create(subject_id: sub.subject_id) %>
+          <% end %>
+
+          <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", follow_up6_month_path([FollowUp6Month.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= FollowUp6Month.create(subject_id: sub.subject_id) %>
+          <% end %> 
+
+          <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", follow_up1_year_path([FollowUp1Year.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= FollowUp1Year.create(subject_id: sub.subject_id) %>
+          <% end %>
         </tr> 
       <% end %>
     </tbody>

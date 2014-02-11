@@ -1,0 +1,2 @@
+module FollowUp6MonthsHelper
+end

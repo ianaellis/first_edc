@@ -1,0 +1,22 @@
+<% provide(:title, '6 Month') %>
+<div class="row">
+	<div class="span6 offset3">
+		<h1>6 Month Follow Up</h1>
+		<h2>Subject ID: <%= @followup6month.subject_id %></h2>
+		<!-- http://railscasts.com/episodes/217-multistep-forms -->
+		<%= form_for @followup6month do |f| %>
+
+			<%= render "fu6month_#{@followup6month.current_step}", :f => f %>
+
+			<div style="width:300px; margin:auto;">
+				<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @followup6month.first_step? %>
+				<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @followup6month.last_step? %>
+				<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
+			<div>
+
+		<% end %>
+	</div>
+</div>
+
+<%= link_to 'Show', @subject %> |
+<%= link_to 'Back', subjects_path %>

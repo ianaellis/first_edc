@@ -16,8 +16,10 @@ class BaselinesController < ApplicationController
     @baseline = Baseline.find(params[:id])
     @baseline.current_step = session[:baseline_step]
     if params[:back_button]
+      @baseline.update_attributes(params[:baseline])
       @baseline.previous_step
     else
+      @baseline.update_attributes(params[:baseline])
       @baseline.next_step
     end
     if params[:submit_button]
@@ -27,7 +29,7 @@ class BaselinesController < ApplicationController
         flash[:notice] = "Did not save baseline, could not update attributes"
       end
       session[:baseline_step] = session[:baseline_params] = nil
-      redirect_to baseline_url
+      redirect_to subjects_url
     else
       session[:baseline_step] = @baseline.current_step
       render "show"

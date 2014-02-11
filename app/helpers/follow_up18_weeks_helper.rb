@@ -1,0 +1,2 @@
+module FollowUp18WeeksHelper
+end

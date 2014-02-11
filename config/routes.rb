@@ -5,9 +5,20 @@ FirstEdc::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :baselines
   resources :treatment_completions
+  resources :follow_up3_weeks
+  resources :follow_up6_weeks
+  resources :follow_up18_weeks
+  resources :follow_up6_months
+  resources :follow_up1_years
+
   resources :subjects do
     resources :baselines
     resources :treatment_completions
+    resources :follow_up3_weeks
+    resources :follow_up6_weeks
+    resources :follow_up18_weeks
+    resources :follow_up6_months
+    resources :follow_up1_years
     match '/screening', to: 'subjects#screening', as: :screening
     match '/baseline', to: 'baselines#baseline', as: :baseline #Allows for display of Subjects? Why?
     match '/tc', to: 'subjects#tc', as: :tc
