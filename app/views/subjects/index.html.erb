@@ -16,6 +16,7 @@
         <th>18 Week Follow Up</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Follow Up</th>
+        <th>Treatment Group</th>
       </tr>
     </thead> 
     <tbody>
@@ -68,6 +69,7 @@
           <% else %>
             <%= FollowUp1Year.create(subject_id: sub.subject_id) %>
           <% end %>
+          <td><%= sub.treatment_group.to_s %></td>
         </tr> 
       <% end %>
     </tbody>

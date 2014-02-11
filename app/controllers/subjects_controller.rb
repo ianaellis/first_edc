@@ -2,14 +2,7 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    # @subjects = Subject.all
-
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @subjects }
-    # end
     @subjects = Subject.paginate(page: params[:page])
-    # @baselines = Baseline.all
   end
 
   def screening_log 
@@ -18,22 +11,12 @@ class SubjectsController < ApplicationController
 
   def show
     @subject = Subject.find(params[:id])
-     
-    # respond_to do |format|
-    #   format.html # show.html.erb
-    #   format.json { render json: @subject }
-    # end
   end
 
   # GET /subjects/new
   # GET /subjects/new.json
   def new
     @subject = Subject.new
-
-    # respond_to do |format|
-    #   format.html # new.html.erb
-    #   format.json { render json: @subject }
-    # end
   end
 
   # GET /subjects/1/edit
@@ -77,31 +60,6 @@ class SubjectsController < ApplicationController
   end
 
 
-  def tc
-    @subject = Subject.find(params[:subject_id])
-    session[:subject_params] ||= {}
-  end
-  
-  def fu3week
-    @subject = Subject.find(params[:subject_id])
-  end
-
-  def fu6week
-    @subject = Subject.find(params[:subject_id])
-  end
-
-  def fu18week
-    @subject = Subject.find(params[:subject_id])
-  end
-  
-  def fu6month
-    @subject = Subject.find(params[:subject_id])
-  end
-
-  def fu1year
-    @subject = Subject.find(params[:subject_id])
-  end
-
   # DELETE /subjects/1
   # DELETE /subjects/1.json
   def destroy
@@ -115,24 +73,29 @@ class SubjectsController < ApplicationController
   end
 
   def randomize
-    # puts params.inspect
-    @site = params[:site_input]
-    @group_size = params[:group_size_input]
-    # @treatment_group_name = params[:treatment_group_name]
+
+    # Create random assignment variable
     @rand_num = rand(999)
     @treatment = '0'
 
-    # Create random assignment variable
     if @rand_num < 500
       @treatment = '1'
     else
       @treatment = '2'
     end
-    flash[:notice] = "Made it to the randomize block"
-    if (@group.to_i >= 6) || (@group.to_i <= 10)
-      # Subject.find_by_sql("SELECT * FROM Subject WHERE ")
+
+    if (params[:group_size_input].to_i >= 2 ) and (params[:group_size_input].to_i <= 10)
+      @group_to_randomize = Subject.where("study_site = ? AND treatment_group is null", params[:site_input].to_i).order("created_at ASC").limit(params[:group_size_input].to_i)
       
-      flash[:notice] = "We are at the database level."
+      flash[:notice] = "We are at the database level. #{@group_to_randomize.inspect}"
+      if params[:treatment_group_name] != '' and params[:site_input] != '' and params[:group_size_input] != ''
+        @group_to_randomize.update_all(treatment_group:params[:treatment_group_name], pref_rand: @treatment.to_i)
+        flash[:notice] = "Subjects randomized, and assigned to group #{params[:treatment_group_name]}"
+      else
+        flash[:notice] = "Nothing saved, please fill in the form completely."
+      end
+
+      # render "randomize"
       # @new_group = Subject.where("study_site = ?  AND treatment_group is null", params[:site_input].to_i).order('created_at ASC').limit(@group_size)
       # flash[:notice] = @new_group.inspect
       # @new_group.update_all(["treatment_group = ? AND pref_rand = ?", params[:treatment_group_name].to_i, @treatment.to_i])
@@ -149,7 +112,7 @@ class SubjectsController < ApplicationController
       # select @group from subjects where date is the oldest and subject does not already have a group number
       # assign each record in @group a @treatment and @group_name
     else
-      flash[:notice] = @group
+      flash[:notice] = "Did not meet pass the if statement"
       # bad range of numbers entered
     end
   end

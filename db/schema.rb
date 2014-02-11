@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140211005852) do
+ActiveRecord::Schema.define(:version => 20140211200310) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -626,7 +626,7 @@ ActiveRecord::Schema.define(:version => 20140211005852) do
     t.integer  "subject_id"
     t.integer  "study_site"
     t.integer  "pref_rand"
-    t.integer  "treatment_group"
+    t.string   "treatment_group"
     t.integer  "sc_smpsq_1"
     t.integer  "sc_smpsq_2"
     t.integer  "sc_smpsq_3"
@@ -673,7 +673,6 @@ ActiveRecord::Schema.define(:version => 20140211005852) do
     t.integer  "subject_id"
     t.integer  "study_site"
     t.integer  "pref_rand"
-    t.integer  "treatment_group"
     t.integer  "sc_smpsq_1"
     t.integer  "sc_smpsq_2"
     t.integer  "sc_smpsq_3"
@@ -721,6 +720,7 @@ ActiveRecord::Schema.define(:version => 20140211005852) do
     t.integer  "sc_inc_3"
     t.integer  "sc_inc_4"
     t.integer  "sc_inc_5"
+    t.string   "treatment_group"
   end
 
   create_table "treatment_completions", :force => true do |t|
