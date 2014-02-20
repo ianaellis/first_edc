@@ -1,0 +1,24 @@
+<% provide(:title, 'Permissions') %>
+<h1>User Permissions</h1>
+
+	<div class="row">
+		<div class="span6 offset3" style="width:300px; margin:auto;">
+			<%= form_for @user do |f| %>
+				<% if current_user.is? :admin %>
+					<% if can? :assign_roles, @user %>
+						<% for role in User::ROLES %>
+							<%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"} %>
+							<%= label_tag "user_roles_#{role}", role.humanize %><br />
+						<% end %>
+						<%= hidden_field_tag "user[roles][]", "" %>
+					<% end %>
+				<% end %>
+				<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+			<% end %>
+
+			<%= gravatar_for @user %>
+			<a href="http://gravatar.com/emails">change gravitar image</a>
+		</div>
+	</div>
+
+

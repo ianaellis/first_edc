@@ -1,5 +1,5 @@
 class BaselinesController < ApplicationController
-
+  load_and_authorize_resource
 	def new
 		# @baseline = Baseline.new
     session[:baseline_params] ||= {}
@@ -34,7 +34,6 @@ class BaselinesController < ApplicationController
       session[:baseline_step] = @baseline.current_step
       render "show"
     end
-
   end
   
   def baseline

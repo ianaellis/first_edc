@@ -1,4 +1,4 @@
-<%= form_for(@subject) do |f| %>
+<%= form_for @subject do |f| %>
   <!-- Look for errors -->
   <% if @subject.errors.any? %>
     <div id="error_explanation"></div>
@@ -16,7 +16,12 @@
     <p>Subject Number:</p>
     <%= f.number_field :subject_id %>
     <p>Study Site Number:</p>
-    <%= f.number_field :study_site %>
+    <%= f.select :study_site, [[' ', nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
+    <p>Enrolled</p>
+    <%= f.select :enrolled, [['', nil],["Yes",1],["No",0]] %>
+    <p>If subject not enrolled, select reason:</p>
+    <%= f.select :reason_not_enrolled, [['',nil],["Refused",0],["Not eligible",1],["Missed recruitment window",2],["Too ill",3],["Died before recruitment/interview",4],["Other",5]] %>
+    <%= f.text_field :reason_not_enrolled_other %>
 
     <%= f.submit "Save Subject", class: "btn btn-large btn-primary" %>
 <% end %> 

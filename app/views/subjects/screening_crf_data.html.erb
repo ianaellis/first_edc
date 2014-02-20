@@ -1,0 +1,96 @@
+<h1>Screening Data</h1>
+<p>Here you can view all Screening Log data that has been entered.</p>
+<br />
+<div class="screening_log_table">
+  <table id="screening_crf_data" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Subject ID</th>
+        <th>Study Site</th>
+        <th>Pref / Rand</th>
+        <th>Treatment Group</th>
+        <th>sc_smpsq_1</th>
+        <th>sc_smpsq_2</th>
+        <th>sc_smpsq_3</th>
+        <th>sc_smpsq_4</th>
+        <th>sc_smpsq_4a</th>
+        <th>sc_smpsq_5</th>
+        <th>sc_smpsq_6</th>
+        <th>sc_smpsq_7</th>
+        <th>sc_smpsq_8</th>
+        <th>sc_smpsq_9</th>
+        <th>sc_smpsq_10</th>
+        <th>sc_exc_1</th>
+        <th>sc_exc_2</th>
+        <th>sc_exc_3</th>
+        <th>sc_pd_1</th>
+        <th>sc_pd_1a</th>
+        <th>sc_pd_2</th>
+        <th>sc_pd_3</th>
+        <th>sc_pd_4</th>
+        <th>sc_pd_5</th>
+        <th>sc_pd_6</th>
+        <th>sc_pe_1</th>
+        <th>sc_pe_2</th>
+        <th>sc_pe_3</th>
+        <th>sc_pe_4</th>
+        <th>sc_pe_5</th>
+        <th>sc_ic_1</th>
+        <th>sc_ic_2</th>
+        <th>sc_ic_3</th>
+        <th>sc_ic_4</th>
+        <th>sc_ic_5</th>
+        <th>sc_is_1</th>
+        <th>sc_is_2</th>
+        <th>sc_is_3</th>
+        <th>sc_is_4</th>
+      </tr>
+    </thead> 
+    <tbody>
+      <% @subjects.each do |sub| %>
+        <tr>
+          <td><%= sub.subject_id %></td>
+          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil" %></td> 
+          <td><%= sub.pref_rand %></td>
+          <td><%= sub.treatment_group %></td>
+          <td><%= sub.sc_smpsq_1 %></td>
+          <td><%= sub.sc_smpsq_2 %></td>
+          <td><%= sub.sc_smpsq_3 %></td>
+          <td><%= sub.sc_smpsq_4 %></td>
+          <td><%= sub.sc_smpsq_4a %></td>
+          <td><%= sub.sc_smpsq_5 %></td>
+          <td><%= sub.sc_smpsq_6 %></td>
+          <td><%= sub.sc_smpsq_7 %></td>
+          <td><%= sub.sc_smpsq_8 %></td>
+          <td><%= sub.sc_smpsq_9 %></td>
+          <td><%= sub.sc_smpsq_10 %></td>
+          <td><%= sub.sc_exc_1 %></td>
+          <td><%= sub.sc_exc_2 %></td>
+          <td><%= sub.sc_exc_3 %></td>
+          <td><%= sub.sc_pd_1 %></td>
+          <td><%= sub.sc_pd_1a %></td>
+          <td><%= sub.sc_pd_2 %></td>
+          <td><%= sub.sc_pd_3 %></td>
+          <td><%= sub.sc_pd_4 %></td>
+          <td><%= sub.sc_pd_5 %></td>
+          <td><%= sub.sc_pd_6 %></td>
+          <td><%= sub.sc_pe_1 %></td>
+          <td><%= sub.sc_pe_2 %></td>
+          <td><%= sub.sc_pe_3 %></td>
+          <td><%= sub.sc_pe_4 %></td>
+          <td><%= sub.sc_pe_5 %></td>
+          <td><%= sub.sc_ic_1 %></td>
+          <td><%= sub.sc_ic_2 %></td>
+          <td><%= sub.sc_ic_3 %></td>
+          <td><%= sub.sc_ic_4 %></td>
+          <td><%= sub.sc_ic_5 %></td>
+          <td><%= sub.sc_is_1 %></td>
+          <td><%= sub.sc_is_2 %></td>
+          <td><%= sub.sc_is_3 %></td>
+          <td><%= sub.sc_is_4 %></td>
+
+        </tr> 
+      <% end %>
+    </tbody>
+  </table>
+<div>

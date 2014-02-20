@@ -16,6 +16,10 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 gem 'client_side_validations'
 
+#User authentication, including roles
+gem 'devise'
+gem 'cancan'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 # group :production do

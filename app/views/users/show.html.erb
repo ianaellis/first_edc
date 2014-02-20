@@ -7,19 +7,26 @@
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
+			<% @user.roles.each do |role| %>
+				| <%= role.camelize %>
+			<% end %>
+			
 			<hr>
 		</section>
 		<div class="user_profile">
-			<h2>Data Entry</h2>
+			<h2>Tools</h2>
 			<body>
 				<center>Here you will find links to the various tasks you are allowed access to.
 					<p><%= link_to "Add a new Patient", newsubject_path %></p>
-					<p><%= link_to "View Patients", subjects_path %></p>
 					<p><%= link_to "Randomize Group", randomize_path %></p>
+					<p><%= link_to "View Patients", subjects_path %></p>
 					<p><%= link_to "View Screening Log", screening_log_path %></p>
 				</center>
-
 			</body>
+			<h2>Data</h2>
+			<center>
+				<p><%= link_to "Screening Data", screening_crf_data_path %></p>
+			</center>
 		</div>
 	</aside>
 </div>

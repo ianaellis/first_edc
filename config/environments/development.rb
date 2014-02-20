@@ -33,9 +33,12 @@ FirstEdc::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
 
   # Allows for local precompilling --added by Ian
   # config.assets.prefix = '/dev-assets'
   config.serve_static_assets = false
+
+  # Default URL for devise --added by Ian
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

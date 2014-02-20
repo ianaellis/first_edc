@@ -16,7 +16,6 @@
         <th>18 Week Follow Up</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Follow Up</th>
-        <th>Treatment Group</th>
       </tr>
     </thead> 
     <tbody>
@@ -28,8 +27,10 @@
           <td><%= link_to "edit", subject_screening_path(sub) %></td>
 
 
-          <% if Baseline.where(subject_id: sub.subject_id).first != nil %>
-            <td><%= link_to "edit", baseline_path([Baseline.where(subject_id: sub.subject_id).first]) %></td>
+
+
+          <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
+            <td><%= link_to "edit", baseline_path([Baseline.where(subject_id: sub.subject_id).first]) %></td>               
           <% else %>
             <%= Baseline.create(subject_id: sub.subject_id) %>
           <% end %> 
@@ -69,7 +70,6 @@
           <% else %>
             <%= FollowUp1Year.create(subject_id: sub.subject_id) %>
           <% end %>
-          <td><%= sub.treatment_group.to_s %></td>
         </tr> 
       <% end %>
     </tbody>

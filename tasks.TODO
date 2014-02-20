@@ -1,12 +1,9 @@
 EDC:
-  ☐ User Table
-    ☐ Add variables to User Table
-      ☐ Permission Variables/User Roles
-        ☐ 
-      ☐ Create new table for permissions?
-  ☐ Randomization Scheme
-    ☐ Pages
-      ☐ Screening Page / New Subject?
-      ☐ Review current group
-        ☐ @note When group reaches X amount randomize that group
-      ☐ 
+
+User Authentication
+- Default all permissions to null.
+- Figure out what roles are allowed to see which pages.
+
+- Add authentication to every page
+
+- Make sure subjects are saved to groups, behind the scenes?

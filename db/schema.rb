@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140211200310) do
+ActiveRecord::Schema.define(:version => 20140220205604) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -711,8 +711,8 @@ ActiveRecord::Schema.define(:version => 20140211200310) do
     t.string   "sc_is_2"
     t.date     "sc_is_3"
     t.string   "sc_is_4"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.integer  "sc_inc_1"
     t.integer  "sc_inc_2"
     t.integer  "sc_inc_2a"
@@ -721,6 +721,9 @@ ActiveRecord::Schema.define(:version => 20140211200310) do
     t.integer  "sc_inc_4"
     t.integer  "sc_inc_5"
     t.string   "treatment_group"
+    t.integer  "enrolled"
+    t.integer  "reason_not_enrolled"
+    t.string   "reason_not_enrolled_other"
   end
 
   create_table "treatment_completions", :force => true do |t|
@@ -944,20 +947,28 @@ ActiveRecord::Schema.define(:version => 20140211200310) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",                    :default => false
-    t.boolean  "site_study_coordinator"
-    t.boolean  "project_coordinator"
-    t.boolean  "site_pi"
-    t.boolean  "lead_pi_sc"
-    t.boolean  "vetpals_facilitator"
-    t.boolean  "other_site_investigators"
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0,  :null => false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

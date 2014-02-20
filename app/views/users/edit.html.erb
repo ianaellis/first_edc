@@ -5,8 +5,8 @@
 		<div class="span6 offset3" style="width:300px; margin:auto;">
 			<%= form_for(@user) do |f| %>
 				<%= render 'fields', f: f %>
-				<% if current_user.admin? %>
-					<%= render 'admin_fields', f: f %>
+				<% if current_user.is? :admin %>
+					Place holder
 				<% end %>
 				<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 			<% end %>

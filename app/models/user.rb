@@ -1,30 +1,34 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
-#
-
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators
-  has_secure_password
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # has_and_belongs_to_many :roles
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+  attr_accessible :roles
 
-  before_save { |user| user.email = email.downcase }
-  before_save :create_remember_token
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators
+  # attr_accessible :title, :body
 
-  validates :name, presence: true, length: { maximum: 50 }
-  VALID_EMAIL_REGEX = /^[+_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/i
-# /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, length: { minimum: 6 }
-  validates :password_confirmation, presence: true
+  ####
+  # Role Based Association 
+  # https://github.com/ryanb/cancan/wiki/Role-Based-Authorization
+  ####
+  ROLES = %w[admin site_study_coordinator project_coordinator site_pi lead_pi_sc vetpals_facilitator other_site_investigators]
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.inject(0, :+)
+  end
 
-  private
-  	def create_remember_token
-  		self.remember_token = SecureRandom.urlsafe_base64
-  	end
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask.to_i || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+
+  def is?(role)
+    roles.include?(role.to_s)
+  end
+
+  ####
 end
