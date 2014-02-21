@@ -19,7 +19,7 @@
     <%= f.select :study_site, [[' ', nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
     <p>Enrolled</p>
     <%= f.select :enrolled, [['', nil],["Yes",1],["No",0]] %>
-    <p>If subject not enrolled, select reason:</p>
+    <div id="not_enrolled"><p>If subject not enrolled, select reason:</p></div>
     <%= f.select :reason_not_enrolled, [['',nil],["Refused",0],["Not eligible",1],["Missed recruitment window",2],["Too ill",3],["Died before recruitment/interview",4],["Other",5]] %>
     <%= f.text_field :reason_not_enrolled_other %>
 
