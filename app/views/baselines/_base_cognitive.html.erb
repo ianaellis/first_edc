@@ -2,7 +2,7 @@
 	<h3>RBANS-List Learning(Verbal Memory)</h3>
 	<p><i>Trial 1: I am going to read you a list of words. I want you to listen carefully and, when I finish, repeat back as many words as you can. You don't have to say them in the same order that I do - just repeat back as many words as you can remember, in any order. Okay?</i></p>
 	<p><i>Trials 2-4: I am going to read the list again. When I finish, repeat back as many words as you can, even if you have already said them before. Okay?</i></p>
-	<table>
+	<table style="margin:auto">
 		<tr>
 			<th>List</th>
 			<th>Trial 1</th>
@@ -83,15 +83,164 @@
 	</table>
 
 	<h3>Controlled Word Association Test</h3>
-	<p>Not sure how to make this form in a useful manner.</p>
+	<div id="cowat_table">
+		<div id="cowat_table_instructions">
+			<p>Directions: I am going to give you one letter of the alphabet and you will have <u>60 seconds</u> to say as many words as you can think of that start with that letter. There are some rules to remember:</p>
+			<ol>
+				<li>Do not say numbers, e.g., <i>If I say the letter T, do not say two, twelve or twenty</i></li>
+				<li>Do not say proper names of people or places, e.g., <i>Texas or Thomas</i></li>
+				<li>Do not say different forms of the same word, e.g., if you said <i>run</i>, don't say <i>ran</i> or <i>running</i>.</li>
+			</ol>
+		</div>
+		<table style="margin:auto">
+			<tr>
+				<th>F</th>
+				<th>A</th>
+				<th>S</th>
+			</tr>
+			<tr>
+				<td><%= calculated_field %></td>
+			</tr>
+
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_1, :style => "width:100px" %></td>
+				<td><%= text_field :baseline, :base_cowat_a_1, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_1, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_2, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_2, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_2, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_3, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_3, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_3, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_4, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_4, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_4, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_5, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_5, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_5, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_6, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_6, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_6, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_7, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_7, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_7, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_8, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_8, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_8, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_9, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_9, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_9, :style => "width:100px"  %></td>
+			</tr>
+			<tr> 
+				<td><%= text_field :baseline, :base_cowat_f_10, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_a_10, :style => "width:100px"  %></td>
+				<td><%= text_field :baseline, :base_cowat_s_10, :style => "width:100px"  %></td>
+			</tr>
+		</table>
+			<div id="cowat_table_second_half"> 
+				<table style="margin:auto">
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_11, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_11, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_11, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_12, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_12, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_12, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_13, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_13, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_13, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_14, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_14, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_14, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_15, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_15, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_15, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_16, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_16, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_16, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_17, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_17, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_17, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_18, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_18, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_18, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_19, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_19, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_19, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_20, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_20, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_20, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_21, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_21, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_21, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_22, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_22, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_22, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_23, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_23, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_23, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_24, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_24, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_24, :style => "width:100px"  %></td>
+				</tr>
+				<tr> 
+					<td><%= text_field :baseline, :base_cowat_f_25, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_a_25, :style => "width:100px"  %></td>
+					<td><%= text_field :baseline, :base_cowat_s_25, :style => "width:100px"  %></td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
 	<h3>WAIS-III Digit Span</h3>
 	<p><strong>A. Instructions for Digits Forward</strong></p>
 	<p><i>Say "I am going to say some numbers. Listen carefully, and when I am through, I want you to say them right after me. Just say what I say."</i></p>
-	<p><i>Discontinue when the examinee scores 0 on BOTH trials of any item.</i></p>
+	<p><i>Discontinue when the examinee scores <strong>NO</strong> on BOTH trials of any item.</i></p>
 	<p><i><strong>Note: It is helpful to write down the subject's response for each trial to ensure correct scoring.</strong></i></p>
 
-	<table border="1">
+	<table border="1" style="margin:auto">
 		<tr>
 			<th>#</th>
 			<th>Trial Item/Response</th>
@@ -153,7 +302,7 @@
 	<p><i>"No, you would say 9-1-7. I said 7-1-9, so to say it backward, you would say 9-1-7. Now try these numbers. Remember you are to say them backward: 3-4-8. Do not provide any assistance on this example or any of the items. Whether the examinee responds correctly (8-4-3) or not, proceed to Trial 1 of Item 1.</i></p>
 	<p><i>Discontinue when the examinee scores 0 on BOTH trials of any item.</i></p>
 	<p><i><strong>Note: It is helpful to write down the subject's response for each trial to ensure correct scoring.</strong></i></p>
-	<table border="1">
+	<table border="1" style="margin:auto">
 		<tr>
 			<th>#</th>
 			<th>Trial Item/Response</th>
@@ -205,8 +354,8 @@
 	</table>
 	<h3>RBANS List Recall</h3>
 	<p><i>"Do you remember the list of words that I read to you several times in the beginning of the testing? Tell me as many of those words as you can remember now."</i></p>
-	<p><i>Place an 'x' in the box next to the word if it is recalled.</i></p>
-	<table border="1">
+	<p><i>Select <strong>YES</strong> from the drop down select next to the word if it is recalled.</i></p>
+	<table border="1" style="margin:auto">
 		<tr>
 			<th>List (Do not read aloud)</th>
 			<th>Responses</th>

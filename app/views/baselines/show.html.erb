@@ -5,15 +5,20 @@
 		<h1>Baseline</h1>
 		<h2>Subject ID: <%= @baseline.subject_id %></h2>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
-
+			<div style="width:1000px; margin:auto;">
 			<%= form_for @baseline do |f| %>
 				<%= render "base_#{@baseline.current_step}", :f => f %>
-				
-				<div style="width:300px; margin:auto;">
+			</div>
+				</br>
+				<div style="width:150px; float:left;">
 					<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @baseline.first_step? %>
+				</div>
+				<div style="width:150px; float:right;">	
 					<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @baseline.last_step? %>
+				</div>
+				<div style="width:200px; margin:auto;">
 					<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
-				<div>
+				</div>
 			<% end %>
 	</div>
 </div>

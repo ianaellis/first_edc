@@ -7,7 +7,7 @@
 ####
 toggleEnrolled = ->
 		if ($("#subject_enrolled").val() is "0")
-	        $("#subject_reason_not_enrolled").show()
+	        $("#subject_reason_not_enrolled").toggle()
 	        $("#not_enrolled").show()    
 	    else
 	    	$("#subject_reason_not_enrolled").hide()
