@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140313214123) do
+ActiveRecord::Schema.define(:version => 20140314180403) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -392,6 +392,43 @@ ActiveRecord::Schema.define(:version => 20140313214123) do
     t.integer  "base_socioeconomic_status"
     t.integer  "base_education_a"
     t.integer  "base_education_b"
+    t.integer  "base_arthritis"
+    t.integer  "base_arthritis_present"
+    t.integer  "base_osteoporosis"
+    t.integer  "base_osteoporosis_present"
+    t.integer  "base_asthma"
+    t.integer  "base_asthma_present"
+    t.integer  "base_copd"
+    t.integer  "base_copd_present"
+    t.integer  "base_angina"
+    t.integer  "base_angina_present"
+    t.integer  "base_heart"
+    t.integer  "base_heart_present"
+    t.integer  "base_heart_attack"
+    t.integer  "base_heart_attack_present"
+    t.integer  "base_neuro"
+    t.integer  "base_neuro_present"
+    t.integer  "base_stroke"
+    t.integer  "base_stroke_present"
+    t.integer  "base_pvd"
+    t.integer  "base_pvd_present"
+    t.integer  "base_diabetes"
+    t.integer  "base_diabetes_present"
+    t.integer  "base_gastrointestinal"
+    t.integer  "base_gastrointestinal_present"
+    t.integer  "base_depression"
+    t.integer  "base_depression_present"
+    t.integer  "base_anxiety"
+    t.integer  "base_anxiety_present"
+    t.integer  "base_visual_impairment"
+    t.integer  "base_visual_impairment_present"
+    t.integer  "base_hearing_impairment"
+    t.integer  "base_hearing_impairment_present"
+    t.integer  "base_ddd"
+    t.integer  "base_ddd_present"
+    t.integer  "base_obese"
+    t.integer  "base_obese_present"
+    t.integer  "base_fci_total"
   end
 
   add_index "baselines", ["subject_id"], :name => "index_baselines_on_subject_id"

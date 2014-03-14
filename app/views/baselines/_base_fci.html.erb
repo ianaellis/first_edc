@@ -1,0 +1,110 @@
+<div id="Baseline FCI">
+	<div id="measure_heading">
+		<div id="measure_title">
+			<h2>Functional Comorbidity Index</h2>
+		</div>
+		<div id="measure_instruction">
+			<p><i>Please completefby asking the subject these questions (see help sheet for definition of diseases). For all "no" answers, verify by reviewing the medical record.</i> </p>
+		</div>
+	</div>
+	<div id="measure_body">
+		<table id="base_fci_table">
+			<tr>
+				<th>Question</th>
+				<th>Yes/No</th>
+				<th style="width:120px;">Present in chart?</th>
+			</tr>
+			<tr>
+				<td>1. Do you have arthritis (rheumatoid or osteoarthritis)?</td>
+				<td><%= select(:baseline, :base_arthritis ,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_arthritis_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>2. Do you have osteoporosis?</td>
+				<td><%= select(:baseline, :base_osteoporosis ,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_osteoporosis_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>3. Do you have asthma?</td>
+				<td><%= select(:baseline, :base_asthma,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_asthma_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>4. Do you have chronic obstructive pulmonary disease (COPD), acquired respiratory distress syndrome (ARDS), or emphysema?</td>
+				<td><%= select(:baseline, :base_copd,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_copd_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>5. Do you have angina?</td>
+				<td><%= select(:baseline, :base_angina,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_angina_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>6. Do you have congestive heart failure (or heart disease)?</td>
+				<td><%= select(:baseline, :base_heart,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_heart_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>7. Have you ever had a heart attack (myocardial infarction)?</td>
+				<td><%= select(:baseline, :base_heart_attack,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_heart_attack_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>8. Do you have a neurological disease (such as multiple sclerosis or Parkinson's)?</td>
+				<td><%= select(:baseline, :base_neuro,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_neuro_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>9. Have you ever had a stroke or a transient ischemic attack (TIA)?</td>
+				<td><%= select(:baseline, :base_stroke,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_stroke_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>10. Do you have peripheral vascular disease?</td>
+				<td><%= select(:baseline, :base_pvd,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_pvd_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>11. Do you have diabetes (type I or type II)?</td>
+				<td><%= select(:baseline, :base_diabetes,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_diabetes_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>12. Do you have an upper gastrointestinal disease (e.g. ulcer, hernia, reflux)?</td>
+				<td><%= select(:baseline, :base_gastrointestinal,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_gastrointestinal_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>13. Do you suffer from depression?</td>
+				<td><%= select(:baseline, :base_depression,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_depression_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>14. Do you have an anxiety or panic disorder?</td>
+				<td><%= select(:baseline, :base_anxiety,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_anxiety_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>15. Do you have a visual impairment (e.g. cataracts, glaucoma, macular degeneration)?</td>
+				<td><%= select(:baseline, :base_visual_impairment,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_visual_impairment_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>16. Do you have a hearing impairment (i.e. very hard of hearing, even with a hearing aid)?</td>
+				<td><%= select(:baseline, :base_hearing_impairment,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_hearing_impairment_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>17. Do you have degenerative disc disease (e.g. back disease, spinal stenosis, severe chronic back pain)?</td>
+				<td><%= select(:baseline, :base_ddd,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_ddd_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+			<tr>
+				<td>18. Obese and/or have a body mass index (BMI) > 30 (weight in kg/height in meters)?</td>
+				<td><%= select(:baseline, :base_obese,[["", nil],["Yes",1],["No",0]], :style => "width:auto") %></td>
+				<td><%= select(:baseline, :base_obese_present,[["", nil],["Yes",1],["No",0]], :style => "width:auto")%></td>
+			</tr>
+
+		</table>
+	</div>
+</div>
