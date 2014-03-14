@@ -25,7 +25,7 @@ class TreatmentCompletionsController < ApplicationController
 	        flash[:notice] = "Did not save Treatmetn Completion, could not update attributes"
 	      end
 	      session[:tc_step] = session[:tc_params] = nil
-	      redirect_to treatment_completion_url
+	      redirect_to subjects_url
 	    else
 	      session[:tc_step] = @tc.current_step
 	      render "show"

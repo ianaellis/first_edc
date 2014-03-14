@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140314180403) do
+ActiveRecord::Schema.define(:version => 20140314203522) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -722,6 +722,19 @@ ActiveRecord::Schema.define(:version => 20140314180403) do
     t.integer  "fu6month_audit_3"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.integer  "fu6month_fuq_2"
+    t.integer  "fu6month_fuq_2a"
+    t.integer  "fu6month_fuq_3"
+    t.integer  "fu6month_fuq_3a"
+    t.integer  "fu6month_fuq_4"
+    t.integer  "fu6month_fuq_4a_level"
+    t.integer  "fu6month_fuq_4a_type"
+    t.integer  "fu6month_fuq_4b"
+    t.integer  "fu6month_fuq_5"
+    t.integer  "fu6month_fuq_5a"
+    t.integer  "fu6month_fuq_6"
+    t.integer  "fu6month_fuq_6a"
+    t.integer  "fu6month_fuq_7"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
@@ -1066,6 +1079,19 @@ ActiveRecord::Schema.define(:version => 20140314180403) do
     t.integer  "tc_sat_11"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "tc_fuq_2"
+    t.integer  "tc_fuq_2a"
+    t.integer  "tc_fuq_3"
+    t.integer  "tc_fuq_3a"
+    t.integer  "tc_fuq_4"
+    t.integer  "tc_fuq_4a_level"
+    t.integer  "tc_fuq_4a_type"
+    t.integer  "tc_fuq_4b"
+    t.integer  "tc_fuq_5"
+    t.integer  "tc_fuq_5a"
+    t.integer  "tc_fuq_6"
+    t.integer  "tc_fuq_6a"
+    t.integer  "tc_fuq_7"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"

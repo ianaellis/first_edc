@@ -10,19 +10,18 @@
         <th>Edit</th>
         <th>Screening</th>
         <th>Baseline</th>
+        <th>3 Week Chart Review</th>
         <th>Treatment Completion</th>
-        <th>3 Week Follow Up</th>
-        <th>6 Week Follow Up</th>
-        <th>18 Week Follow Up</th>
+        <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
-        <th>1 Year Follow Up</th>
+        <th>1 Year Chart Review</th>
       </tr>
     </thead> 
     <tbody>
       <% @subjects.each do |sub| %>
         <tr>
           <td><%= sub.subject_id %></td>
-          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Portland" : "nil"%></td>
+          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil"%></td>
           <td><%= link_to "edit", edit_subject_path(sub) %></td>
           <td><%= link_to "edit", subject_screening_path(sub) %></td>
 
@@ -35,23 +34,24 @@
             <%= Baseline.create(subject_id: sub.subject_id) %>
           <% end %> 
 
-          <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
-            <td><%= link_to "edit", treatment_completion_path([TreatmentCompletion.where(subject_id: sub.subject_id).first]) %></td>
-          <% else %>
-            <%= TreatmentCompletion.create(subject_id: sub.subject_id) %>
-          <% end %>
-
           <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
             <td><%= link_to "edit", follow_up3_week_path([FollowUp3Week.where(subject_id: sub.subject_id).first]) %></td>
           <% else %>
             <%= FollowUp3Week.create(subject_id: sub.subject_id) %>
           <% end %>
 
-          <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
+          <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
+            <td><%= link_to "edit", treatment_completion_path([TreatmentCompletion.where(subject_id: sub.subject_id).first]) %></td>
+          <% else %>
+            <%= TreatmentCompletion.create(subject_id: sub.subject_id) %>
+          <% end %>
+
+
+<!--           <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
             <td><%= link_to "edit", follow_up6_week_path([FollowUp6Week.where(subject_id: sub.subject_id).first]) %></td>
           <% else %>
             <%= FollowUp6Week.create(subject_id: sub.subject_id) %>
-          <% end %>
+          <% end %> -->
 
           <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
             <td><%= link_to "edit", follow_up18_week_path([FollowUp18Week.where(subject_id: sub.subject_id).first]) %></td>
