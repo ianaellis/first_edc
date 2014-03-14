@@ -38,7 +38,8 @@
 		<h3>General Health</h3>
 		<li>In general, would you say your health is: <%= select(:baseline, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5]], {}, :style => "width:70px") %></li>
 		<h3>Quality of Life (QoL)</h3>
-		<li>All things considered in the last month, how would you rate your overall quality of life? <%= select(:baseline, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
+		<li>All things considered in the last month, how would you rate your overall quality of life? <i>0-worst possible QoL, 10-best possible QoL</i> <%= select(:baseline, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10]], {}, :style => "width:70px") %></li>
+		<h3>Medical Record Review</h3>
 		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:baseline, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3]], {}, :style => "width:70px") %></li>
 		<li>What level is (or was) the amputation? <%= select(:baseline, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]], {}, :style => "width:70px") %></li>
 		<li>Was the surgery an initial or revision amputation? <%= select(:baseline, :base_cq_7, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>

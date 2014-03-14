@@ -1,0 +1,142 @@
+<div id="General Demographics">
+	<div id="measure_heading">
+		<div id="measure_title">
+			<h2>General Demographics</h2>
+		</div>
+		<div id="measure_instruction">
+			<p><i>See screening CRF for demographic questions that are part of screening (age, gender, race,
+				current martial status, and approximate driving distance to VA study site).</i> </p>
+		</div>
+	</div>
+	<div class="measure_body">
+		<ol>
+			<li><p>
+					<div class="measure_question"><b>Subject Number:</b></div>
+					<div class="measure_answer"><b><%= @baseline.subject_id %></b></div>
+				</p>
+			</li>
+
+			<li>
+				<p>
+					<div class="measure_question"><b>Study Site:</b></div>
+					<div class="measure_answer">
+						<% if Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 1  %>
+							<b>Seattle</b>
+						<% elsif Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 2 %>
+							<b>Houston</b>
+						<% elsif Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 3 %>
+							<b>Cleveland</b>
+						<% elsif Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 4 %>
+							<b>Tampa</b>
+						<% end %>
+					</div>
+				</p>
+			</li>
+			
+			<li>
+				<p>
+					<div class="measure_question"><b>Weight</b><i>(pounds):</i></div> 
+					<div class="measure_answer"><%= text_field(:baseline, :base_weight, :style => "width:100px;") %></div> 
+				</p>
+			</li>
+				
+			<li>
+				<p>
+					<div class="measure_question"><b>Height</b><i>(inches):</i></div> 
+					<div class="measure_answer"><%= text_field(:baseline, :base_height, :style => "width:100px;") %></div> 
+				</p>
+			</li>
+			<li>
+				<p>
+					<div class="measure_question"><b>Current Employment Status:</b></div>
+					<ol type="a">
+						<li>
+							<p>
+								<div class="measure_question">Are you currently employed<i>(i.e., recieving income from a job)?</i></div>
+								<div class="measure_answer"><%= select(:baseline, :base_employment_status_a,
+								[["", nil],
+								["Yes", 1],
+								["No", 0]], {}, :style => "width:auto;") %></div>
+							</p>
+						</li>
+						<div id="base_employment_status">
+						<li>
+							<p>
+								<div class="measure_question">If <b>No</b>, "I am currently unemployed for the following reason":</div>
+								<div class="measure_answer"><%= select(:baseline, :base_employment_status_b,
+								[["", nil],
+								["Retired", 1],
+								["Unable to find work", 2],
+								["I am disabled", 3]], {}, :style => "width:auto;") %></div>
+							</p>
+						</li>
+						</div>
+					</ol>
+				</p>
+			</li>
+			<li>
+				<p>
+					<div class="measure_question"><b>Current Living Status: Where do you currently live?</b></div>
+					<div class="measure_answer"><%= select(:baseline, :base_living_status,
+					[["", nil],
+					["At home alone", 1],
+					["At home with spouse or family or friend", 2],
+					["Assisted living community/housing", 3],
+					["Nursing home / nursing rehabilitation center", 4],
+					["Other", 5]]) %></div>
+				</p>
+				<div id="base_living_status">
+					<ol type="a">
+						<li>
+							<p>
+								<div class="measure_question">Other:</div>
+								<div class="measure_answer"><%= text_field(:baseline, :base_living_status_other, :style => "width:200px;") %></div>
+							</p>
+						</li>
+					</ol>
+				</div>
+			</li>
+			<li>
+				<p>
+					<div class="measure_question"><b>Socioeconomic Status:</b><i>(monthly household income from all sources)</i></div>
+					<div class="measure_answer"><%= select(:baseline, :base_socioeconomic_status,
+					[["", nil],
+					["≤ $1,250", 1],
+					["$1,251 - $1,999", 2],
+					["$2,000 - $3,000", 3],
+					["$3,001 - $4,000", 4],
+					["$4,001 - $6,250", 5],
+					["> $6,250", 6]]) %></div>
+				</p>
+			</li>
+			<li>
+				<p>
+					<div class="measure_question"><b>Years of Education:</b><i>(1 year is the completion of first grade)</i></div>
+					<ol type="a">
+						<li>
+							<p>
+								<div class="measure_question">Number of years completed: <i>(Highest grade completed +1 for each year of education post high school)</i>
+									<div class="measure_answer"><%= text_field(:baseline, :base_education_a, :style => "width:100px;") %>
+									</div>
+								</div>
+							</p>
+						</li>
+					</br>
+						<li>
+							<p>
+								<div class="measure_question">Please select highest level of schooling.</div>
+								<div class="measure_answer"><%= select(:baseline, :base_education_b,
+								[["", nil],
+								["Some high school", 1],
+								["High school", 2],
+								["Some college", 3],
+								["Finished college", 4],
+								["Graduate Degree(i.e., Masters, PhD/MD/JD)"]]) %></div>
+							</p>
+						</li>
+					</ol>
+				</p>
+			</li>
+		</ol>
+	</div>
+</div>

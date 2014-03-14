@@ -2,6 +2,22 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+
+#General Demographics
+toggleBaseEmploymentStatus = ->
+	if($("#baselines_base_employment_status_a").val() is "1")
+		$("#base_employment_status").show()
+	else
+		$("#base_employment_status").hide()
+	return
+
+toggleBaseLivingStatus = ->
+	if($("#baselines_base_living_status").val() is "5")
+		$("#base_living_status").show()
+	else
+		$("#base_living_status").hide()
+	return
+
 #Prosthesis
 toggleBaseProsthesis = ->
 	if($("#baseline_base_pu_1").val() is "1")
@@ -58,6 +74,9 @@ toggleCowatTableSecondHalf = ->
 
 jQuery ->
 	$(document).ready ->
+		#General Demographics
+		toggleBaseEmploymentStatus()
+		toggleBaseLivingStatus()
 		#Prosthesis
 		toggleBaseProsthesis()
 		#Comorbidity
@@ -69,6 +88,13 @@ jQuery ->
 		togglePanasTable()
 		toggleCowatTableSecondHalf()
 
+		#General Demographics
+		$("#baselines_base_employment_status_a").on "change", ->
+			toggleBaseEmploymentStatus()
+			return
+		$("#baselines_base_living_status").on "change", ->
+			toggleBaseLivingStatus()
+			return
 
 		#Prosthesis
 		$("#baseline_base_pu_1").on "change", ->
