@@ -3,13 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .measure_answer {
-	float: right;
-	display: block;
+	// float: right;
+
+	display: inline-block;
 	width:200px;
 }
 
 .measure_question {
-	float:left;
+	// float:left;
+	display: inline-block;
 
 }
 
