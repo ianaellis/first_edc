@@ -41,6 +41,8 @@ class SubjectsController < ApplicationController
       redirect_to subjects_url
     else
       flash[:failure] = "Subject Screening was NOT updated. Error occurred."
+
+      format.json { render json: @subject.errors, status: :unprocessable_entity }
       redirect_to subjects_url
     end
   end
