@@ -40,6 +40,7 @@ class SubjectsController < ApplicationController
       flash[:success] = "Subject Screening Log Submitted."
       redirect_to subjects_url
     else
+      flash[:failure] = "Subject Screening was NOT updated. Error occurred."
       redirect_to subjects_url
     end
   end
