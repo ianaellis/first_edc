@@ -24,7 +24,7 @@ class FollowUp1YearsController < ApplicationController
 		# @followup1year = followup1year.find(params[:id])
 		@followup1year = FollowUp1Year.find(params[:id])
 		if @followup1year.update_attributes(params[:followup1year])
-		  flash[:success] = "Profile updated"
+		  flash[:success] = "1 Year Chart Review updated"
 		  redirect_to subjects_url
 		else
 		  redirect_to subjects_url

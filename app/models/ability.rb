@@ -13,6 +13,10 @@ class Ability
      if user.is? :site_study_coordinator
         can :show, Baseline
         can :update, Baseline
+        cannot :destroy, Subject
+
+        can :show, Subject
+        can :update, Subject
      end
     
     # The first argument to `can` is the action you are giving the user 

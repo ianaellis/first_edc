@@ -45,12 +45,14 @@ class SubjectsController < ApplicationController
   end
 
   def destroy
-    @subject = Subject.find(params[:id])
-    @subject.destroy
+    if current_user.is? :admin
+      @subject = Subject.find(params[:id])
+      @subject.destroy
 
-    respond_to do |format|
-      format.html { redirect_to subjects_url }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to subjects_url }
+        format.json { head :no_content }
+      end
     end
   end
 

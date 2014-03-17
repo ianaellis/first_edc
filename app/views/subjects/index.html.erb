@@ -15,6 +15,9 @@
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Chart Review</th>
+        <% if current_user.is? :admin %>
+          <th>Delete</th>
+        <% end %>
       </tr>
     </thead> 
     <tbody>
@@ -63,8 +66,11 @@
           <% else %>
             <%= FollowUp1Year.create(subject_id: sub.subject_id) %>
           <% end %>
+          <% if current_user.is? :admin %>
+            <td><%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %></td>
+          <% end %>
         </tr> 
       <% end %>
     </tbody>
   </table>
-<div>
+</div>

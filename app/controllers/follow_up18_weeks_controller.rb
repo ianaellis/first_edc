@@ -24,7 +24,7 @@ class FollowUp18WeeksController < ApplicationController
 		# @followup18week = followup18week.find(params[:id])
 		@followup18week = FollowUp18Week.find(params[:id])
 		if @followup18week.update_attributes(params[:followup18week])
-		  flash[:success] = "Profile updated"
+		  flash[:success] = "18 Week Chart Review Updated"
 		  redirect_to subjects_url
 		else
 		  redirect_to subjects_url

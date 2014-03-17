@@ -24,7 +24,7 @@ class BaselinesController < ApplicationController
     end
     if params[:submit_button]
       if @baseline.update_attributes(params[:baseline])
-        flash[:success] = "Baseline Information Saved"
+        flash[:success] = "Baseline Information Updated"
       else
         flash[:notice] = "Did not save baseline, could not update attributes"
       end
