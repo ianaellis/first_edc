@@ -32,7 +32,7 @@ class FollowUp6MonthsController < ApplicationController
 		end
 		if params[:submit_button]
 		  if @followup6month.update_attributes(params[:followup6month])
-		    flash[:notice] = "6 Month Follow Up Information Saved"
+		    flash[:success] = "6 Month Follow Up Information Saved"
 		  else
 		    flash[:notice] = "Did not save followup6month, could not update attributes"
 		  end

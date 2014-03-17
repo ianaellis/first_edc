@@ -1,12 +1,13 @@
-<%= form_for @subject do |f| %>
+<div style="width:300px;margin:auto;">
+<%= form_for(@subject) do |f| %>
   <!-- Look for errors -->
   <% if @subject.errors.any? %>
     <div id="error_explanation"></div>
       <h2>
-        <%= pluralize(@user.errors.count, "error") %> prohibited this subject from being saved:
+        <%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:
       </h2>
       <ul>
-        <% @subject.errors.full_message.each do |msg| %>
+        <% @subject.errors.messages.values.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -15,7 +16,7 @@
   <!-- Add new subject to Subject -->
     <p>Subject Number:</p>
     <%= f.number_field :subject_id %>
-    <p>Study Site Number:</p>
+    <p>Study Site:</p>
     <%= f.select :study_site, [[' ', nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
     <p>Enrolled</p>
     <%= f.select :enrolled, [['', nil],["Yes",1],["No",0]] %>
@@ -25,3 +26,4 @@
 
     <%= f.submit "Save Subject", class: "btn btn-large btn-primary" %>
 <% end %> 
+</div>

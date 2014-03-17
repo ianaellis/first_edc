@@ -20,7 +20,7 @@ class TreatmentCompletionsController < ApplicationController
 	    end
 	    if params[:submit_button]
 	      if @tc.update_attributes(params[:tc])
-	        flash[:notice] = "Treatment Completion Information Saved"
+	        flash[:success] = "Treatment Completion Information Saved"
 	      else
 	        flash[:notice] = "Did not save Treatmetn Completion, could not update attributes"
 	      end

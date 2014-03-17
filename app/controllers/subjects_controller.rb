@@ -8,6 +8,7 @@ class SubjectsController < ApplicationController
 
   def new
     @subject = Subject.new
+    @user = User.new
   end
   
   def show
@@ -37,9 +38,9 @@ class SubjectsController < ApplicationController
 
     if @subject.update_attributes(params[:subject])
       flash[:success] = "Subject Screening Log Submitted."
-      redirect_to @subject
+      redirect_to subjects_url
     else
-      render 'edit'
+      render 'newsubject'
     end
   end
 
