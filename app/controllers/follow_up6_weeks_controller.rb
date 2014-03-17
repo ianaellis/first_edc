@@ -21,7 +21,6 @@ class FollowUp6WeeksController < ApplicationController
 	end
 
 	def update
-		# @followup6week = followup6week.find(params[:id])
 		@followup6week = FollowUp6Week.find(params[:id])
 		if @followup6week.update_attributes(params[:followup6week])
 		  flash[:success] = "6 Week Chart Review Updated"

@@ -40,7 +40,7 @@ class SubjectsController < ApplicationController
       flash[:success] = "Subject Screening Log Submitted."
       redirect_to subjects_url
     else
-      render 'newsubject'
+      redirect_to subjects_url
     end
   end
 
