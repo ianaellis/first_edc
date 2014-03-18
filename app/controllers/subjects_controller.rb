@@ -78,11 +78,14 @@ class SubjectsController < ApplicationController
     # Create random assignment variable
     @rand_num = rand(999)
     @treatment = '0'
+    @treatment_name = ""
 
     if @rand_num < 500
       @treatment = '1'
+      @treatment_name = "Vetpals Group"
     else
       @treatment = '2'
+      @treatment_name = "Normal Care"
     end
 
     if (params[:group_size_input].to_i >= 6 ) and (params[:group_size_input].to_i <= 10)
@@ -90,7 +93,7 @@ class SubjectsController < ApplicationController
       
       if params[:treatment_group_name] != '' and params[:site_input] != '' and params[:group_size_input] != ''
         @group_to_randomize.update_all(treatment_group:params[:treatment_group_name], pref_rand: @treatment.to_i)
-        flash[:success] = "Subjects randomized, and assigned to group #{params[:treatment_group_name]}"
+        flash[:success] = "Subjects randomized, and assigned the #{params[:treatment_name]}"
         redirect_to subjects_path
       else
         flash[:failure] = "Nothing saved, please fill in the form completely."
