@@ -72,6 +72,17 @@ toggleCowatTableSecondHalf = ->
 		$("#cowat_table_second_half").show()
 	return
 
+#Audit-C
+toggleBaseAlcohol = ->
+	if($("#baseline_base_audit_1").val() is "0")
+		$("#base_alcohol").hide()
+	else if($("#baseline_base_audit_1").val() is "")
+		$("#base_alcohol").hide()
+	else
+		$("#base_alcohol").show()
+	return
+
+
 jQuery ->
 	$(document).ready ->
 		#General Demographics
@@ -87,6 +98,8 @@ jQuery ->
 		#PANAS
 		togglePanasTable()
 		toggleCowatTableSecondHalf()
+		#Audit-C
+		toggleBaseAlcohol()
 
 		#General Demographics
 		$("#baseline_base_employment_status_a").on "change", ->
@@ -126,6 +139,11 @@ jQuery ->
 		#COWAT
 		$("#baseline_base_cowat_s_10").on "change", ->
 			toggleCowatTableSecondHalf()
+			return
+
+		#Audit-C
+		$("#baseline_base_audit_1").on "change", ->
+			toggleBaseAlcohol()
 			return
 		return
 	return
