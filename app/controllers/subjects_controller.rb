@@ -90,12 +90,13 @@ class SubjectsController < ApplicationController
       
       if params[:treatment_group_name] != '' and params[:site_input] != '' and params[:group_size_input] != ''
         @group_to_randomize.update_all(treatment_group:params[:treatment_group_name], pref_rand: @treatment.to_i)
-        flash[:notice] = "Subjects randomized, and assigned to group #{params[:treatment_group_name]}"
+        flash[:success] = "Subjects randomized, and assigned to group #{params[:treatment_group_name]}"
+        redirect_to subjects_path
       else
-        flash[:notice] = "Nothing saved, please fill in the form completely."
+        flash[:failure] = "Nothing saved, please fill in the form completely."
       end
     else
-      flash[:notice] = "The group size must be between 6 and 10."
+      flash[:failure] = "The group size must be between 6 and 10."
     end
   end
 
