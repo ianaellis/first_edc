@@ -5,14 +5,14 @@
 
 #General Demographics
 toggleBaseEmploymentStatus = ->
-	if($("#baselines_base_employment_status_a").val() is "1")
+	if($("#baseline_base_employment_status_a").val() is "1")
 		$("#base_employment_status").show()
 	else
 		$("#base_employment_status").hide()
 	return
 
 toggleBaseLivingStatus = ->
-	if($("#baselines_base_living_status").val() is "5")
+	if($("#baseline_base_living_status").val() is "5")
 		$("#base_living_status").show()
 	else
 		$("#base_living_status").hide()
@@ -89,10 +89,10 @@ jQuery ->
 		toggleCowatTableSecondHalf()
 
 		#General Demographics
-		$("#baselines_base_employment_status_a").on "change", ->
+		$("#baseline_base_employment_status_a").on "change", ->
 			toggleBaseEmploymentStatus()
 			return
-		$("#baselines_base_living_status").on "change", ->
+		$("#baseline_base_living_status").on "change", ->
 			toggleBaseLivingStatus()
 			return
 
