@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140314203522) do
+ActiveRecord::Schema.define(:version => 20140317211600) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -1117,6 +1117,7 @@ ActiveRecord::Schema.define(:version => 20140314203522) do
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
     t.integer  "roles_mask"
+    t.integer  "user_study_site"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

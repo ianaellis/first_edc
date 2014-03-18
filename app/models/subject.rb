@@ -26,7 +26,7 @@ class Subject < ActiveRecord::Base
    # }
 
    #Validations for new subject
-   validates :subject_id, :presence => {:message => 'Subject ID cannot be blank.'}, :uniqueness => {:message => 'Subject ID already found in database.'}
+   validates :subject_id, :presence => {:message => 'Subject ID cannot be blank.'}, :uniqueness => {:message => 'Subject ID already found in database.'}, numericality: {:only_integer => true, message: "Subject ID must only consist of numbers." }
    validates :study_site, :presence => {:message => 'Study Site cannot be blank.'}
    validates :enrolled, :presence => {:message => 'Enrolled cannot be blank.'}
 end

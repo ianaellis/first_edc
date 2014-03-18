@@ -17,6 +17,7 @@
     </thead> 
     <tbody>
       <% @subjects.each do |sub| %>
+      <% if (current_user.user_study_site == sub.study_site) or current_user.is? :admin %>
         <tr>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil" %></td> 
@@ -24,9 +25,8 @@
           <td><%= sub.sc_pe_5 %></td>
           <td><%= sub.enrolled %></td>
           <td><%= sub.sc_smpsq_4 %></td>
-         
-
         </tr> 
+        <% end %>
       <% end %>
     </tbody>
   </table>

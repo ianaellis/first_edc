@@ -14,10 +14,23 @@
     </div>
   <% end %>
   <!-- Add new subject to Subject -->
+    <p>Study Site:</p>
+    <% if current_user.user_study_site == 1 %>
+      <%= f.select :study_site, [["Seattle", 1]] %>
+    
+    <% elsif current_user.user_study_site == 2 %>
+      <%= f.select :study_site, [["Houston", 2]] %>
+   
+    <% elsif current_user.user_study_site == 3 %>
+      <%= f.select :study_site, [["Cleveland", 3]] %>
+    
+    <% elsif current_user.user_study_site == 4 %>
+      <%= f.select :study_site, [["Tampa", 4]] %>
+    <% elsif current_user.is? :admin %>
+      <%= f.select :study_site, [["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
+    <% end %>
     <p>Subject Number:</p>
     <%= f.number_field :subject_id %>
-    <p>Study Site:</p>
-    <%= f.select :study_site, [[' ', nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
     <p>Enrolled</p>
     <%= f.select :enrolled, [['', nil],["Yes",1],["No",0]] %>
     <div id="not_enrolled"><p>If subject not enrolled, select reason:</p></div>

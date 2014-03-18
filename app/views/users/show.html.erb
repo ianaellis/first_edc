@@ -7,6 +7,7 @@
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
+			<b><%= @user.user_study_site == 1? "Seattle" : @user.user_study_site == 2? "Houston" : @user.user_study_site == 3? "Cleveland" : @user.user_study_site == 4? "Tampa" : "nil"%></b>
 			<% @user.roles.each do |role| %>
 				| <%= role.camelize %>
 			<% end %>
