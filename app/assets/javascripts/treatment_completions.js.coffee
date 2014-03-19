@@ -37,6 +37,22 @@ toggleTCPassed = ->
 		$("#tc_passed").hide()
 	return
 
+#PANAS
+togglePanasTable = ->
+	if($("#tc_panas_present_moment_or_last_week").val() is "")
+		$("#tc_panas_table").hide()
+	else
+		$("#tc_panas_table").show()
+	return
+
+#Prosthesis
+toggleTCProsthesis = ->
+	if($("#tc_tc_pu_1").val() is "1")
+		$("#tc_prosthesis").show()
+	else
+		$("#tc_prosthesis").hide()
+	return
+
 
 
 jQuery ->
@@ -46,6 +62,8 @@ jQuery ->
 		toggleTCContra()
 		toggleTCHospital()
 		toggleTCPassed()
+		togglePanasTable()
+		toggleTCProsthesis()
 
 		$("#tc_tc_fuq_2").on "change", ->
 			toggleTCRevision()
@@ -65,6 +83,15 @@ jQuery ->
 
 		$("#tc_tc_fuq_6").on "change", ->
 			toggleTCPassed()
+			return
+
+		#PANAS
+		$("#tc_panas_present_moment_or_last_week").on "change", ->
+			togglePanasTable()
+			return
+
+		$("#tc_tc_pu_1").on "change", ->
+			toggleTCProsthesis()
 			return
 		return
 	return

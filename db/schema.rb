@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140317211600) do
+ActiveRecord::Schema.define(:version => 20140319000524) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -720,8 +720,8 @@ ActiveRecord::Schema.define(:version => 20140317211600) do
     t.integer  "fu6month_audit_1"
     t.integer  "fu6month_audit_2"
     t.integer  "fu6month_audit_3"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.integer  "fu6month_fuq_2"
     t.integer  "fu6month_fuq_2a"
     t.integer  "fu6month_fuq_3"
@@ -735,6 +735,7 @@ ActiveRecord::Schema.define(:version => 20140317211600) do
     t.integer  "fu6month_fuq_6"
     t.integer  "fu6month_fuq_6a"
     t.integer  "fu6month_fuq_7"
+    t.integer  "panas_present_moment_or_last_week"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
@@ -1077,8 +1078,8 @@ ActiveRecord::Schema.define(:version => 20140317211600) do
     t.integer  "tc_sat_9"
     t.integer  "tc_sat_10"
     t.integer  "tc_sat_11"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.integer  "tc_fuq_2"
     t.integer  "tc_fuq_2a"
     t.integer  "tc_fuq_3"
@@ -1092,6 +1093,7 @@ ActiveRecord::Schema.define(:version => 20140317211600) do
     t.integer  "tc_fuq_6"
     t.integer  "tc_fuq_6a"
     t.integer  "tc_fuq_7"
+    t.integer  "panas_present_moment_or_last_week"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"

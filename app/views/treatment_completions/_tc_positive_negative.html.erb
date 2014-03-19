@@ -1,6 +1,14 @@
 <h2>The Positive and Negative Affect Schedule</h2>
 	<p><i>This scale consists of a number of words that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week.</i></p>
-	<table>
+	<p>Select an option from the drop down menu before proceding.</p>
+	<div style="width:200px; margin:auto;">
+	<p><%= select(:tc, :panas_present_moment_or_last_week,
+		[["",nil],
+		["Pain at present moment", 1],
+		["Pain over the past week", 2]]) %></p>
+	</div>
+	<div id="tc_panas_table">
+	<table style="margin:auto">
 		<tr>
 			<th>Question</th>
 			<th>Response</th>
