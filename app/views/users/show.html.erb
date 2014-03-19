@@ -24,10 +24,12 @@
 					<p><%= link_to "View Screening Log", screening_log_path %></p>
 				</center>
 			</body>
-			<h2>Data</h2>
-			<center>
-				<p><%= link_to "Screening Data", screening_crf_data_path %></p>
-			</center>
+			<% if current_user.is? :admin %>
+				<h2>Data</h2>
+				<center>
+					<p><%= link_to "Screening Data", screening_crf_data_path %></p>
+				</center>
+			<% end %>
 		</div>
 	</aside>
 </div>
