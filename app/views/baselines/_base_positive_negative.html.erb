@@ -5,7 +5,7 @@
 	<p><%= select(:baseline, :panas_present_moment_or_last_week,
 		[["",nil],
 		["Pain at present moment", 1],
-		["Pain over the past week", 2]]) %></p>
+		["Pain over the past week", 2],["Refused", 1000]]) %></p>
 	</div>
 	<div id="panas_table">
 	<table style="margin:auto">
@@ -25,7 +25,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>2. Distressed</p></td>
 			<td><%= select(:baseline, :base_panas_2,
@@ -34,7 +34,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>3. Excited</p></td>
@@ -44,7 +44,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>4. Upset</p></td>
 			<td><%= select(:baseline, :base_panas_4,
@@ -53,7 +53,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>5. Strong</p></td>
@@ -63,7 +63,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>6. Guilty</p></td>
 			<td><%= select(:baseline, :base_panas_6,
@@ -72,7 +72,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>7. Scared</p></td>
@@ -82,7 +82,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>8. Hostile</p></td>
 			<td><%= select(:baseline, :base_panas_8,
@@ -91,7 +91,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>9. Enthusiastic</p></td>
@@ -101,7 +101,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>10. Proud</p></td>
 			<td><%= select(:baseline, :base_panas_10,
@@ -110,7 +110,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>11. Irritable</p></td>
@@ -120,7 +120,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>12. Alert</p></td>
 			<td><%= select(:baseline, :base_panas_12,
@@ -129,7 +129,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>13. Ashamed</p></td>
@@ -139,7 +139,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>14. Inspired</p></td>
 			<td><%= select(:baseline, :base_panas_14,
@@ -148,7 +148,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>15. Nervous</p></td>
@@ -158,7 +158,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>16. Determined</p></td>
 			<td><%= select(:baseline, :base_panas_16,
@@ -167,7 +167,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>17. Attentive</p></td>
@@ -177,7 +177,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>18. Jittery</p></td>
 			<td><%= select(:baseline, :base_panas_18,
@@ -186,7 +186,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>19. Active</p></td>
@@ -196,7 +196,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>20. Afraid</p></td>
 			<td><%= select(:baseline, :base_panas_20,
@@ -205,7 +205,7 @@
 			["A little",2],
 			["Moderately",3],
 			["Quite a bit",4],
-			["Extremely",5]])%></td>
+			["Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 	</table>
 	</div>

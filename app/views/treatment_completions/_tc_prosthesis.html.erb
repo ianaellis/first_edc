@@ -2,7 +2,7 @@
 	<p><i>Now I would like to ask you some questions about prosthesis use.</i></p>
 	<ol>
 		<li>Do you currently have an artificial limb or prosthesis, even if it is not used regularly?</li>
-		<%= select(:tc, :tc_pu_1, [["",nil],["Yes",1],["No",0]],{}, :style => "width:70px")%>
+		<%= select(:tc, :tc_pu_1, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:70px")%>
 		<div id="tc_prosthesis">
 			<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
 			<%= f.number_field :tc_pu_2, :style => "width:70px" %>
@@ -17,5 +17,5 @@
 		["Some of the time",3],
 		["None of the time",4],
 		["Refused",5],
-		["Dont know",6]],{}, :style => "width:200px")%>
+		["Dont know",6],["Refused", 1000]],{}, :style => "width:200px")%>
 	</ol>

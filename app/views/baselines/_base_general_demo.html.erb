@@ -56,7 +56,7 @@
 								<div class="measure_answer"><%= select(:baseline, :base_employment_status_a,
 								[["", nil],
 								["Yes", 1],
-								["No", 0]], {}, :style => "width:auto;") %></div>
+								["No", 0],["Refused", 1000]], {}, :style => "width:auto;") %></div>
 							</p>
 						</li>
 						<div id="base_employment_status">
@@ -67,7 +67,7 @@
 								[["", nil],
 								["Retired", 1],
 								["Unable to find work", 2],
-								["I am disabled", 3]], {}, :style => "width:auto;") %></div>
+								["I am disabled", 3],["Refused", 1000]], {}, :style => "width:auto;") %></div>
 							</p>
 						</li>
 						</div>
@@ -83,7 +83,7 @@
 					["At home with spouse or family or friend", 2],
 					["Assisted living community/housing", 3],
 					["Nursing home / nursing rehabilitation center", 4],
-					["Other", 5]]) %></div>
+					["Other", 5],["Refused", 1000]]) %></div>
 				</p>
 				<div id="base_living_status">
 					<ol type="a">
@@ -106,7 +106,7 @@
 					["$2,000 - $3,000", 3],
 					["$3,001 - $4,000", 4],
 					["$4,001 - $6,250", 5],
-					["> $6,250", 6]]) %></div>
+					["> $6,250", 6],["Refused", 1000]]) %></div>
 				</p>
 			</li>
 			<li>
@@ -131,7 +131,7 @@
 								["High school", 2],
 								["Some college", 3],
 								["Finished college", 4],
-								["Graduate Degree(i.e., Masters, PhD/MD/JD)"]]) %></div>
+								["Graduate Degree(i.e., Masters, PhD/MD/JD)"],["Refused", 1000]]) %></div>
 							</p>
 						</li>
 					</ol>

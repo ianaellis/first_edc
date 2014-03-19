@@ -2,46 +2,46 @@
 <ol>
 	<li>Which leg or foot (side) is being (or was) amputated? <%= select(:followup6month, :fu6month_comp_1, [["",nil],["Right",1],["Left",2]], {}, :style => "width:auto") %></li>
 	<p><i>Make sure that what is marked is ultimately the actual surgical level.</i></p>
-	<li>What level is (or as) the amputation? <%= select(:followup6month, :fu6month_comp_2, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]],{}, :style => "width:auto") %></li>
-	<li>Which leg or foot (side) is being (or was) amputated? <%= select(:followup6month, :fu6month_comp_3, [["",nil],["Initial",1],["Revision",2]], {}, :style => "width:auto") %></li>
+	<li>What level is (or as) the amputation? <%= select(:followup6month, :fu6month_comp_2, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]],{}, :style => "width:auto") %></li>
+	<li>Which leg or foot (side) is being (or was) amputated? <%= select(:followup6month, :fu6month_comp_3, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto") %></li>
 	<li>Time since amputation? <%= f.number_field :fu6month_comp_4, :style => "width:70px" %> <i>(Days)</i> </li>
 	<li>Contralateral limb side (limb without recent amputation surgery)
 		<ol type="a">
 			<li>In the limb not awaiting surgery, does the subject have:
 				<ol>
 					<li>Claudication: Do you have pain in the calf while walking?
-						<%= select(:followup6month, :fu6month_comp_5_a1, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a1, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>Do you have poor circulation (foot always cold and discolored)?
-						<%= select(:followup6month, :fu6month_comp_5_a2, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>Do you have pain in the joints when you walk?
-						<%= select(:followup6month, :fu6month_comp_5_a3, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a3, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>Loss of sensation: do you have numbness in your foot?
-						<%= select(:followup6month, :fu6month_comp_5_a4, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a4, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>Do you have a wound or sores on your foot?
-						<%= select(:followup6month, :fu6month_comp_5_a5, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a5, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>Do you have any other condition affecting your leg not being operated on?
-						<%= select(:followup6month, :fu6month_comp_5_a6, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a6, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 					<li>None of the above?
-						<%= select(:followup6month, :fu6month_comp_5_a7, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+						<%= select(:followup6month, :fu6month_comp_5_a7, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 					</li>
 				</ol>
 			</li>
 			<li>If YES to any of the above, do these conditions affect your ability to walk?
-				<%= select(:followup6month, :fu6month_comp_5b, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+				<%= select(:followup6month, :fu6month_comp_5b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 			</li>
 			<li>If patient responds YES to item 6, ask - "Do you have an amputation on your other leg?"
-				<%= select(:followup6month, :fu6month_comp_5c, [["",nil],["Yes",1],["No",0]], {}, :style => "width:auto") %>
+				<%= select(:followup6month, :fu6month_comp_5c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto") %>
 				<br />
 				<p><i>If yes, mark previous contralateral amputation type and level.</i></p>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level: <%= select(:followup6month, :fu6month_comp_5c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]],{}, :style => "width:auto") %></li>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Level: <%= select(:followup6month, :fu6month_comp_5c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]],{}, :style => "width:auto") %></li>
 				<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <%= select(:followup6month, :fu6month_comp_5c_type, [["",nil],["Initial",1],["Revision",2]],{}, :style => "width:auto") %></li>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <%= select(:followup6month, :fu6month_comp_5c_type, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]],{}, :style => "width:auto") %></li>
 			</li>
 		</ol>
 	</li>

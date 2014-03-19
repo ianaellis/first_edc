@@ -10,31 +10,31 @@
 				<ol>
 					<li>Study Assessment (time since Baseline): 6 weeks</li>
 					<li>Has there been a revision at the same level (e.g. TT to higher TT)?
-						<%= select(:followup6week, :fu6week_fuq_2, [["",nil],["Yes",1],["No",0]],{}, :style => "width:auto") %>
+						<%= select(:followup6week, :fu6week_fuq_2, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
 						<ol type="a">
 							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_2a, :style => "width:auto" %> <i>(days)</i></li>
 						</ol>
 					</li>
 					<li>Has there been a revision to a higher level (e.g. TM to TT or TT to TF)?
-						<%= select(:followup6week, :fu6week_fuq_3, [["",nil],["Yes",1],["No",0]],{}, :style => "width:auto") %>
+						<%= select(:followup6week, :fu6week_fuq_3, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
 						<ol type="a">
 							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_3a, :style => "width:auto" %> <i>(days)</i></li>
 						</ol>
 					</li>
-					<li>Has there been a contralateral limb amputation? <%= select(:followup6week, :fu6week_fuq_4, [["",nil],["Yes",1],["No",0]],{}, :style => "width:auto") %>
+					<li>Has there been a contralateral limb amputation? <%= select(:followup6week, :fu6week_fuq_4, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
 						<p><i>If YES, mark contralateral level and type</i></p>
 						<ol type="a">
-							<li>Level: <%= select(:followup6week, :fu6week_fuq_4a_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6]],{}, :style => "width:auto")%></li>
-							<li>Type: <%= select(:followup6week, :fu6week_fuq_4a_type,[["",nil],["Initial",1],["Revision",2]],{}, :style => "width:auto")%></li>
+							<li>Level: <%= select(:followup6week, :fu6week_fuq_4a_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]],{}, :style => "width:auto")%></li>
+							<li>Type: <%= select(:followup6week, :fu6week_fuq_4a_type,[["",nil],["Initial",1],["Revision",2],["Refused", 1000]],{}, :style => "width:auto")%></li>
 							<li>Mark time since original amputation surgery <%= f.number_field :fu6week_fuq_4b, :style => "width:auto" %> <i>(days)</i> </li>
 						</ol>
 					</li>
-					<li>Was the patient admitted to the hospital? <%= select(:followup6week, :fu6week_fuq_5,[["",nil],["Yes",1],["No",0]],{}, :style => "width:auto")%>
+					<li>Was the patient admitted to the hospital? <%= select(:followup6week, :fu6week_fuq_5,[["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto")%>
 						<ol type="a">
 							<li>If yes, reason for admission: <%= f.text_field :fu6week_fuq_5a, :style => "width:auto" %></li>
 						</ol>
 					</li>
-					<li>Has the patient passed away? <%= select(:followup6week, :fu6week_fuq_6,[["",nil],["Yes",1],["No",0]],{}, :style => "width:auto")%>
+					<li>Has the patient passed away? <%= select(:followup6week, :fu6week_fuq_6,[["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto")%>
 						<ol type="a">
 							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_6a, :style => "width:auto" %></li>
 						</ol>
