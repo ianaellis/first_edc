@@ -58,7 +58,7 @@ toggleContralateralB = ->
 
 #PANAS
 togglePanasTable = ->
-	if($("#baseline_panas_present_moment_or_last_week").val() is "" or $("#baseline_panas_present_moment_or_last_week").val() is "1000"))
+	if($("#baseline_panas_present_moment_or_last_week").val() is "" or $("#baseline_panas_present_moment_or_last_week").val() is "1000")
 		$("#panas_table").hide()
 	else
 		$("#panas_table").show()
