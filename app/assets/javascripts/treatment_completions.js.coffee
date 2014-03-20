@@ -39,7 +39,7 @@ toggleTCPassed = ->
 
 #PANAS
 togglePanasTable = ->
-	if($("#tc_panas_present_moment_or_last_week").val() is "")
+	if($("#tc_panas_present_moment_or_last_week").val() is "" or $("#tc_panas_present_moment_or_last_week").val() is "1000")
 		$("#tc_panas_table").hide()
 	else
 		$("#tc_panas_table").show()

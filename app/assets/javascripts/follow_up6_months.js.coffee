@@ -4,7 +4,7 @@
 
 #PANAS
 togglePanasTable = ->
-	if($("#followup6month_panas_present_moment_or_last_week").val() is "")
+	if($("#followup6month_panas_present_moment_or_last_week").val() is "" or $("#followup6month_panas_present_moment_or_last_week").val() is "1000"))
 		$("#6m_panas_table").hide()
 	else
 		$("#6m_panas_table").show()
