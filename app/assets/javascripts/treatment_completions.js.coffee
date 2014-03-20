@@ -53,6 +53,13 @@ toggleTCProsthesis = ->
 		$("#tc_prosthesis").hide()
 	return
 
+#Audit
+toggleTCAlcohol = ->
+	if($("#tc_tc_audit_1").val() is "0" or $("#tc_tc_audit_1").val() is "")
+		$("#tc_alcohol").hide()
+	else
+		$("#tc_alcohol").show()
+	return
 
 
 jQuery ->
@@ -64,6 +71,7 @@ jQuery ->
 		toggleTCPassed()
 		togglePanasTable()
 		toggleTCProsthesis()
+		toggleTCAlcohol()
 
 		$("#tc_tc_fuq_2").on "change", ->
 			toggleTCRevision()
@@ -92,6 +100,11 @@ jQuery ->
 
 		$("#tc_tc_pu_1").on "change", ->
 			toggleTCProsthesis()
+			return
+
+		#Audit
+		$("#tc_tc_audit_1").on "change", ->
+			toggleTCAlcohol()
 			return
 		return
 	return
