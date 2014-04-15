@@ -8,7 +8,7 @@
 			<div class="span6 offset3 center" style="width:300px; margin:auto;">
 				<div>
 					Enter Group Size: <%= number_field_tag(:group_size_input)%>
-					Select Study Site: <%= select :study_site, {}, [[' ', nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
+					Select Study Site: <%= select :study_site, {}, [[' ', nil],["1 - Seattle", 1],["2 - Houston", 2],["3 - Cleveland", 3],["4 - Tampa", 4]] %>
 					Group Name: <%= text_field_tag(:treatment_group_name) %>
 					<%= submit_tag "Randomize", class: "btn btn-large btn-primary", :style => "width:300px" %>
 				</div>

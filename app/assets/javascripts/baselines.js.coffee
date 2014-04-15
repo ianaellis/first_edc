@@ -5,7 +5,7 @@
 
 #General Demographics
 toggleBaseEmploymentStatus = ->
-	if($("#baseline_base_employment_status_a").val() is "1")
+	if($("#baseline_base_employment_status_a").val() is "0")
 		$("#base_employment_status").show()
 	else
 		$("#base_employment_status").hide()
@@ -82,6 +82,38 @@ toggleBaseAlcohol = ->
 		$("#base_alcohol").show()
 	return
 
+#Cognitive - RBANS List Learning
+toggleRBANSListLearning = ->
+	if($("#baseline_refuse_rbans_list").val() is "1000")
+		$("#base_rbans_refused").hide()
+	else
+		$("#base_rbans_refused").show()
+	return
+toggleCWAT = ->
+	if($("#baseline_refuse_cwat").val() is "1000")
+		$("#base_cwat_refused").hide()
+	else
+		$("#base_cwat_refused").show()
+	return
+toggleWAIS1 = ->
+	if($("#baseline_refuse_wais_1").val() is "1000")
+		$("#base_wais1_refused").hide()
+	else
+		$("#base_wais1_refused").show()
+	return
+toggleWAIS2 = ->
+	if($("#baseline_refuse_wais_2").val() is "1000")
+		$("#base_wais2_refused").hide()
+	else
+		$("#base_wais2_refused").show()
+	return
+toggleRBANSListRecall = ->
+	if($("#baseline_refuse_rbans_list_recall").val() is "1000")
+		$("#base_rbans_recall_refused").hide()
+	else
+		$("#base_rbans_recall_refused").show()
+	return
+
 
 jQuery ->
 	$(document).ready ->
@@ -100,6 +132,11 @@ jQuery ->
 		toggleCowatTableSecondHalf()
 		#Audit-C
 		toggleBaseAlcohol()
+		#Cognitive
+		toggleRBANSListLearning()
+		toggleWAIS1()
+		toggleWAIS2()
+		toggleRBANSListRecall()
 
 		#General Demographics
 		$("#baseline_base_employment_status_a").on "change", ->
@@ -144,6 +181,23 @@ jQuery ->
 		#Audit-C
 		$("#baseline_base_audit_1").on "change", ->
 			toggleBaseAlcohol()
+			return
+
+		#Cognitive
+		$("#baseline_refuse_rbans_list").on "change", ->
+			toggleRBANSListLearning()
+			return
+		$("#baseline_refuse_cwat").on "change", ->
+			toggleCWAT()
+			return
+		$("#baseline_refuse_wais_1").on "change", ->
+			toggleWAIS1()
+			return
+		$("#baseline_refuse_wais_2").on "change", ->
+			toggleWAIS2()
+			return
+		$("#baseline_refuse_rbans_list_recall").on "change", ->
+			toggleRBANSListRecall()
 			return
 		return
 	return

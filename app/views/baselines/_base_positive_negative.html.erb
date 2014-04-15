@@ -1,11 +1,30 @@
 <h2>The Positive and Negative Affect Schedule</h2>
 	<p><i>This scale consists of a number of words that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week.</i></p>
 	<p>Select an option from the drop down menu before proceding.</p>
+	<center>
+		<table style="width:500px;">
+			<tr>
+				<th><center>1</center></th>
+				<th><center>2</center></th>
+				<th><center>3</center></th>
+				<th><center>4</center></th>
+				<th><center>5</center></th>
+			</tr>
+			<tr>
+				<td><center>Very slightly or not at all</center></td>
+				<td><center>A little</center></td>
+				<td><center>Moderately</center></td>
+				<td><center>Quite a bit</center></td>
+				<td><center>Extremely</center></td>
+			</tr>
+		</table>
+	</center>
+	<br />
 	<div style="width:200px; margin:auto;">
 	<p><%= select(:baseline, :panas_present_moment_or_last_week,
 		[["",nil],
-		["Pain at present moment", 1],
-		["Pain over the past week", 2],["Refused", 1000]]) %></p>
+		["At present moment", 1],
+		["Over the past week", 2],["Refused", 1000]]) %></p>
 	</div>
 	<div id="panas_table">
 	<table style="margin:auto">
@@ -21,191 +40,191 @@
 			<td><p>1. Interested</p></td>
 			<td><%= select(:baseline, :base_panas_1,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>2. Distressed</p></td>
 			<td><%= select(:baseline, :base_panas_2,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>3. Excited</p></td>
 			<td><%= select(:baseline, :base_panas_3,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>4. Upset</p></td>
 			<td><%= select(:baseline, :base_panas_4,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>5. Strong</p></td>
 			<td><%= select(:baseline, :base_panas_5,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>6. Guilty</p></td>
 			<td><%= select(:baseline, :base_panas_6,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>7. Scared</p></td>
 			<td><%= select(:baseline, :base_panas_7,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>8. Hostile</p></td>
 			<td><%= select(:baseline, :base_panas_8,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>9. Enthusiastic</p></td>
 			<td><%= select(:baseline, :base_panas_9,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>10. Proud</p></td>
 			<td><%= select(:baseline, :base_panas_10,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>11. Irritable</p></td>
 			<td><%= select(:baseline, :base_panas_11,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>12. Alert</p></td>
 			<td><%= select(:baseline, :base_panas_12,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>13. Ashamed</p></td>
 			<td><%= select(:baseline, :base_panas_13,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>14. Inspired</p></td>
 			<td><%= select(:baseline, :base_panas_14,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>15. Nervous</p></td>
 			<td><%= select(:baseline, :base_panas_15,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>16. Determined</p></td>
 			<td><%= select(:baseline, :base_panas_16,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>17. Attentive</p></td>
 			<td><%= select(:baseline, :base_panas_17,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>18. Jittery</p></td>
 			<td><%= select(:baseline, :base_panas_18,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td><p>19. Active</p></td>
 			<td><%= select(:baseline, :base_panas_19,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td><p>20. Afraid</p></td>
 			<td><%= select(:baseline, :base_panas_20,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 	</table>
 	</div>

@@ -31,14 +31,12 @@
 			<td><%= select(:subject, :sc_smpsq_4, [["", nil],["Yes", 1],["No", 0]])  %></td>
 			<td><i>Correct when the number can be verified or the subject can repeat the number at some other time.</i></td>
 		</tr>
-		<div id="screen_street_address">
-			<tr>
-				<td>4a</td>
-				<td>What is your street address?</td>
-				<td><%= select(:subject, :sc_smpsq_4a, [["", nil],["Yes", 1],["No", 0]])  %></td>
-				<td><i>Ask only if the subject does not have a telephone.</i></td>
-			</tr>
-		</div>
+		<tr id="screen_street_address">
+			<td>4a</td>
+			<td>What is your street address?</td>
+			<td><%= select(:subject, :sc_smpsq_4a, [["", nil],["Yes", 1],["No", 0]])  %></td>
+			<td><i>Ask only if the subject does not have a telephone.</i></td>
+		</tr>
 		<tr>
 			<td>5</td>
 			<td>How old are you?</td>
@@ -220,7 +218,7 @@
 		</li>
 		<li>
 			<p>Site Number</p>
-			<%= select(:subject, :sc_ic_5,[["", nil],["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa",4]],{}, :style => "width:70px") %>
+			<%= select(:subject, :sc_ic_5,[["", nil],["1 - Seattle", 1],["2 - Houston", 2],["3 - Cleveland", 3],["4 - Tampa",4]],{}, :style => "width:70px") %>
 		</li>
 	</ol>
 	<div style="width:300px;margin:auto;">

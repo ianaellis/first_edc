@@ -1,5 +1,6 @@
 <h2>Multidimensional Scale of Perceived Social Support</h2>
-	<p><i>Instructions: We are interested in how you feel about the following statements. Read each statement carefully. Indicate how you feel about each statement.</i></p>
+	<p><i>Instructions: We are interested in how you feel about the following statements. Read each statement carefully. Indicate how you much you agree or disagree with the following statements.</i></p>
+	<p><i>Response Scale: 1 - Very strongly disagree, 2 - Strongly disagree, 3 - Mildly disagree, 4 - Neutral, 5 - Mildly agree, 6 - Strongly agree, 7 - Very strongly agree.</i></p>
 	<table>
 		<tr>
 			<th>#</th>
@@ -9,61 +10,169 @@
 		<tr>
 			<td>1.</td>
 			<td>There is a special person who is around when I am in need.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_1, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_1,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>2.</td>
 			<td>There is a special person with whom I can share my joys and sorrows.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_2, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_2,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>3.</td>
 			<td>My family really tries to help me.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_3, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_3,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>4.</td>
 			<td>I get the emotional help and support I need from my family.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_4, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_4,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>5.</td>
 			<td>I have a special person who is a real source of comfort to me.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_5, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_5,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>6.</td>
 			<td>My friends really try to help me.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_6, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_6,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>7.</td>
 			<td>I can count on my friends when things go wrong.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_7, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_7,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>8.</td>
 			<td>I can talk about my problems with my family.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_8, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_8,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>9.</td>
 			<td>I have friends with whom I can share my joys and sorrows.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_9, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_9,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>10.</td>
 			<td>There is a special person in my life who cares about my feelings.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_10, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_10,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>11.</td>
 			<td>My family is willing to help me make decisions.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_11, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_11,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 		<tr>
 			<td>12.</td>
 			<td>I can talk about my problems with my friends.</td>
-			<td><%= select(:followup6month,:fu6month_mspss_12, [["",nil],["Very Strongly Disagree",1],["Strongly Disagree",2],["Mildly Disagree",3],["Neutral",4],["Mildly Agree",5],["Strongly Agree",6],["Very Strongly Agree",7],["Refused", 1000]],{}, :style => "width:auto") %></td>
+			<td><%= select(:followup6month,:fu6month_mspss_12,  
+			[["",nil],
+			["1 - Very Strongly Disagree",1],
+			["2 - Strongly Disagree",2],
+			["3 - Mildly Disagree",3],
+			["4 - Neutral",4],
+			["5 - Mildly Agree",5],
+			["6 - Strongly Agree",6],
+			["7 - Very Strongly Agree",7],
+			["Refused", 1000]],{}, :style => "width:auto") %></td>
 		</tr>
 	</table>

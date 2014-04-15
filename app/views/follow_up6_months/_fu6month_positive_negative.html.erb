@@ -1,11 +1,30 @@
 <h2>The Positive and Negative Affect Schedule</h2>
 	<p><i>This scale consists of a number of words that describe different feelings and emotions. Read each item and then list the number from the scale below next to each word. Indicate to what extent you feel this way right now, that is, at the present moment OR indicate the extent you have felt this way over the past week.</i></p>
 	<p>Select an option from the drop down menu before proceding.</p>
+	<center>
+		<table style="width:500px;">
+			<tr>
+				<th><center>1</center></th>
+				<th><center>2</center></th>
+				<th><center>3</center></th>
+				<th><center>4</center></th>
+				<th><center>5</center></th>
+			</tr>
+			<tr>
+				<td><center>Very slightly or not at all</center></td>
+				<td><center>A little</center></td>
+				<td><center>Moderately</center></td>
+				<td><center>Quite a bit</center></td>
+				<td><center>Extremely</center></td>
+			</tr>
+		</table>
+	</center>
+	<br />
 	<div style="width:200px; margin:auto;">
 	<p><%= select(:followup6month, :panas_present_moment_or_last_week,
 		[["",nil],
-		["Pain at present moment", 1],
-		["Pain over the past week", 2],["Refused", 1000]]) %></p>
+		["At present moment", 1],
+		["Over the past week", 2],["Refused", 1000]]) %></p>
 	</div>
 	<div id="6m_panas_table">
 	<table style="margin:auto">
@@ -21,190 +40,190 @@
 			<td>1. Interested</td>
 			<td><%= select(:followup6month, :fu6month_panas_1,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>2. Distressed</td>
 			<td><%= select(:followup6month, :fu6month_panas_2,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>3. Excited</td>
 			<td><%= select(:followup6month, :fu6month_panas_3,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>4. Upset</td>
 			<td><%= select(:followup6month, :fu6month_panas_4,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>5. Strong</td>
 			<td><%= select(:followup6month, :fu6month_panas_5,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>6. Guilty</td>
 			<td><%= select(:followup6month, :fu6month_panas_6,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>7. Scared</td>
 			<td><%= select(:followup6month, :fu6month_panas_7,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>8. Hostile</td>
 			<td><%= select(:followup6month, :fu6month_panas_8,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>9. Enthusiastic</td>
 			<td><%= select(:followup6month, :fu6month_panas_9,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>10. Proud</td>
 			<td><%= select(:followup6month, :fu6month_panas_10,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>11. Irritable</td>
 			<td><%= select(:followup6month, :fu6month_panas_11,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>12. Alert</td>
 			<td><%= select(:followup6month, :fu6month_panas_12,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>13. Ashamed</td>
 			<td><%= select(:followup6month, :fu6month_panas_13,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>14. Inspired</td>
 			<td><%= select(:followup6month, :fu6month_panas_14,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>15. Nervous</td>
 			<td><%= select(:followup6month, :fu6month_panas_15,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>16. Determined</td>
 			<td><%= select(:followup6month, :fu6month_panas_16,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>17. Attentive</td>
 			<td><%= select(:followup6month, :fu6month_panas_17,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>18. Jittery</td>
 			<td><%= select(:followup6month, :fu6month_panas_18,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 		<tr>
 			<td>19. Active</td>
 			<td><%= select(:followup6month, :fu6month_panas_19,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 			<td></td>
 			<td>20. Afraid</td>
 			<td><%= select(:followup6month, :fu6month_panas_20,
 			[["",nil],
-			["Very slightly or not at all",1],
-			["A little",2],
-			["Moderately",3],
-			["Quite a bit",4],
-			["Extremely",5],["Refused", 1000]])%></td>
+			["1 - Very slightly or not at all",1],
+			["2 - A little",2],
+			["3 - Moderately",3],
+			["4 - Quite a bit",4],
+			["5 - Extremely",5],["Refused", 1000]])%></td>
 		</tr>
 	</table>

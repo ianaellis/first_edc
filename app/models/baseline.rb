@@ -8,6 +8,8 @@ class Baseline < ActiveRecord::Base
    attr_accessible :base_cowat_s, :base_cowat_f, :base_cowat_a, :base_cowat_s_1, :base_cowat_s_2, :base_cowat_s_3, :base_cowat_s_4, :base_cowat_s_5, :base_cowat_s_6, :base_cowat_s_7, :base_cowat_s_8, :base_cowat_s_9, :base_cowat_s_10, :base_cowat_s_11, :base_cowat_s_12, :base_cowat_s_13, :base_cowat_s_14, :base_cowat_s_15, :base_cowat_s_16, :base_cowat_s_17, :base_cowat_s_18, :base_cowat_s_19, :base_cowat_s_20, :base_cowat_s_21, :base_cowat_s_22, :base_cowat_s_23, :base_cowat_s_24, :base_cowat_s_25, :base_cowat_a_1, :base_cowat_a_2, :base_cowat_a_3, :base_cowat_a_4, :base_cowat_a_5, :base_cowat_a_6, :base_cowat_a_7, :base_cowat_a_8, :base_cowat_a_9, :base_cowat_a_10, :base_cowat_a_11, :base_cowat_a_12, :base_cowat_a_13, :base_cowat_a_14, :base_cowat_a_15, :base_cowat_a_16, :base_cowat_a_17, :base_cowat_a_18, :base_cowat_a_19, :base_cowat_a_20, :base_cowat_a_21, :base_cowat_a_22, :base_cowat_a_23, :base_cowat_a_24, :base_cowat_a_25, :base_cowat_f_1, :base_cowat_f_2, :base_cowat_f_3, :base_cowat_f_4, :base_cowat_f_5, :base_cowat_f_6, :base_cowat_f_7, :base_cowat_f_8, :base_cowat_f_9, :base_cowat_f_10, :base_cowat_f_11, :base_cowat_f_12, :base_cowat_f_13, :base_cowat_f_14, :base_cowat_f_15, :base_cowat_f_16, :base_cowat_f_17, :base_cowat_f_18, :base_cowat_f_19, :base_cowat_f_20, :base_cowat_f_21, :base_cowat_f_22, :base_cowat_f_23, :base_cowat_f_24, :base_cowat_f_25
    attr_accessible :base_weight, :base_height, :base_employment_status_a, :base_employment_status_b, :base_living_status, :base_living_status_other, :base_socioeconomic_status, :base_education_a, :base_education_b
    attr_accessible :base_arthritis, :base_arthritis_present, :base_osteoporosis, :base_osteoporosis_present, :base_asthma, :base_asthma_present, :base_copd, :base_copd_present, :base_angina, :base_angina_present, :base_heart, :base_heart_present, :base_heart_attack, :base_heart_attack_present, :base_neuro, :base_neuro_present, :base_stroke, :base_stroke_present, :base_pvd, :base_pvd_present, :base_diabetes, :base_diabetes_present, :base_gastrointestinal, :base_gastrointestinal_present, :base_depression, :base_depression_present, :base_anxiety, :base_anxiety_present, :base_visual_impairment, :base_visual_impairment_present, :base_hearing_impairment, :base_hearing_impairment_present, :base_ddd, :base_ddd_present, :base_obese, :base_obese_present
+   attr_accessible :refuse_rbans_list, :refuse_rbans_list_recall, :refuse_cwat, :refuse_wais_1, :refuse_wais_2
+
 
    attr_writer :current_step
 
@@ -34,4 +36,6 @@ class Baseline < ActiveRecord::Base
    def last_step?
    	current_step == steps.last
    end
+
+   validates :base_height, numericality: {:less_than_or_equal_to => 85, message: "Height must be below 85 inches."}, presence: {message: "Height cannot be blank"}
 end

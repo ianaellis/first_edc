@@ -25,11 +25,16 @@ class BaselinesController < ApplicationController
     if params[:submit_button]
       if @baseline.update_attributes(params[:baseline])
         flash[:success] = "Baseline Information Updated"
+        session[:baseline_step] = session[:baseline_params] = nil
+        redirect_to subjects_url
       else
         flash[:notice] = "Did not save baseline, could not update attributes"
+        respond_to do |format|
+          format.html { render action: "show" }
+          format.json { render json: @baseline.errors, status: :unprocessable_entity }
+        end
+
       end
-      session[:baseline_step] = session[:baseline_params] = nil
-      redirect_to subjects_url
     else
       session[:baseline_step] = @baseline.current_step
       render "show"
