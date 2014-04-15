@@ -134,6 +134,7 @@ jQuery ->
 		toggleBaseAlcohol()
 		#Cognitive
 		toggleRBANSListLearning()
+		toggleCWAT()
 		toggleWAIS1()
 		toggleWAIS2()
 		toggleRBANSListRecall()
