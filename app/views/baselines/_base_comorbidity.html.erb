@@ -3,7 +3,11 @@
 	<ol>
 		<li><p>Has the patient had (or have now):
 				<ol type="a">
-					<li>Dialysis <%= select(:baseline, :base_cq_1a, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
+					<li>Dialysis <%= select(:baseline, :base_cq_1a,
+					[["",nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], {}, :style => "width:70px") %></li>
 					<li>Lower Extremity Arterial Reconstruction (stents, angioplasty, bypass, etc.)? <%= select(:baseline, :base_cq_1b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
 					<div id="base_lear">
 						<ol type="i"><li>Side: <%= select(:baseline, :base_cq_1b_side, [["",nil],["Right",1],["Left",2],["Both",3],["Refused", 1000]], {}, :style => "width:70px") %></li>

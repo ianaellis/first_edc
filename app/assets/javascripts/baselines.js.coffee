@@ -202,3 +202,194 @@ jQuery ->
 			return
 		return
 	return
+
+#FCI
+
+fci_PIC_1 = ->
+	if($("#baseline_base_arthritis").val() is "0")
+		$("#base_PIC_1").show()
+	else
+		$("#base_PIC_1").hide()
+	return
+fci_PIC_2 = ->
+	if($("#baseline_base_osteoporosis").val() is "0")
+		$("#base_PIC_2").show()
+	else
+		$("#base_PIC_2").hide()
+	return
+fci_PIC_3 = ->
+	if($("#baseline_base_asthma").val() is "0")
+		$("#base_PIC_3").show()
+	else
+		$("#base_PIC_3").hide()
+	return
+fci_PIC_4 = ->
+	if($("#baseline_base_copd").val() is "0")
+		$("#base_PIC_4").show()
+	else
+		$("#base_PIC_4").hide()
+	return
+fci_PIC_5 = ->
+	if($("#baseline_base_angina").val() is "0")
+		$("#base_PIC_5").show()
+	else
+		$("#base_PIC_5").hide()
+	return
+fci_PIC_6 = ->
+	if($("#baseline_base_heart").val() is "0")
+		$("#base_PIC_6").show()
+	else
+		$("#base_PIC_6").hide()
+	return
+fci_PIC_7 = ->
+	if($("#baseline_base_heart_attack").val() is "0")
+		$("#base_PIC_7").show()
+	else
+		$("#base_PIC_7").hide()
+	return
+fci_PIC_8 = ->
+	if($("#baseline_base_neuro").val() is "0")
+		$("#base_PIC_8").show()
+	else
+		$("#base_PIC_8").hide()
+	return
+fci_PIC_9 = ->
+	if($("#baseline_base_stroke").val() is "0")
+		$("#base_PIC_9").show()
+	else
+		$("#base_PIC_9").hide()
+	return
+fci_PIC_10 = ->
+	if($("#baseline_base_pvd").val() is "0")
+		$("#base_PIC_10").show()
+	else
+		$("#base_PIC_10").hide()
+	return
+fci_PIC_11 = ->
+	if($("#baseline_base_diabetes").val() is "0")
+		$("#base_PIC_11").show()
+	else
+		$("#base_PIC_11").hide()
+	return
+fci_PIC_12 = ->
+	if($("#baseline_base_gastrointestinal").val() is "0")
+		$("#base_PIC_12").show()
+	else
+		$("#base_PIC_12").hide()
+	return
+fci_PIC_13 = ->
+	if($("#baseline_base_depression").val() is "0")
+		$("#base_PIC_13").show()
+	else
+		$("#base_PIC_13").hide()
+	return
+fci_PIC_14 = ->
+	if($("#baseline_base_anxiety").val() is "0")
+		$("#base_PIC_14").show()
+	else
+		$("#base_PIC_14").hide()
+	return
+fci_PIC_15 = ->
+	if($("#baseline_base_visual_impairment").val() is "0")
+		$("#base_PIC_15").show()
+	else
+		$("#base_PIC_15").hide()
+	return
+fci_PIC_16 = ->
+	if($("#baseline_base_hearing_impairment").val() is "0")
+		$("#base_PIC_16").show()
+	else
+		$("#base_PIC_16").hide()
+	return
+fci_PIC_17 = ->
+	if($("#baseline_base_ddd").val() is "0")
+		$("#base_PIC_17").show()
+	else
+		$("#base_PIC_17").hide()
+	return
+fci_PIC_18 = ->
+	if($("#baseline_base_obese").val() is "0")
+		$("#base_PIC_18").show()
+	else
+		$("#base_PIC_18").hide()
+	return
+
+
+jQuery ->
+	$(document).ready ->
+		fci_PIC_1()
+		fci_PIC_2()
+		fci_PIC_3()
+		fci_PIC_4()
+		fci_PIC_5()
+		fci_PIC_6()
+		fci_PIC_7()
+		fci_PIC_8()
+		fci_PIC_9()
+		fci_PIC_10()
+		fci_PIC_11()
+		fci_PIC_12()
+		fci_PIC_13()
+		fci_PIC_14()
+		fci_PIC_15()
+		fci_PIC_16()
+		fci_PIC_17()
+		fci_PIC_18()
+
+
+		$("#baseline_base_arthritis").on "change", ->
+			fci_PIC_1()
+			return
+		$("#baseline_base_osteoporosis").on "change", ->
+			fci_PIC_2()
+			return
+		$("#baseline_base_asthma").on "change", ->
+			fci_PIC_3()
+			return
+		$("#baseline_base_copd").on "change", ->
+			fci_PIC_4()
+			return
+		$("#baseline_base_angina").on "change", ->
+			fci_PIC_5()
+			return
+		$("#baseline_base_heart").on "change", ->
+			fci_PIC_6()
+			return
+		$("#baseline_base_heart_attack").on "change", ->
+			fci_PIC_7()
+			return
+		$("#baseline_base_neuro").on "change", ->
+			fci_PIC_8()
+			return
+		$("#baseline_base_stroke").on "change", ->
+			fci_PIC_9()
+			return
+		$("#baseline_base_pvd").on "change", ->
+			fci_PIC_10()
+			return
+		$("#baseline_base_diabetes").on "change", ->
+			fci_PIC_11()
+			return
+		$("#baseline_base_gastrointestinal").on "change", ->
+			fci_PIC_12()
+			return
+		$("#baseline_base_depression").on "change", ->
+			fci_PIC_13()
+			return
+		$("#baseline_base_anxiety").on "change", ->
+			fci_PIC_14()
+			return
+		$("#baseline_base_visual_impairment").on "change", ->
+			fci_PIC_15()
+			return
+		$("#baseline_base_hearing_impairment").on "change", ->
+			fci_PIC_16()
+			return
+		$("#baseline_base_ddd").on "change", ->
+			fci_PIC_17()
+			return
+		$("#baseline_base_obese").on "change", ->
+			fci_PIC_18()
+			return
+		return
+	return

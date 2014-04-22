@@ -16,95 +16,347 @@
 			</tr>
 			<tr>
 				<td>1. Do you have arthritis (rheumatoid or osteoarthritis)?</td>
-				<td><%= select(:baseline, :base_arthritis ,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_arthritis_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_arthritis,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_1">
+						<%= select(:baseline, :base_arthritis_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto") %>
+					</div>
+				</td>
+				
 			</tr>
 			<tr>
 				<td>2. Do you have osteoporosis?</td>
-				<td><%= select(:baseline, :base_osteoporosis ,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_osteoporosis_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_osteoporosis,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_2">
+						<%= select(:baseline, :base_osteoporosis_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>3. Do you have asthma?</td>
-				<td><%= select(:baseline, :base_asthma,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_asthma_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_asthma,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_3">
+						<%= select(:baseline, :base_asthma_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>4. Do you have chronic obstructive pulmonary disease (COPD), acquired respiratory distress syndrome (ARDS), or emphysema?</td>
-				<td><%= select(:baseline, :base_copd,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_copd_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_copd,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_4">
+						<%= select(:baseline, :base_copd_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>5. Do you have angina?</td>
-				<td><%= select(:baseline, :base_angina,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_angina_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_angina,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_5">
+						<%= select(:baseline, :base_angina_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>6. Do you have congestive heart failure (or heart disease)?</td>
-				<td><%= select(:baseline, :base_heart,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_heart_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_heart,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_6">
+						<%= select(:baseline, :base_heart_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>7. Have you ever had a heart attack (myocardial infarction)?</td>
-				<td><%= select(:baseline, :base_heart_attack,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_heart_attack_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_heart_attack,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_7">
+						<%= select(:baseline, :base_heart_attack_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>8. Do you have a neurological disease (such as multiple sclerosis or Parkinson's)?</td>
-				<td><%= select(:baseline, :base_neuro,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_neuro_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_neuro,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_8">
+						<%= select(:baseline, :base_neuro_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>9. Have you ever had a stroke or a transient ischemic attack (TIA)?</td>
-				<td><%= select(:baseline, :base_stroke,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_stroke_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_stroke,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_9">
+						<%= select(:baseline, :base_stroke_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>10. Do you have peripheral vascular disease?</td>
-				<td><%= select(:baseline, :base_pvd,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_pvd_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_pvd,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_10">
+						<%= select(:baseline, :base_pvd_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>11. Do you have diabetes (type I or type II)?</td>
-				<td><%= select(:baseline, :base_diabetes,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_diabetes_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_diabetes,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_11">
+						<%= select(:baseline, :base_diabetes_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>12. Do you have an upper gastrointestinal disease (e.g. ulcer, hernia, reflux)?</td>
-				<td><%= select(:baseline, :base_gastrointestinal,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_gastrointestinal_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_gastrointestinal,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_12">
+						<%= select(:baseline, :base_gastrointestinal_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>13. Do you suffer from depression?</td>
-				<td><%= select(:baseline, :base_depression,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_depression_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_depression,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_13">
+						<%= select(:baseline, :base_depression_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>14. Do you have an anxiety or panic disorder?</td>
-				<td><%= select(:baseline, :base_anxiety,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_anxiety_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_anxiety,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_14">
+						<%= select(:baseline, :base_anxiety_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>15. Do you have a visual impairment (e.g. cataracts, glaucoma, macular degeneration)?</td>
-				<td><%= select(:baseline, :base_visual_impairment,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_visual_impairment_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_visual_impairment,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_15">
+						<%= select(:baseline, :base_visual_impairment_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>16. Do you have a hearing impairment (i.e. very hard of hearing, even with a hearing aid)?</td>
-				<td><%= select(:baseline, :base_hearing_impairment,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_hearing_impairment_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_hearing_impairment,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_16">
+						<%= select(:baseline, :base_hearing_impairment_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>17. Do you have degenerative disc disease (e.g. back disease, spinal stenosis, severe chronic back pain)?</td>
-				<td><%= select(:baseline, :base_ddd,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_ddd_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_ddd,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_17">
+						<%= select(:baseline, :base_ddd_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>18. Obese and/or have a body mass index (BMI) > 30 (weight in kg/height in meters)?</td>
-				<td><%= select(:baseline, :base_obese,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto") %></td>
-				<td><%= select(:baseline, :base_obese_present,[["", nil],["Yes",1],["No",0],["Refused", 1000]], :style => "width:auto")%></td>
+				<td>
+					<%= select(:baseline, :base_obese,
+					[["", nil],
+					["Yes",1],
+					["No",0],
+					["Refused", 1000]], :style => "width:auto") %>
+				</td>
+				<td>
+					<div id="base_PIC_18">
+						<%= select(:baseline, :base_obese_present,
+						[["", nil],
+						["Yes",1],
+						["No",0],
+						["Refused", 1000]], :style => "width:auto")%>
+					</div>
+				</td>
 			</tr>
-
 		</table>
 	</div>
 </div>

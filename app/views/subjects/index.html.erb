@@ -11,6 +11,7 @@
         <th>Screening</th>
         <th>Baseline</th>
         <th>3 Week Chart Review</th>
+        <th>6 Week Chart Review</th>
         <th>Treatment Completion</th>
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
@@ -47,6 +48,14 @@
           <% end %>
           </td>
           
+          <td>
+          <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
+            <%= link_to "edit", follow_up6_week_path([FollowUp6Week.where(subject_id: sub.subject_id).first]) %>
+          <% else %>
+            <%= FollowUp6Week.create(subject_id: sub.subject_id) %>
+          <% end %>
+          </td>
+
           <td>
           <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", treatment_completion_path([TreatmentCompletion.where(subject_id: sub.subject_id).first]) %>
