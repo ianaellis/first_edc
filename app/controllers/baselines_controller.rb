@@ -149,9 +149,9 @@ class BaselinesController < ApplicationController
   def create
     @baseline = Baseline.new(params[:baseline])
     if @baseline.save
-      flash[:success] = "Baseline added from the create method."
       redirect_to baselines_url
     else
+      flash[:success] = "nope"
       render 'new'
     end
   end

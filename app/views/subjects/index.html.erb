@@ -30,8 +30,6 @@
           <td><%= link_to "edit", edit_subject_path(sub) %></td>
           <td><%= link_to "edit", subject_screening_path(sub) %></td>
 
-
-
           <td>
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
             <%= link_to "edit", baseline_path([Baseline.where(subject_id: sub.subject_id).first]) %>              
@@ -44,7 +42,7 @@
           <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up3_week_path([FollowUp3Week.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= FollowUp3Week.create(subject_id: sub.subject_id) %>
+            <% FollowUp3Week.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
           
@@ -52,7 +50,7 @@
           <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up6_week_path([FollowUp6Week.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= FollowUp6Week.create(subject_id: sub.subject_id) %>
+            <% FollowUp6Week.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
 
@@ -60,7 +58,7 @@
           <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", treatment_completion_path([TreatmentCompletion.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= TreatmentCompletion.create(subject_id: sub.subject_id) %>
+            <% TreatmentCompletion.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
           
@@ -68,7 +66,7 @@
           <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up18_week_path([FollowUp18Week.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= FollowUp18Week.create(subject_id: sub.subject_id) %>
+            <% FollowUp18Week.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
 
@@ -76,7 +74,7 @@
           <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up6_month_path([FollowUp6Month.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= FollowUp6Month.create(subject_id: sub.subject_id) %>
+            <% FollowUp6Month.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
 
@@ -84,7 +82,7 @@
           <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up1_year_path([FollowUp1Year.where(subject_id: sub.subject_id).first]) %>
           <% else %>
-            <%= FollowUp1Year.create(subject_id: sub.subject_id) %>
+            <% FollowUp1Year.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
           

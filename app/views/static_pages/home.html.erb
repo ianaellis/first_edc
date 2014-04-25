@@ -1,11 +1,43 @@
-<div class="center hero-unit">
+<div class="hero-unit">
 	<h1>VetPALS EDC</h1>
+	<h2>VetPALS Electronic Data Capture web platform</h2>
 
-	<h2>
-		This is the home page for our application.
-	</h2>
+	<div id="homepage_body">
+		<div id="homepage_text">
+			<h3 class="center"><b>Welcome</b></h3>
 
-	<%= link_to "Sign up here", signup_path, class: "btn btn-large btn-primary" %>
+			<p>
+				Please sign in to continue,
+				or make a new account. New account will have to be verified by an admin before they
+				become active.
+			</p>
+			<p>
+				If you have any question about this site, or ideas to improve upon the site, 
+				email me at <a href="mailto:ian@specri.com">Ian Ellis</a>.
+			</p>
+			<p>This site is under development, with new features being added daily.</p>
+		</div>
+		<div id="homepage_links">
+			<h3 class="center" id="homepage_titles"><b>Links</b></h3>
+			<ul>
+				<li><%= link_to "Create new account", signup_path, class: "btn" %></li>
+				<li><%= link_to "Log in", signin_path, class: "btn" %></li>
+			</ul>
+		</div>
+		<div id="homepage_news">
+			<h3 class="center" id="homepage_titles"><b>News</b></h3>
+			<ul type="circle">
+				<li>April 25th, 2014</li>
+					<ul>
+						<li><i>Created home page</i></li>
+						<li><i>Fixing baseline edit link</i></li>
+						<li><i>Adding screening ID</i></li>
+					</ul>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Spectrum Research"), 'http://specri.com' %>
+
+<!-- <%= link_to image_tag("rails.png", alt: "Spectrum Research"), 'http://specri.com' %> -->
