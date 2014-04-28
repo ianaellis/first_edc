@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140418194314) do
+ActiveRecord::Schema.define(:version => 20140428174400) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -500,10 +500,10 @@ ActiveRecord::Schema.define(:version => 20140418194314) do
     t.integer  "fu18week_fuq_4a_type"
     t.integer  "fu18week_fuq_4b"
     t.integer  "fu18week_fuq_5"
-    t.integer  "fu18week_fuq_5a"
+    t.string   "fu18week_fuq_5a"
     t.integer  "fu18week_fuq_6"
     t.integer  "fu18week_fuq_6a"
-    t.integer  "fu18week_fuq_7"
+    t.string   "fu18week_fuq_7"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
   end
@@ -522,10 +522,10 @@ ActiveRecord::Schema.define(:version => 20140418194314) do
     t.integer  "fu1year_fuq_4a_type"
     t.integer  "fu1year_fuq_4b"
     t.integer  "fu1year_fuq_5"
-    t.integer  "fu1year_fuq_5a"
+    t.string   "fu1year_fuq_5a"
     t.integer  "fu1year_fuq_6"
     t.integer  "fu1year_fuq_6a"
-    t.integer  "fu1year_fuq_7"
+    t.string   "fu1year_fuq_7"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end
@@ -544,12 +544,12 @@ ActiveRecord::Schema.define(:version => 20140418194314) do
     t.integer  "fu3week_fuq_4a_type"
     t.integer  "fu3week_fuq_4b"
     t.integer  "fu3week_fuq_5"
-    t.integer  "fu3week_fuq_5a"
+    t.string   "fu3week_fuq_5a"
     t.integer  "fu3week_fuq_6"
     t.integer  "fu3week_fuq_6a"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
-    t.integer  "fu3week_fuq_7"
+    t.string   "fu3week_fuq_7"
   end
 
   add_index "follow_up3_weeks", ["subject_id"], :name => "index_follow_up3_weeks_on_subject_id"
@@ -760,10 +760,10 @@ ActiveRecord::Schema.define(:version => 20140418194314) do
     t.integer  "fu6week_fuq_4a_type"
     t.integer  "fu6week_fuq_4b"
     t.integer  "fu6week_fuq_5"
-    t.integer  "fu6week_fuq_5a"
+    t.string   "fu6week_fuq_5a"
     t.integer  "fu6week_fuq_6"
     t.integer  "fu6week_fuq_6a"
-    t.integer  "fu6week_fuq_7"
+    t.string   "fu6week_fuq_7"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
   end
@@ -872,6 +872,7 @@ ActiveRecord::Schema.define(:version => 20140418194314) do
     t.integer  "enrolled"
     t.integer  "reason_not_enrolled"
     t.string   "reason_not_enrolled_other"
+    t.integer  "screeningID"
   end
 
   create_table "treatment_completions", :force => true do |t|
