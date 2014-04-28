@@ -10,15 +10,16 @@
 					<%= form_for @baseline do |f| %>
 						<%= render "base_#{@baseline.current_step}", :f => f %>
 					<div id="submit_buttons" style="width:800px; margin:auto;">
-						<div id="continue_button" style="width:150px; float:right">	
+						<div id="back_button" style="width:150px; float:left;">
+							<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @baseline.first_step? %>
+						</div>
+						<div id="continue_button" style="width:150px; float:right;">	
 							<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @baseline.last_step? %>
 						</div>
 						<div id="submit_button" style="width:200px; margin:auto">
 							<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
 						</div>
-						<div id="back_button" style="width:150px;">
-							<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @baseline.first_step? %>
-						</div>
+						<div style="clear:both"></div>
 					</div>
 				</div>
 				<div style="width:150px; float:left;">
@@ -47,6 +48,3 @@
 			<% end %>
 	</div>
 </div>
-
-<%= link_to 'Show', @subject %> |
-<%= link_to 'Back', subjects_path %>
