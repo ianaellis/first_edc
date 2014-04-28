@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140428174400) do
+ActiveRecord::Schema.define(:version => 20140428175607) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -872,7 +872,7 @@ ActiveRecord::Schema.define(:version => 20140428174400) do
     t.integer  "enrolled"
     t.integer  "reason_not_enrolled"
     t.string   "reason_not_enrolled_other"
-    t.integer  "screeningID"
+    t.string   "screening_id"
   end
 
   create_table "treatment_completions", :force => true do |t|

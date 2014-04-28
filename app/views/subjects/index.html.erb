@@ -23,7 +23,7 @@
     </thead> 
     <body>
       <% @subjects.each do |sub| %>
-      <% if (current_user.user_study_site == sub.study_site) or current_user.is? :admin %>
+      <% if (current_user.user_study_site == sub.study_site) or current_user.is? :admin and sub.subject_id != nil %>
         <tr>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil"%></td>

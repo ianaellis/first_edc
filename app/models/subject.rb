@@ -9,12 +9,13 @@ class Subject < ActiveRecord::Base
    has_one :follow_up6_month
    has_one :follow_up1_year
 
+
    #Screening Variables
    attr_accessible :subject_id, :study_site, :sc_smpsq_1, :sc_smpsq_2, :sc_smpsq_3, :sc_smpsq_4, :sc_smpsq_4a, :sc_smpsq_5, :sc_smpsq_6, :sc_smpsq_7, :sc_smpsq_8, :sc_smpsq_9, :sc_smpsq_10
    attr_accessible :sc_inc_1, :sc_inc_2, :sc_inc_2a, :sc_inc_2b, :sc_inc_3, :sc_inc_4, :sc_inc_5, :sc_exc_1, :sc_exc_2, :sc_exc_3, :sc_pd_1, :sc_pd_2, :sc_pd_3, :sc_pd_4, :sc_pd_4o, :sc_pd_5, :sc_pe_1, :sc_pe_2, :sc_pe_3, :sc_pe_4, :sc_pe_4a, :sc_pe_5, :sc_pe_5o, :sc_ic_1, :sc_ic_2, :sc_ic_3, :sc_ic_4, :sc_ic_5
    attr_accessible :enrolled, :reason_not_enrolled, :reason_not_enrolled_other
    #Variables for Randomization
-   attr_accessible :group_size_input, :site_input, :group_name
+   attr_accessible :group_size_input, :site_input, :group_name, :screening_id
 
    CRFS = %w[Baseline TreatmentCompletion FollowUp3Week FollowUp6Week FollowUp18Week FollowUp6Month FollowUp1Year]
 
@@ -26,7 +27,8 @@ class Subject < ActiveRecord::Base
    # }
 
    #Validations for new subject
-   validates :subject_id, :presence => {:message => 'Subject ID cannot be blank.'}, :uniqueness => {:message => 'Subject ID already found in database.'}, numericality: {:only_integer => true, message: "Subject ID must only consist of numbers." }
+   validates :screening_id, :presence => {:message => 'Screening ID cannot be blank.'}, :uniqueness => {:message => 'Screening ID already found in database.'}, :length => { is: 5 }, :format => {:with => /^S\w{4}$/i, :message => 'Format must be S####'}
+   validates :subject_id, :uniqueness => {:message => "Subject ID already found in database."}, :length => { is: 4, :message => 'Subject ID must be 4 numbers long' }
    validates :study_site, :presence => {:message => 'Study Site cannot be blank.'}
    validates :enrolled, :presence => {:message => 'Enrolled cannot be blank.'}
 end

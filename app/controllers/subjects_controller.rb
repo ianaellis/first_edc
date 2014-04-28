@@ -20,7 +20,7 @@ class SubjectsController < ApplicationController
     respond_to do |format|
       if @subject.save
         flash[:success] = "Subject successfully added."
-        redirect_to subjects_path
+        redirect_to new_subject_path
       else
         format.html { render action: "new" }
         format.json { render json: @subject.errors, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class SubjectsController < ApplicationController
       @subject.destroy
 
       respond_to do |format|
-        format.html { redirect_to subjects_url }
+        format.html { redirect_to subject_screening_path }
         format.json { head :no_content }
       end
     end

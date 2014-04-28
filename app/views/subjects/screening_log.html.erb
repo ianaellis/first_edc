@@ -5,12 +5,17 @@
   <table id="screening_log" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
     <thead>
       <tr>
+        <th>Screening ID</th>
         <th>Subject ID</th>
         <th>Study Site</th>
         <th>Eligible</th>
         <th>Reason Not Eligible</th>
         <th>Enrolled</th>
         <th>Reason Not Enrolled</th>
+        <th>Edit</th>
+        <% if current_user.is? :admin %>
+          <th>Delete</th>
+        <% end %>
 
 
       </tr>
@@ -19,12 +24,19 @@
       <% @subjects.each do |sub| %>
       <% if (current_user.user_study_site == sub.study_site) or current_user.is? :admin %>
         <tr>
+          <td><%= sub.screening_id %></td>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil" %></td> 
           <td><%= sub.sc_pe_3 %></td>
           <td><%= sub.sc_pe_5 %></td>
           <td><%= sub.enrolled %></td>
-          <td><%= sub.sc_smpsq_4 %></td>
+          <td><%= sub.reason_not_enrolled %></td>
+          <td><%= link_to "edit", edit_subject_path([Subject.where(screening_id: sub.screening_id).first])%></td>
+          <% if current_user.is? :admin %>
+            <td>
+              <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>
+            </td>
+          <% end %>
         </tr> 
         <% end %>
       <% end %>

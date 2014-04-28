@@ -19,14 +19,25 @@
 		</div>
 		<div id="homepage_links">
 			<h3 class="center" id="homepage_titles"><b>Links</b></h3>
-			<ul>
-				<li><%= link_to "Create new account", signup_path, class: "btn" %></li>
-				<li><%= link_to "Log in", signin_path, class: "btn" %></li>
-			</ul>
+			<% if signed_in? %>
+				<ul><li><%= link_to "Enter Subject", newsubject_path %></li></ul>
+				<ul><li><%= link_to "View Screening Log", screening_log_path %></li></ul>
+				<ul><li><%= link_to "View Subjects", subjects_path %></li></ul>
+
+			<% else %>
+				<ul>
+					<li><%= link_to "Create new account", signup_path, class: "btn" %></li>
+					<li><%= link_to "Log in", signin_path, class: "btn" %></li>
+				</ul>
+			<% end %>
 		</div>
 		<div id="homepage_news">
 			<h3 class="center" id="homepage_titles"><b>News</b></h3>
 			<ul type="circle">
+				<li>April 28th, 2014</li>
+				<ul>
+					<li><i>Screening log updated</i></li>
+				</ul>
 				<li>April 25th, 2014</li>
 					<ul>
 						<li><i>Created home page</i></li>
