@@ -28,7 +28,7 @@ class Subject < ActiveRecord::Base
 
    #Validations for new subject
    validates :screening_id, :presence => {:message => 'Screening ID cannot be blank.'}, :uniqueness => {:message => 'Screening ID already found in database.'}, :length => { is: 5 }, :format => {:with => /^S\w{4}$/i, :message => 'Format must be S####'}
-   validates :subject_id, :uniqueness => {:message => "Subject ID already found in database."}, :length => { is: 4, :message => 'Subject ID must be 4 numbers long' }
+   # validates :subject_id, :uniqueness => {:message => "Subject ID already found in database."}, :length => { is: 4, :message => 'Subject ID must be 4 numbers long' }
    validates :study_site, :presence => {:message => 'Study Site cannot be blank.'}
    validates :enrolled, :presence => {:message => 'Enrolled cannot be blank.'}
 end

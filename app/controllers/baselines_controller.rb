@@ -139,7 +139,7 @@ class BaselinesController < ApplicationController
   
   def baseline
     @baseline = Baseline.find(params[:subject_id])
-    session[:subject_params] ||= {}
+    session[:baseline_params] ||= {} # or subject_params
   end
 
   def edit
