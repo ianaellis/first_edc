@@ -5,12 +5,25 @@
 			<br/>
 
 		<%= form_tag({controller: "subjects", action: "randomize"}, method: "post") do %>
-			<div class="span6 offset3 center" style="width:300px; margin:auto;">
+			<div class="span6 offset3 center" style="width:200px; margin:auto;">
 				<div>
-					Enter Group Size: <%= number_field_tag(:group_size_input)%>
-					Select Study Site: <%= select :study_site, {}, [[' ', nil],["1 - Seattle", 1],["2 - Houston", 2],["3 - Cleveland", 3],["4 - Tampa", 4]] %>
-					Group Name: <%= text_field_tag(:treatment_group_name) %>
-					<%= submit_tag "Randomize", class: "btn btn-large btn-primary", :style => "width:300px" %>
+					Enter Group Size: 
+					<%= select(:subject, :group_size_input,
+					[['',nil],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10]]) %>
+					Select Study Site: 
+					<%= select :study_site, {}, 
+					[[' ', nil],
+					["1 - Seattle", 1],
+					["2 - Houston", 2],
+					["3 - Cleveland", 3],
+					["4 - Tampa", 4]] %>
+					TODO - Auto Assign Group Name: <%= text_field_tag(:treatment_group_name) %>
+					<%= submit_tag "Randomize", class: "btn btn-large btn-primary", :style => "width:100px" %>
 				</div>
 			</div>
 		<% end %>

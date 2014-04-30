@@ -15,6 +15,7 @@ class BaselinesController < ApplicationController
     session[:baseline_params].deep_merge!(params[:baseline]) if params[:baseline_id]
     @baseline = Baseline.find(params[:id])
     @baseline.current_step = session[:baseline_step]
+    
     if params[:back_button]
       @baseline.update_attributes(params[:baseline])
       @baseline.previous_step

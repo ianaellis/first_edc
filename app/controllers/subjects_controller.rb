@@ -36,7 +36,7 @@ class SubjectsController < ApplicationController
 
     if @subject.update_attributes(params[:subject])
       flash[:success] = "Subject Screening Log Submitted."
-      render "screening_log"
+      redirect_to screening_log_path
     else
       flash[:failure] = "Subject Screening was NOT updated. Error occurred."
 
@@ -69,8 +69,6 @@ class SubjectsController < ApplicationController
   def screening
     @subject = Subject.find(params[:subject_id])
   end
-
-
 
   def randomize
     # Create random assignment variable
