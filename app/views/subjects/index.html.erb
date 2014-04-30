@@ -32,15 +32,15 @@
 
           <td>
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
-            <%= link_to "edit", baseline_path([Baseline.where(subject_id: sub.subject_id).first]) %>              
+            <%= link_to "edit", baseline_path(Baseline.where(subject_id: sub.subject_id).first) %>              
           <% else %>
-            <% Baseline.create(subject_id: sub.subject_id) %>
+            <%= Baseline.create(subject_id: sub.subject_id) %>
           <% end %>
           </td> 
           
           <td>
           <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
-            <%= link_to "edit", follow_up3_week_path([FollowUp3Week.where(subject_id: sub.subject_id).first]) %>
+            <%= link_to "edit", follow_up3_week_path(FollowUp3Week.where(subject_id: sub.subject_id).first) %>
           <% else %>
             <% FollowUp3Week.create(subject_id: sub.subject_id) %>
           <% end %>

@@ -8,7 +8,6 @@ class SubjectsController < ApplicationController
 
   def new
     @subject = Subject.new
-    @user = User.new
   end
   
   def show
@@ -20,7 +19,7 @@ class SubjectsController < ApplicationController
     respond_to do |format|
       if @subject.save
         flash[:success] = "Subject successfully added."
-        redirect_to new_subject_path
+        format.html { render action: "screening" }
       else
         format.html { render action: "new" }
         format.json { render json: @subject.errors, status: :unprocessable_entity }
@@ -37,7 +36,7 @@ class SubjectsController < ApplicationController
 
     if @subject.update_attributes(params[:subject])
       flash[:success] = "Subject Screening Log Submitted."
-      redirect_to subjects_url
+      render "screening_log"
     else
       flash[:failure] = "Subject Screening was NOT updated. Error occurred."
 
@@ -100,6 +99,10 @@ class SubjectsController < ApplicationController
     else
       flash[:failure] = "The group size must be between 6 and 10."
     end
+  end
+
+  def empty_subject(subject_id)
+    where(subject_id: :subject_id).first != nil 
   end
 
 end

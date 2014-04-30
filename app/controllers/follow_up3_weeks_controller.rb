@@ -17,7 +17,7 @@ class FollowUp3WeeksController < ApplicationController
 	end
 
 	def edit
-	 # @followup3week = followup3week.find(params[:id])
+	 @followup3week = followup3week.find(params[:id])
 	end
 
 	def update

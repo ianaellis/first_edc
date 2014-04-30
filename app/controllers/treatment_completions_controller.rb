@@ -44,7 +44,7 @@ class TreatmentCompletionsController < ApplicationController
 	def create
     	@tc = TreatmentCompletion.new(params[:tc])
 	    if @tc.save
-	      flash[:success] = "Treatmetn Completion added from the create method."
+	      flash[:success] = "Treatment Completion added from the create method."
 	      redirect_to treatment_completions_url
 	    else
 	      render 'new'
