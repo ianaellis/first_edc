@@ -31,4 +31,5 @@ class Subject < ActiveRecord::Base
    # validates :subject_id, :uniqueness => {:message => "Subject ID already found in database."}, :length => { is: 4, :message => 'Subject ID must be 4 numbers long' }
    validates :study_site, :presence => {:message => 'Study Site cannot be blank.'}
    # validates :enrolled, :presence => {:message => 'Enrolled cannot be blank.'}
+
 end

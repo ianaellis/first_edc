@@ -13,7 +13,7 @@
         <th>Enrolled</th>
         <th>Reason Not Enrolled</th>
         <th>Edit</th>
-        <th>Screening Log</th>
+        <th>Screening CRF</th>
         <% if current_user.is? :admin %>
           <th>Delete</th>
         <% end %>
@@ -33,7 +33,7 @@
           <td><%= sub.enrolled %></td>
           <td><%= sub.reason_not_enrolled %></td>
           <td><%= link_to "edit", edit_subject_path([Subject.where(screening_id: sub.screening_id).first])%></td>
-          <td><%= link_to "Screening log", subject_screening_path(sub) %></td>
+          <td><%= link_to "Screening CRF", subject_screening_path(sub) %></td>
           <% if current_user.is? :admin %>
             <td>
               <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>

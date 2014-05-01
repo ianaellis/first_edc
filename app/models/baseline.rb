@@ -37,5 +37,9 @@ class Baseline < ActiveRecord::Base
    	current_step == steps.last
    end
 
-   validates :base_height, numericality: {:less_than_or_equal_to => 85, message: "Height must be below 85 inches."}, presence: {message: "Height cannot be blank"}
+   def empty_subject(subject_id)
+      where(subject_id: :subject_id).first != nil 
+   end
+
+   # validates :base_height, numericality: {:less_than_or_equal_to => 85, message: "Height must be below 85 inches."}, presence: {message: "Height cannot be blank"}
 end

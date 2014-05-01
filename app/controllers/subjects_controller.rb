@@ -99,8 +99,4 @@ class SubjectsController < ApplicationController
     end
   end
 
-  def empty_subject(subject_id)
-    where(subject_id: :subject_id).first != nil 
-  end
-
 end

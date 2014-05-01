@@ -148,7 +148,7 @@ class BaselinesController < ApplicationController
   end
 
   def create
-    @baseline = Baseline.new(params[:baseline])
+    @baseline = Baseline.create(params[:baseline])
     if @baseline.save
       flash[:success] = "Baseline added from create method"
       redirect_to baselines_url
@@ -157,11 +157,4 @@ class BaselinesController < ApplicationController
     end
   end
 
-  def empty_subject(subject_id)
-    where(subject_id: :subject_id).first != nil 
-  end
-
-  def display_link
-    "#{Baseline.where(subject_id: sub.subject_id)}"
-  end
 end
