@@ -86,11 +86,11 @@
           <% end %>
           </td>
           
-          <td>
           <% if current_user.is? :admin %>
+          <td>
             <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>
-          <% end %>
           </td>
+          <% end %>
         </tr>
         <% end %> 
       <% end %>
