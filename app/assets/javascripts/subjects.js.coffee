@@ -79,6 +79,12 @@ toggleIneligibleOther = ->
 		$("#screen_ineligible_other").hide()
 	return
 
+toggleInformedConsent = ->
+	if($("#subject_sc_pe_1").val() is "1"  and $("#subject_sc_pe_2").val() is "2")
+		$("#informed_consent").show()
+	else
+		$("#informed_consent").hide()
+	return
 jQuery ->
 	$(document).ready ->
 		toggleStreetAddress()
@@ -87,6 +93,7 @@ jQuery ->
 		toggleWaiverGranted()
 		toggleIneligible()
 		toggleIneligibleOther()
+		toggleInformedConsent()
 
 		$("#subject_sc_smpsq_4").on "change", ->
 			toggleStreetAddress()
@@ -110,5 +117,11 @@ jQuery ->
 		$("#subject_sc_pe_5").on "change", ->
 			toggleIneligibleOther()
 			return
+		$("#subject_sc_pe_1").on "change", ->
+			toggleInformedConsent()
+			return
+		$("#subject_sc_pe_2").on "change", ->
+			toggleInformedConsent()
+			return	
 		return
 	return

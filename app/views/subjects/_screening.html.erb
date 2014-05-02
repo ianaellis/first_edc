@@ -197,32 +197,33 @@
 			</li>
 		</div>
 	</ol>
-
+	<div id="informed_consent">
 	<h2>6.0 Informed Consent</h2>
-	<ol>
-		<li>
-			<p>Has the patient signed the informed consent prior ot any study related procedures?</p>
-			<%= select(:subject, :sc_ic_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
-		</li>
-		<li>
-			<p>Was the patient given a copy of their signed informed consent?</p>
-			<%= select(:subject, :sc_ic_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
-		</li>
-		<div style="width:300px;margin:left;">
+		<ol>
 			<li>
-				<p>Date Informed Consent and HIPAA were signed</p>
-				<%= date_select(:subject, :sc_ic_3, :style => "width:140px") %>
+				<p>Has the patient signed the informed consent prior ot any study related procedures?</p>
+				<%= select(:subject, :sc_ic_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 			</li>
-		</div>
-		<li>
-			<p>Subject Number (e.g. 1001, 1002, 2003)</p>
-			<%= number_field(:subject, :subject_id, :style => "width:70px") %>
-		</li>
-		<li>
-			<p>Site Number</p>
-			<%= select(:subject, :sc_ic_5,[["", nil],["1 - Seattle", 1],["2 - Houston", 2],["3 - Cleveland", 3],["4 - Tampa",4]],{}, :style => "width:70px") %>
-		</li>
-	</ol>
+			<li>
+				<p>Was the patient given a copy of their signed informed consent?</p>
+				<%= select(:subject, :sc_ic_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+			</li>
+			<div style="width:300px;margin:left;">
+				<li>
+					<p>Date Informed Consent and HIPAA were signed</p>
+					<%= date_select(:subject, :sc_ic_3, :style => "width:140px") %>
+				</li>
+			</div>
+			<li>
+				<p>Subject Number (e.g. 1001, 1002, 2003)</p>
+				<%= number_field(:subject, :subject_id, :style => "width:70px") %>
+			</li>
+			<li>
+				<p>Site Number</p>
+				<%= select(:subject, :sc_ic_5,[["", nil],["1 - Seattle", 1],["2 - Houston", 2],["3 - Cleveland", 3],["4 - Tampa",4]],{}, :style => "width:70px") %>
+			</li>
+		</ol>
+	</div>
 	<div style="width:300px;margin:auto;">
 		<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 	</div>

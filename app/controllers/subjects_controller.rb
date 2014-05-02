@@ -87,7 +87,7 @@ class SubjectsController < ApplicationController
     if (params[:group_size_input].to_i >= 6 ) and (params[:group_size_input].to_i <= 10)
       @group_to_randomize = Subject.where("study_site = ? AND treatment_group is null", params[:site_input].to_i).order("created_at ASC").limit(params[:group_size_input].to_i)
       
-      if params[:treatment_group_name] != '' and params[:site_input] != '' and params[:group_size_input] != ''
+      if params[:site_input] != '' and params[:group_size_input] != ''
         @group_to_randomize.update_all(treatment_group:params[:treatment_group_name], pref_rand: @treatment.to_i)
         flash[:success] = "Subjects randomized, and assigned the #{params[:treatment_name]}"
         redirect_to subjects_path
