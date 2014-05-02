@@ -5,24 +5,39 @@
 	<div id="homepage_body">
 		<div id="homepage_text">
 			<h3 class="center"><b>Welcome</b></h3>
+			<% if signed_in? %>
+				<p><strong>For a new screened participant:</strong></p>
+				<ol>
+					<li>Click on <i><%= link_to "Enter New Participant", newsubject_path %></i></li>
+					<li>Follow the prompts to select Study Site and enter a screening number.</li>
+				</ol>
 
-			<p>
-				Please sign in to continue,
-				or make a new account. New account will have to be verified by an admin before they
-				become active.
-			</p>
-			<p>
-				If you have any question about this site, or ideas to improve upon the site, 
-				email me at <a href="mailto:ian@specri.com">Ian Ellis</a>.
-			</p>
-			<p>This site is under development, with new features being added daily.</p>
+				<p><strong>If you've already entered screening information, you can:</strong></p>
+				<ol>
+					<li>View the <%= link_to "screening log", screening_log_path %></li>
+					<li>View the <%= link_to "participant log", subjects_path %></li>
+					<li>Change incorrectly entered information by contacting <a href="mailto:ian@specri.com">Ian Ellis</a> </li>
+					<li>Finally, you can view, edit, and update the follow-up log (In progress)</li>
+				</ol>
+			<% else %>
+				<p>
+					Please sign in to continue,
+					or make a new account. New account will have to be verified by an admin before they
+					become active.
+				</p>
+				<p>
+					If you have any question about this site, or ideas to improve upon the site, 
+					email me at <a href="mailto:ian@specri.com">Ian Ellis</a>.
+				</p>
+				<p>This site is under development, with new features being added daily.</p>
+			<% end %>
 		</div>
 		<div id="homepage_links">
 			<h3 class="center" id="homepage_titles"><b>Links</b></h3>
 			<% if signed_in? %>
-				<ul><li><%= link_to "Enter Subject", newsubject_path %></li></ul>
+				<ul><li><%= link_to "Enter Participant", newsubject_path %></li></ul>
 				<ul><li><%= link_to "View Screening Log", screening_log_path %></li></ul>
-				<ul><li><%= link_to "View Subjects", subjects_path %></li></ul>
+				<ul><li><%= link_to "View Participants", subjects_path %></li></ul>
 
 			<% else %>
 				<ul>
