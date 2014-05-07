@@ -1,5 +1,7 @@
 FirstEdc::Application.routes.draw do
 
+  get "follow_up_log/index"
+
   devise_for :users
   resources :users do
     match '/permission', to: 'users#permission'
@@ -13,6 +15,10 @@ FirstEdc::Application.routes.draw do
   resources :follow_up18_weeks
   resources :follow_up6_months
   resources :follow_up1_years
+
+  resources :follow_up_logs
+  match '/follow_up_log_site', to: 'follow_up_logs#show'
+  match '/edit_follow_up_logs', to: 'follow_up_logs#edit'
 
   resources :subjects do
     match '/screening', to: 'subjects#screening'

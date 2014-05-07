@@ -1,0 +1,111 @@
+<h2>Edit Follow Up Log for <%= @follow_up_log.site %></h2>
+
+
+<%= form_for(@follow_up_log) do |f| %>
+	<div id="followuplog_attribute_update_body">
+		<div id="followuplog_attribute_update">
+			<p>
+				Baseline Target: 
+				<%= f.number_field :baseline_target %>
+			</p>
+			<p>
+				Baseline Completed:
+				<%= f.number_field :baseline_completed %>
+			</p>
+			<p>
+				Baseline Reasons:
+				<%= f.text_field :baseline_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				3 Week Target: 
+				<%= f.number_field :week3_target %>
+			</p>
+			<p>
+				3 Week Completed:
+				<%= f.number_field :week3_completed %>
+			</p>
+			<p>
+				3 Week Reasons:
+				<%= f.text_field :week3_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				6 Week Target: 
+				<%= f.number_field :week6_target %>
+			</p>
+			<p>
+				6 Week Completed:
+				<%= f.number_field :week6_completed %>
+			</p>
+			<p>
+				6 Week Reasons:
+				<%= f.text_field :week6_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				TC Week Target: 
+				<%= f.number_field :tc_target %>
+			</p>
+			<p>
+				TC Week Completed:
+				<%= f.number_field :tc_completed %>
+			</p>
+			<p>
+				TC Week Reasons:
+				<%= f.text_field :tc_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				18 Week Target: 
+				<%= f.number_field :week18_target %>
+			</p>
+			<p>
+				18 Week Completed:
+				<%= f.number_field :week18_completed %>
+			</p>
+			<p>
+				18 Week Reasons:
+				<%= f.text_field :week18_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				6 Month Target: 
+				<%= f.number_field :month6_target %>
+			</p>
+			<p>
+				6 Month Completed:
+				<%= f.number_field :month6_completed %>
+			</p>
+			<p>
+				6 Month Reasons:
+				<%= f.text_field :month6_reasons %>
+			</p>			
+		</div>
+		<div id="followuplog_attribute_update">
+			<p>
+				1 Year Target: 
+				<%= f.number_field :year1_target %>
+			</p>
+			<p>
+				1 Year Completed:
+				<%= f.number_field :year1_completed %>
+			</p>
+			<p>
+				1 Year Reasons:
+				<%= f.text_field :year1_reasons %>
+			</p>			
+		</div>
+		<div class="clear"></div>
+
+		<div id="followuplog_submit_button">
+			<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+		</div>
+
+	</div>
+<% end %>

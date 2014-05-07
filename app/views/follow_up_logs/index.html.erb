@@ -1,0 +1,399 @@
+
+<% if current_user.is? :admin %>
+
+	<h1>Admin Follow Up Log</h1>
+	<table style="margin:auto" class="table table-hover">
+		<tr>
+			<th>CRF</th>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<th colspan="4"><center><%= link_to "Seattle", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<th colspan="4"><center><%= link_to "Houston", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<th colspan="4"><center><%= link_to "Cleveland", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<th colspan="4"><center><%= link_to "Tampa", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<th></th>
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
+
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
+
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
+
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
+		</tr>
+		<tr>
+			<td>Baseline</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+
+		<tr>
+			<td>3 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>6 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.week6_target %></td>
+					<td><%= log.week6_completed %></td>
+					<td><%= log.week6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.week6_target %></td>
+					<td><%= log.week6_completed %></td>
+					<td><%= log.week6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.week6_target %></td>
+					<td><%= log.week6_completed %></td>
+					<td><%= log.week6_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.week6_target %></td>
+					<td><%= log.week6_completed %></td>
+					<td><%= log.week6_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>Treatment Completion</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>18 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>6 Month</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>1 Year</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 1 %>
+					<td><%= log.year1_target %></td>
+					<td><%= log.year1_completed %></td>
+					<td><%= log.year1_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 2 %>
+					<td><%= log.year1_target %></td>
+					<td><%= log.year1_completed %></td>
+					<td><%= log.year1_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 3 %>
+					<td><%= log.year1_target %></td>
+					<td><%= log.year1_completed %></td>
+					<td><%= log.year1_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 4 %>
+					<td><%= log.year1_target %></td>
+					<td><%= log.year1_completed %></td>
+					<td><%= log.year1_reasons %></td>
+					<td><%=  %></td>
+				<% end %>
+			<% end %>
+		</tr>
+
+
+	</table>
+<% else %>
+<!-- None admin section -->
+<h1>Follow Up Log</h1>
+
+	<table class="table table-hover" style="margin:auto; width:500px;">
+		<tr>
+			<th>CRF</th>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<th colspan="4"><center><%= link_to "Edit Table", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<th></th>
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
+		</tr>
+		<tr>
+			<td>Baseline</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+
+		<tr>
+			<td>3 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>6 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.week6_target %></td>
+					<td><%= log.week6_completed %></td>
+					<td><%= log.week6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>Treatment Completion</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>18 Week</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>6 Month</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+		<tr>
+			<td>1 Year</td>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == current_user.user_study_site %>
+					<td><%= log.year1_target %></td>
+					<td><%= log.year1_completed %></td>
+					<td><%= log.year1_reasons %></td>
+					<td><%= %></td>
+				<% end %>
+			<% end %>
+		</tr>
+	</table>
+<% end %>

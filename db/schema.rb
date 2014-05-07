@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140430190741) do
+ActiveRecord::Schema.define(:version => 20140506194541) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -769,6 +769,33 @@ ActiveRecord::Schema.define(:version => 20140430190741) do
   end
 
   add_index "follow_up6_weeks", ["subject_id"], :name => "index_follow_up6_weeks_on_subject_id"
+
+  create_table "follow_up_logs", :force => true do |t|
+    t.integer  "site"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "baseline_target"
+    t.integer  "baseline_completed"
+    t.string   "baseline_reasons"
+    t.integer  "week3_target"
+    t.integer  "week3_completed"
+    t.string   "week3_reasons"
+    t.integer  "week6_target"
+    t.integer  "week6_completed"
+    t.string   "week6_reasons"
+    t.integer  "tc_target"
+    t.integer  "tc_completed"
+    t.string   "tc_reasons"
+    t.integer  "week18_target"
+    t.integer  "week18_completed"
+    t.string   "week18_reasons"
+    t.integer  "month6_target"
+    t.integer  "month6_completed"
+    t.string   "month6_reasons"
+    t.integer  "year1_target"
+    t.integer  "year1_completed"
+    t.string   "year1_reasons"
+  end
 
   create_table "subject", :force => true do |t|
     t.integer  "subject_id"

@@ -17,7 +17,7 @@
 					<li>View the <%= link_to "screening log", screening_log_path %></li>
 					<li>View the <%= link_to "participant log", subjects_path %></li>
 					<li>Change incorrectly entered information by contacting <a href="mailto:ian@specri.com">Ian Ellis</a> </li>
-					<li>Finally, you can view, edit, and update the follow-up log (In progress)</li>
+					<li>Finally, you can view, edit, and update the <%= link_to "follow up log", follow_up_logs_path %>.</li>
 				</ol>
 			<% else %>
 				<p>
@@ -38,6 +38,7 @@
 				<ul><li><%= link_to "Enter Participant", newsubject_path %></li></ul>
 				<ul><li><%= link_to "View Screening Log", screening_log_path %></li></ul>
 				<ul><li><%= link_to "View Participants", subjects_path %></li></ul>
+				<ul><li><%= link_to "View Follow Up Log", follow_up_logs_path %></li></ul>
 
 			<% else %>
 				<ul>
