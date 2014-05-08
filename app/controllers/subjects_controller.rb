@@ -48,10 +48,23 @@ class SubjectsController < ApplicationController
   def destroy
     if current_user.is? :admin
       @subject = Subject.find(params[:id])
+      @baseline = Baseline.find(params[:id])
+      @week3 = FollowUp3Week.find(params[:id])
+      @week6 = FollowUp6Week.find(params[:id])
+      @tc = TreatmentCompletion.find(params[:id])
+      @week18 = FollowUp18Week.find(params[:id])
+      @year1 = FollowUp1Year.find(params[:id])
+
       @subject.destroy
+      @baseline.destroy
+      @week3.destroy
+      @week6.destroy
+      @tc.destroy
+      @week18.destroy
+      @year1.destroy
 
       respond_to do |format|
-        format.html { redirect_to subject_screening_path }
+        format.html { redirect_to subjects_path }
         format.json { head :no_content }
       end
     end
