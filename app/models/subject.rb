@@ -16,6 +16,7 @@ class Subject < ActiveRecord::Base
    attr_accessible :enrolled, :reason_not_enrolled, :reason_not_enrolled_other
    #Variables for Randomization
    attr_accessible :group_size_input, :site_input, :group_name, :screening_id
+   attr_accessor :test_rand_variable
 
    CRFS = %w[Baseline TreatmentCompletion FollowUp3Week FollowUp6Week FollowUp18Week FollowUp6Month FollowUp1Year]
 

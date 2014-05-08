@@ -71,32 +71,40 @@ class SubjectsController < ApplicationController
   end
 
   def randomize
+    # Test RIDING THE RAILS
+    @group_size_input = params[:test_rand_variable]
+
     # Create random assignment variable
     @rand_num = rand(999)
-    @treatment = '0'
+    @treatment = 0
     @treatment_name = ""
 
+    @subject_array = Array.new
+    # @subject_array = params[:group_size_input_string].to_a
+    # @subjectIDsForRandomization = @subject_array.try(:split,",") || 'no'
+
     if @rand_num < 500
-      @treatment = '1'
+      @treatment = 1
       @treatment_name = "Vetpals Group"
     else
-      @treatment = '2'
+      @treatment = 2
       @treatment_name = "Normal Care"
     end
-
-    if (params[:group_size_input].to_i >= 6 ) and (params[:group_size_input].to_i <= 10)
-      @group_to_randomize = Subject.where("study_site = ? AND treatment_group is null", params[:site_input].to_i).order("created_at ASC").limit(params[:group_size_input].to_i)
-      
-      if params[:site_input] != '' and params[:group_size_input] != ''
-        @group_to_randomize.update_all(pref_rand: @treatment.to_i)
-        flash[:success] = "Subjects randomized, and assigned the #{params[:treatment_name]}"
-        redirect_to subjects_path
-      else
-        flash[:failure] = "Nothing saved, please fill in the form completely."
-      end
-    else
-      flash[:failure] = "The group size must be between 6 and 10."
-    end
+    # flash[:success] = "#{params[:test_rand_variable]}" || 'mp'
+    # if (@group_size_input >= 6 ) and (@group_size_input <= 10 )
+    #   @group_to_randomize = Subject.where("study_site = ? AND treatment_group is null", params[:site_input].to_i).order("created_at ASC").limit(params[:group_size_input].to_i)
+    #   if params[:site_input] != '' and params[:group_size_input] != ''
+    #     @group_to_randomize.update_all(pref_rand: @treatment.to_i)
+    #     flash[:success] = "Subjects randomized, and assigned the #{params[:treatment_name]}"
+    #     redirect_to screening_log_path
+    #   else
+    #     flash[:failure] = "Nothing saved, please fill in the form completely."
+    #     redirect_to screening_log_path
+    #   end
+    #   flash[:success] = "We got here"
+    # else
+    #   flash[:failure] = "Nope its still here"
+    # end
   end
 
 end

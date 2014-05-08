@@ -4,17 +4,19 @@
 			<center>Here you can create a new group by entering a group size (6-10) and selecting the correct study site.</center>
 			<br/>
 
-		<%= form_tag({controller: "subjects", action: "randomize"}, method: "post") do %>
+		<%= form_tag({controller: "subjects", action: "randomize"}, method: "post") do |f| %>
 			<div class="span6 offset3 center" style="width:200px; margin:auto;">
 				<div>
 					Enter Group Size: 
-					<%= select(:subject, :group_size_input,
+					<%= select "test_rand_variable", {},
 					[['',nil],
 					["6",6],
 					["7",7],
 					["8",8],
 					["9",9],
-					["10",10]]) %>
+					["10",10]] %>
+					Enter Subject IDs (Separated by commas):
+
 					Select Study Site: 
 					<%= select :study_site, {}, 
 					[[' ', nil],

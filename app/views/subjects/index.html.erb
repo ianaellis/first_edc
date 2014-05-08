@@ -7,8 +7,6 @@
       <tr>
         <th>Subject ID</th>
         <th>Study Site</th>
-        <th>Edit</th>
-        <th>Screening</th>
         <th>Baseline</th>
         <th>3 Week Chart Review</th>
         <th>6 Week Chart Review</th>
@@ -27,8 +25,6 @@
         <tr>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil"%></td>
-          <td><%= link_to "edit", edit_subject_path(sub) %></td>
-          <td><%= link_to "edit", subject_screening_path(sub) %></td>
 
           <td>
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 

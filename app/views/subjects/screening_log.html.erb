@@ -13,7 +13,6 @@
         <th>Enrolled</th>
         <th>Reason Not Enrolled</th>
         <th>Randomized</th>
-        <th>Edit</th>
         <th>Screening CRF</th>
         <% if current_user.is? :admin %>
           <th>Delete</th>
@@ -38,7 +37,6 @@
           <% else %>
             <td>No</td>
           <% end %>
-          <td><%= link_to "edit", edit_subject_path([Subject.where(screening_id: sub.screening_id).first])%></td>
           <td><%= link_to "Screening CRF", subject_screening_path(sub) %></td>
           <% if current_user.is? :admin %>
             <td>
