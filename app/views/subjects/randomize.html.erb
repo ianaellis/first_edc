@@ -8,22 +8,30 @@
 			<div class="span6 offset3 center" style="width:200px; margin:auto;">
 				<div>
 					Enter Group Size: 
-					<%= select "test_rand_variable", {},
+					<%= select "test_rand_variable", :test_rand_variable,
 					[['',nil],
 					["6",6],
 					["7",7],
 					["8",8],
 					["9",9],
 					["10",10]] %>
-					Enter Subject IDs (Separated by commas):
-
-					Select Study Site: 
-					<%= select :study_site, {}, 
-					[[' ', nil],
-					["1 - Seattle", 1],
-					["2 - Houston", 2],
-					["3 - Cleveland", 3],
-					["4 - Tampa", 4]] %>
+					
+					<p>Study Site:</p>
+				    <% if current_user.user_study_site == 1 %>
+				      <%= select :study_site, :site, [["Seattle", 1]] %>
+				    
+				    <% elsif current_user.user_study_site == 2 %>
+				      <%= select :study_site, :site, [["Houston", 2]] %>
+				   
+				    <% elsif current_user.user_study_site == 3 %>
+				      <%= select :study_site, :site, [["Cleveland", 3]] %>
+				    
+				    <% elsif current_user.user_study_site == 4 %>
+				      <%= select :study_site, :site, [["Tampa", 4]] %>
+				    <% elsif current_user.is? :admin %>
+				      <%= select :study_site, :site, [["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
+				    <% end %>
+				    
 					<%= submit_tag "Randomize", class: "btn btn-large btn-primary", :style => "width:100px" %>
 				</div>
 			</div>
