@@ -20,6 +20,9 @@ gem 'client_side_validations'
 gem 'devise'
 gem 'cancan'
 
+#Form Validation with Parsley
+gem "parsley-rails"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
