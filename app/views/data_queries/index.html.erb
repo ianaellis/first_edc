@@ -1,4 +1,4 @@
-<h1>Data Query Table</h1>
+<h1>Data Query Log</h1>
 <table style="margin:auto" class="table table-hover">
 	<tr>
 		<th>Subject ID</th>
@@ -19,7 +19,7 @@
 			<td><%= query.investigator_name %></td>
 			<td><%= query.resolution_notes %></td>
 			<td><%= link_to "Edit", edit_data_query_path(query.id) %></td>
-			<td><%= link_to "delete", query, method: :delete, confirm: "Delete subject?" %></td>
+			<td><%= link_to "Delete", query, method: :delete, confirm: "Delete subject?" %></td>
 		</tr>
 	<% end %>
 </table>
