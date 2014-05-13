@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140507182706) do
+ActiveRecord::Schema.define(:version => 20140513045537) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -486,6 +486,17 @@ ActiveRecord::Schema.define(:version => 20140507182706) do
     t.string   "sc_is_4"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "data_queries", :force => true do |t|
+    t.integer  "subject_id"
+    t.string   "data_manager"
+    t.string   "investigator_name"
+    t.string   "crf_measure_number"
+    t.string   "query_notes"
+    t.string   "resolution_notes"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "follow_up18_weeks", :force => true do |t|

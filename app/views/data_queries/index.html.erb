@@ -1,0 +1,27 @@
+<h1>Data Query Table</h1>
+<table style="margin:auto" class="table table-hover">
+	<tr>
+		<th>Subject ID</th>
+		<th>Data Manager</th>
+		<th>CRF,Measure,Number</th>
+		<th>Query Notes</th>
+		<th>Investigator</th>
+		<th>Resolution Notes</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	<% @data_queries.each do |query| %>
+		<tr>
+			<td><%= query.subject_id %></td>
+			<td><%= query.data_manager %></td>
+			<td><%= query.crf_measure_number %></td>
+			<td><%= query.query_notes %></td>
+			<td><%= query.investigator_name %></td>
+			<td><%= query.resolution_notes %></td>
+			<td><%= link_to "Edit", edit_data_query_path(query.id) %></td>
+			<td><%= link_to "delete", query, method: :delete, confirm: "Delete subject?" %></td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to "New Query", new_data_query_path %>

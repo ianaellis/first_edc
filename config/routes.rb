@@ -15,6 +15,8 @@ FirstEdc::Application.routes.draw do
   resources :follow_up18_weeks
   resources :follow_up6_months
   resources :follow_up1_years
+  
+  resources :data_queries
 
   resources :follow_up_logs
   match '/follow_up_log_site', to: 'follow_up_logs#show'
