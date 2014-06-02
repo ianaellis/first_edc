@@ -76,6 +76,8 @@
 			<td><i>Any error in the series-or an unwillingness to attempt the series is scored as incorrect.</i></td>
 		</tr>
 	</table>
+	<br/>
+	<p><i>A minimum score of <strong>5/10</strong> required for study participation. Participants potentially influenced by pain medication or current medical state may be screened again at a later date.</i></p>
 
 	<h2>2.0 Inclusion Criteria</h2>
 	<div style="width:auto;margin:auto;">
@@ -86,7 +88,7 @@
 				<%= select(:subject, :sc_inc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 			</li> 
 			<li>
-				<p>Is this patient within 6 months of a major unilateral amputation surgery?</p> 
+				<p>Is this patient within 6 months of a major unilateral amputation surgery? <i>This may include initial, contralateral, or revision amputation at any of the following levels: transfemoral (above-knee), transtibial (below-knee), knee disarticulation (through-knee), Syme’s/ankle disarticulation (through-ankle), and transmetatarsal amputation (through-foot, includes Chopart amputation and Lisfranc amputation) due to dysvascular disease/diabetes. *Can include a revision of an amputation. Revision amputation is a soft tissue revision <u>with bone shortening</u> at the same or a higher level.</i></p> 
 				<%= select(:subject, :sc_inc_2,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 				<ol>
 					<div id="screen_ampsurg">
@@ -158,8 +160,10 @@
 			<p>Current Martial Status</p>
 			<%= select(:subject, :sc_pd_5,[["", nil],["Single, never married", 1],["Married/Domestic partnership", 2],["Separated", 3], ["Divorced", 4],["Widowed", 5]], {}, :style => "width:200px") %>
 		</li>
+		<p>Is subject reporting from a Telehealth site?</p>
+		<%= select(:subject, :telehealth,[["", nil],["1 - Yes"],["0 - No"]], {}, :style => "width:auto") %>
 		<li>
-			<p>Approximate driving distance from home to study site</p> 
+			<p>Approximate driving distance from home to study site (or Telehealth site).</p> 
 			<%= select(:subject, :sc_pd_5,[["", nil],["Less than one hour", 1],["1-2 hours", 2],["2-4 hours", 3], ["4-6 hours", 4],["6-8 hours", 5],["More than 8 hours", 6]], {}, :style => "width:200px") %>
 		</li>
 	</ol>

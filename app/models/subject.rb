@@ -15,7 +15,7 @@ class Subject < ActiveRecord::Base
    attr_accessible :sc_inc_1, :sc_inc_2, :sc_inc_2a, :sc_inc_2b, :sc_inc_3, :sc_inc_4, :sc_inc_5, :sc_exc_1, :sc_exc_2, :sc_exc_3, :sc_pd_1, :sc_pd_2, :sc_pd_3, :sc_pd_4, :sc_pd_4o, :sc_pd_5, :sc_pe_1, :sc_pe_2, :sc_pe_3, :sc_pe_4, :sc_pe_4a, :sc_pe_5, :sc_pe_5o, :sc_ic_1, :sc_ic_2, :sc_ic_3, :sc_ic_4, :sc_ic_5
    attr_accessible :enrolled, :reason_not_enrolled, :reason_not_enrolled_other
    #Variables for Randomization
-   attr_accessible :group_size_input, :site_input, :group_name, :screening_id
+   attr_accessible :group_size_input, :site_input, :group_name, :screening_id, :telehealth
    attr_accessor :test_rand_variable, :treatment
 
    CRFS = %w[Baseline TreatmentCompletion FollowUp3Week FollowUp6Week FollowUp18Week FollowUp6Month FollowUp1Year]
