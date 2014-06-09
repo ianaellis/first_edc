@@ -14,9 +14,11 @@ class TreatmentCompletionsController < ApplicationController
 	    @tc = TreatmentCompletion.find(params[:id])
 	    @tc.current_step = session[:tc_step]
 	    if params[:back_button]
-	      @tc.previous_step
+	    	@tc.update_attributes(params[:tc])
+	      	@tc.previous_step
 	    else
-	      @tc.next_step
+	    	@tc.update_attributes(params[:tc])
+	      	@tc.next_step
 	    end
 	    if params[:submit_button]
 	      if @tc.update_attributes(params[:tc])

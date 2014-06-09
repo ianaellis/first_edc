@@ -6,6 +6,12 @@
 		<div id="measure_instruction">
 			<p><i>See screening CRF for demographic questions that are part of screening (age, gender, race,
 				current martial status, and approximate driving distance to VA study site).</i> </p>
+			<p><i>Please marke method of administration:</i></p>
+			<%= select(:baseline, :administration_method,
+				[["",nil],
+				["Over phone",1],
+				["In person",2],
+				["Telehealth site",3]], {}, :style => "width:auto") %>
 		</div>
 	</div>
 	<div class="measure_body">
