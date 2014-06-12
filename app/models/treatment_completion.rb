@@ -16,7 +16,7 @@ class TreatmentCompletion < ActiveRecord::Base
 	end
 
 	def steps
-		%w[smfa phq whoqol_bref positive_negative pam spsir ssscq prosthesis pain mspss audit accessing_resources satisfaction ]   
+		%w[smfa phq whoqol_bref positive_negative pam spsir ssscq prosthesis pain mspss audit satisfaction ]   
 	end
 
 	def next_step

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140612204801) do
+ActiveRecord::Schema.define(:version => 20140612213703) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -757,6 +757,16 @@ ActiveRecord::Schema.define(:version => 20140612204801) do
     t.integer  "fu6month_fuq_7"
     t.integer  "panas_present_moment_or_last_week"
     t.integer  "administration_method"
+    t.integer  "fu6month_ar_1"
+    t.integer  "fu6month_ar_2"
+    t.integer  "fu6month_ar_3"
+    t.integer  "fu6month_ar_4"
+    t.integer  "fu6month_ar_5"
+    t.integer  "fu6month_ar_6"
+    t.integer  "fu6month_ar_7"
+    t.integer  "fu6month_ar_8"
+    t.integer  "fu6month_ar_9"
+    t.integer  "fu6month_ar_9o"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
