@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140609200404) do
+ActiveRecord::Schema.define(:version => 20140612204801) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -808,6 +808,29 @@ ActiveRecord::Schema.define(:version => 20140609200404) do
     t.integer  "year1_target"
     t.integer  "year1_completed"
     t.string   "year1_reasons"
+  end
+
+  create_table "psychosocial_scales", :force => true do |t|
+    t.integer  "psy_scale_ptcs_1"
+    t.integer  "psy_scale_ptcs_2"
+    t.integer  "psy_scale_ptcs_3"
+    t.integer  "psy_scale_ptcs_4"
+    t.integer  "psy_scale_ptcs_5"
+    t.integer  "psy_scale_ptcs_6"
+    t.integer  "psy_scale_ptcs_7"
+    t.integer  "psy_scale_ptcs_8"
+    t.integer  "psy_scale_ptcs_9"
+    t.integer  "psy_scale_ptcs_10"
+    t.integer  "psy_scale_ptcs_11"
+    t.integer  "psy_scale_ptcs_12"
+    t.integer  "psy_scale_ptcs_13"
+    t.integer  "psy_scale_ptcs_14"
+    t.integer  "psy_scale_ptcs_15"
+    t.integer  "psy_scale_ptcs_16"
+    t.integer  "psy_scale_ptcs_17"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "subject_id"
   end
 
   create_table "subject", :force => true do |t|

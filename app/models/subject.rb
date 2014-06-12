@@ -8,6 +8,7 @@ class Subject < ActiveRecord::Base
    has_one :follow_up18_week
    has_one :follow_up6_month
    has_one :follow_up1_year
+   has_one :psychosocial_scale
 
 
    #Screening Variables

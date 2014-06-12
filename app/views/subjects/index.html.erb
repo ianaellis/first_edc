@@ -11,6 +11,7 @@
         <th>3 Week Chart Review</th>
         <th>6 Week Chart Review</th>
         <th>Treatment Completion</th>
+        <th>Psychosocial Scale</th>
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Chart Review</th>
@@ -57,7 +58,14 @@
             <% TreatmentCompletion.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
-          
+          <td>
+            <% if PsychosocialScale.where(subject_id: sub.subject_id).first != nil %>
+              <%= link_to "edit", psychosocial_scale_path(PsychosocialScale.where(subject_id: sub.subject_id).first) %>
+            <% else %>
+              <% PsychosocialScale.create(subject_id: sub.subject_id) %>
+            <% end %>
+          </td>
+
           <td>
           <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up18_week_path(FollowUp18Week.where(subject_id: sub.subject_id).first) %>

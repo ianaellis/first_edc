@@ -10,6 +10,7 @@ FirstEdc::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :baselines
   resources :treatment_completions
+  resources :psychosocial_scales
   resources :follow_up3_weeks
   resources :follow_up6_weeks
   resources :follow_up18_weeks
