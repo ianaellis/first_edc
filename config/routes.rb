@@ -9,6 +9,9 @@ FirstEdc::Application.routes.draw do
   end
   resources :sessions, only: [:new, :create, :destroy]
   resources :baselines
+
+  match '/base_general_demo', to: 'baselines#base_general_demo'
+
   resources :treatment_completions
   resources :psychosocial_scales
   resources :follow_up3_weeks

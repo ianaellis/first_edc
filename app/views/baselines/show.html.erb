@@ -7,7 +7,7 @@
 				<div style="width:900px; float:right;">
 					<h1>Baseline</h1>
 					<h2>Subject ID: <%= @baseline.subject_id %></h2>
-					<%= form_for @baseline do |f| %>
+					<%= form_for @baseline, html: {"data-parsley-validate" => ''} do |f| %>
 						<%= render "base_#{@baseline.current_step}", :f => f %>
 					<div id="submit_buttons" style="width:800px; margin:auto;">
 						<div id="back_button" style="width:150px; float:left;">

@@ -88,7 +88,7 @@
 				<%= select(:subject, :sc_inc_1,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 			</li> 
 			<li>
-				<p>Is this patient within 6 months of a major unilateral amputation surgery? <i>This may include initial, contralateral, or revision amputation at any of the following levels: transfemoral (above-knee), transtibial (below-knee), knee disarticulation (through-knee), Syme’s/ankle disarticulation (through-ankle), and transmetatarsal amputation (through-foot, includes Chopart amputation and Lisfranc amputation) due to dysvascular disease/diabetes. *Can include a revision of an amputation. Revision amputation is a soft tissue revision <u>with bone shortening</u> at the same or a higher level.</i></p> 
+				<p>Is this patient within 2 years of a major unilateral amputation surgery? <i>This may include initial, contralateral, or revision amputation at any of the following levels: transfemoral (above-knee), transtibial (below-knee), knee disarticulation (through-knee), Syme’s/ankle disarticulation (through-ankle), and transmetatarsal amputation (through-foot, includes Chopart amputation and Lisfranc amputation) due to dysvascular disease/diabetes. *Can include a revision of an amputation. Revision amputation is a soft tissue revision <u>with bone shortening</u> at the same or a higher level.</i></p> 
 				<%= select(:subject, :sc_inc_2,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
 				<ol>
 					<div id="screen_ampsurg">
@@ -205,7 +205,7 @@
 	<h2>6.0 Informed Consent</h2>
 		<ol>
 			<li>
-				<p>Has the patient signed the informed consent prior ot any study related procedures?</p>
+				<p>Has the patient signed the informed consent prior to any study related procedures?</p>
 				<%= select(:subject, :sc_ic_1,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 			</li>
 			<li>

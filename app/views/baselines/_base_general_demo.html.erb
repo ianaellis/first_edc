@@ -11,7 +11,7 @@
 				[["",nil],
 				["Over phone",1],
 				["In person",2],
-				["Telehealth site",3]], {}, :style => "width:auto") %>
+				["Telehealth site",3]], {}, :style => "width:auto", :required => '') %>
 		</div>
 	</div>
 	<div class="measure_body">
@@ -43,14 +43,14 @@
 			<li>
 				<p>
 					<div class="measure_question"><b>Weight</b><i>(pounds):</i></div> 
-					<div class="measure_answer"><%= text_field(:baseline, :base_weight, :style => "width:100px;") %></div> 
+					<div class="measure_answer"><%= text_field(:baseline, :base_weight, :style => "width:100px;", :data => {:"parsley-trigger" => 'change'}, :required => '') %></div> 
 				</p>
 			</li>
 				
 			<li>
 				<p>
 					<div class="measure_question"><b>Height</b><i>(inches):</i></div> 
-					<div class="measure_answer"><%= text_field(:baseline, :base_height, :style => "width:100px;") %></div> 
+					<div class="measure_answer"><%= text_field(:baseline, :base_height, :style => "width:100px;", :data => {:"parsley-trigger" => 'change'}, :required => '') %></div> 
 				</p>
 			</li>
 			<li>
@@ -63,7 +63,7 @@
 								<div class="measure_answer"><%= select(:baseline, :base_employment_status_a,
 								[["", nil],
 								["Yes", 1],
-								["No", 0],["Refused", 1000]], {}, :style => "width:auto;") %></div>
+								["No", 0],["Refused", 1000]], {}, :style => "width:auto;", :data => {:"parsley-trigger" => 'change'}, :required => '') %></div>
 							</p>
 						</li>
 						<div id="base_employment_status">
@@ -90,7 +90,7 @@
 					["At home with spouse or family or friend", 2],
 					["Assisted living community/housing", 3],
 					["Nursing home / nursing rehabilitation center", 4],
-					["Other", 5],["Refused", 1000]]) %></div>
+					["Other", 5],["Refused", 1000]], {}, :data => {:"parsley-trigger" => 'change'}, :required => '') %></div>
 				</p>
 				<div id="base_living_status">
 					<ol type="a">
@@ -113,7 +113,7 @@
 					["$2,000 - $3,000", 3],
 					["$3,001 - $4,000", 4],
 					["$4,001 - $6,250", 5],
-					["> $6,250", 6],["Refused", 1000]]) %></div>
+					["> $6,250", 6],["Refused", 1000]], {}, :data => {:"parsley-trigger" => 'change'}, :required => '') %></div>
 				</p>
 			</li>
 			<li>
@@ -123,7 +123,7 @@
 						<li>
 							<p>
 								<div class="measure_question">Number of years completed: <i>(Highest grade completed +1 for each year of education post high school)</i>
-									<div class="measure_answer"><%= text_field(:baseline, :base_education_a, :style => "width:100px;") %>
+									<div class="measure_answer"><%= text_field(:baseline, :base_education_a, :style => "width:100px;", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 									</div>
 								</div>
 							</p>
@@ -138,7 +138,7 @@
 								["High school", 2],
 								["Some college", 3],
 								["Finished college", 4],
-								["Graduate Degree(i.e., Masters, PhD/MD/JD)"],["Refused", 1000]]) %></div>
+								["Graduate Degree(i.e., Masters, PhD/MD/JD)"],["Refused", 1000]], {}, :data => {:"parsley-trigger" => 'change'}, :required => '') %></div>
 							</p>
 						</li>
 					</ol>

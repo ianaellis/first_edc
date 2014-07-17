@@ -7,26 +7,26 @@
 					[["",nil],
 					["Yes",1],
 					["No",0],
-					["Refused", 1000]], {}, :style => "width:70px") %></li>
-					<li>Lower Extremity Arterial Reconstruction (stents, angioplasty, bypass, etc.)? <%= select(:baseline, :base_cq_1b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
+					["Refused", 1000]], {}, :style => "width:70px", :required => '') %></li>
+					<li>Lower Extremity Arterial Reconstruction (stents, angioplasty, bypass, etc.)? <%= select(:baseline, :base_cq_1b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="base_lear">
 						<ol type="i"><li>Side: <%= select(:baseline, :base_cq_1b_side, [["",nil],["Right",1],["Left",2],["Both",3],["Refused", 1000]], {}, :style => "width:70px") %></li>
 						</ol>
 					</div>	
 					</li>
-					<li>Traumatic Head Injury/Brain Injury(loss of consciousness > 1 minute)? <%= select(:baseline, :base_cq_1c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-					<li>Joint Replacement <%= select(:baseline, :base_cq_1d, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
+					<li>Traumatic Head Injury/Brain Injury(loss of consciousness > 1 minute)? <%= select(:baseline, :base_cq_1c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+					<li>Joint Replacement <%= select(:baseline, :base_cq_1d, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="base_joint">
 						<ol type="i"><li>Joint: <%= select(:baseline, :base_cq_1d_joint, [["",nil],["Hip",1],["Knee",2],["Ankle",3],["Refused", 1000]], {}, :style => "width:70px") %></li>
 						</ol>
 					<div>
 					</li>
-					<li>Hypertension <%= select(:baseline, :base_cq_1e, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
-					<li>PTSD <%= select(:baseline, :base_cq_1f, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
-					<li>Cancer <%= select(:baseline, :base_cq_1g, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
+					<li>Hypertension <%= select(:baseline, :base_cq_1e, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
+					<li>PTSD <%= select(:baseline, :base_cq_1f, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
+					<li>Cancer <%= select(:baseline, :base_cq_1g, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 				</ol>
 			</p></li>
-		<li><p>Did patient answer yes to previous question on diabetes? <%= select(:baseline, :base_cq_2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></p></li>
+		<li><p>Did patient answer yes to previous question on diabetes? <%= select(:baseline, :base_cq_2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></p></li>
 		<div id="base_diabetes">
 			<ol type="a">
 				<li><p>If Yes, for how many years have you had diabetes? <%= number_field(:baseline, :base_cq_2a, :style => "width:70px") %></p></li>
@@ -34,31 +34,31 @@
 		</div>
 		<li>Psychological Factors</li>
 		<ol type="a">
-			<li>Have you ever been treated for depression or anxiety? <%= select(:baseline, :base_cq_3a, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-			<li>Have you participated in any therapy (individual or group) with a psychologist, psychiatrist, counselor, or social worker in the last 3 months? <%= select(:baseline, :base_cq_3b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-			<li>Have you participated in any peer visits? <%= select(:baseline, :base_cq_3c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-			<li>Are you taking any medications for your mood? <%= select(:baseline, :base_cq_3d, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
+			<li>Have you ever been treated for depression or anxiety? <%= select(:baseline, :base_cq_3a, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+			<li>Have you participated in any therapy (individual or group) with a psychologist, psychiatrist, counselor, or social worker in the last 3 months? <%= select(:baseline, :base_cq_3b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+			<li>Have you participated in any peer visits? <%= select(:baseline, :base_cq_3c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+			<li>Are you taking any medications for your mood? <%= select(:baseline, :base_cq_3d, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		</ol>
 		<h3>General Health</h3>
-		<li>In general, would you say your health is: <%= select(:baseline, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5],["Refused", 1000]], {}, :style => "width:70px") %></li>
+		<li>In general, would you say your health is: <%= select(:baseline, :base_cq_4, [["",nil],["Very poor",1],["Poor",2],["Fair",3],["Good",4],["Very good",5],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		<h3>Quality of Life (QoL)</h3>
-		<li>All things considered in the last month, how would you rate your overall quality of life? <i>0-worst possible QoL, 10-best possible QoL</i> <%= select(:baseline, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused", 1000]], {}, :style => "width:70px") %></li>
+		<li>All things considered in the last month, how would you rate your overall quality of life? <i>0-worst possible QoL, 10-best possible QoL</i> <%= select(:baseline, :base_cq_5, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		<h3>Medical Record Review</h3>
-		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:baseline, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3],["Refused", 1000]], {}, :style => "width:70px") %></li>
-		<li>What level is (or was) the amputation? <%= select(:baseline, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]], {}, :style => "width:70px") %></li>
-		<li>Was the surgery an initial or revision amputation? <%= select(:baseline, :base_cq_7, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto") %></li>
-		<li>Time since amputation: <%= number_field(:baseline, :base_cq_8, :style => "width:70px") %> (days)</li>
+		<li>Which leg or foot (side) is being (or was) amputated? <%= select(:baseline, :base_cq_6, [["",nil],["Right",1],["Left",2],["Both",3],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+		<li>What level is (or was) the amputation? <%= select(:baseline, :base_cq_7, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+		<li>Was the surgery an initial or revision amputation? <%= select(:baseline, :base_cq_7, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+		<li>Time since amputation: <%= number_field(:baseline, :base_cq_8, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %> (days)</li>
 		<li>Contralateral limb side (limb without recent amputation surgery)
 			<ol type="a">
 				<li>In the limb not awaiting surgery, does the subject have:
 					<ol type="1">
-						<li>Claudication: Do you have pain in the calf while walking? <%= select(:baseline, :base_cq_10_a1, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>Do you have poor circulation (foot always cold and discolored)? <%= select(:baseline, :base_cq_10_a2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>Do you have pain in the joints when you walk? <%= select(:baseline, :base_cq_10_a3, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>Loss of sensation: do you have numbness in your foot? <%= select(:baseline, :base_cq_10_a4, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>Do you have a wound or sores on your foot? <%= select(:baseline, :base_cq_10_a5, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>Do you have any other condition affecting your leg not being operated on? <%= select(:baseline, :base_cq_10_a6, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
-						<li>None of the above? <%= select(:baseline, :base_cq_10_a7, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %></li>
+						<li>Claudication: Do you have pain in the calf while walking? <%= select(:baseline, :base_cq_10_a1, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>Do you have poor circulation (foot always cold and discolored)? <%= select(:baseline, :base_cq_10_a2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>Do you have pain in the joints when you walk? <%= select(:baseline, :base_cq_10_a3, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>Loss of sensation: do you have numbness in your foot? <%= select(:baseline, :base_cq_10_a4, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>Do you have a wound or sores on your foot? <%= select(:baseline, :base_cq_10_a5, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>Do you have any other condition affecting your leg not being operated on? <%= select(:baseline, :base_cq_10_a6, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>None of the above? <%= select(:baseline, :base_cq_10_a7, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 					</ol>
 				</li>
 				<div id="base_contralateralB">

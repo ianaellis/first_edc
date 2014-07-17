@@ -21,7 +21,7 @@ gem 'devise'
 gem 'cancan'
 
 #Form Validation with Parsley
-gem "parsley-rails"
+gem 'parsley-rails'
 
 
 # Bundle edge Rails instead:
