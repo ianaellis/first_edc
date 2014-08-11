@@ -115,3 +115,70 @@ jQuery ->
 			return
 		return
 	return
+
+
+#6month Review
+
+toggle6WRevision = ->
+	if ($("#followup6month_fu6month_fuq_2").val() is "1")
+		$("#fu6month_revision").show()
+	else
+		$("#fu6month_revision").hide()
+	return
+
+toggle6WRevisionHigher = ->
+	if ($("#followup6month_fu6month_fuq_3").val() is "1")
+		$("#fu6month_revision_higher").show()
+	else
+		$("#fu6month_revision_higher").hide()
+	return
+
+toggle6WContra = ->
+	if ($("#followup6month_fu6month_fuq_4").val() is "1")
+		$("#fu6month_contra").show()
+	else
+		$("#fu6month_contra").hide()
+	return
+
+toggle6WHospital = ->
+	if ($("#followup6month_fu6month_fuq_5").val() is "1")
+		$("#fu6month_hospital").show()
+	else
+		$("#fu6month_hospital").hide()
+	return
+
+toggle6WPassed = ->
+	if ($("#followup6month_fu6month_fuq_6").val() is "1")
+		$("#fu6month_passed").show()
+	else
+		$("#fu6month_passed").hide()
+	return
+
+jQuery ->
+	$(document).ready ->
+		toggle6WRevision()
+		toggle6WRevisionHigher()
+		toggle6WContra()
+		toggle6WHospital()
+		toggle6WPassed()
+
+		$("#followup6month_fu6month_fuq_2").on "change", ->
+			toggle6WRevision()
+			return
+
+		$("#followup6month_fu6month_fuq_3").on "change", ->
+			toggle6WRevisionHigher()
+			return
+
+		$("#followup6month_fu6month_fuq_4").on "change", ->
+			toggle6WContra()
+			return
+
+		$("#followup6month_fu6month_fuq_5").on "change", ->
+			toggle6WHospital()
+			return
+
+		$("#followup6month_fu6month_fuq_6").on "change", ->
+			toggle6WPassed()
+			return
+		return

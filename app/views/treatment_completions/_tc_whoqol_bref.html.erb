@@ -7,12 +7,12 @@
 			["2 - Poor",2],
 			["3 - Neither poor nor good",3],
 			["4 - Good",4],
-			["5 - Very good",5],["Refused", 1000]],{}, :style =>"width:auto")%></li>
+			["5 - Very good",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		<li>How satisfied are you with your health? <%= select(:tc, :tc_whoqol_2,
 			[["",nil],
 			["1 - Very dissatisfied",1],
 			["2 - Dissatisfied",2],
 			["3 - Neither satisfied nor dissatisfied",3],
 			["4 - Satisfied",4],
-			["5 - Very satisfied",5],["Refused", 1000]],{}, :style =>"width:auto")%></li>
+			["5 - Very satisfied",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 	</ol>

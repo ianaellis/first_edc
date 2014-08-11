@@ -14,9 +14,14 @@ class Ability
         can :show, Baseline
         can :update, Baseline
         cannot :destroy, Subject
+        cannot :manage, PsychosocialScale
 
         can :show, Subject
         can :update, Subject
+     end
+
+     if user.is? :vetpals_facilitator
+        can :manage, PsychosocialScale
      end
     
     # The first argument to `can` is the action you are giving the user 

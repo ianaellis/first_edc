@@ -9,9 +9,8 @@
         <th>Study Site</th>
         <th>Baseline</th>
         <th>3 Week Chart Review</th>
-        <th>6 Week Chart Review</th>
         <th>Treatment Completion</th>
-        <th>Psychosocial Scale</th>
+        <th>PTCS – Facilitator only</th>
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
         <th>1 Year Chart Review</th>
@@ -40,14 +39,6 @@
             <%= link_to "edit", follow_up3_week_path(FollowUp3Week.where(subject_id: sub.subject_id).first) %>
           <% else %>
             <% FollowUp3Week.create(subject_id: sub.subject_id) %>
-          <% end %>
-          </td>
-          
-          <td>
-          <% if FollowUp6Week.where(subject_id: sub.subject_id).first != nil %>
-            <%= link_to "edit", follow_up6_week_path(FollowUp6Week.where(subject_id: sub.subject_id).first) %>
-          <% else %>
-            <% FollowUp6Week.create(subject_id: sub.subject_id) %>
           <% end %>
           </td>
 

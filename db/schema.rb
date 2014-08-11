@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140612213703) do
+ActiveRecord::Schema.define(:version => 20140809014924) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -438,6 +438,10 @@ ActiveRecord::Schema.define(:version => 20140612213703) do
     t.integer  "cowat_total_a"
     t.integer  "cowat_total_s"
     t.integer  "administration_method"
+    t.integer  "baseline_amp_side"
+    t.integer  "baseline_smoking_1"
+    t.integer  "baseline_smoking_2"
+    t.integer  "baseline_smoking_3"
   end
 
   add_index "baselines", ["subject_id"], :name => "index_baselines_on_subject_id"
@@ -767,6 +771,10 @@ ActiveRecord::Schema.define(:version => 20140612213703) do
     t.integer  "fu6month_ar_8"
     t.integer  "fu6month_ar_9"
     t.integer  "fu6month_ar_9o"
+    t.integer  "fu6month_smoking_1"
+    t.integer  "fu6month_smoking_2"
+    t.integer  "fu6month_smoking_3"
+    t.integer  "fu6month_amp_side"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
@@ -950,6 +958,7 @@ ActiveRecord::Schema.define(:version => 20140612213703) do
     t.integer  "group_size_input"
     t.string   "group_size_input_string"
     t.integer  "telehealth"
+    t.integer  "sc_pe_3a"
   end
 
   create_table "treatment_completions", :force => true do |t|
@@ -1181,6 +1190,10 @@ ActiveRecord::Schema.define(:version => 20140612213703) do
     t.integer  "tc_fuq_7"
     t.integer  "panas_present_moment_or_last_week"
     t.integer  "administration_method"
+    t.integer  "tc_smoking_1"
+    t.integer  "tc_smoking_2"
+    t.integer  "tc_smoking_3"
+    t.integer  "tc_amp_side"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"

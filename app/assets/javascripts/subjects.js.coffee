@@ -85,6 +85,31 @@ toggleInformedConsent = ->
 	else
 		$("#informed_consent").hide()
 	return
+
+togglePatientEligible = ->
+	if($("#subject_sc_pe_3").val() is "1")
+		$("#patient_eligible_yes").show()
+		$("#patient_eligible_no").hide()
+	else if($("#subject_sc_pe_3").val() is "0")
+		$("#patient_eligible_no").show()
+		$("#patient_eligible_yes").hide()
+	else
+		$("#patient_eligible_no").hide()
+		$("#patient_eligible_yes").hide()
+	return
+
+togglePatientEligible = ->
+	if($("#subject_sc_pe_3").val() is "1")
+		$("#patient_eligible_yes").show()
+		$("#patient_eligible_no").hide()
+	else if($("#subject_sc_pe_3").val() is "2")
+		$("#patient_eligible_no").show()
+		$("#patient_eligible_yes").hide()
+	else
+		$("#patient_eligible_no").hide()
+		$("#patient_eligible_yes").hide()
+	return
+
 jQuery ->
 	$(document).ready ->
 		toggleStreetAddress()
@@ -94,6 +119,7 @@ jQuery ->
 		toggleIneligible()
 		toggleIneligibleOther()
 		toggleInformedConsent()
+		togglePatientEligible()
 
 		$("#subject_sc_smpsq_4").on "change", ->
 			toggleStreetAddress()
@@ -122,6 +148,9 @@ jQuery ->
 			return
 		$("#subject_sc_pe_2").on "change", ->
 			toggleInformedConsent()
+			return
+		$("#subject_sc_pe_3").on "change", ->
+			togglePatientEligible()
 			return	
 		return
 	return

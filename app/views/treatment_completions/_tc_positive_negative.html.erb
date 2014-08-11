@@ -23,7 +23,7 @@
 	<div style="width:200px; margin:auto;">
 	<p><%= select(:tc, :panas_present_moment_or_last_week,
 		[["",nil],
-		["Over the past week", 1],["Refused", 1000]]) %></p>
+		["Over the past week", 1],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></p>
 	</div>
 	<div id="tc_panas_table">
 	<table style="margin:auto">
@@ -43,7 +43,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>2. Distressed</td>
 			<td><%= select(:tc, :tc_panas_2,
@@ -52,7 +52,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>3. Excited</td>
@@ -62,7 +62,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>4. Upset</td>
 			<td><%= select(:tc, :tc_panas_4,
@@ -71,7 +71,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>5. Strong</td>
@@ -81,7 +81,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>6. Guilty</td>
 			<td><%= select(:tc, :tc_panas_6,
@@ -90,7 +90,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>7. Scared</td>
@@ -100,7 +100,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>8. Hostile</td>
 			<td><%= select(:tc, :tc_panas_8,
@@ -109,7 +109,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>9. Enthusiastic</td>
@@ -119,7 +119,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>10. Proud</td>
 			<td><%= select(:tc, :tc_panas_10,
@@ -128,7 +128,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>11. Irritable</td>
@@ -138,7 +138,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>12. Alert</td>
 			<td><%= select(:tc, :tc_panas_12,
@@ -147,7 +147,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>13. Ashamed</td>
@@ -157,7 +157,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>14. Inspired</td>
 			<td><%= select(:tc, :tc_panas_14,
@@ -166,7 +166,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>15. Nervous</td>
@@ -176,7 +176,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>16. Determined</td>
 			<td><%= select(:tc, :tc_panas_16,
@@ -185,7 +185,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>17. Attentive</td>
@@ -195,7 +195,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>18. Jittery</td>
 			<td><%= select(:tc, :tc_panas_18,
@@ -204,7 +204,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 		<tr>
 			<td>19. Active</td>
@@ -214,7 +214,7 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 			<td></td>
 			<td>20. Afraid</td>
 			<td><%= select(:tc, :tc_panas_20,
@@ -223,6 +223,6 @@
 			["2 - A little",2],
 			["3 - Moderately",3],
 			["4 - Quite a bit",4],
-			["5 - Extremely",5],["Refused", 1000]])%></td>
+			["5 - Extremely",5],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
 		</tr>
 	</table>

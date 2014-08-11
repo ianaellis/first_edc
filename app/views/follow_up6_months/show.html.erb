@@ -6,7 +6,7 @@
 		<h2>Subject ID: <%= @followup6month.subject_id %></h2>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 			<div style="width:1000px; margin:auto;">
-			<%= form_for @followup6month do |f| %>
+			<%= form_for @followup6month, html: {"data-parsley-validate" => ''} do |f| %>
 				<%= render "fu6month_#{@followup6month.current_step}", :f => f %>
 			</div>
 				</br>

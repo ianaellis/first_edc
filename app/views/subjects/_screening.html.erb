@@ -178,10 +178,22 @@
 			<p>Did the patient meet any of the exclusion criteria?</p>
 			<%= select(:subject, :sc_pe_2,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
 		</li>
-		<li>
-			<p>Is the patient eligible for this study?</p>
-			<%= select(:subject, :sc_pe_3,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
-		</li>
+			<li>
+				<div id="patient_eligible">
+					<p>Is the patient eligible for this study?</p>
+					<%= select(:subject, :sc_pe_3,[["", nil],["Yes", 1],["No", 2]], {}, :style => "width:70px") %>
+				</div>
+					<ol>
+						<div id="patient_eligible_yes">
+							<li>If the patient was eligible but did not enroll in the study, please check the primary reason for not participating.</li>
+							<%= select(:subject, :sc_pe_3a, [["",nil],["Refused Participation",0],["Missed recruitment window",2],["Too ill",3],["Died before interview",4],["Other",5]], {}, :style => "width:200px") %>
+						</div>
+						<div id="patient_eligible_no">
+							<li>If the subject was ineligible, please check the primary reason for ineligibility.</li>
+							<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
+						</div>
+					</ol>
+			</li>
 		<strong><p><i>5.1 must be answered "Yes" and 5.2 answered "No" for the subject to be eligible.</i></p></strong>
 		<li>
 			<p>Was a waiver granted for any deviations from the inclusion/exclusion criteria?</p>
@@ -194,7 +206,7 @@
 		<div id="screen_ineligible">
 			<li>
 				<p>If the subject was ineligible, please check the primary reason for ineligibility:</p>
-				<%= select(:subject, :sc_pe_5,[["", nil],["Meets criteria but not interested", 0],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
+				<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
 				<div id="screen_ineligible_other">
 					<p>Other: <%= text_field(:subject, :sc_pe_5o, :style => "width:200px") %></p>
 				</div>

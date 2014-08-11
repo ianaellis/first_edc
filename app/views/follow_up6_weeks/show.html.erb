@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
 	<div id="heading">
 		<h1>6 Week Chart Review</h1>
 		<h2>Subject ID: <%= @followup6week.subject_id %></h2>
@@ -6,12 +6,12 @@
 	<div id="body">
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<div id="form" style="margin:auto; width:1000px;">
-			<%= form_for @followup6week do |f| %>
+			<%= form_for @followup6week, html: {"data-parsley-validate" => ''} do |f| %>
 				<ol>
 					<li>Study Assessment (time since Baseline): 6 weeks</li>
 					<strong>Since the last chart review...</strong>
 					<li>Has there been a revision at the same level (e.g. TT to higher TT)?
-						<%= select(:followup6week, :fu6week_fuq_2, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
+						<%= select(:followup6week, :fu6week_fuq_2, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 						<div id="fu6week_revision">
 							<ol type="a">
 								<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_2a, :style => "width:auto" %> <i>(days)</i></li>
@@ -19,14 +19,14 @@
 						</div>
 					</li>
 					<li>Has there been a revision to a higher level (e.g. TM to TT or TT to TF)?
-						<%= select(:followup6week, :fu6week_fuq_3, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
+						<%= select(:followup6week, :fu6week_fuq_3, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 						<div id="fu6week_revision_higher">
 							<ol type="a">
 								<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_3a, :style => "width:auto" %> <i>(days)</i></li>
 							</ol>
 						</div>
 					</li>
-					<li>Has there been a contralateral limb amputation? <%= select(:followup6week, :fu6week_fuq_4, [["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto") %>
+					<li>Has there been a contralateral limb amputation? <%= select(:followup6week, :fu6week_fuq_4, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 						<div id="fu6week_contra">
 							<p><i>If YES, mark contralateral level and type</i></p>
 							<ol type="a">
@@ -36,14 +36,14 @@
 							</ol>
 						</div>
 					</li>
-					<li>Was the patient admitted to the hospital? <%= select(:followup6week, :fu6week_fuq_5,[["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto")%>
+					<li>Was the patient admitted to the hospital? <%= select(:followup6week, :fu6week_fuq_5,[["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 						<div id="fu6week_hospital">
 							<ol type="a">
 								<li>If yes, reason for admission: <%= f.text_field :fu6week_fuq_5a, :style => "width:auto" %></li>
 							</ol>
 						</div>
 					</li>
-					<li>Has the patient passed away? <%= select(:followup6week, :fu6week_fuq_6,[["",nil],["Yes",1],["No",0],["Refused", 1000]],{}, :style => "width:auto")%>
+					<li>Has the patient passed away? <%= select(:followup6week, :fu6week_fuq_6,[["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 						<div id="fu6week_passed">
 							<ol type="a">
 								<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu6week_fuq_6a, :style => "width:auto" %></li>
@@ -60,3 +60,4 @@
 		</div>
 	</div>
 </div>
+ -->

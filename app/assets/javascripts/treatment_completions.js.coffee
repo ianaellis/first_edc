@@ -108,3 +108,69 @@ jQuery ->
 			return
 		return
 	return
+
+#6week Review
+
+toggle6WRevision = ->
+	if ($("#tc_tc_fuq_2").val() is "1")
+		$("#tc_revision").show()
+	else
+		$("#tc_revision").hide()
+	return
+
+toggle6WRevisionHigher = ->
+	if ($("#tc_tc_fuq_3").val() is "1")
+		$("#tc_revision_higher").show()
+	else
+		$("#tc_revision_higher").hide()
+	return
+
+toggle6WContra = ->
+	if ($("#tc_tc_fuq_4").val() is "1")
+		$("#tc_contra").show()
+	else
+		$("#tc_contra").hide()
+	return
+
+toggle6WHospital = ->
+	if ($("#tc_tc_fuq_5").val() is "1")
+		$("#tc_hospital").show()
+	else
+		$("#tc_hospital").hide()
+	return
+
+toggle6WPassed = ->
+	if ($("#tc_tc_fuq_6").val() is "1")
+		$("#tc_passed").show()
+	else
+		$("#tc_passed").hide()
+	return
+
+jQuery ->
+	$(document).ready ->
+		toggle6WRevision()
+		toggle6WRevisionHigher()
+		toggle6WContra()
+		toggle6WHospital()
+		toggle6WPassed()
+
+		$("#tc_tc_fuq_2").on "change", ->
+			toggle6WRevision()
+			return
+
+		$("#tc_tc_fuq_3").on "change", ->
+			toggle6WRevisionHigher()
+			return
+
+		$("#tc_tc_fuq_4").on "change", ->
+			toggle6WContra()
+			return
+
+		$("#tc_tc_fuq_5").on "change", ->
+			toggle6WHospital()
+			return
+
+		$("#tc_tc_fuq_6").on "change", ->
+			toggle6WPassed()
+			return
+		return
