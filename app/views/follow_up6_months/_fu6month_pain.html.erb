@@ -2,7 +2,7 @@
 	<ol>
 		<li>How would you rate your pain on a 0-10 scale at the present time, this is right now, where 0 is 'No Pain' and 10 is 'Pain as bad as it could be'?</li>
 		<%= select(:followup6month, :fu6month_cpg_1, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
-		<li>In the past 6 months, how intense was your worse pain rated on a 0-10 scale (rated as above)?</li>
+		<li>In the past 6 months, how intense was your worst pain rated on a 0-10 scale (rated as above)?</li>
 		<%= select(:followup6month, :fu6month_cpg_2, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 		<li>In the past 6 months, on average, how intense was your pain rated on a 0-10 scale (rated as above)?</li>
 		<%= select(:followup6month, :fu6month_cpg_3, [["",nil],["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["10",10],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>

@@ -9,7 +9,8 @@ class FollowUp6Month < ActiveRecord::Base
     attr_accessible :administration_method
     attr_accessible :fu6month_ar_1, :fu6month_ar_2, :fu6month_ar_3, :fu6month_ar_4, :fu6month_ar_5, :fu6month_ar_6, :fu6month_ar_7, :fu6month_ar_8, :fu6month_ar_9, :fu6month_ar_9o
     attr_accessible :fu6month_smoking_1, :fu6month_smoking_2, :fu6month_smoking_3, :fu6month_amp_side, :fu6month_fuq_2, :fu6month_fuq_2a, :fu6month_fuq_3, :fu6month_fuq_3a, :fu6month_fuq_4, :fu6month_fuq_4a_level, :fu6month_fuq_4a_type, :fu6month_fuq_4b, :fu6month_fuq_5, :fu6month_fuq_5a, :fu6month_fuq_6, :fu6month_fuq_6a, :fu6month_fuq_7
-   
+   	attr_accessible :fu6month_pu_2_bilateral_left, :fu6month_pu_3_bilateral_left
+
 	attr_writer :current_step
 
 	def current_step

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140809014924) do
+ActiveRecord::Schema.define(:version => 20140814005416) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -442,6 +442,8 @@ ActiveRecord::Schema.define(:version => 20140809014924) do
     t.integer  "baseline_smoking_1"
     t.integer  "baseline_smoking_2"
     t.integer  "baseline_smoking_3"
+    t.integer  "base_pu_2_bilateral_left"
+    t.integer  "base_pu_3_bilateral_left"
   end
 
   add_index "baselines", ["subject_id"], :name => "index_baselines_on_subject_id"
@@ -775,6 +777,8 @@ ActiveRecord::Schema.define(:version => 20140809014924) do
     t.integer  "fu6month_smoking_2"
     t.integer  "fu6month_smoking_3"
     t.integer  "fu6month_amp_side"
+    t.integer  "fu6month_pu_2_bilateral_left"
+    t.integer  "fu6month_pu_3_bilateral_left"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
@@ -1194,6 +1198,8 @@ ActiveRecord::Schema.define(:version => 20140809014924) do
     t.integer  "tc_smoking_2"
     t.integer  "tc_smoking_3"
     t.integer  "tc_amp_side"
+    t.integer  "tc_pu_2_bilateral_left"
+    t.integer  "tc_pu_3_bilateral_left"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"

@@ -26,6 +26,14 @@ toggleBaseProsthesis = ->
 		$("#base_prosthesis").hide()
 	return
 
+toggleBaseProsthesisBilateral = ->
+	if($("#baseline_baseline_amp_side").val() is "3")
+		$("#base_prosthesis_bilateral").show()
+
+	else
+		$("#base_prosthesis_bilateral").hide()
+	return
+
 #Comorbidity
 toggleBaseLEAR = ->
 	
@@ -138,6 +146,7 @@ jQuery ->
 		toggleWAIS1()
 		toggleWAIS2()
 		toggleRBANSListRecall()
+		toggleBaseProsthesisBilateral()
 
 		#General Demographics
 		$("#baseline_base_employment_status_a").on "change", ->
@@ -150,6 +159,10 @@ jQuery ->
 		#Prosthesis
 		$("#baseline_base_pu_1").on "change", ->
 			toggleBaseProsthesis()
+			return
+
+		$("#baseline_baseline_amp_side").on "change", ->
+			toggleBaseProsthesisBilateral()
 			return
 
 		#Comorbidity

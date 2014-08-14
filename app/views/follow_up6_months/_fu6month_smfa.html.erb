@@ -1,7 +1,7 @@
 <h2>Short Musculoskeletal Function Assessment</h2>
 <p><i>Thank you for completing your 6 Month Follow Up Assessment for this study. Please remember NOT to discuss your group assignment with the research coordinator or with any other study participants while you are completing this assessment. As a study participant, you may be involved in the VETPALS program and attend group classes, or you may be part of an individual educational support program and are reading materials and following up individually with a health care provider. It is really important that you do not tell the research coordinator which program you are part of, or discuss anything at this appointment that could reveal which program you are in. Thank you! </i></p>
 <br/>
-<p><i>We are interested in finding out how you are managing with your injury or arthritis this week. We would like to know about any problems you may be having with your daily activities because of your injury or arthritis.</i></p>
+<p><i>We are interested in finding out how you are managing with your amputation this week. We would like to know about any problems you may be having with your daily activities because of your amputation.</i></p>
 <p><i>Please mark method of administration:</i></p>
 <%= select(:followup6month, :administration_method,
 	[["",nil],
@@ -336,7 +336,7 @@
 		</td>
 	</tr>
 </table>
-<p><i>These next questions ask how often you are experiencing problems this week because of your injury or arthritis.</i></p>
+<p><i>These next questions ask how often you are experiencing problems this week because of your amputation.</i></p>
 
 <center>
 	<table style="width:500px;">
@@ -458,7 +458,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>34. How often do you feel angry or frustrated that you have this injury or arthritis?</td>
+		<td>34. How often do you feel angry or frustrated that you have this amputation?</td>
 		<td><%= select(:followup6month, :fu6month_smfa_34,
 				[["",nil],
 				["1 - None of the time",1],
@@ -470,7 +470,7 @@
 		</td>
 	</tr>
 </table>
-<p><i>These questions are about how much you are bothered by problems you are having this week because of your injury or arthritis.</i></p>
+<p><i>These questions are about how much you are bothered by problems you are having this week because of your amputation.</i></p>
 <center>
 	<table style="width:500px;">
 		<tr>
@@ -591,7 +591,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>43. How much are you bothered by problems adjusting or coping with your injury or arthritis?</td>
+		<td>43. How much are you bothered by problems adjusting or coping with your amputation?</td>
 		<td><%= select(:followup6month, :fu6month_smfa_43,
 				[["",nil],
 				["1 - Not at all bothered",1],

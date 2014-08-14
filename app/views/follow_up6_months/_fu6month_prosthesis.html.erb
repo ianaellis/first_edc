@@ -5,10 +5,19 @@
 		<%= select(:followup6month, :fu6month_pu_1, [["",nil],["1 - Yes",1],["0 - No",0],["Refused", 1000]],{}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 		<li>Indicate amputation side: <%= select(:followup6month, :fu6month_amp_side, [["",nil],["Left",1],["Right",2],["Bilateral",3]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		<div id="6m_prosthesis">
+			
 			<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
 			<%= f.number_field :fu6month_pu_2, :style => "width:70px" %>
 			<li>In the past week, on average, how many days a week did yo uwear the prosthesis?</li>
 			<%= f.number_field :fu6month_pu_3, :style => "width:70px" %>
+		</div>
+
+		<div id="6m_prosthesis_bilateral">
+			<p>Please answer the following questions in relation to your <b>LEFT</b> side.</p>
+			<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
+			<%= f.number_field :fu6month_pu_2_bilateral_left, :style => "width:70px" %>
+			<li>In the past week, on average, how many days a week did you wear the prosthesis?</li>
+			<%= f.number_field :fu6month_pu_3_bilateral_left, :style => "width:70px" %>
 		</div>
 		<li>How often in the past week have you used a wheelchair? Would you say:</li>
 		<%= select(:followup6month, :fu6month_pu_4,
