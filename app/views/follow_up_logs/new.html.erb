@@ -5,12 +5,12 @@
 	<div class="span6 offset3">
 		<div style="width:300px;margin:auto;">
 			<% if current_user.is? :admin %>
-				<%= form_for :follow_up_log, url: follow_up_logs_path do |f| %>
+<!-- 				<%= form_for :follow_up_log, url: follow_up_logs_path do |f| %>
 
 					<%= f.select :site, [["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
 					
 					<%= f.submit "Create Follow Up Log", class: "btn btn-large btn-primary" %>
-				<% end %>
+				<% end %> -->
 			<% end %>
 		</div>
 	</div>
