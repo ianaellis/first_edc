@@ -1,6 +1,7 @@
 class Subject < ActiveRecord::Base
    include ActiveModel::Conversion
    extend ActiveModel::Naming
+   self.per_page = 10000
    has_one :baseline
    has_one :treatment_completion
    has_one :follow_up3_week
