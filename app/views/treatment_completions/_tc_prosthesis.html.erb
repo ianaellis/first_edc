@@ -6,16 +6,16 @@
 		<li>Indicate amputation side: <%= select(:tc, :tc_amp_side, [["",nil],["Left",1],["Right",2],["Bilateral",3]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 
 			<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
-			<%= f.number_field :tc_pu_2, :style => "width:70px" %>
+			<%= number_field(:tc, :tc_pu_2, :style => "width:70px") %>
 			<li>In the past week, on average, how many days a week did you wear the prosthesis?</li>
-			<%= f.number_field :tc_pu_3, :style => "width:70px" %>
+			<%= number_field(:tc, :tc_pu_3, :style => "width:70px") %>
 
 		<div id="tc_prosthesis_bilateral">
 			<p>Please answer the following questions in relation to your <b>LEFT</b> side.</p>
 			<li>During the past week, on average how many hours during a typical day did you wear the prosthesis?</li>
-			<%= f.number_field :tc_pu_2_bilateral_left, :style => "width:70px" %>
+			<%= number_field(:tc, :tc_pu_2_bilateral_left, :style => "width:70px") %>
 			<li>In the past week, on average, how many days a week did you wear the prosthesis?</li>
-			<%= f.number_field :tc_pu_3_bilateral_left, :style => "width:70px" %>
+			<%= number_field(:tc, :tc_pu_3_bilateral_left, :style => "width:70px") %>
 		</div>
 		<li>How often in the past week have you used a wheelchair? Would you say:</li>
 		<%= select(:tc, :tc_pu_4,
