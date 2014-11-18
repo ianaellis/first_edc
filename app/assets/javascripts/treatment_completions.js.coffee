@@ -146,6 +146,15 @@ toggle6WPassed = ->
 		$("#tc_passed").hide()
 	return
 
+#Prosthesis
+toggleTCProsthesis = ->
+	if($("#tc_tc_pu_1").val() is "1")
+		$("#tc_prosthesis").show()
+	else
+		$("#tc_prosthesis").hide()
+	return
+
+
 toggleTCProsthesisBilateral = ->
 	if ($("#tc_tc_amp_side").val() is "3")
 		$("#tc_prosthesis_bilateral").show()
@@ -162,6 +171,7 @@ jQuery ->
 		toggle6WHospital()
 		toggle6WPassed()
 		toggleTCProsthesisBilateral()
+		toggleTCProsthesis()
 
 		$("#tc_tc_fuq_2").on "change", ->
 			toggle6WRevision()
@@ -181,6 +191,10 @@ jQuery ->
 
 		$("#tc_tc_fuq_6").on "change", ->
 			toggle6WPassed()
+			return
+
+		$("#tc_tc_tc_pu_1").on "change", ->
+			toggleTCProsthesis()
 			return
 
 		$("#tc_tc_amp_side").on "change", ->

@@ -18,6 +18,14 @@ toggle6MProsthesis = ->
 		$("#6m_prosthesis").hide()
 	return
 
+#Prosthesis
+toggle6MProsthesis = ->
+	if($("#followup6month_fu6month_pu_1").val() is "1")
+		$("#6m_prosthesis").show()
+	else
+		$("#6m_prosthesis").hide()
+	return
+
 toggle6MProsthesisBilateral = ->
 	if($("#followup6month_fu6month_amp_side").val() is "3")
 		$("#6m_prosthesis_bilateral").show()
@@ -39,12 +47,16 @@ jQuery ->
 		toggle6MProsthesis()
 		toggle6MAlcohol()
 		toggle6MProsthesisBilateral()
+		toggle6MProsthesis()
 
 		#PANAS
 		$("#followup6month_panas_present_moment_or_last_week").on "change", ->
 			togglePanasTable()
 			return
 
+		$("#followup6month_fu6month_pu_1").on "change", ->
+			toggle6MProsthesis()
+			return
 		$("#followup6month_fu6month_pu_1").on "change", ->
 			toggle6MProsthesis()
 			return
