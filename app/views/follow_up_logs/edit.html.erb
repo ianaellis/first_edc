@@ -106,6 +106,19 @@
 		<div id="followuplog_submit_button">
 			<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 		</div>
-
+	<div>
+		<ul>Reasons:</ul>
+		<ul>
+			<li><b>S</b> = Scheduled but not completed</li>
+			<li><b>P</b> = Pending scheduling</li>
+			<li><b>L</b> = Loss to follow up</li>
+			<li><b>M</b> = Missed follow up</li>
+			<li><b>W</b> = Participant formally withdrew</li>
+			<li><b>R</b> = Refused</li>
+			<li><b>D</b> = Died</li>
+			<li><b>I</b> = Incomplete follow-up</li>
+			<li><b>O</b> = Other</li>
+		</ul>
+	</div>
 	</div>
 <% end %>
