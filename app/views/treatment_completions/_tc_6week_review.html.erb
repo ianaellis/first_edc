@@ -30,7 +30,7 @@
 	<li>Was the patient admitted to the hospital? <%= select(:tc, :tc_fuq_5,[["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 		<div id="tc_hospital">
 			<ol type="a">
-				<li>If yes, reason for admission: <%= f.text_field :tc_fuq_5a, :style => "width:auto" %></li>
+				<li>If yes, reason for admission: <%= text_field(:tc, :tc_fuq_5a, :style => "width:auto") %></li>
 			</ol>
 		</div>
 	</li>
