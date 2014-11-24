@@ -8,6 +8,8 @@ FirstEdc::Application.routes.draw do
     match '/users', to: 'users#edit' 
   end
   resources :sessions, only: [:new, :create, :destroy]
+
+  match '/race_gender_table', to: 'baselines#race_gender_table'
   resources :baselines
 
   match '/base_general_demo', to: 'baselines#base_general_demo'

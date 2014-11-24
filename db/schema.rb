@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141120194731) do
+ActiveRecord::Schema.define(:version => 20141124224410) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -963,6 +963,7 @@ ActiveRecord::Schema.define(:version => 20141120194731) do
     t.string   "group_size_input_string"
     t.integer  "telehealth"
     t.integer  "sc_pe_3a"
+    t.integer  "sc_exc_4"
   end
 
   create_table "treatment_completions", :force => true do |t|

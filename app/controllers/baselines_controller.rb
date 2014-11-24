@@ -7,6 +7,10 @@ class BaselinesController < ApplicationController
     @baseline.current_step = session[:baseline_step]
 	end
 
+  def race_gender_table
+    @baselines = Baseline.all
+  end
+
   def show
     @baseline = Baseline.find(params[:id])
   end

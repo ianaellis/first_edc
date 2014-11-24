@@ -130,8 +130,12 @@
 		</li>
 		<li>
 			<p>Does the patient have a major uncontrolled psychiatric illness (bipolar disorder, psychosis, severe suicidality) identified by chart review and confirmed, if necessary, with a provider or investigator?</p>
-			<%= select(:subject, :sc_exc_3,[["", nil],["Yes",1],["No", 0]], {}, :style => "width:70px") %>
+			<%= select(:subject, :sc_exc_3,[["", nil],["Yes", 1],["No", 0]], {}, :style => "width:70px") %>
 			</li>
+		<li>
+			<p>Does the patient have a spinal cord injury (SCI)?</p>
+			<%= select(:subject, :sc_exc_4,[["", nil],["Yes", 1],["No", 0]], {}, :style => "width:70px") %>
+		</li>
 	</ol>
 	<strong><p><i>EXCLUSION CRITERIA - All exclusion criteria must be marked no to continue.</i></p></strong>
 
