@@ -1,1 +1,255 @@
-<h1>Test</h1>
+<title>Race and Gender Distribution</title>
+<h1>Race and Gender Distribution</h1>
+
+
+<p>Please note, Hispanic not included in total count. It is a seperate question, so I can only assume that each Hispanic person has also selected a response for 'Ethnicity' and would be counted anyway. </p>
+
+<h2>Total</h2>
+<center>
+	<table border="3" cellpadding="4" cellspacing="3" width="50%">
+		<tr>
+			<td></td>
+			<th>American Indian or Alaskan Native</th>
+			<th>Asian</th>
+			<th>Black or African American</th>
+			<th>Native hawaiian or other Pacific Islander</th>
+			<th>White</th>
+			<th>Hispanic or Latino</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+		<tr align="center">
+			<th>Men</th>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '5', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 enrolled").where(sc_pd_2: '1', sc_pd_3: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '1', sc_pd_4: '6', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_2: '1', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Women</th>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '5', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 enrolled").where(sc_pd_2: '2', sc_pd_3: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 enrolled").where(sc_pd_2: '2', sc_pd_4: '6', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_2: '2', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Total</th>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '5', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_3: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(sc_pd_4: '6', enrolled: '1').count %></td>
+			<td><%= Subject.includes("enrolled").where(enrolled: '1').count(:sc_pd_2) %></td>
+		</tr>
+	</table>
+</center>
+
+<h2>Seattle</h2>
+<center>
+	<table border="3" cellpadding="4" cellspacing="3" width="50%">
+		<tr>
+			<td></td>
+			<th>American Indian or Alaskan Native</th>
+			<th>Asian</th>
+			<th>Black or African American</th>
+			<th>Native hawaiian or other Pacific Islander</th>
+			<th>White</th>
+			<th>Hispanic or Latino</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+		<tr align="center">
+			<th>Men</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '5', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '3', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '2', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '4', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '1', sc_pd_3: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '6', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '1', study_site: '1', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Women</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '5', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '3', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '2', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '4', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '2', sc_pd_3: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '6', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '2', study_site: '1', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Total</th>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '5', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '3', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '2', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '4', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_3: '1', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '6', study_site: '1', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(study_site: '1', enrolled: '1').count(:sc_pd_2) %></td>
+		</tr>
+	</table>
+</center>
+
+<h2>Houston</h2>
+<center>
+	<table border="3" cellpadding="4" cellspacing="3" width="50%">
+		<tr>
+			<td></td>
+			<th>American Indian or Alaskan Native</th>
+			<th>Asian</th>
+			<th>Black or African American</th>
+			<th>Native hawaiian or other Pacific Islander</th>
+			<th>White</th>
+			<th>Hispanic or Latino</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+		<tr align="center">
+			<th>Men</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '5', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '3', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '2', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '4', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '1', sc_pd_3: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '6', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '1', study_site: '2', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Women</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '5', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '3', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '2', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '4', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '2', sc_pd_3: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '6', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '2', study_site: '2', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Total</th>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '5', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '3', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '2', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '4', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_3: '1', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '6', study_site: '2', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(study_site: '2', enrolled: '1').count(:sc_pd_2) %></td>
+		</tr>
+	</table>
+</center>
+
+<h2>Cleveland</h2>
+<center>
+	<table border="3" cellpadding="4" cellspacing="3" width="50%">
+		<tr>
+			<td></td>
+			<th>American Indian or Alaskan Native</th>
+			<th>Asian</th>
+			<th>Black or African American</th>
+			<th>Native hawaiian or other Pacific Islander</th>
+			<th>White</th>
+			<th>Hispanic or Latino</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+		<tr align="center">
+			<th>Men</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '5', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '3', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '2', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '4', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '1', sc_pd_3: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '6', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '1', study_site: '3', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Women</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '5', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '3', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '2', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '4', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '2', sc_pd_3: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '6', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '2', study_site: '3', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Total</th>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '5', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '3', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '2', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '4', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_3: '1', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '6', study_site: '3', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(study_site: '3', enrolled: '1').count(:sc_pd_2) %></td>
+		</tr>
+	</table>
+</center>
+
+<h2>Tampa</h2>
+<center>
+	<table border="3" cellpadding="4" cellspacing="3" width="50%">
+		<tr>
+			<td></td>
+			<th>American Indian or Alaskan Native</th>
+			<th>Asian</th>
+			<th>Black or African American</th>
+			<th>Native hawaiian or other Pacific Islander</th>
+			<th>White</th>
+			<th>Hispanic or Latino</th>
+			<th>Other</th>
+			<th>Total</th>
+		</tr>
+		<tr align="center">
+			<th>Men</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '5', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '3', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '2', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '4', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '1', sc_pd_3: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '1', sc_pd_4: '6', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '1', study_site: '4', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Women</th>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '5', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '3', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '2', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '4', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_3 study_site enrolled").where(sc_pd_2: '2', sc_pd_3: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("sc_pd_4 study_site enrolled").where(sc_pd_2: '2', sc_pd_4: '6', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_2: '2', study_site: '4', enrolled: '1').count %></td>
+		</tr>
+		<tr align="center">
+			<th>Total</th>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '5', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '3', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '2', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '4', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_3: '1', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '6', study_site: '4', enrolled: '1').count %></td>
+			<td><%= Subject.includes("study_site enrolled").where(study_site: '1', enrolled: '4').count(:sc_pd_2) %></td>
+		</tr>
+	</table>
+</center>
