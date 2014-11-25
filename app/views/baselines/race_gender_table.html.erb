@@ -249,7 +249,7 @@
 			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '1', study_site: '4', enrolled: '1').count %></td>
 			<td><%= Subject.includes("study_site enrolled").where(sc_pd_3: '1', study_site: '4', enrolled: '1').count %></td>
 			<td><%= Subject.includes("study_site enrolled").where(sc_pd_4: '6', study_site: '4', enrolled: '1').count %></td>
-			<td><%= Subject.includes("study_site enrolled").where(study_site: '1', enrolled: '4').count(:sc_pd_2) %></td>
+			<td><%= Subject.includes("study_site enrolled").where(study_site: '4', enrolled: '1').count(:sc_pd_2) %></td>
 		</tr>
 	</table>
 </center>
