@@ -13,6 +13,7 @@ FirstEdc::Application.routes.draw do
   resources :baselines
 
   match '/base_general_demo', to: 'baselines#base_general_demo'
+  match '/baseline_view', to: 'baselines#baseline_view'
 
   resources :treatment_completions
   resources :psychosocial_scales

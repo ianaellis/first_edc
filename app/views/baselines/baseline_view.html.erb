@@ -1,0 +1,983 @@
+<h1>Baseline Data Review</h1>
+
+<div class="screening_log_table">
+  <table id="screening_log" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+    
+    	<tr>
+    		<th>Subject ID</th>
+    		<th colspan="10"><center>General Demographics</center></th>
+    		<th colspan="36"><center>Functional Comorbidity Index</center></th>
+    		<th colspan="31"><center>Comorbidity Questions</center></th>
+    		<th colspan="46"><center>Short Musculoskeletal Function Assessment</center></th>
+    		<th colspan="10"><center>Patient Health Questionnaire</center></th>
+    		<th colspan="2"><center>WHOQOL - BREF</center></th>
+    		<th colspan="21"><center>The Positive and Negative Affect Schedule</center></th>
+    		<th colspan="9"><center>MSES Self-Efficacy</center></th>
+    		<th colspan="13"><center>Patient Activation Measure</center></th>
+    		<th colspan="25"><center>SPSI-R Problem Solving</center></th>
+    		<th colspan="6"><center>Single Statement Stages of Change Questionnaire</center></th>
+    		<th colspan="7"><center>Prosthesis Use</center></th>
+    		<th colspan="7"><center>Chronic Pain Grade</center></th>
+    		<th colspan="12"><center>Multidimensional Scale of Perceived Social Support</center></th>
+    		<th colspan="6"><center>Audit-C Questionnaire</center></th>
+    		<th colspan="41"><center>RBANS-List Learning(Verbal Memory)</center></th>
+    		<th colspan="79"><center>Controlled Word Association Test</center></th>
+    		<th colspan="17"><center>WAIS-III Digit Span Forward</center></th>
+    		<th colspan="15"><center>WAIS-III Digit Span Backward</center></th>
+    		<th colspan="11"><center>RBANS-List Recall</center></th>
+    	</tr>
+    	<tr>
+    		<th>subject_id</th>
+    		<th>administation_method</th>
+    		<th>base_weight</th>
+    		<th>base_height</th>
+    		<th>base_employment_status_a</th>
+    		<th>base_employment_status_b</th>
+    		<th>base_living_status</th>
+    		<th>base_living_status_other</th>
+    		<th>base_socioeconomic_status</th>
+    		<th>base_education_a</th>
+    		<th>base_education_b</th>
+    		<th>base_arthritis</th>
+    		<th>base_arthritis_present</th>
+    		<th>base_osteoporosis</th>
+    		<th>base_osteoporosis_present</th>
+    		<th>base_asthma</th>
+    		<th>base_asthma_present</th>
+    		<th>base_copd</th>
+    		<th>base_copd_present</th>
+    		<th>base_angina</th>
+    		<th>base_angina_present</th>
+    		<th>base_heart</th>
+    		<th>base_heart_present</th>
+    		<th>base_heart_attack</th>
+    		<th>base_heart_attack_present</th>
+    		<th>base_neuro</th>
+    		<th>base_neuro_present</th>
+    		<th>base_stroke</th>
+    		<th>base_stroke_present</th>
+    		<th>base_pvd</th>
+    		<th>base_pvd_present</th>
+    		<th>base_diabetes</th>
+    		<th>base_diabetes_present</th>
+    		<th>base_gastrointestinal</th>
+    		<th>base_gastrointestinal_present</th>
+    		<th>base_depression</th>
+    		<th>base_depression_present</th>
+    		<th>base_anxiety</th>
+    		<th>base_anxiety_present</th>
+    		<th>base_visual_impairment</th>
+    		<th>base_visual_impairment_present</th>
+    		<th>base_hearing_impairment</th>
+    		<th>base_hearing_impairment_present</th>
+    		<th>base_ddd</th>
+    		<th>base_ddd_present</th>
+    		<th>base_obese</th>
+    		<th>base_obese_present</th>
+
+    		<th>base_cq_1a</th>
+			<th>base_cq_1b</th>
+			<th>base_cq_1b_side</th>
+			<th>base_cq_1c</th>
+			<th>base_cq_1d</th>
+			<th>base_cq_1d_joint</th>
+			<th>base_cq_1e</th>
+			<th>base_cq_1f</th>
+			<th>base_cq_1g</th>
+			<th>base_cq_2</th>
+			<th>base_cq_2a</th>
+			<th>base_cq_3a</th>
+			<th>base_cq_3b</th>
+			<th>base_cq_3c</th>
+			<th>base_cq_3d</th>
+			<th>base_cq_4</th>
+			<th>base_cq_5</th>
+			<th>base_cq_6</th>
+			<th>base_cq_9</th>
+			<th>base_cq_7</th>
+			<th>base_cq_8</th>
+			<th>base_cq_10_a1</th>
+			<th>base_cq_10_a2</th>
+			<th>base_cq_10_a3</th>
+			<th>base_cq_10_a4</th>
+			<th>base_cq_10_a5</th>
+			<th>base_cq_10_a6</th>
+			<th>base_cq_10_a7</th>
+			<th>base_cq_10_b</th>
+			<th>base_cq_10_c_level</th>
+			<th>base_cq_10_c_type</th>
+
+			<th>base_smfa_1 </th>
+			<th>base_smfa_2 </th>
+			<th>base_smfa_3 </th>
+			<th>base_smfa_4 </th>
+			<th>base_smfa_5 </th>
+			<th>base_smfa_6 </th>
+			<th>base_smfa_7 </th>
+			<th>base_smfa_8 </th>
+			<th>base_smfa_9 </th>
+			<th>base_smfa_10</th>
+			<th>base_smfa_11</th>
+			<th>base_smfa_12</th>
+			<th>base_smfa_13</th>
+			<th>base_smfa_14</th>
+			<th>base_smfa_15</th>
+			<th>base_smfa_16</th>
+			<th>base_smfa_17</th>
+			<th>base_smfa_18</th>
+			<th>base_smfa_19</th>
+			<th>base_smfa_20</th>
+			<th>base_smfa_21</th>
+			<th>base_smfa_22</th>
+			<th>base_smfa_23</th>
+			<th>base_smfa_24</th>
+			<th>base_smfa_25</th>
+			<th>base_smfa_26</th>
+			<th>base_smfa_27</th>
+			<th>base_smfa_28</th>
+			<th>base_smfa_29</th>
+			<th>base_smfa_30</th>
+			<th>base_smfa_31</th>
+			<th>base_smfa_32</th>
+			<th>base_smfa_33</th>
+			<th>base_smfa_34</th>
+			<th>base_smfa_35</th>
+			<th>base_smfa_36</th>
+			<th>base_smfa_37</th>
+			<th>base_smfa_38</th>
+			<th>base_smfa_39</th>
+			<th>base_smfa_40</th>
+			<th>base_smfa_41</th>
+			<th>base_smfa_42</th>
+			<th>base_smfa_43</th>
+			<th>base_smfa_44</th>
+			<th>base_smfa_45</th>
+			<th>base_smfa_46</th>
+
+			<th>base_phq_1</th>
+			<th>base_phq_2</th>
+			<th>base_phq_3</th>
+			<th>base_phq_4</th>
+			<th>base_phq_5</th>
+			<th>base_phq_6</th>
+			<th>base_phq_7</th>
+			<th>base_phq_8</th>
+			<th>base_phq_9</th>
+			<th>base_phq_10</th>
+
+			<th>base_whoqol_1</th>
+			<th>base_whoqol_2</th>
+
+			<th>panas_present_moment_or_last_week</th>
+			<th>base_panas_1</th>
+			<th>base_panas_2</th>
+			<th>base_panas_3</th>
+			<th>base_panas_4</th>
+			<th>base_panas_5</th>
+			<th>base_panas_6</th>
+			<th>base_panas_7</th>
+			<th>base_panas_8</th>
+			<th>base_panas_9</th>
+			<th>base_panas_10</th>
+			<th>base_panas_11</th>
+			<th>base_panas_12</th>
+			<th>base_panas_13</th>
+			<th>base_panas_14</th>
+			<th>base_panas_15</th>
+			<th>base_panas_16</th>
+			<th>base_panas_17</th>
+			<th>base_panas_18</th>
+			<th>base_panas_19</th>
+			<th>base_panas_20</th>
+
+			<th>base_mses_1</th>
+			<th>base_mses_2</th>
+			<th>base_mses_3</th>
+			<th>base_mses_4</th>
+			<th>base_mses_5</th>
+			<th>base_mses_6</th>
+			<th>base_mses_7</th>
+			<th>base_mses_8</th>
+			<th>base_mses_9</th>
+
+			<th>base_pam_1</th>
+			<th>base_pam_2</th>
+			<th>base_pam_3</th>
+			<th>base_pam_4</th>
+			<th>base_pam_5</th>
+			<th>base_pam_6</th>
+			<th>base_pam_7</th>
+			<th>base_pam_8</th>
+			<th>base_pam_9</th>
+			<th>base_pam_10</th>
+			<th>base_pam_11</th>
+			<th>base_pam_12</th>
+			<th>base_pam_13</th>
+
+			<th>base_spsi_1</th>
+			<th>base_spsi_2</th>
+			<th>base_spsi_3</th>
+			<th>base_spsi_4</th>
+			<th>base_spsi_5</th>
+			<th>base_spsi_6</th>
+			<th>base_spsi_7</th>
+			<th>base_spsi_8</th>
+			<th>base_spsi_9</th>
+			<th>base_spsi_10</th>
+			<th>base_spsi_11</th>
+			<th>base_spsi_12</th>
+			<th>base_spsi_13</th>
+			<th>base_spsi_14</th>
+			<th>base_spsi_15</th>
+			<th>base_spsi_16</th>
+			<th>base_spsi_17</th>
+			<th>base_spsi_18</th>
+			<th>base_spsi_19</th>
+			<th>base_spsi_20</th>
+			<th>base_spsi_21</th>
+			<th>base_spsi_22</th>
+			<th>base_spsi_23</th>
+			<th>base_spsi_24</th>
+			<th>base_spsi_25</th>
+
+			<th>base_soc_1</th>
+			<th>base_soc_2</th>
+			<th>base_soc_3</th>
+			<th>base_soc_4</th>
+			<th>base_soc_5</th>
+			<th>base_soc_6</th>
+
+			<th>base_pu_1</th>
+			<th>baseline_amp_side</th>
+			<th>base_pu_2</th>
+			<th>base_pu_3</th>
+			<th>base_pu_2_bilateral_left</th>
+			<th>base_pu_3_bilateral_left</th>
+			<th>base_pu_4</th>
+
+			<th>base_cpg_1</th>
+			<th>base_cpg_2</th>
+			<th>base_cpg_3</th>
+			<th>base_cpg_4</th>
+			<th>base_cpg_5</th>
+			<th>base_cpg_6</th>
+			<th>base_cpg_7</th>
+
+			<th>base_mspss_1</th>
+			<th>base_mspss_2</th>
+			<th>base_mspss_3</th>
+			<th>base_mspss_4</th>
+			<th>base_mspss_5</th>
+			<th>base_mspss_6</th>
+			<th>base_mspss_7</th>
+			<th>base_mspss_8</th>
+			<th>base_mspss_9</th>
+			<th>base_mspss_10</th>
+			<th>base_mspss_11</th>
+			<th>base_mspss_12</th>
+
+			<th>base_audit_1</th>
+			<th>base_audit_2</th>
+			<th>base_audit_3</th>
+			<th>baseline_smoking_1</th>
+			<th>baseline_smoking_2</th>
+			<th>baseline_smoking_3</th>
+			
+			<th>refuse_rbans_list</th>
+			<th>base_rbans_t1_1</th>
+			<th>base_rbans_t2_1</th>
+			<th>base_rbans_t3_1</th>
+			<th>base_rbans_t4_1</th>
+
+			<th>base_rbans_t1_2</th>
+			<th>base_rbans_t2_2</th>
+			<th>base_rbans_t3_2</th>
+			<th>base_rbans_t4_2</th>
+
+			<th>base_rbans_t1_3</th>
+			<th>base_rbans_t2_3</th>
+			<th>base_rbans_t3_3</th>
+			<th>base_rbans_t4_3</th>
+
+			<th>base_rbans_t1_4</th>
+			<th>base_rbans_t2_4</th>
+			<th>base_rbans_t3_4</th>
+			<th>base_rbans_t4_4</th>
+
+			<th>base_rbans_t1_5</th>
+			<th>base_rbans_t2_5</th>
+			<th>base_rbans_t3_5</th>
+			<th>base_rbans_t4_5</th>
+
+			<th>base_rbans_t1_6</th>
+			<th>base_rbans_t2_6</th>
+			<th>base_rbans_t3_6</th>
+			<th>base_rbans_t4_6</th>
+
+			<th>base_rbans_t1_7</th>
+			<th>base_rbans_t2_7</th>
+			<th>base_rbans_t3_7</th>
+			<th>base_rbans_t4_7</th>
+
+			<th>base_rbans_t1_8</th>
+			<th>base_rbans_t2_8</th>
+			<th>base_rbans_t3_8</th>
+			<th>base_rbans_t4_8</th>
+
+			<th>base_rbans_t1_9</th>
+			<th>base_rbans_t2_9</th>
+			<th>base_rbans_t3_9</th>
+			<th>base_rbans_t4_9</th>
+
+			<th>base_rbans_t1_10</th>
+			<th>base_rbans_t2_10</th>
+			<th>base_rbans_t3_10</th>
+			<th>base_rbans_t4_10</th>
+			
+			<th>refuse_cwat</th>
+			<th>base_cowat_f_1</th>
+			<th>base_cowat_a_1</th>
+			<th>base_cowat_s_1</th>
+
+			<th>base_cowat_f_2</th>
+			<th>base_cowat_a_2</th>
+			<th>base_cowat_s_2</th>
+
+			<th>base_cowat_f_3</th>
+			<th>base_cowat_a_3</th>
+			<th>base_cowat_s_3</th>
+
+			<th>base_cowat_f_4</th>
+			<th>base_cowat_a_4</th>
+			<th>base_cowat_s_4</th>
+
+			<th>base_cowat_f_5</th>
+			<th>base_cowat_a_5</th>
+			<th>base_cowat_s_5</th>
+
+			<th>base_cowat_f_6</th>
+			<th>base_cowat_a_6</th>
+			<th>base_cowat_s_6</th>
+
+			<th>base_cowat_f_7</th>
+			<th>base_cowat_a_7</th>
+			<th>base_cowat_s_7</th>
+
+			<th>base_cowat_f_8</th>
+			<th>base_cowat_a_8</th>
+			<th>base_cowat_s_8</th>
+
+			<th>base_cowat_f_9</th>
+			<th>base_cowat_a_9</th>
+			<th>base_cowat_s_9</th>
+
+			<th>base_cowat_f_10</th>
+			<th>base_cowat_a_10</th>
+			<th>base_cowat_s_10</th>
+
+			<th>base_cowat_f_11</th>
+			<th>base_cowat_a_11</th>
+			<th>base_cowat_s_11</th>
+
+			<th>base_cowat_f_12</th>
+			<th>base_cowat_a_12</th>
+			<th>base_cowat_s_12</th>
+
+			<th>base_cowat_f_13</th>
+			<th>base_cowat_a_13</th>
+			<th>base_cowat_s_13</th>
+
+			<th>base_cowat_f_14</th>
+			<th>base_cowat_a_14</th>
+			<th>base_cowat_s_14</th>
+
+			<th>base_cowat_f_15</th>
+			<th>base_cowat_a_15</th>
+			<th>base_cowat_s_15</th>
+
+			<th>base_cowat_f_16</th>
+			<th>base_cowat_a_16</th>
+			<th>base_cowat_s_16</th>
+
+			<th>base_cowat_f_17</th>
+			<th>base_cowat_a_17</th>
+			<th>base_cowat_s_17</th>
+
+			<th>base_cowat_f_18</th>
+			<th>base_cowat_a_18</th>
+			<th>base_cowat_s_18</th>
+
+			<th>base_cowat_f_19</th>
+			<th>base_cowat_a_19</th>
+			<th>base_cowat_s_19</th>
+
+			<th>base_cowat_f_20</th>
+			<th>base_cowat_a_20</th>
+			<th>base_cowat_s_20</th>
+
+			<th>base_cowat_f_21</th>
+			<th>base_cowat_a_21</th>
+			<th>base_cowat_s_21</th>
+
+			<th>base_cowat_f_22</th>
+			<th>base_cowat_a_22</th>
+			<th>base_cowat_s_22</th>
+
+			<th>base_cowat_f_23</th>
+			<th>base_cowat_a_23</th>
+			<th>base_cowat_s_23</th>
+
+			<th>base_cowat_f_24</th>
+			<th>base_cowat_a_24</th>
+			<th>base_cowat_s_24</th>
+
+			<th>base_cowat_f_25</th>
+			<th>base_cowat_a_25</th>
+			<th>base_cowat_s_25</th>
+
+			<th>base_cowat_f</th>
+			<th>base_cowat_a</th>
+			<th>base_cowat_s</th>
+			
+			<th>refuse_wais_1</th>
+			<th>base_wais_a_1_t1</th>
+			<th>base_wais_a_1_t2</th>
+
+			<th>base_wais_a_2_t1</th>
+			<th>base_wais_a_2_t2</th>
+
+			<th>base_wais_a_3_t1</th>
+			<th>base_wais_a_3_t2</th>
+
+			<th>base_wais_a_4_t1</th>
+			<th>base_wais_a_4_t2</th>
+
+			<th>base_wais_a_5_t1</th>
+			<th>base_wais_a_5_t2</th>
+
+			<th>base_wais_a_6_t1</th>
+			<th>base_wais_a_6_t2</th>
+
+			<th>base_wais_a_7_t1</th>
+			<th>base_wais_a_7_t2</th>
+
+			<th>base_wais_a_8_t1</th>
+			<th>base_wais_a_8_t2</th>
+
+			<th>refuse_wais_2</th>
+			<th>base_wais_b_1_t1</th>
+			<th>base_wais_b_1_t2</th>
+
+			<th>base_wais_b_2_t1</th>
+			<th>base_wais_b_2_t2</th>
+
+			<th>base_wais_b_3_t1</th>
+			<th>base_wais_b_3_t2</th>
+
+			<th>base_wais_b_4_t1</th>
+			<th>base_wais_b_4_t2</th>
+
+			<th>base_wais_b_5_t1</th>
+			<th>base_wais_b_5_t2</th>
+
+			<th>base_wais_b_6_t1</th>
+			<th>base_wais_b_6_t2</th>
+
+			<th>base_wais_b_7_t1</th>
+			<th>base_wais_b_7_t2</th>
+
+
+			<th>refuse_rbans_list_recall</th>
+			<th>base_rbans_re_1</th>
+			<th>base_rbans_re_2</th>
+			<th>base_rbans_re_3</th>
+			<th>base_rbans_re_4</th>
+			<th>base_rbans_re_5</th>
+			<th>base_rbans_re_6</th>
+			<th>base_rbans_re_7</th>
+			<th>base_rbans_re_8</th>
+			<th>base_rbans_re_9</th>
+			<th>base_rbans_re_10</th>
+
+    	</tr>
+    	<% @baselines.order('subject_id').each do |sub| %>
+    	<% if current_user.is? :admin %>	
+    		<tr>
+    			<td><%= sub.subject_id %></td>
+    			<td><%= sub.administration_method %></td>
+    			<td><%= sub.base_weight %></td>
+    			<td><%= sub.base_height %></td>
+    			<td><%= sub.base_employment_status_a %></td>
+    			<td><%= sub.base_employment_status_b %></td>
+    			<td><%= sub.base_living_status %></td>
+    			<td><%= sub.base_living_status_other %></td>
+    			<td><%= sub.base_socioeconomic_status %></td>
+    			<td><%= sub.base_education_a %></td>
+    			<td><%= sub.base_education_b %></td>
+
+    			<td><%= sub.base_arthritis %></td>
+    			<td><%= sub.base_arthritis_present %></td>
+    			<td><%= sub.base_osteoporosis %></td>
+    			<td><%= sub.base_osteoporosis_present %></td>
+    			<td><%= sub.base_asthma %></td>
+    			<td><%= sub.base_asthma_present %></td>
+    			<td><%= sub.base_copd %></td>
+    			<td><%= sub.base_copd_present %></td>
+    			<td><%= sub.base_angina %></td>
+    			<td><%= sub.base_angina_present %></td>
+    			<td><%= sub.base_heart %></td>
+    			<td><%= sub.base_heart_present %></td>
+    			<td><%= sub.base_heart_attack %></td>
+    			<td><%= sub.base_heart_attack_present %></td>
+    			<td><%= sub.base_neuro %></td>
+    			<td><%= sub.base_neuro_present %></td>
+    			<td><%= sub.base_stroke %></td>
+    			<td><%= sub.base_stroke_present %></td>
+    			<td><%= sub.base_pvd %></td>
+    			<td><%= sub.base_pvd_present %></td>
+    			<td><%= sub.base_diabetes %></td>
+    			<td><%= sub.base_diabetes_present %></td>
+    			<td><%= sub.base_gastrointestinal %></td>
+    			<td><%= sub.base_gastrointestinal_present %></td>
+    			<td><%= sub.base_depression %></td>
+    			<td><%= sub.base_depression_present %></td>
+    			<td><%= sub.base_anxiety %></td>
+    			<td><%= sub.base_anxiety_present %></td>
+    			<td><%= sub.base_visual_impairment %></td>
+    			<td><%= sub.base_visual_impairment_present %></td>
+    			<td><%= sub.base_hearing_impairment %></td>
+    			<td><%= sub.base_hearing_impairment_present %></td>
+    			<td><%= sub.base_ddd %></td>
+    			<td><%= sub.base_ddd_present %></td>
+    			<td><%= sub.base_obese %></td>
+    			<td><%= sub.base_obese_present %></td>
+
+    			<td><%= sub.base_cq_1a %></td>
+    			<td><%= sub.base_cq_1b %></td>
+    			<td><%= sub.base_cq_1b_side %></td>
+    			<td><%= sub.base_cq_1c %></td>
+    			<td><%= sub.base_cq_1d %></td>
+    			<td><%= sub.base_cq_1d_joint %></td>
+    			<td><%= sub.base_cq_1e %></td>
+    			<td><%= sub.base_cq_1f %></td>
+    			<td><%= sub.base_cq_1g %></td>
+    			<td><%= sub.base_cq_2 %></td>
+    			<td><%= sub.base_cq_2a %></td>
+    			<td><%= sub.base_cq_3a %></td>
+    			<td><%= sub.base_cq_3b %></td>
+    			<td><%= sub.base_cq_3c %></td>
+    			<td><%= sub.base_cq_3d %></td>
+    			<td><%= sub.base_cq_4 %></td>
+    			<td><%= sub.base_cq_5 %></td>
+    			<td><%= sub.base_cq_6 %></td>
+    			<td><%= sub.base_cq_9 %></td>
+    			<td><%= sub.base_cq_7 %></td>
+    			<td><%= sub.base_cq_8 %></td>
+    			<td><%= sub.base_cq_10_a1 %></td>
+    			<td><%= sub.base_cq_10_a2 %></td>
+    			<td><%= sub.base_cq_10_a3 %></td>
+    			<td><%= sub.base_cq_10_a4 %></td>
+    			<td><%= sub.base_cq_10_a5 %></td>
+    			<td><%= sub.base_cq_10_a6 %></td>
+    			<td><%= sub.base_cq_10_a7 %></td>	
+    			<td><%= sub.base_cq_10_b %></td>
+    			<td><%= sub.base_cq_10_c_level %></td>
+    			<td><%= sub.base_cq_10_c_type %></td>
+				
+				<td><%= sub.base_smfa_1 %></td>
+				<td><%= sub.base_smfa_2 %></td>
+				<td><%= sub.base_smfa_3 %></td>
+				<td><%= sub.base_smfa_4 %></td>
+				<td><%= sub.base_smfa_5 %></td>
+				<td><%= sub.base_smfa_6 %></td>
+				<td><%= sub.base_smfa_7 %></td>
+				<td><%= sub.base_smfa_8 %></td>
+				<td><%= sub.base_smfa_9 %></td>
+				<td><%= sub.base_smfa_10 %></td>
+				<td><%= sub.base_smfa_11 %></td>
+				<td><%= sub.base_smfa_12 %></td>
+				<td><%= sub.base_smfa_13 %></td>
+				<td><%= sub.base_smfa_14 %></td>
+				<td><%= sub.base_smfa_15 %></td>
+				<td><%= sub.base_smfa_16 %></td>
+				<td><%= sub.base_smfa_17 %></td>
+				<td><%= sub.base_smfa_18 %></td>
+				<td><%= sub.base_smfa_19 %></td>
+				<td><%= sub.base_smfa_20 %></td>
+				<td><%= sub.base_smfa_21 %></td>
+				<td><%= sub.base_smfa_22 %></td>
+				<td><%= sub.base_smfa_23 %></td>
+				<td><%= sub.base_smfa_24 %></td>
+				<td><%= sub.base_smfa_25 %></td>
+				<td><%= sub.base_smfa_26 %></td>
+				<td><%= sub.base_smfa_27 %></td>
+				<td><%= sub.base_smfa_28 %></td>
+				<td><%= sub.base_smfa_29 %></td>
+				<td><%= sub.base_smfa_30 %></td>
+				<td><%= sub.base_smfa_31 %></td>
+				<td><%= sub.base_smfa_32 %></td>
+				<td><%= sub.base_smfa_33 %></td>
+				<td><%= sub.base_smfa_34 %></td>
+				<td><%= sub.base_smfa_35 %></td>
+				<td><%= sub.base_smfa_36 %></td>
+				<td><%= sub.base_smfa_37 %></td>
+				<td><%= sub.base_smfa_38 %></td>
+				<td><%= sub.base_smfa_39 %></td>
+				<td><%= sub.base_smfa_40 %></td>
+				<td><%= sub.base_smfa_41 %></td>
+				<td><%= sub.base_smfa_42 %></td>
+				<td><%= sub.base_smfa_43 %></td>
+				<td><%= sub.base_smfa_44 %></td>
+				<td><%= sub.base_smfa_45 %></td>
+				<td><%= sub.base_smfa_46 %></td>
+				
+				<td><%= sub.base_phq_1 %></td>
+				<td><%= sub.base_phq_2 %></td>
+				<td><%= sub.base_phq_3 %></td>
+				<td><%= sub.base_phq_4 %></td>
+				<td><%= sub.base_phq_5 %></td>
+				<td><%= sub.base_phq_6 %></td>
+				<td><%= sub.base_phq_7 %></td>
+				<td><%= sub.base_phq_8 %></td>
+				<td><%= sub.base_phq_9 %></td>
+				<td><%= sub.base_phq_10 %></td>
+
+				<td><%= sub.base_whoqol_1 %></td>
+				<td><%= sub.base_whoqol_2 %></td>
+				
+				<td><%= sub.panas_present_moment_or_last_week %></td>
+				<td><%= sub.base_panas_1 %></td>
+				<td><%= sub.base_panas_2 %></td>
+				<td><%= sub.base_panas_3 %></td>
+				<td><%= sub.base_panas_4 %></td>
+				<td><%= sub.base_panas_5 %></td>
+				<td><%= sub.base_panas_6 %></td>
+				<td><%= sub.base_panas_7 %></td>
+				<td><%= sub.base_panas_8 %></td>
+				<td><%= sub.base_panas_9 %></td>
+				<td><%= sub.base_panas_10 %></td>
+				<td><%= sub.base_panas_11 %></td>
+				<td><%= sub.base_panas_12 %></td>
+				<td><%= sub.base_panas_13 %></td>
+				<td><%= sub.base_panas_14 %></td>
+				<td><%= sub.base_panas_15 %></td>
+				<td><%= sub.base_panas_16 %></td>
+				<td><%= sub.base_panas_17 %></td>
+				<td><%= sub.base_panas_18 %></td>
+				<td><%= sub.base_panas_19 %></td>
+				<td><%= sub.base_panas_20 %></td>
+
+				<td><%= sub.base_mses_1 %></td>
+				<td><%= sub.base_mses_2 %></td>
+				<td><%= sub.base_mses_3 %></td>
+				<td><%= sub.base_mses_4 %></td>
+				<td><%= sub.base_mses_5 %></td>
+				<td><%= sub.base_mses_6 %></td>
+				<td><%= sub.base_mses_7 %></td>
+				<td><%= sub.base_mses_8 %></td>
+				<td><%= sub.base_mses_9 %></td>
+
+				<td><%= sub.base_pam_1 %></td>
+				<td><%= sub.base_pam_2 %></td>
+				<td><%= sub.base_pam_3 %></td>
+				<td><%= sub.base_pam_4 %></td>
+				<td><%= sub.base_pam_5 %></td>
+				<td><%= sub.base_pam_6 %></td>
+				<td><%= sub.base_pam_7 %></td>
+				<td><%= sub.base_pam_8 %></td>
+				<td><%= sub.base_pam_9 %></td>
+				<td><%= sub.base_pam_10 %></td>
+				<td><%= sub.base_pam_11 %></td>
+				<td><%= sub.base_pam_12 %></td>
+				<td><%= sub.base_pam_13 %></td>
+
+				<td><%= sub.base_spsi_1 %></td>
+				<td><%= sub.base_spsi_2 %></td>
+				<td><%= sub.base_spsi_3 %></td>
+				<td><%= sub.base_spsi_4 %></td>
+				<td><%= sub.base_spsi_5 %></td>
+				<td><%= sub.base_spsi_6 %></td>
+				<td><%= sub.base_spsi_7 %></td>
+				<td><%= sub.base_spsi_8 %></td>
+				<td><%= sub.base_spsi_9 %></td>
+				<td><%= sub.base_spsi_10 %></td>
+				<td><%= sub.base_spsi_11 %></td>
+				<td><%= sub.base_spsi_12 %></td>
+				<td><%= sub.base_spsi_13 %></td>
+				<td><%= sub.base_spsi_14 %></td>
+				<td><%= sub.base_spsi_15 %></td>
+				<td><%= sub.base_spsi_16 %></td>
+				<td><%= sub.base_spsi_17 %></td>
+				<td><%= sub.base_spsi_18 %></td>
+				<td><%= sub.base_spsi_19 %></td>
+				<td><%= sub.base_spsi_20 %></td>
+				<td><%= sub.base_spsi_21 %></td>
+				<td><%= sub.base_spsi_22 %></td>
+				<td><%= sub.base_spsi_23 %></td>
+				<td><%= sub.base_spsi_24 %></td>
+				<td><%= sub.base_spsi_25 %></td>
+
+				<td><%= sub.base_soc_1 %></td>
+				<td><%= sub.base_soc_2 %></td>
+				<td><%= sub.base_soc_3 %></td>
+				<td><%= sub.base_soc_4 %></td>
+				<td><%= sub.base_soc_5 %></td>
+				<td><%= sub.base_soc_6 %></td>
+
+				<td><%= sub.base_pu_1 %></td>
+				<td><%= sub.baseline_amp_side %></td>
+				<td><%= sub.base_pu_2 %></td>
+				<td><%= sub.base_pu_3 %></td>
+				<td><%= sub.base_pu_2_bilateral_left %></td>
+				<td><%= sub.base_pu_3_bilateral_left %></td>
+				<td><%= sub.base_pu_4 %></td>
+
+				<td><%= sub.base_cpg_1 %></td>
+				<td><%= sub.base_cpg_2 %></td>
+				<td><%= sub.base_cpg_3 %></td>
+				<td><%= sub.base_cpg_4 %></td>
+				<td><%= sub.base_cpg_5 %></td>
+				<td><%= sub.base_cpg_6 %></td>
+				<td><%= sub.base_cpg_7 %></td>
+
+				<td><%= sub.base_mspss_1 %></td>
+				<td><%= sub.base_mspss_2 %></td>
+				<td><%= sub.base_mspss_3 %></td>
+				<td><%= sub.base_mspss_4 %></td>
+				<td><%= sub.base_mspss_5 %></td>
+				<td><%= sub.base_mspss_6 %></td>
+				<td><%= sub.base_mspss_7 %></td>
+				<td><%= sub.base_mspss_8 %></td>
+				<td><%= sub.base_mspss_9 %></td>
+				<td><%= sub.base_mspss_10 %></td>
+				<td><%= sub.base_mspss_11 %></td>
+				<td><%= sub.base_mspss_12 %></td>
+				
+				<td><%= sub.base_audit_1 %></td>
+				<td><%= sub.base_audit_2 %></td>
+				<td><%= sub.base_audit_3 %></td>
+				<td><%= sub.baseline_smoking_1 %></td>
+				<td><%= sub.baseline_smoking_2 %></td>
+				<td><%= sub.baseline_smoking_3 %></td>
+				
+				<td><%= sub.refuse_rbans_list %></td>
+				<td><%= sub.base_rbans_t1_1 %></td>
+				<td><%= sub.base_rbans_t2_1 %></td>
+				<td><%= sub.base_rbans_t3_1 %></td>
+				<td><%= sub.base_rbans_t4_1 %></td>
+
+				<td><%= sub.base_rbans_t1_2 %></td>
+				<td><%= sub.base_rbans_t2_2 %></td>
+				<td><%= sub.base_rbans_t3_2 %></td>
+				<td><%= sub.base_rbans_t4_2 %></td>
+
+				<td><%= sub.base_rbans_t1_3 %></td>
+				<td><%= sub.base_rbans_t2_3 %></td>
+				<td><%= sub.base_rbans_t3_3 %></td>
+				<td><%= sub.base_rbans_t4_3 %></td>
+
+				<td><%= sub.base_rbans_t1_4 %></td>
+				<td><%= sub.base_rbans_t2_4 %></td>
+				<td><%= sub.base_rbans_t3_4 %></td>
+				<td><%= sub.base_rbans_t4_4 %></td>
+
+				<td><%= sub.base_rbans_t1_5 %></td>
+				<td><%= sub.base_rbans_t2_5 %></td>
+				<td><%= sub.base_rbans_t3_5 %></td>
+				<td><%= sub.base_rbans_t4_5 %></td>
+
+				<td><%= sub.base_rbans_t1_6 %></td>
+				<td><%= sub.base_rbans_t2_6 %></td>
+				<td><%= sub.base_rbans_t3_6 %></td>
+				<td><%= sub.base_rbans_t4_6 %></td>
+
+				<td><%= sub.base_rbans_t1_7 %></td>
+				<td><%= sub.base_rbans_t2_7 %></td>
+				<td><%= sub.base_rbans_t3_7 %></td>
+				<td><%= sub.base_rbans_t4_7 %></td>
+
+				<td><%= sub.base_rbans_t1_8 %></td>
+				<td><%= sub.base_rbans_t2_8 %></td>
+				<td><%= sub.base_rbans_t3_8 %></td>
+				<td><%= sub.base_rbans_t4_8 %></td>
+
+				<td><%= sub.base_rbans_t1_9 %></td>
+				<td><%= sub.base_rbans_t2_9 %></td>
+				<td><%= sub.base_rbans_t3_9 %></td>
+				<td><%= sub.base_rbans_t4_9 %></td>
+
+				<td><%= sub.base_rbans_t1_10 %></td>
+				<td><%= sub.base_rbans_t2_10 %></td>
+				<td><%= sub.base_rbans_t3_10 %></td>
+				<td><%= sub.base_rbans_t4_10 %></td>
+
+				<td><%= sub.refuse_cwat %></td>
+				<td><%= sub.base_cowat_f_1 %></td>
+				<td><%= sub.base_cowat_a_1 %></td>
+				<td><%= sub.base_cowat_s_1 %></td>
+
+				<td><%= sub.base_cowat_f_2 %></td>
+				<td><%= sub.base_cowat_a_2 %></td>
+				<td><%= sub.base_cowat_s_2 %></td>
+
+				<td><%= sub.base_cowat_f_3 %></td>
+				<td><%= sub.base_cowat_a_3 %></td>
+				<td><%= sub.base_cowat_s_3 %></td>
+
+				<td><%= sub.base_cowat_f_4 %></td>
+				<td><%= sub.base_cowat_a_4 %></td>
+				<td><%= sub.base_cowat_s_4 %></td>
+
+				<td><%= sub.base_cowat_f_5 %></td>
+				<td><%= sub.base_cowat_a_5 %></td>
+				<td><%= sub.base_cowat_s_5 %></td>
+
+				<td><%= sub.base_cowat_f_6 %></td>
+				<td><%= sub.base_cowat_a_6 %></td>
+				<td><%= sub.base_cowat_s_6 %></td>
+
+				<td><%= sub.base_cowat_f_7 %></td>
+				<td><%= sub.base_cowat_a_7 %></td>
+				<td><%= sub.base_cowat_s_7 %></td>
+
+				<td><%= sub.base_cowat_f_8 %></td>
+				<td><%= sub.base_cowat_a_8 %></td>
+				<td><%= sub.base_cowat_s_8 %></td>
+
+				<td><%= sub.base_cowat_f_9 %></td>
+				<td><%= sub.base_cowat_a_9 %></td>
+				<td><%= sub.base_cowat_s_9 %></td>
+
+				<td><%= sub.base_cowat_f_10 %></td>
+				<td><%= sub.base_cowat_a_10 %></td>
+				<td><%= sub.base_cowat_s_10 %></td>
+
+				<td><%= sub.base_cowat_f_11 %></td>
+				<td><%= sub.base_cowat_a_11 %></td>
+				<td><%= sub.base_cowat_s_11 %></td>
+
+				<td><%= sub.base_cowat_f_12 %></td>
+				<td><%= sub.base_cowat_a_12 %></td>
+				<td><%= sub.base_cowat_s_12 %></td>
+
+				<td><%= sub.base_cowat_f_13 %></td>
+				<td><%= sub.base_cowat_a_13 %></td>
+				<td><%= sub.base_cowat_s_13 %></td>
+
+				<td><%= sub.base_cowat_f_14 %></td>
+				<td><%= sub.base_cowat_a_14 %></td>
+				<td><%= sub.base_cowat_s_14 %></td>
+
+				<td><%= sub.base_cowat_f_15 %></td>
+				<td><%= sub.base_cowat_a_15 %></td>
+				<td><%= sub.base_cowat_s_15 %></td>
+
+				<td><%= sub.base_cowat_f_16 %></td>
+				<td><%= sub.base_cowat_a_16 %></td>
+				<td><%= sub.base_cowat_s_16 %></td>
+
+				<td><%= sub.base_cowat_f_17 %></td>
+				<td><%= sub.base_cowat_a_17 %></td>
+				<td><%= sub.base_cowat_s_17 %></td>
+
+				<td><%= sub.base_cowat_f_18 %></td>
+				<td><%= sub.base_cowat_a_18 %></td>
+				<td><%= sub.base_cowat_s_18 %></td>
+
+				<td><%= sub.base_cowat_f_19 %></td>
+				<td><%= sub.base_cowat_a_19 %></td>
+				<td><%= sub.base_cowat_s_19 %></td>
+
+				<td><%= sub.base_cowat_f_20 %></td>
+				<td><%= sub.base_cowat_a_20 %></td>
+				<td><%= sub.base_cowat_s_20 %></td>
+
+				<td><%= sub.base_cowat_f_21 %></td>
+				<td><%= sub.base_cowat_a_21 %></td>
+				<td><%= sub.base_cowat_s_21 %></td>
+
+				<td><%= sub.base_cowat_f_22 %></td>
+				<td><%= sub.base_cowat_a_22 %></td>
+				<td><%= sub.base_cowat_s_22 %></td>
+
+				<td><%= sub.base_cowat_f_23 %></td>
+				<td><%= sub.base_cowat_a_23 %></td>
+				<td><%= sub.base_cowat_s_23 %></td>
+
+				<td><%= sub.base_cowat_f_24 %></td>
+				<td><%= sub.base_cowat_a_24 %></td>
+				<td><%= sub.base_cowat_s_24 %></td>
+
+				<td><%= sub.base_cowat_f_25 %></td>
+				<td><%= sub.base_cowat_a_25 %></td>
+				<td><%= sub.base_cowat_s_25 %></td>
+
+				<td><%= sub.base_cowat_f %></td>
+				<td><%= sub.base_cowat_a %></td>
+				<td><%= sub.base_cowat_s %></td>
+
+				<td><%= sub.refuse_wais_1 %></td>
+				<td><%= sub.base_wais_a_1_t1 %></td>
+				<td><%= sub.base_wais_a_1_t2 %></td>
+
+				<td><%= sub.base_wais_a_2_t1 %></td>
+				<td><%= sub.base_wais_a_2_t2 %></td>
+
+				<td><%= sub.base_wais_a_3_t1 %></td>
+				<td><%= sub.base_wais_a_3_t2 %></td>
+
+				<td><%= sub.base_wais_a_4_t1 %></td>
+				<td><%= sub.base_wais_a_4_t2 %></td>
+
+				<td><%= sub.base_wais_a_5_t1 %></td>
+				<td><%= sub.base_wais_a_5_t2 %></td>
+
+				<td><%= sub.base_wais_a_6_t1 %></td>
+				<td><%= sub.base_wais_a_6_t2 %></td>
+
+				<td><%= sub.base_wais_a_7_t1 %></td>
+				<td><%= sub.base_wais_a_7_t2 %></td>
+
+				<td><%= sub.base_wais_a_8_t1 %></td>
+				<td><%= sub.base_wais_a_8_t2 %></td>
+
+				<td><%= sub.refuse_wais_2 %></td>
+				<td><%= sub.base_wais_b_1_t1 %></td>
+				<td><%= sub.base_wais_b_1_t2 %></td>
+
+				<td><%= sub.base_wais_b_2_t1 %></td>
+				<td><%= sub.base_wais_b_2_t2 %></td>
+
+				<td><%= sub.base_wais_b_3_t1 %></td>
+				<td><%= sub.base_wais_b_3_t2 %></td>
+
+				<td><%= sub.base_wais_b_4_t1 %></td>
+				<td><%= sub.base_wais_b_4_t2 %></td>
+
+				<td><%= sub.base_wais_b_5_t1 %></td>
+				<td><%= sub.base_wais_b_5_t2 %></td>
+
+				<td><%= sub.base_wais_b_6_t1 %></td>
+				<td><%= sub.base_wais_b_6_t2 %></td>
+
+				<td><%= sub.base_wais_b_7_t1 %></td>
+				<td><%= sub.base_wais_b_7_t2 %></td>
+
+				<td><%= sub.refuse_rbans_list_recall %></td>
+				<td><%= sub.base_rbans_re_1 %></td>
+				<td><%= sub.base_rbans_re_2 %></td>
+				<td><%= sub.base_rbans_re_3 %></td>
+				<td><%= sub.base_rbans_re_4 %></td>
+				<td><%= sub.base_rbans_re_5 %></td>
+				<td><%= sub.base_rbans_re_6 %></td>
+				<td><%= sub.base_rbans_re_7 %></td>
+				<td><%= sub.base_rbans_re_8 %></td>
+				<td><%= sub.base_rbans_re_9 %></td>
+				<td><%= sub.base_rbans_re_10 %></td>
+
+    		</tr>
+    	<% end %>
+    	<% end %>
+
+   </table>
+</div>
