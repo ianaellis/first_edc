@@ -16,6 +16,7 @@ FirstEdc::Application.routes.draw do
   match '/baseline_view', to: 'baselines#baseline_view'
 
   resources :treatment_completions
+  match '/tc_view', to: 'treatment_completions#tc_view'
   resources :psychosocial_scales
   resources :follow_up3_weeks
   resources :follow_up6_weeks

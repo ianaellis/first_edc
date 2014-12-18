@@ -1,0 +1,435 @@
+<h1>Treatment Completion Review</h1>
+
+<div class="screening_log_table">
+  <table id="screening_log" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+  	<tr>
+  		<th>Subject ID</th>
+  		<th colspan="47"><center>Short Musculoskeletal Function Assessment</center></th>
+  		<th colspan="10"><center>Patient Health Questionnaire</center></th>
+  		<th colspan="2"><center>WHOQOL - BREF</center></th>
+  		<th colspan="21"><center>The Positive and Negative Affect Schedule</center></th>
+  		<th colspan="9"><center>MSES Self-Efficacy</center></th>
+  		<th colspan="13"><center>Patient Activation Measure</center></th>
+  		<th colspan="25"><center>SPSI-R Problem Solving</center></th>
+  		<th colspan="6"><center>Single Statement Stages of Change Questionnaire</center></th>
+  		<th colspan="7"><center>Prosthesis Use</center></th>
+  		<th colspan="7"><center>Chronic Pain Grade</center></th>
+  		<th colspan="12"><center>Multidimensional Scale of Perceived Social Support</center></th>
+    	<th colspan="6"><center>Audit-C Questionnaire</center></th>
+    	<th colspan="10"><center>Accessing Resources</center></th>
+    	<th colspan="13"><center>Chart Review</center></th>
+  	</tr>
+  	<tr>
+		<th>subject_id</th>
+		<th>tc_administration_method</th>
+		<th>tc_smfa_1 </th>
+		<th>tc_smfa_2 </th>
+		<th>tc_smfa_3 </th>
+		<th>tc_smfa_4 </th>
+		<th>tc_smfa_5 </th>
+		<th>tc_smfa_6 </th>
+		<th>tc_smfa_7 </th>
+		<th>tc_smfa_8 </th>
+		<th>tc_smfa_9 </th>
+		<th>tc_smfa_10</th>
+		<th>tc_smfa_11</th>
+		<th>tc_smfa_12</th>
+		<th>tc_smfa_13</th>
+		<th>tc_smfa_14</th>
+		<th>tc_smfa_15</th>
+		<th>tc_smfa_16</th>
+		<th>tc_smfa_17</th>
+		<th>tc_smfa_18</th>
+		<th>tc_smfa_19</th>
+		<th>tc_smfa_20</th>
+		<th>tc_smfa_21</th>
+		<th>tc_smfa_22</th>
+		<th>tc_smfa_23</th>
+		<th>tc_smfa_24</th>
+		<th>tc_smfa_25</th>
+		<th>tc_smfa_26</th>
+		<th>tc_smfa_27</th>
+		<th>tc_smfa_28</th>
+		<th>tc_smfa_29</th>
+		<th>tc_smfa_30</th>
+		<th>tc_smfa_31</th>
+		<th>tc_smfa_32</th>
+		<th>tc_smfa_33</th>
+		<th>tc_smfa_34</th>
+		<th>tc_smfa_35</th>
+		<th>tc_smfa_36</th>
+		<th>tc_smfa_37</th>
+		<th>tc_smfa_38</th>
+		<th>tc_smfa_39</th>
+		<th>tc_smfa_40</th>
+		<th>tc_smfa_41</th>
+		<th>tc_smfa_42</th>
+		<th>tc_smfa_43</th>
+		<th>tc_smfa_44</th>
+		<th>tc_smfa_45</th>
+		<th>tc_smfa_46</th>  
+
+		<th>tc_phq_1</th>
+		<th>tc_phq_2</th>
+		<th>tc_phq_3</th>
+		<th>tc_phq_4</th>
+		<th>tc_phq_5</th>
+		<th>tc_phq_6</th>
+		<th>tc_phq_7</th>
+		<th>tc_phq_8</th>
+		<th>tc_phq_9</th>
+		<th>tc_phq_10</th>
+
+		<th>tc_whoqol_1</th>
+		<th>tc_whoqol_2</th>	
+
+		<th>tc_panas_present_moment_or_last_week</th>
+		<th>tc_panas_1</th>
+		<th>tc_panas_2</th>
+		<th>tc_panas_3</th>
+		<th>tc_panas_4</th>
+		<th>tc_panas_5</th>
+		<th>tc_panas_6</th>
+		<th>tc_panas_7</th>
+		<th>tc_panas_8</th>
+		<th>tc_panas_9</th>
+		<th>tc_panas_10</th>
+		<th>tc_panas_11</th>
+		<th>tc_panas_12</th>
+		<th>tc_panas_13</th>
+		<th>tc_panas_14</th>
+		<th>tc_panas_15</th>
+		<th>tc_panas_16</th>
+		<th>tc_panas_17</th>
+		<th>tc_panas_18</th>
+		<th>tc_panas_19</th>
+		<th>tc_panas_20</th>	
+
+		<th>tc_mses_1</th>
+		<th>tc_mses_2</th>
+		<th>tc_mses_3</th>
+		<th>tc_mses_4</th>
+		<th>tc_mses_5</th>
+		<th>tc_mses_6</th>
+		<th>tc_mses_7</th>
+		<th>tc_mses_8</th>
+		<th>tc_mses_9</th>
+
+		<th>tc_pam_1</th>
+		<th>tc_pam_2</th>
+		<th>tc_pam_3</th>
+		<th>tc_pam_4</th>
+		<th>tc_pam_5</th>
+		<th>tc_pam_6</th>
+		<th>tc_pam_7</th>
+		<th>tc_pam_8</th>
+		<th>tc_pam_9</th>
+		<th>tc_pam_10</th>
+		<th>tc_pam_11</th>
+		<th>tc_pam_12</th>
+		<th>tc_pam_13</th>
+
+		<th>tc_spsi_1</th>
+		<th>tc_spsi_2</th>
+		<th>tc_spsi_3</th>
+		<th>tc_spsi_4</th>
+		<th>tc_spsi_5</th>
+		<th>tc_spsi_6</th>
+		<th>tc_spsi_7</th>
+		<th>tc_spsi_8</th>
+		<th>tc_spsi_9</th>
+		<th>tc_spsi_10</th>
+		<th>tc_spsi_11</th>
+		<th>tc_spsi_12</th>
+		<th>tc_spsi_13</th>
+		<th>tc_spsi_14</th>
+		<th>tc_spsi_15</th>
+		<th>tc_spsi_16</th>
+		<th>tc_spsi_17</th>
+		<th>tc_spsi_18</th>
+		<th>tc_spsi_19</th>
+		<th>tc_spsi_20</th>
+		<th>tc_spsi_21</th>
+		<th>tc_spsi_22</th>
+		<th>tc_spsi_23</th>
+		<th>tc_spsi_24</th>
+		<th>tc_spsi_25</th>
+
+		<th>tc_soc_1</th>
+		<th>tc_soc_2</th>
+		<th>tc_soc_3</th>
+		<th>tc_soc_4</th>
+		<th>tc_soc_5</th>
+		<th>tc_soc_6</th>
+
+		<th>tc_pu_1</th>
+		<th>tc_amp_side</th>
+		<th>tc_pu_2</th>
+		<th>tc_pu_3</th>
+		<th>tc_pu_2_bilateral_left</th>
+		<th>tc_pu_3_bilateral_left</th>
+		<th>tc_pu_4</th>
+
+		<th>tc_cpg_1</th>
+		<th>tc_cpg_2</th>
+		<th>tc_cpg_3</th>
+		<th>tc_cpg_4</th>
+		<th>tc_cpg_5</th>
+		<th>tc_cpg_6</th>
+		<th>tc_cpg_7</th>
+
+		<th>tc_mspss_1</th>
+		<th>tc_mspss_2</th>
+		<th>tc_mspss_3</th>
+		<th>tc_mspss_4</th>
+		<th>tc_mspss_5</th>
+		<th>tc_mspss_6</th>
+		<th>tc_mspss_7</th>
+		<th>tc_mspss_8</th>
+		<th>tc_mspss_9</th>
+		<th>tc_mspss_10</th>
+		<th>tc_mspss_11</th>
+		<th>tc_mspss_12</th>
+
+		<th>tc_audit_1</th>
+		<th>tc_audit_2</th>
+		<th>tc_audit_3</th>
+		<th>tc_smoking_1</th>
+		<th>tc_smoking_2</th>
+		<th>tc_smoking_3</th>
+
+		<th>tc_ar_1</th>
+		<th>tc_ar_2</th>
+		<th>tc_ar_3</th>
+		<th>tc_ar_4</th>
+		<th>tc_ar_5</th>
+		<th>tc_ar_6</th>
+		<th>tc_ar_7</th>
+		<th>tc_ar_8</th>
+		<th>tc_ar_9</th>
+		<th>tc_ar_9o</th>
+
+		<th>tc_fuq_2</th>
+		<th>tc_fuq_2a</th>
+		<th>tc_fuq_3</th>
+		<th>tc_fuq_3a</th>
+		<th>tc_fuq_4</th>
+		<th>tc_fuq_4a_level</th>
+		<th>tc_fuq_4a_type</th>
+		<th>tc_fuq_4b</th>
+		<th>tc_fuq_5</th>
+		<th>tc_fuq_5a</th>
+		<th>tc_fuq_6</th>
+		<th>tc_fuq_6a</th>
+		<th>tc_fuq_7</th>
+	</tr>
+		<% TreatmentCompletion.order('subject_id').each do |sub| %>
+    		<% if current_user.is? :admin %>
+	<tr>
+				<td><%= sub.subject_id %></td>
+				<td><%= sub.administration_method %></td>
+    			<td><%= sub.tc_smfa_1 %></td>
+				<td><%= sub.tc_smfa_2 %></td>
+				<td><%= sub.tc_smfa_3 %></td>
+				<td><%= sub.tc_smfa_4 %></td>
+				<td><%= sub.tc_smfa_5 %></td>
+				<td><%= sub.tc_smfa_6 %></td>
+				<td><%= sub.tc_smfa_7 %></td>
+				<td><%= sub.tc_smfa_8 %></td>
+				<td><%= sub.tc_smfa_9 %></td>
+				<td><%= sub.tc_smfa_10 %></td>
+				<td><%= sub.tc_smfa_11 %></td>
+				<td><%= sub.tc_smfa_12 %></td>
+				<td><%= sub.tc_smfa_13 %></td>
+				<td><%= sub.tc_smfa_14 %></td>
+				<td><%= sub.tc_smfa_15 %></td>
+				<td><%= sub.tc_smfa_16 %></td>
+				<td><%= sub.tc_smfa_17 %></td>
+				<td><%= sub.tc_smfa_18 %></td>
+				<td><%= sub.tc_smfa_19 %></td>
+				<td><%= sub.tc_smfa_20 %></td>
+				<td><%= sub.tc_smfa_21 %></td>
+				<td><%= sub.tc_smfa_22 %></td>
+				<td><%= sub.tc_smfa_23 %></td>
+				<td><%= sub.tc_smfa_24 %></td>
+				<td><%= sub.tc_smfa_25 %></td>
+				<td><%= sub.tc_smfa_26 %></td>
+				<td><%= sub.tc_smfa_27 %></td>
+				<td><%= sub.tc_smfa_28 %></td>
+				<td><%= sub.tc_smfa_29 %></td>
+				<td><%= sub.tc_smfa_30 %></td>
+				<td><%= sub.tc_smfa_31 %></td>
+				<td><%= sub.tc_smfa_32 %></td>
+				<td><%= sub.tc_smfa_33 %></td>
+				<td><%= sub.tc_smfa_34 %></td>
+				<td><%= sub.tc_smfa_35 %></td>
+				<td><%= sub.tc_smfa_36 %></td>
+				<td><%= sub.tc_smfa_37 %></td>
+				<td><%= sub.tc_smfa_38 %></td>
+				<td><%= sub.tc_smfa_39 %></td>
+				<td><%= sub.tc_smfa_40 %></td>
+				<td><%= sub.tc_smfa_41 %></td>
+				<td><%= sub.tc_smfa_42 %></td>
+				<td><%= sub.tc_smfa_43 %></td>
+				<td><%= sub.tc_smfa_44 %></td>
+				<td><%= sub.tc_smfa_45 %></td>
+				<td><%= sub.tc_smfa_46 %></td>
+
+				<td><%= sub.tc_phq_1 %></td>
+				<td><%= sub.tc_phq_2 %></td>
+				<td><%= sub.tc_phq_3 %></td>
+				<td><%= sub.tc_phq_4 %></td>
+				<td><%= sub.tc_phq_5 %></td>
+				<td><%= sub.tc_phq_6 %></td>
+				<td><%= sub.tc_phq_7 %></td>
+				<td><%= sub.tc_phq_8 %></td>
+				<td><%= sub.tc_phq_9 %></td>
+				<td><%= sub.tc_phq_10 %></td>
+
+				<td><%= sub.tc_whoqol_1 %></td>
+				<td><%= sub.tc_whoqol_2 %></td>
+
+				<td><%= sub.panas_present_moment_or_last_week %></td>
+				<td><%= sub.tc_panas_1 %></td>
+				<td><%= sub.tc_panas_2 %></td>
+				<td><%= sub.tc_panas_3 %></td>
+				<td><%= sub.tc_panas_4 %></td>
+				<td><%= sub.tc_panas_5 %></td>
+				<td><%= sub.tc_panas_6 %></td>
+				<td><%= sub.tc_panas_7 %></td>
+				<td><%= sub.tc_panas_8 %></td>
+				<td><%= sub.tc_panas_9 %></td>
+				<td><%= sub.tc_panas_10 %></td>
+				<td><%= sub.tc_panas_11 %></td>
+				<td><%= sub.tc_panas_12 %></td>
+				<td><%= sub.tc_panas_13 %></td>
+				<td><%= sub.tc_panas_14 %></td>
+				<td><%= sub.tc_panas_15 %></td>
+				<td><%= sub.tc_panas_16 %></td>
+				<td><%= sub.tc_panas_17 %></td>
+				<td><%= sub.tc_panas_18 %></td>
+				<td><%= sub.tc_panas_19 %></td>
+				<td><%= sub.tc_panas_20 %></td>
+
+				<td><%= sub.tc_mses_1 %></td>
+				<td><%= sub.tc_mses_2 %></td>
+				<td><%= sub.tc_mses_3 %></td>
+				<td><%= sub.tc_mses_4 %></td>
+				<td><%= sub.tc_mses_5 %></td>
+				<td><%= sub.tc_mses_6 %></td>
+				<td><%= sub.tc_mses_7 %></td>
+				<td><%= sub.tc_mses_8 %></td>
+				<td><%= sub.tc_mses_9 %></td>
+
+				<td><%= sub.tc_pam_1 %></td>
+				<td><%= sub.tc_pam_2 %></td>
+				<td><%= sub.tc_pam_3 %></td>
+				<td><%= sub.tc_pam_4 %></td>
+				<td><%= sub.tc_pam_5 %></td>
+				<td><%= sub.tc_pam_6 %></td>
+				<td><%= sub.tc_pam_7 %></td>
+				<td><%= sub.tc_pam_8 %></td>
+				<td><%= sub.tc_pam_9 %></td>
+				<td><%= sub.tc_pam_10 %></td>
+				<td><%= sub.tc_pam_11 %></td>
+				<td><%= sub.tc_pam_12 %></td>
+				<td><%= sub.tc_pam_13 %></td>
+
+				<td><%= sub.tc_spsi_1 %></td>
+				<td><%= sub.tc_spsi_2 %></td>
+				<td><%= sub.tc_spsi_3 %></td>
+				<td><%= sub.tc_spsi_4 %></td>
+				<td><%= sub.tc_spsi_5 %></td>
+				<td><%= sub.tc_spsi_6 %></td>
+				<td><%= sub.tc_spsi_7 %></td>
+				<td><%= sub.tc_spsi_8 %></td>
+				<td><%= sub.tc_spsi_9 %></td>
+				<td><%= sub.tc_spsi_10 %></td>
+				<td><%= sub.tc_spsi_11 %></td>
+				<td><%= sub.tc_spsi_12 %></td>
+				<td><%= sub.tc_spsi_13 %></td>
+				<td><%= sub.tc_spsi_14 %></td>
+				<td><%= sub.tc_spsi_15 %></td>
+				<td><%= sub.tc_spsi_16 %></td>
+				<td><%= sub.tc_spsi_17 %></td>
+				<td><%= sub.tc_spsi_18 %></td>
+				<td><%= sub.tc_spsi_19 %></td>
+				<td><%= sub.tc_spsi_20 %></td>
+				<td><%= sub.tc_spsi_21 %></td>
+				<td><%= sub.tc_spsi_22 %></td>
+				<td><%= sub.tc_spsi_23 %></td>
+				<td><%= sub.tc_spsi_24 %></td>
+				<td><%= sub.tc_spsi_25 %></td>
+
+				<td><%= sub.tc_soc_1 %></td>
+				<td><%= sub.tc_soc_2 %></td>
+				<td><%= sub.tc_soc_3 %></td>
+				<td><%= sub.tc_soc_4 %></td>
+				<td><%= sub.tc_soc_5 %></td>
+				<td><%= sub.tc_soc_6 %></td>
+
+				<td><%= sub.tc_pu_1 %></td>
+				<td><%= sub.tc_amp_side %></td>
+				<td><%= sub.tc_pu_2 %></td>
+				<td><%= sub.tc_pu_3 %></td>
+				<td><%= sub.tc_pu_2_bilateral_left %></td>
+				<td><%= sub.tc_pu_3_bilateral_left %></td>
+				<td><%= sub.tc_pu_4 %></td>
+
+				<td><%= sub.tc_cpg_1 %></td>
+				<td><%= sub.tc_cpg_2 %></td>
+				<td><%= sub.tc_cpg_3 %></td>
+				<td><%= sub.tc_cpg_4 %></td>
+				<td><%= sub.tc_cpg_5 %></td>
+				<td><%= sub.tc_cpg_6 %></td>
+				<td><%= sub.tc_cpg_7 %></td>
+
+				<td><%= sub.tc_mspss_1 %></td>
+				<td><%= sub.tc_mspss_2 %></td>
+				<td><%= sub.tc_mspss_3 %></td>
+				<td><%= sub.tc_mspss_4 %></td>
+				<td><%= sub.tc_mspss_5 %></td>
+				<td><%= sub.tc_mspss_6 %></td>
+				<td><%= sub.tc_mspss_7 %></td>
+				<td><%= sub.tc_mspss_8 %></td>
+				<td><%= sub.tc_mspss_9 %></td>
+				<td><%= sub.tc_mspss_10 %></td>
+				<td><%= sub.tc_mspss_11 %></td>
+				<td><%= sub.tc_mspss_12 %></td>
+				
+				<td><%= sub.tc_audit_1 %></td>
+				<td><%= sub.tc_audit_2 %></td>
+				<td><%= sub.tc_audit_3 %></td>
+				<td><%= sub.tc_smoking_1 %></td>
+				<td><%= sub.tc_smoking_2 %></td>
+				<td><%= sub.tc_smoking_3 %></td>
+
+				<td><%= sub.tc_ar_1 %></td>
+				<td><%= sub.tc_ar_2 %></td>
+				<td><%= sub.tc_ar_3 %></td>
+				<td><%= sub.tc_ar_4 %></td>
+				<td><%= sub.tc_ar_5 %></td>
+				<td><%= sub.tc_ar_6 %></td>
+				<td><%= sub.tc_ar_7 %></td>
+				<td><%= sub.tc_ar_8 %></td>
+				<td><%= sub.tc_ar_9 %></td>
+				<td><%= sub.tc_ar_9o %></td>
+
+				<td><%= sub.tc_fuq_2 %></td>
+				<td><%= sub.tc_fuq_2a %></td>
+				<td><%= sub.tc_fuq_3 %></td>
+				<td><%= sub.tc_fuq_3a %></td>
+				<td><%= sub.tc_fuq_4 %></td>
+				<td><%= sub.tc_fuq_4a_level %></td>
+				<td><%= sub.tc_fuq_4a_type %></td>
+				<td><%= sub.tc_fuq_4b %></td>
+				<td><%= sub.tc_fuq_5 %></td>
+				<td><%= sub.tc_fuq_5a %></td>
+				<td><%= sub.tc_fuq_6 %></td>
+				<td><%= sub.tc_fuq_6a %></td>
+				<td><%= sub.tc_fuq_7 %></td>
+    		<% end %>
+    	<% end %>	
+	</tr>
+  </table>
+</div>
