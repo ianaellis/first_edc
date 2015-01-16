@@ -11,7 +11,7 @@
 					<%= select(:followup18week, :fu18week_fuq_2, [["",nil],["1 - Yes",1],["0 - No",0],["Refused", 1000]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="followup18week_revision">
 						<ol type="a">
-							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu18week_fuq_2a, :style => "width:auto" %> <i>(days)</i></li>
+							<li>If YES, mark time since original amputation surgery: <%= number_field(:followup18week, :fu18week_fuq_2a, :style => "width:auto") %> <i>(days)</i></li>
 						</ol>
 					</div>
 				</li>
@@ -19,7 +19,7 @@
 					<%= select(:followup18week, :fu18week_fuq_3, [["",nil],["1 - Yes",1],["0 - No",0],["Refused", 1000]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="followup18week_revision_higher">
 						<ol type="a">
-							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu18week_fuq_3a, :style => "width:auto" %> <i>(days)</i></li>
+							<li>If YES, mark time since original amputation surgery: <%= number_field(:followup18week, :fu18week_fuq_3a, :style => "width:auto") %> <i>(days)</i></li>
 						</ol>
 					</div>
 				</li>
@@ -29,25 +29,25 @@
 						<ol type="a">
 							<li>Level: <%= select(:followup18week, :fu18week_fuq_4a_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]],{}, :style => "width:auto")%></li>
 							<li>Type: <%= select(:followup18week, :fu18week_fuq_4a_type,[["",nil],["Initial",1],["Revision",2],["Refused", 1000]],{}, :style => "width:auto")%></li>
-							<li>Mark time since original amputation surgery <%= f.number_field :fu18week_fuq_4b, :style => "width:auto" %> <i>(days)</i> </li>
+							<li>Mark time since original amputation surgery <%= number_field(:followup18week, :fu18week_fuq_4b, :style => "width:auto") %> <i>(days)</i> </li>
 						</ol>
 					</div>
 				</li>
 				<li>Was the patient admitted to the hospital? <%= select(:followup18week, :fu18week_fuq_5,[["",nil],["1 - Yes",1],["0 - No",0],["Refused", 1000]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="followup18week_hospital">
 						<ol type="a">
-							<li>If yes, reason for admission: <%= f.text_field :fu18week_fuq_5a, :style => "width:auto" %></li>
+							<li>If yes, reason for admission: <%= text_field(:followup18week, :fu18week_fuq_5a, :style => "width:auto") %></li>
 						</ol>
 					</div>
 				</li>
 				<li>Has the patient passed away? <%= select(:followup18week, :fu18week_fuq_6,[["",nil],["1 - Yes",1],["0 - No",0],["Refused", 1000]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<div id="followup18week_passed">
 						<ol type="a">
-							<li>If YES, mark time since original amputation surgery: <%= f.number_field :fu18week_fuq_6a, :style => "width:auto" %></li>
+							<li>If YES, mark time since original amputation surgery: <%= number_field(:followup18week, :fu18week_fuq_6a, :style => "width:auto") %></li>
 						</ol>
 					</div>
 				</li>
-				<li>Notes: <%= f.text_field :fu18week_fuq_7, :style => "width:auto" %></li>
+				<li>Notes: <%= text_field(:followup18week, :fu18week_fuq_7, :style => "width:auto") %></li>
 			</ol>
 			<div style="width:200px; margin:auto;">
 				<%= f.submit "Submit", class: "btn btn-large btn-primary" %>

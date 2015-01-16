@@ -1,0 +1,48 @@
+<h1>18 Week Data Review</h1>
+
+<div class="screening_log_table">
+  <table id="screening_log" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+    
+    	<tr>
+    		<th>Subject ID</th>
+    		<th colspan="13"><center>Chart Review</center></th>
+    	</tr>
+    	<tr>
+    		<th>subject_id</th>
+
+    		<th>fu18week_fuq_2</th>
+            <th>fu18week_fuq_2a</th>
+            <th>fu18week_fuq_3</th>
+            <th>fu18week_fuq_3a</th>
+            <th>fu18week_fuq_4</th>
+            <th>fu18week_fuq_4a_level</th>
+            <th>fu18week_fuq_4a_type</th>
+            <th>fu18week_fuq_4b</th>
+            <th>fu18week_fuq_5</th>
+            <th>fu18week_fuq_5a</th>
+            <th>fu18week_fuq_6</th>
+            <th>fu18week_fuq_6a</th>
+            <th>fu18week_fuq_7</th>
+    	</tr>
+    	<% FollowUp18Week.order('subject_id').each do |sub| %>
+            <% if current_user.is? :admin %>
+		<tr>
+			<td><%= sub.subject_id %></td>
+			<td><%= sub.fu18week_fuq_2 %></td>
+            <td><%= sub.fu18week_fuq_2a %></td>
+            <td><%= sub.fu18week_fuq_3 %></td>
+            <td><%= sub.fu18week_fuq_3a %></td>
+            <td><%= sub.fu18week_fuq_4 %></td>
+            <td><%= sub.fu18week_fuq_4a_level %></td>
+            <td><%= sub.fu18week_fuq_4a_type %></td>
+            <td><%= sub.fu18week_fuq_4b %></td>
+            <td><%= sub.fu18week_fuq_5 %></td>
+            <td><%= sub.fu18week_fuq_5a %></td>
+            <td><%= sub.fu18week_fuq_6 %></td>
+            <td><%= sub.fu18week_fuq_6a %></td>
+            <td><%= sub.fu18week_fuq_7 %></td>
+        	<% end %>
+        <% end %>  
+		</tr>
+	</table>
+</div>

@@ -19,10 +19,14 @@ FirstEdc::Application.routes.draw do
   match '/tc_view', to: 'treatment_completions#tc_view'
   resources :psychosocial_scales
   resources :follow_up3_weeks
+  match '/fu3week_view', to: 'follow_up3_weeks#fu3week_view'
   resources :follow_up6_weeks
   resources :follow_up18_weeks
+  match '/fu18week_view', to: 'follow_up18_weeks#fu18week_view'
   resources :follow_up6_months
+  match '/fu6month_view', to: 'follow_up6_months#fu6month_view'
   resources :follow_up1_years
+  match '/fu1year_view', to: 'follow_up1_years#fu1year_view'
   
   resources :data_queries
 
