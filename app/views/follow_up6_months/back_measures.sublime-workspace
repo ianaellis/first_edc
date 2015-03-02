@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"patient",
+				"patient_site_number"
+			],
+			[
+				"patie",
+				"patient_id"
+			],
+			[
+				"pat",
+				"patient_id"
+			],
+			[
 				"follo",
 				"followup6month"
 			],
@@ -54,10 +66,6 @@
 			[
 				"fu6month_smo",
 				"fu6month_smoking_3"
-			],
-			[
-				"patient",
-				"patient_eligible_yes"
 			],
 			[
 				"gen",
@@ -506,19 +514,35 @@
 			[
 				"users",
 				"users"
-			],
-			[
-				"ra",
-				"randomize"
-			],
-			[
-				"treatment",
-				"treatment_group_name"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/patients/new.html.erb",
+			"settings":
+			{
+				"buffer_size": 295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/controllers/patients_controller.rb",
+			"settings":
+			{
+				"buffer_size": 408,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/patients/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 176,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -680,6 +704,14 @@
 	},
 	"file_history":
 	[
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/welcome/index.html.erb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/patients/index.html.erb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/Gemfile",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/subjects/new.html.erb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/controllers/subjects_controller.rb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/measures/new.html.erb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/controllers/measures_controller.rb",
+		"/home/ian/Documents/CodeProjects/Rails/projects/back_measures/config/routes.rb",
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/follow_up3_weeks/fu3week_view.html.erb",
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/config/routes.rb",
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/layouts/_header.html.erb",
@@ -799,15 +831,7 @@
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/static_pages/home.html.erb",
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/data_queries/edit.html.erb",
 		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/data_queries/index.html.erb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/data_queries/show.html.erb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/follow_up_logs/index.html.erb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/controllers/follow_up_logs_controller.rb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/data_queries/new.html.erb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/controllers/users_controller.rb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/db/migrate/20140513045537_create_data_queries.rb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/models/data_query.rb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/spec/controllers/subjects_controller_spec.rb",
-		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/treatment_completions/new.html.erb"
+		"/home/ian/Documents/CodeProjects/Rails/first_edc/app/views/data_queries/show.html.erb"
 	],
 	"find":
 	{
@@ -826,6 +850,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"%>\n",
 			"fu18week",
 			"fu3week",
 			"fu6month",
@@ -952,8 +977,7 @@
 			"ubjects",
 			"subjects",
 			"error",
-			"correct",
-			"auth"
+			"correct"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1054,8 +1078,89 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/patients/new.html.erb",
+					"settings":
+					{
+						"buffer_size": 295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/controllers/patients_controller.rb",
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/ian/Documents/CodeProjects/Rails/projects/back_measures/app/views/patients/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1105,15 +1210,35 @@
 		"selected_items":
 		[
 			[
+				"inde",
+				"app/views/welcome/index.html.erb"
+			],
+			[
+				"pati",
+				"app/controllers/patients_controller.rb"
+			],
+			[
+				"sub",
+				"app/controllers/subjects_controller.rb"
+			],
+			[
+				"contro",
+				"app/controllers/measures_controller.rb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"index",
+				"app/views/welcome/index.html.erb"
+			],
+			[
 				"_head",
 				"app/views/layouts/_header.html.erb"
 			],
 			[
 				"route",
-				"config/routes.rb"
-			],
-			[
-				"rout",
 				"config/routes.rb"
 			],
 			[
@@ -1123,10 +1248,6 @@
 			[
 				"head",
 				"app/views/layouts/_header.html.erb"
-			],
-			[
-				"inde",
-				"app/views/subjects/index.html.erb"
 			],
 			[
 				"ind",
@@ -1139,10 +1260,6 @@
 			[
 				"tr",
 				"app/models/treatment_completion.rb"
-			],
-			[
-				"index",
-				"doc/app/index.html"
 			],
 			[
 				"basco",
@@ -1433,10 +1550,6 @@
 				"app/models/subject.rb"
 			],
 			[
-				"sub",
-				"app/controllers/subjects_controller.rb"
-			],
-			[
 				"screnlog",
 				"app/views/subjects/screening_log.html.erb"
 			],
@@ -1607,14 +1720,6 @@
 			[
 				"treatmcon",
 				"app/controllers/treatment_completions_controller.rb"
-			],
-			[
-				"baseshow",
-				"app/views/baselines/show.html.erb"
-			],
-			[
-				"treatmeshow",
-				"app/views/treatment_completions/show.html.erb"
 			]
 		],
 		"width": 0.0
@@ -1631,6 +1736,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 394.0,
+	"side_bar_width": 193.0,
 	"status_bar_visible": true
 }

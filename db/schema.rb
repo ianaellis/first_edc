@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141124224410) do
+ActiveRecord::Schema.define(:version => 20150302193105) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -444,6 +444,7 @@ ActiveRecord::Schema.define(:version => 20141124224410) do
     t.integer  "baseline_smoking_3"
     t.integer  "base_pu_2_bilateral_left"
     t.integer  "base_pu_3_bilateral_left"
+    t.string   "baseline_cognitive_notes"
   end
 
   add_index "baselines", ["subject_id"], :name => "index_baselines_on_subject_id"

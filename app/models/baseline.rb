@@ -9,7 +9,7 @@ class Baseline < ActiveRecord::Base
    attr_accessible :base_weight, :base_height, :base_employment_status_a, :base_employment_status_b, :base_living_status, :base_living_status_other, :base_socioeconomic_status, :base_education_a, :base_education_b
    attr_accessible :base_arthritis, :base_arthritis_present, :base_osteoporosis, :base_osteoporosis_present, :base_asthma, :base_asthma_present, :base_copd, :base_copd_present, :base_angina, :base_angina_present, :base_heart, :base_heart_present, :base_heart_attack, :base_heart_attack_present, :base_neuro, :base_neuro_present, :base_stroke, :base_stroke_present, :base_pvd, :base_pvd_present, :base_diabetes, :base_diabetes_present, :base_gastrointestinal, :base_gastrointestinal_present, :base_depression, :base_depression_present, :base_anxiety, :base_anxiety_present, :base_visual_impairment, :base_visual_impairment_present, :base_hearing_impairment, :base_hearing_impairment_present, :base_ddd, :base_ddd_present, :base_obese, :base_obese_present
    attr_accessible :refuse_rbans_list, :refuse_rbans_list_recall, :refuse_cwat, :refuse_wais_1, :refuse_wais_2, :cowat_total_f, :cowat_total_s, :cowat_total_a
-   attr_accessible :administration_method, :baseline_amp_side, :baseline_smoking_1, :baseline_smoking_2, :baseline_smoking_3, :base_pu_2_bilateral_left, :base_pu_3_bilateral_left
+   attr_accessible :baseline_cognitive_notes, :administration_method, :baseline_amp_side, :baseline_smoking_1, :baseline_smoking_2, :baseline_smoking_3, :base_pu_2_bilateral_left, :base_pu_3_bilateral_left
 
    attr_writer :current_step
 
