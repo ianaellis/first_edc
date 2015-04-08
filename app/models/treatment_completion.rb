@@ -35,4 +35,8 @@ class TreatmentCompletion < ActiveRecord::Base
 	def last_step?
 		current_step == steps.last
 	end
+
+	def set_step(step)
+		current_step = step
+	end
 end

@@ -8,6 +8,7 @@
 			
 			<%= form_for @tc, html: {"data-parsley-validate" => ''} do |f| %>
 			<div style="width:1000px; margin:auto;">
+
 				<%= render "tc_#{@tc.current_step}", :f => f %>
 			</div>
 		</br>
@@ -21,6 +22,11 @@
 					<div style="width:200px; margin:auto;">
 						<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
 					</div>
+
+
+
+			</div>
+
 			<% end %>
 	</div>
 </div>

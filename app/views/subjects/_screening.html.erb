@@ -192,10 +192,6 @@
 							<li>If the patient was eligible but did not enroll in the study, please check the primary reason for not participating.</li>
 							<%= select(:subject, :sc_pe_3a, [["",nil],["Refused Participation",0],["Missed recruitment window",2],["Too ill",3],["Died before interview",4],["Other",5]], {}, :style => "width:200px") %>
 						</div>
-						<div id="patient_eligible_no">
-							<li>If the subject was ineligible, please check the primary reason for ineligibility.</li>
-							<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Non diabetes/dysvascular amputation", 6],["Other", 7]], {}, :style => "width:200px") %>
-						</div>
 					</ol>
 			</li>
 		<strong><p><i>5.1 must be answered "Yes" and 5.2 answered "No" for the subject to be eligible.</i></p></strong>
@@ -238,12 +234,11 @@
 				<p>Subject Number (e.g. 1001, 1002, 2003)</p>
 				<%= number_field(:subject, :subject_id, :style => "width:70px") %>
 			</li>
-			<li>
-				<p>Enroll subject?</p>
-				<%= select(:subject, :enrolled, [["", nil],["Yes",1],["No",2]], {}, :style => "width:70px") %>
-			</li>
+
 		</ol>
 	</div>
+	<p>Enroll subject?</p>
+		<%= select(:subject, :enrolled, [["", nil],["Yes",1],["No",2]], {}, :style => "width:70px") %>
 	<div style="width:300px;margin:auto;">
 		<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 	</div>
