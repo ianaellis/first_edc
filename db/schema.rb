@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150302193105) do
+ActiveRecord::Schema.define(:version => 20150423230745) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -854,6 +854,17 @@ ActiveRecord::Schema.define(:version => 20150302193105) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "subject_id"
+    t.integer  "psy_scale_sat_1"
+    t.integer  "psy_scale_sat_2"
+    t.integer  "psy_scale_sat_3"
+    t.integer  "psy_scale_sat_4"
+    t.integer  "psy_scale_sat_5"
+    t.integer  "psy_scale_sat_6"
+    t.integer  "psy_scale_sat_7"
+    t.integer  "psy_scale_sat_8"
+    t.integer  "psy_scale_sat_9"
+    t.integer  "psy_scale_sat_10"
+    t.string   "psy_scale_sat_11"
   end
 
   create_table "subject", :force => true do |t|
