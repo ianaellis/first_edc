@@ -152,57 +152,6 @@
 			<% end %>
 		</tr>
 		<tr>
-			<td>6 Week</td>
-			<% @follow_up_log.each do |log| %>
-				<% if log.site == 1 %>
-					<td><%= log.week6_target %></td>
-					<td><%= log.week6_completed %></td>
-					<td><%= log.week6_reasons %></td>
-					<% if (log.week6_target != nil) and (log.week6_target != 0) and (log.week6_completed != nil) %>
-						<td><%= number_to_percentage(((log.week6_completed.to_f)/(log.week6_target.to_f))*100, precision: 2) %></td>
-					<% else %>
-						<td></td>
-					<% end %>
-				<% end %>
-			<% end %>
-			<% @follow_up_log.each do |log| %>
-				<% if log.site == 2 %>
-					<td><%= log.week6_target %></td>
-					<td><%= log.week6_completed %></td>
-					<td><%= log.week6_reasons %></td>
-					<% if (log.week6_target != nil) and (log.week6_target != 0) and (log.week6_completed != nil) %>
-						<td><%= number_to_percentage(((log.week6_completed.to_f)/(log.week6_target.to_f))*100, precision: 2) %></td>
-					<% else %>
-						<td></td>
-					<% end %>
-				<% end %>
-			<% end %>
-			<% @follow_up_log.each do |log| %>
-				<% if log.site == 3 %>
-					<td><%= log.week6_target %></td>
-					<td><%= log.week6_completed %></td>
-					<td><%= log.week6_reasons %></td>
-					<% if (log.week6_target != nil) and (log.week6_target != 0) and (log.week6_completed != nil) %>
-						<td><%= number_to_percentage(((log.week6_completed.to_f)/(log.week6_target.to_f))*100, precision: 2) %></td>
-					<% else %>
-						<td></td>
-					<% end %>
-				<% end %>
-			<% end %>
-			<% @follow_up_log.each do |log| %>
-				<% if log.site == 4 %>
-					<td><%= log.week6_target %></td>
-					<td><%= log.week6_completed %></td>
-					<td><%= log.week6_reasons %></td>
-					<% if (log.week6_target != nil) and (log.week6_target != 0) and (log.week6_completed != nil) %>
-						<td><%= number_to_percentage(((log.week6_completed.to_f)/(log.week6_target.to_f))*100, precision: 2) %></td>
-					<% else %>
-						<td></td>
-					<% end %>
-				<% end %>
-			<% end %>
-		</tr>
-		<tr>
 			<td>Treatment Completion</td>
 			<% @follow_up_log.each do |log| %>
 				<% if log.site == 1 %>
