@@ -4,6 +4,17 @@
 		<h2>Subject ID: <%= @followup1year.subject_id %></h2>
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<%= form_for @followup1year, html: {"data-parsley-validate" => ''} do |f| %>
+		<div id="crf_status">
+			<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+			<%= select(:followup1year, :fu1year_crf_status,
+				[["",nil],
+				["Participant completed assessment", 1],
+				["Participant missed assessment but still enrolled", 2],
+				["Participant formally withdrew", 3],
+				["Participant lost to follow-up (unknown reason)", 4],
+				["Participant did not begin intervention after randomization", 5],
+				["Participant died", 6]], {}, :style => "width:auto") %>
+		</div>
 			<ol>
 				<li>Study Assessment (time since Baseline): 12 Months</li>
 				<strong>Since the last chart review...</strong>

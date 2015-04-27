@@ -5,6 +5,18 @@
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
 		<div class="3week_form">
 			<%= form_for @followup3week, html: {"data-parsley-validate" => ''} do |f| %>
+
+			<div id="crf_status">
+				<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+				<%= select(:followup3week, :fu3week_crf_status,
+					[["",nil],
+					["Participant completed assessment", 1],
+					["Participant missed assessment but still enrolled", 2],
+					["Participant formally withdrew", 3],
+					["Participant lost to follow-up (unknown reason)", 4],
+					["Participant did not begin intervention after randomization", 5],
+					["Participant died", 6]], {}, :style => "width:auto") %>
+			</div>
 				<ol>
 					<li>Study Assessment (time since Baseline): 3 weeks</li>
 					<strong>Since the last chart review...</strong>

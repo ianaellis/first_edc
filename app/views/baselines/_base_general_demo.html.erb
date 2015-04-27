@@ -4,7 +4,7 @@
 			<h2>General Demographics</h2>
 		</div>
 		<div id="measure_instruction">
-			<p><i>See screening CRF for demographic questions that are part of screening (age, gender, race,
+			<p><i>See screening CRF for demographic questions that are a part of screening (age, gender, race,
 				current martial status, and approximate driving distance to VA study site).</i> </p>
 			<p><i>Please marke method of administration:</i></p>
 			<%= select(:baseline, :administration_method,
@@ -12,6 +12,17 @@
 				["Over phone",1],
 				["In person",2],
 				["Telehealth site",3]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
+		</div>
+		<div id="crf_status">
+			<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+			<%= select(:baseline, :baseline_crf_status,
+				[["",nil],
+				["Participant completed assessment", 1],
+				["Participant missed assessment but still enrolled", 2],
+				["Participant formally withdrew", 3],
+				["Participant lost to follow-up (unknown reason)", 4],
+				["Participant did not begin intervention after randomization", 5],
+				["Participant died", 6]], {}, :style => "width:auto") %>
 		</div>
 	</div>
 	<div class="measure_body">

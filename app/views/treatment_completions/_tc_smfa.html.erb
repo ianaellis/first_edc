@@ -10,6 +10,17 @@
 	["Telehealth site",3]], {}, :style => "width:auto") %>
 <p><i>Please answer each question by putting a check in the box corresponding to the choice that best describes you.</i></p>
 <p><i>These questions are about how much difficulty you may be having this week with your daily activities because of your amputation.</i></p>
+<div id="crf_status">
+	<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+	<%= select(:tc, :tc_crf_status,
+		[["",nil],
+		["Participant completed assessment", 1],
+		["Participant missed assessment but still enrolled", 2],
+		["Participant formally withdrew", 3],
+		["Participant lost to follow-up (unknown reason)", 4],
+		["Participant did not begin intervention after randomization", 5],
+		["Participant died", 6]], {}, :style => "width:auto") %>
+</div>
 <center>
 	<table style="width:500px;">
 		<tr>

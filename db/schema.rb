@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150423230745) do
+ActiveRecord::Schema.define(:version => 20150427192930) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -445,6 +445,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.integer  "base_pu_2_bilateral_left"
     t.integer  "base_pu_3_bilateral_left"
     t.string   "baseline_cognitive_notes"
+    t.integer  "baseline_crf_status"
   end
 
   add_index "baselines", ["subject_id"], :name => "index_baselines_on_subject_id"
@@ -525,6 +526,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.string   "fu18week_fuq_7"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.integer  "fu18week_crf_status"
   end
 
   add_index "follow_up18_weeks", ["subject_id"], :name => "index_follow_up18_weeks_on_subject_id"
@@ -547,6 +549,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.string   "fu1year_fuq_7"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "fu1year_crf_status"
   end
 
   add_index "follow_up1_years", ["subject_id"], :name => "index_follow_up1_years_on_subject_id"
@@ -569,6 +572,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
     t.string   "fu3week_fuq_7"
+    t.integer  "fu3week_crf_status"
   end
 
   add_index "follow_up3_weeks", ["subject_id"], :name => "index_follow_up3_weeks_on_subject_id"
@@ -780,6 +784,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.integer  "fu6month_amp_side"
     t.integer  "fu6month_pu_2_bilateral_left"
     t.integer  "fu6month_pu_3_bilateral_left"
+    t.integer  "fu6month_crf_status"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
@@ -1213,6 +1218,7 @@ ActiveRecord::Schema.define(:version => 20150423230745) do
     t.integer  "tc_pu_2_bilateral_left"
     t.integer  "tc_pu_3_bilateral_left"
     t.string   "tc_fuq_5a"
+    t.integer  "tc_crf_status"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"
