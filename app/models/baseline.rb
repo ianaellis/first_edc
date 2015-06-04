@@ -19,7 +19,7 @@ class Baseline < ActiveRecord::Base
    end
 
    def steps
-   	%w[general_demo fci comorbidity sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis pain mspss audit stop cognitive]
+   	%w[status general_demo fci comorbidity sfmfa phq whoqol_bref positive_negative mses_self pam spsir change_questionnaire prosthesis pain mspss audit stop cognitive]
    end
 
    def next_step

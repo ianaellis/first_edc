@@ -18,7 +18,7 @@ class FollowUp6Month < ActiveRecord::Base
 	end
 
 	def steps
-		%w[smfa phq whoqol_bref positive_negative mses_self pam spsir ssscq prosthesis pain mspss audit medical_review]
+		%w[status smfa phq whoqol_bref positive_negative mses_self pam spsir ssscq prosthesis pain mspss audit medical_review]
     end
 
 	def next_step

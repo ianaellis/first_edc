@@ -42,6 +42,11 @@ class BaselinesController < ApplicationController
           format.json { render json: @baseline.errors, status: :unprocessable_entity }
         end
       end
+    elsif params[:status_link]
+      @baseline.update_attributes(params[:baseline])
+      @baseline.current_step = "status"
+      session[:baseline_step] = @baseline.current_step
+      render "show"
     elsif params[:general_demo_link]
       @baseline.update_attributes(params[:baseline])
       @baseline.current_step = "general_demo"
