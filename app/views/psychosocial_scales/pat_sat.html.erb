@@ -1,0 +1,163 @@
+	<h2>Satisfaction</h2>
+			<br />
+			<p>I would like to begin by asking you some questions about your satisfaction with the PALS group meetings.</p>
+			<table>
+				<tr>
+					
+					<td><strong>Question</strong></td>
+					<td><strong>Response</strong></td>
+				</tr>
+				<tr>
+					<td>1. On a scale from 0 to 10, how helpful were the PALS classes? <br />0 means the classes were not at all helpful and 10 means the classes were very helpful.</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_1,
+					[["",nil],
+					["0",0],
+					["1",1],
+					["2",2],
+					["3",3],
+					["4",4],
+					["5",5],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>2. On a scale from 0 to 10, how successful do you feel the PALS course is in helping you manage your mood? <br />0 means not at all successful and 10 means extremely successful.</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_2,
+					[["",nil],
+					["0",0],
+					["1",1],
+					["2",2],
+					["3",3],
+					["4",4],
+					["5",5],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>3. On a scale from 0 to 10, how successful do you feel the PALS course is in helping you manage the pain related to limb loss?<br />0 means not at all successful and 10 means extremely successful.</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_3,
+					[["",nil],
+					["0",0],
+					["1",1],
+					["2",2],
+					["3",3],
+					["4",4],
+					["5",5],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>4. On a scale from 0 to 10, how successful do you feel the PALS course is in helping you manage other problems related to your limb loss?<br />0 means not at all successful and 10 means extremely successful.</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_4,
+					[["",nil],
+					["0",0],
+					["1",1],
+					["2",2],
+					["3",3],
+					["4",4],
+					["5",5],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>5. How confident are you that the PALS course will be successful in helping you improve the quality of your life?<br />0 means you are not at all confident and 10 means you are extremely confident</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_5,
+					[["",nil],
+					["0",0],
+					["1",1],
+					["2",2],
+					["3",3],
+					["4",4],
+					["5",5],
+					["6",6],
+					["7",7],
+					["8",8],
+					["9",9],
+					["10",10],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>6. How would you rate the overall benefit you received from participating in the PALS classes, taking into account the effort you put into it? Would you say...?</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_6,
+					[["",nil],
+					["The benefits far outweighed the effort...",1],
+					["The benefits somewhat outweighed the effort...",2],
+					["The benefits equaled the effort you put into it...",3],
+					["The effort somewhat outweighed the benefits...",4],
+					["The effort far outweighed the benefits...",5],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>7. Would you recommend participating in the PALS classes to a friend with limb loss?</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_7,
+					[["",nil],
+					["1 - Yes",1],
+					["0 - No",0],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>8. Based on your experience with limb loss, when do you think it would be most helpful for others to take the PALS course. Would you say it would be most helpful...</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_8,
+					[["",nil],
+					["In the first 3 months following limb loss",1],
+					["3-6 months following limb loss",2],
+					["6-12 months following limb loss",3],
+					["After one years or more",4],
+					["It wouldnt be helpful",5],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>9. Compared to the benefits of participating in a typical Peer Support Group, how helpful is a course like PALS? Would you say it is...</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_9,
+					[["",nil],
+					["Much more helpful",1],
+					["Somewhat more helpful",2],
+					["As helpful",3],
+					["Somewhat less helpful",4],
+					["Much less helpful, or...",5],
+					["Never attended a peer support group outside of PALS",6],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>10. When you think about other services available to help people manage the loss of a limb, how would you rank the importance of a course like PALS? Would you say it is...</td>
+					<td><%= select(:psychosocial_scale, :psy_scale_sat_10,
+					[["",nil],
+					["Much more important",1],
+					["Somewhat more important",2],
+					["As important",3],
+					["Somewhat less important",4],
+					["Much less important",5],
+					["Refused", 1000],
+					["Dont know", 900]],{}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></td>
+				</tr>
+				<tr>
+					<td>11. In the year prior to joining the study, about how many times altogether did you attend meetings of a peer support group for people with limb loss?</td>
+					<td><%= number_field(:psychosocial_scale, :psy_scale_sat_11, :style => "width:70px") %></td>
+				</tr>
+
+			</table>
