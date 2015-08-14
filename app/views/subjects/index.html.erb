@@ -13,7 +13,7 @@
         <th>PTCS – Facilitator only</th>
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
-        <th>1 Year Chart Review</th>
+        <!-- <th>1 Year Chart Review</th> -->
         <% if current_user.is? :admin %>
           <th>Delete</th>
         <% end %>
@@ -73,13 +73,13 @@
           <% end %>
           </td>
 
-           <td>
+<!--            <td>
           <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
             <%= link_to "edit", follow_up1_year_path(FollowUp1Year.where(subject_id: sub.subject_id).first) %>
           <% else %>
             <% FollowUp1Year.create(subject_id: sub.subject_id) %>
           <% end %>
-          </td>
+          </td> -->
           
           <% if current_user.is? :admin %>
           <td>
