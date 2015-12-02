@@ -50,7 +50,7 @@
       <% @subjects.each do |sub| %>
         <tr>
           <td><%= sub.subject_id %></td>
-          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : "nil" %></td> 
+          <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : sub.study_site == 5? "Minneapolis" : "nil" %></td> 
           <td><%= sub.pref_rand %></td>
           <td><%= sub.treatment_group %></td>
           <td><%= sub.sc_smpsq_1 %></td>

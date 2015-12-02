@@ -26,8 +26,10 @@
     
     <% elsif current_user.user_study_site == 4 %>
       <%= f.select :study_site, [["Tampa", 4]] %>
+    <% elsif current_user.user_study_site == 5 %>
+      <%= f.select :study_site, [["Minneapolis", 5]] %>
     <% elsif current_user.is? :admin %>
-      <%= f.select :study_site, [["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4]] %>
+      <%= f.select :study_site, [["Seattle", 1],["Houston", 2],["Cleveland", 3],["Tampa", 4],["Minneapolis", 5]] %>
     <% end %>
     <p>Screening ID Number:</p>
     <%= f.text_field :screening_id, :value => "S" %>

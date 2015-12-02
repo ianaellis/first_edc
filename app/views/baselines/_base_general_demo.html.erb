@@ -35,6 +35,8 @@
 							<b>Cleveland</b>
 						<% elsif Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 4 %>
 							<b>Tampa</b>
+						<% elsif Subject.where("subject_id = ?", @baseline.subject_id).pluck(:study_site).first == 5 %>
+							<b>Minneapolis</b>
 						<% end %>
 					</div>
 				</p>

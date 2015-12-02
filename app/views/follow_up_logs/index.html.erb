@@ -1,4 +1,3 @@
-
 <% if current_user.is? :admin %>
 
 	<h1>Admin Follow Up Log</h1>
@@ -23,6 +22,11 @@
 			<% @follow_up_log.each do |log| %>
 				<% if log.site == 4 %>
 					<th colspan="4"><center><%= link_to "Tampa", edit_follow_up_log_path(log.id) %></center></th>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
+					<th colspan="4"><center><%= link_to "Minneapolis", edit_follow_up_log_path(log.id) %></center></th>
 				<% end %>
 			<% end %>
 		</tr>
