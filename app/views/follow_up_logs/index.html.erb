@@ -51,6 +51,11 @@
 			<th>Complete</th>
 			<th>Reasons</th>
 			<th>%</th>
+
+			<th>Target</th>
+			<th>Complete</th>
+			<th>Reasons</th>
+			<th>%</th>
 		</tr>
 		<tr>
 			<td>Baseline</td>
@@ -102,6 +107,19 @@
 					<% end %>
 				<% end %>
 			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
+					<td><%= log.baseline_target %></td>
+					<td><%= log.baseline_completed %></td>
+					<td><%= log.baseline_reasons %></td>
+					<% if (log.baseline_target != nil) and (log.baseline_target != 0) and (log.baseline_completed != nil) %>
+						<td><%= number_to_percentage(((log.baseline_completed.to_f)/(log.baseline_target.to_f))*100, precision: 2) %></td>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>			
+
 		</tr>
 
 		<tr>
@@ -144,6 +162,18 @@
 			<% end %>
 			<% @follow_up_log.each do |log| %>
 				<% if log.site == 4 %>
+					<td><%= log.week3_target %></td>
+					<td><%= log.week3_completed %></td>
+					<td><%= log.week3_reasons %></td>
+					<% if (log.week3_target != nil) and (log.week3_target != 0) and (log.week3_completed != nil) %>
+						<td><%= number_to_percentage(((log.week3_completed.to_f)/(log.week3_target.to_f))*100, precision: 2) %></td>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
 					<td><%= log.week3_target %></td>
 					<td><%= log.week3_completed %></td>
 					<td><%= log.week3_reasons %></td>
@@ -205,6 +235,18 @@
 					<% end %>
 				<% end %>
 			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
+					<td><%= log.tc_target %></td>
+					<td><%= log.tc_completed %></td>
+					<td><%= log.tc_reasons %></td>
+					<% if (log.tc_target != nil) and (log.tc_target != 0) and (log.tc_completed != nil) %>
+						<td><%= number_to_percentage(((log.tc_completed.to_f)/(log.tc_target.to_f))*100, precision: 2) %></td>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>
 		</tr>
 		<tr>
 			<td>18 Week</td>
@@ -256,6 +298,18 @@
 					<% end %>
 				<% end %>
 			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
+					<td><%= log.week18_target %></td>
+					<td><%= log.week18_completed %></td>
+					<td><%= log.week18_reasons %></td>
+					<% if (log.week18_target != nil) and (log.week18_target != 0) and (log.week18_completed != nil) %>
+						<td><%= number_to_percentage(((log.week18_completed.to_f)/(log.week18_target.to_f))*100, precision: 2) %></td>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>
 		</tr>
 		<tr>
 			<td>6 Month</td>
@@ -297,6 +351,18 @@
 			<% end %>
 			<% @follow_up_log.each do |log| %>
 				<% if log.site == 4 %>
+					<td><%= log.month6_target %></td>
+					<td><%= log.month6_completed %></td>
+					<td><%= log.month6_reasons %></td>
+					<% if (log.month6_target != nil) and (log.month6_target != 0) and (log.month6_completed != nil) %>
+						<td><%= number_to_percentage(((log.month6_completed.to_f)/(log.month6_target.to_f))*100, precision: 2) %></td>
+					<% else %>
+						<td></td>
+					<% end %>
+				<% end %>
+			<% end %>
+			<% @follow_up_log.each do |log| %>
+				<% if log.site == 5 %>
 					<td><%= log.month6_target %></td>
 					<td><%= log.month6_completed %></td>
 					<td><%= log.month6_reasons %></td>
@@ -473,7 +539,7 @@
 				<% end %>
 			<% end %>
 		</tr>
-		<tr>
+<!-- 		<tr>
 			<td>1 Year</td>
 			<% @follow_up_log.each do |log| %>
 				<% if log.site == current_user.user_study_site %>
@@ -487,6 +553,6 @@
 					<% end %>
 				<% end %>
 			<% end %>
-		</tr>
+		</tr> -->
 	</table>
 <% end %>
