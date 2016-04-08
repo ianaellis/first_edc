@@ -206,7 +206,7 @@
 		<div id="screen_ineligible">
 			<li>
 				<p>If the subject was ineligible, please check the primary reason for ineligibility:</p>
-				<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Investigator decision", 8],["Other", 7]], {}, :style => "width:200px") %>
+				<%= select(:subject, :sc_pe_5,[["", nil],["Failed SPMSQ/dementia", 1],["Active substance use disorder", 2],["Major uncontrolled psychiatric illness", 3],["No contact info", 4],["Non-English speaking", 5],["Spinal Cord Injury", 6],["Investigator decision", 8],["Other", 7]], {}, :style => "width:200px") %>
 				<div id="screen_ineligible_other">
 					<p>Other: <%= text_field(:subject, :sc_pe_5o_reason, :style => "width:200px") %></p>
 				</div>
