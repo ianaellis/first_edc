@@ -65,7 +65,16 @@
 						<li>Do you have pain in the joints when you walk? <%= select(:baseline, :base_cq_10_a3, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 						<li>Loss of sensation: do you have numbness in your foot? <%= select(:baseline, :base_cq_10_a4, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 						<li>Do you have a wound or sores on your foot? <%= select(:baseline, :base_cq_10_a5, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
-						<li>Do you have any other condition affecting your leg not being operated on? <%= select(:baseline, :base_cq_10_a6, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
+						<li>
+							Do you have any other condition affecting your leg not being operated on? <%= select(:baseline, :base_cq_10_a6, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
+							<ol type="i">
+								<li>If patient responds YES to item 10.a.6, ask - "Do you have an amputation on your other leg?" <%= select(:baseline, :base_cq_10_c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
+									<i>If yes, mark previous contralateral amputation type and level.</i>
+									<br/>Level: <%= select(:baseline, :base_cq_10_c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]], {}, :style => "width:auto") %></li>
+									Type: <%= select(:baseline, :base_cq_10_c_type, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto") %></li>
+								</li>
+							</ol>
+						</li>
 						<li>None of the above? <%= select(:baseline, :base_cq_10_a7, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 					</ol>
 				</li>
@@ -73,11 +82,6 @@
 					<li>If YES to any of the above, do these conditions affect your ability to walk? <%= select(:baseline, :base_cq_10_b, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
 					</li>
 				</div>
-				<li>If patient responds YES to item 10.a.6, ask - "Do you have an amputation on your other leg?" <%= select(:baseline, :base_cq_10_c, [["",nil],["Yes",1],["No",0],["Refused", 1000]], {}, :style => "width:70px") %>
-					<br/><i>If yes, mark previous contralateral amputation type and level.</i>
-					<br/>Level: <%= select(:baseline, :base_cq_10_c_level, [["",nil],["TM",1],["Midfoot",2],["Symes",3],["TT",4],["Knee",5],["TF",6],["Refused", 1000]], {}, :style => "width:auto") %></li>
-					<br/>Type: <%= select(:baseline, :base_cq_10_c_type, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto") %></li>
-				</li>
 			</ol>
 		</li>
 
