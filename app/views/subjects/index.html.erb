@@ -26,7 +26,7 @@
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : sub.study_site == 5? "Minneapolis" : "nil"%></td>
 
-<!-- This is the new background thing I'm working on -->
+<!-- This is the new background thing I'm working on
           
         <% if Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 1 %> 
           <td bgcolor="#98FB98" >
@@ -40,17 +40,17 @@
           <% end %>
           </td> 
 
-<!-- End of new thing I'm working on -->
+ End of new thing I'm working on -->
 
 <!-- This is the old tag that works for sure -->
 
-<!--           <td>
+           <td>
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
             <%= link_to "edit", baseline_path(Baseline.where(subject_id: sub.subject_id).first) %>              
           <% else %>
             <%= Baseline.create(subject_id: sub.subject_id) %>
           <% end %>
-          </td>  -->
+          </td> 
 
 <!-- End of old tag THAT WORKS FOR SURE -->
           
