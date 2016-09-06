@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
-	$('#subject_test').dataTable({"sPaginationType": "bootstrap"});
+	$('#all_subjects').dataTable({"sPaginationType": "bootstrap"});
 	$('#screening_crf_data').dataTable({
 		"sScrollX": "100%",
 		"sScrollXInner": "300%",

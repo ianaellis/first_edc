@@ -15,19 +15,23 @@
 			<hr>
 		</section>
 		<div class="user_profile">
-			<h2>Tools</h2>
-			<body>
-				<center>Here you will find links to the various tasks you are allowed access to.
-					<p><%= link_to "Add a new Participant", newsubject_path %></p>
-					<p><%= link_to "View Participant", subjects_path %></p>
-					<p><%= link_to "View Screening Log", screening_log_path %></p>
-				</center>
-			</body>
+			
+			<h2UserProfile>Tools</h2UserProfile></br>
+			
+			Here you will find links to the various tasks you are allowed access to.
+			<ol>
+				<li><%= link_to "Add a new Participant", newsubject_path %></li>
+				<li><%= link_to "View Screening Log", screening_log_path %></li>
+				<li><%= link_to "View Participant", subjects_path %></li>
+			</ol>
+
+			<hr>
+			<!-- Admin Stuff -->
 			<% if current_user.is? :admin %>
-				<h2>Data</h2>
-				<center>
-					<p><%= link_to "Screening Data", screening_crf_data_path %></p>
-				</center>
+				<h2UserProfile>Admin Tools</h2UserProfile>
+				
+				<p><%= link_to "Screening Data", screening_crf_data_path %></p>
+				
 			<% end %>
 		</div>
 	</aside>
