@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
 	$('#all_subjects').dataTable({"sPaginationType": "bootstrap"});
+	$('#subject_test').dataTable({"sPaginationType": "bootstrap"});
 	$('#screening_crf_data').dataTable({
 		"sScrollX": "100%",
 		"sScrollXInner": "300%",

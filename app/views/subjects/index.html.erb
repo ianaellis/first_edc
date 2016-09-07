@@ -1,8 +1,8 @@
 <h1>Participant Data Entry</h1>
 <p>With this table, you can view all currently entered subjects and quickly view or search for any table element. This table automatically sorts itself as you do so. For this particular table, try searching for a Participant ID.</p>
 <br />
-<div>
-  <table id="all_subjects" cellpadding="0" cellspacing="0" border="0" class="table table-bordered">
+<div class="screeing_log_table">
+  <table id="subject_test" cellpadding="0" cellspacing="0" border="0" class="table table-bordered">
     <thead>
       <tr>
         <th>Subject ID</th>
@@ -85,13 +85,13 @@
             <% end %>
           </td>
 
-           <td>
+<!--            <td>
             <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
               <%= link_to "edit", follow_up1_year_path(FollowUp1Year.where(subject_id: sub.subject_id).first) %>
             <% else %>
               <% FollowUp1Year.create(subject_id: sub.subject_id) %>
             <% end %>
-          </td>
+          </td> -->
 
           
           <% if current_user.is? :admin %>
