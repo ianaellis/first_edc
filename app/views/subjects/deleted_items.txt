@@ -1,0 +1,42 @@
+Color Items
+
+<!--         <% if Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 1 %> 
+          <td bgcolor="#98FB98" >
+        <% else %>
+          <td>
+        <% end %>  -->
+
+
+<!--          <% if FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 1 %> 
+          <td bgcolor="#98FB98" >
+        <% else %>
+          <td>
+        <% end %>  -->
+
+        <!--         <% if TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 1 %> 
+          <td bgcolor="#98FB98" >
+        <% else %>
+          <td>
+        <% end %>  -->
+
+        <!--         <% if FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 1 %> 
+          <td bgcolor="#98FB98" >
+        <% else %>
+          <td>
+        <% end %>  -->
+
+        <!--         <% if FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 1 %> 
+          <td bgcolor="#98FB98" >
+        <% else %>
+          <td>
+        <% end %>  -->
+
+
+Follow up 1 Year
+<!--            <td>
+            <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
+              <%= link_to "edit", follow_up1_year_path(FollowUp1Year.where(subject_id: sub.subject_id).first) %>
+            <% else %>
+              <% FollowUp1Year.create(subject_id: sub.subject_id) %>
+            <% end %>
+          </td> -->
