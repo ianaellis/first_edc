@@ -28,11 +28,7 @@
 
 <!-- This is the new background thing I'm working on -->
           
-<!--         <% if Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 1 %> 
-          <td bgcolor="#98FB98" >
-        <% else %>
-          <td>
-        <% end %>  -->
+
           
           <td>
             <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
@@ -44,17 +40,6 @@
 
  <!-- End of new thing I'm working on -->
 
-<!-- This is the old tag that works for sure -->
-
-<!--            <td>
-          <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
-            <%= link_to "edit", baseline_path(Baseline.where(subject_id: sub.subject_id).first) %>              
-          <% else %>
-            <%= Baseline.create(subject_id: sub.subject_id) %>
-          <% end %>
-          </td>  -->
-
-<!-- End of old tag THAT WORKS FOR SURE -->
           
           
           <td>
@@ -65,11 +50,6 @@
             <% end %>
           </td>
 
-<!--         <% if TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 1 %> 
-          <td bgcolor="#98FB98" >
-        <% else %>
-          <td>
-        <% end %>  -->
           
           <td>
             <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
@@ -79,11 +59,6 @@
             <% end %>
           </td>
 
-<!--         <% if FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 1 %> 
-          <td bgcolor="#98FB98" >
-        <% else %>
-          <td>
-        <% end %>  -->
           
           <td>
             <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
@@ -93,11 +68,6 @@
             <% end %>
           </td>
 
-<!--         <% if FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 1 %> 
-          <td bgcolor="#98FB98" >
-        <% else %>
-          <td>
-        <% end %>  -->
           
           <td>
             <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
