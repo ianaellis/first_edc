@@ -56,11 +56,6 @@
 
 <!-- End of old tag THAT WORKS FOR SURE -->
           
-<!--          <% if FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 1 %> 
-          <td bgcolor="#98FB98" >
-        <% else %>
-          <td>
-        <% end %>  -->
           
           <td>
             <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
