@@ -8,9 +8,7 @@
 				<h2>Subject ID: <%= @tc.subject_id %></h2>
 				<!-- http://railscasts.com/episodes/217-multistep-forms -->	
 				<%= form_for @tc, html: {"data-parsley-validate" => ''} do |f| %>
-					<div style="width:1000px; margin:auto;">
-						<%= render "tc_#{@tc.current_step}", :f => f %>
-					</div>
+					<%= render "tc_#{@tc.current_step}", :f => f %>
 						</br>
 					<!-- Bottom Navigation Buttons -->
 					<div style="width:150px; float:left;">
