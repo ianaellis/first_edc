@@ -28,6 +28,7 @@
     	</tr>
     	<tr>
     		<th>subject_id</th>
+    		<th>baseline_status</th>
     		<th>administation_method</th>
     		<th>base_weight</th>
     		<th>base_height</th>
@@ -505,6 +506,7 @@
     	<% if current_user.is? :admin %>	
     		<tr>
     			<td><%= sub.subject_id %></td>
+    			<td><%= sub.baseline_crf_status %></td>
     			<td><%= sub.administration_method %></td>
     			<td><%= sub.base_weight %></td>
     			<td><%= sub.base_height %></td>

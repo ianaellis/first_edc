@@ -13,7 +13,6 @@
         <th>18 Week Chart Review</th>
         <th>6 Month Follow Up</th>
         <th>PTCS – Facilitator only</th>
-        <!-- <th>1 Year Chart Review</th> -->
         <% if current_user.is? :admin %>
           <th>Delete</th>
         <% end %>
@@ -25,7 +24,9 @@
         <tr>
           <td><%= sub.subject_id %></td>
           <td><%= sub.study_site == 1? "Seattle" : sub.study_site == 2? "Houston" : sub.study_site == 3? "Cleveland" : sub.study_site == 4? "Tampa" : sub.study_site == 5? "Minneapolis" : "nil"%></td>
-             
+   
+
+<!-- All CRF -->
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
               <% if Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
@@ -38,60 +39,58 @@
             <%= Baseline.create(subject_id: sub.subject_id) %>
           <% end %> 
                 </td>
-          
+
           <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
-              <% if FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 1 %> 
-                <td bgcolor="#98FB98" >
-              <% else %>
-                <td>
-              <% end %>
-            <%= link_to "edit", follow_up3_week_path(FollowUp3Week.where(subject_id: sub.subject_id).first) %>
-          <% else %>
-                <td>
+            <% if FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 1 %> 
+              <td bgcolor="#98FB98" >
+            <% else %>
+              <td>
+            <% end %>
+          <%= link_to "edit", follow_up3_week_path(FollowUp3Week.where(subject_id: sub.subject_id).first) %>
+         <% else %>
+               <td>
             <% FollowUp3Week.create(subject_id: sub.subject_id) %>
-          <% end %>
-                </td>
+         <% end %>
+              </td>
 
-          <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
-              <% if TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 1 %> 
-                <td bgcolor="#98FB98" >
-              <% else %>
-                <td>
-              <% end %>
-            <%= link_to "edit", treatment_completion_path(TreatmentCompletion.where(subject_id: sub.subject_id).first) %>
-          <% else %>
-                <td>
-            <% TreatmentCompletion.create(subject_id: sub.subject_id) %>
-          <% end %>
-                </td>
-
-    
+         <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
+            <% if TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 1 %> 
+              <td bgcolor="#98FB98" >
+            <% else %>
+              <td>
+            <% end %>
+          <%= link_to "edit", treatment_completion_path(TreatmentCompletion.where(subject_id: sub.subject_id).first) %>
+        <% else %>
+              <td>
+          <% TreatmentCompletion.create(subject_id: sub.subject_id) %>
+        <% end %>
+              </td>
         
-          <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
+         <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
               <% if FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
               <% else %>
                 <td>
               <% end %>
             <%= link_to "edit", follow_up18_week_path(FollowUp18Week.where(subject_id: sub.subject_id).first) %>
-          <% else %>
+         <% else %>
                 <td>
             <% FollowUp18Week.create(subject_id: sub.subject_id) %>
-          <% end %>
+         <% end %>
                 </td>
 
-          <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
+         <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
               <% if FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
               <% else %>
                 <td>
               <% end %>
             <%= link_to "edit", follow_up6_month_path(FollowUp6Month.where(subject_id: sub.subject_id).first) %>
-          <% else %>
+         <% else %>
                 <td>
             <% FollowUp6Month.create(subject_id: sub.subject_id) %>
-          <% end %>
-                </td>
+         <% end %>
+               </td>
 
           <td>
             <% if PsychosocialScale.where(subject_id: sub.subject_id).first != nil %>
@@ -99,8 +98,9 @@
             <% else %>
               <% PsychosocialScale.create(subject_id: sub.subject_id) %>
             <% end %>
-          </td>
-          
+          </td>        
+
+
           <% if current_user.is? :admin %>
           <td>
             <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>
