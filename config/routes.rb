@@ -41,6 +41,9 @@ FirstEdc::Application.routes.draw do
   match '/randomize', to: 'subjects#randomize'
   match '/screening_log', to: 'subjects#screening_log'
   match '/screening_crf_data', to: 'subjects#screening_crf_data'
+  # resources :comments do
+  #   match '/comment', to: 'subjects#update'
+  # end
 
   
   devise_scope :user do

@@ -8,6 +8,17 @@
 				<h1>Baseline</h1>
 				<h2>Subject ID: <%= @baseline.subject_id %></h2>
 				<%= form_for @baseline, html: {"data-parsley-validate" => ''} do |f| %>
+					<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+					<%= select(:baseline, :baseline_crf_status,
+						[["",nil],
+						["Participant completed assessment", 1],
+						["Participant missed assessment but still enrolled", 2],
+						["Participant formally withdrew", 3],
+						["Participant lost to follow-up (unknown reason)", 4],
+						["Participant did not begin intervention after randomization", 5],
+						["Participant died", 6],
+						["Failure to Launch", 7],
+						["CRF in Progress", 8]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
 					<%= render "base_#{@baseline.current_step}", :f => f %>
 				<div id="submit_buttons" style="width:800px; margin:auto;">
 					<div id="back_button" style="width:150px; float:left;">
@@ -25,7 +36,7 @@
 			<div style="width:150px; float:left;">
 				<br/><br/><br/><br/><br/><br/><br/>
 				<center><b>Quick Navigation</b></center>
-				<%= f.submit "Status", class: "btn btn-large btn-primary", :name => 'status_link' %>
+				<!-- <%= f.submit "Status", class: "btn btn-large btn-primary", :name => 'status_link' %> -->
 				<%= f.submit "General Demo", class: "btn btn-large btn-primary", :name => 'general_demo_link' %>
 				<%= f.submit "FCI", class: "btn btn-large btn-primary", :name => 'fci_link' %>
 				<%= f.submit "Comorbidity", class: "btn btn-large btn-primary", :name => 'comorbidity_link' %>

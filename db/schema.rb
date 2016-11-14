@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150604173013) do
+ActiveRecord::Schema.define(:version => 20161114210634) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -982,6 +982,7 @@ ActiveRecord::Schema.define(:version => 20150604173013) do
     t.integer  "sc_pe_3a"
     t.integer  "sc_exc_4"
     t.string   "sc_pe_5o_reason"
+    t.string   "comments"
   end
 
   create_table "treatment_completions", :force => true do |t|

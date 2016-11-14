@@ -91,6 +91,10 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:subject_id])
   end
 
+  def comment
+    @subjects = Subject.find(params[:subject_id])
+  end
+
 
 private 
 

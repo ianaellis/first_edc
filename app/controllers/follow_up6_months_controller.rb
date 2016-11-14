@@ -46,11 +46,6 @@ class FollowUp6MonthsController < ApplicationController
           		format.json { render json: @baseline.errors, status: :unprocessable_entity }
         	end
 	      end 
-	    elsif params[:status_link]
-	      @followup6month.update_attributes(params[:followup6month])
-	      @followup6month.current_step = "status"
-	      session[:followup6month_step] = @followup6month.current_step
-	      render "show"
 	    elsif params[:smfa_link]
 	      @followup6month.update_attributes(params[:followup6month])
 	      @followup6month.current_step = "smfa"

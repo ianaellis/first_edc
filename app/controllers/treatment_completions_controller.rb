@@ -36,11 +36,6 @@ class TreatmentCompletionsController < ApplicationController
           		format.json { render json: @baseline.errors, status: :unprocessable_entity }
         	end
 	      end 
-	    elsif params[:status_link]
-	      @tc.update_attributes(params[:tc])
-	      @tc.current_step = "status"
-	      session[:tc_step] = @tc.current_step
-	      render "show"
 	    elsif params[:smfa_link]
 	      @tc.update_attributes(params[:tc])
 	      @tc.current_step = "smfa"

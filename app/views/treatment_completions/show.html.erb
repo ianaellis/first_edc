@@ -8,6 +8,18 @@
 				<h2>Subject ID: <%= @tc.subject_id %></h2>
 				<!-- http://railscasts.com/episodes/217-multistep-forms -->	
 				<%= form_for @tc, html: {"data-parsley-validate" => ''} do |f| %>
+					<p><i><strong>Please mark participant status</strong>. Please mark appropriately (for example, don't mark "Participant completed assessment" until you have finished the assessment).</i></p>
+					<%= select(:tc, :tc_crf_status,
+						[["",nil],
+						["Participant completed assessment", 1],
+						["Participant missed assessment but still enrolled", 2],
+						["Participant formally withdrew", 3],
+						["Participant lost to follow-up (unknown reason)", 4],
+						["Participant did not begin intervention after randomization", 5],
+						["Participant died", 6],
+						["Failure to Launch", 7],
+						["CRF in Progress", 8]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %>
+
 					<%= render "tc_#{@tc.current_step}", :f => f %>
 						</br>
 					<!-- Bottom Navigation Buttons -->
@@ -28,7 +40,6 @@
 					<div style="width:150px; float:left;">
 						<br/><br/><br/><br/><br/><br/><br/>
 						<center><b>Quick Navigation</b></center>
-						<%= f.submit "Status", class: "btn btn-large btn-primary", :name => 'status_link' %>
 						<%= f.submit "SMFA", class: "btn btn-large btn-primary", :name => 'smfa_link' %>
 						<%= f.submit "PHQ", class: "btn btn-large btn-primary", :name => 'phq_link' %>
 						<%= f.submit "WHOQOL Bref", class: "btn btn-large btn-primary", :name => 'whoqol_bref_link' %>
