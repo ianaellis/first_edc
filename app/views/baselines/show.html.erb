@@ -3,49 +3,48 @@
 <div class="row">
 	<div class="span6 offset3">
 		<!-- http://railscasts.com/episodes/217-multistep-forms -->
-			<div style="width:1100px; margin:auto;">
-				<div style="width:900px; float:right;">
-					<h1>Baseline</h1>
-					<h2>Subject ID: <%= @baseline.subject_id %></h2>
-					<%= form_for @baseline, html: {"data-parsley-validate" => ''} do |f| %>
-						<%= render "base_#{@baseline.current_step}", :f => f %>
-					<div id="submit_buttons" style="width:800px; margin:auto;">
-						<div id="back_button" style="width:150px; float:left;">
-							<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @baseline.first_step? %>
-						</div>
-						<div id="continue_button" style="width:150px; float:right;">	
-							<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @baseline.last_step? %>
-						</div>
-						<div id="submit_button" style="width:200px; margin:auto">
-							<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
-						</div>
-						<div style="clear:both"></div>
+		<div style="width:1100px; margin:auto;">
+			<div style="width:900px; float:right;">
+				<h1>Baseline</h1>
+				<h2>Subject ID: <%= @baseline.subject_id %></h2>
+				<%= form_for @baseline, html: {"data-parsley-validate" => ''} do |f| %>
+					<%= render "base_#{@baseline.current_step}", :f => f %>
+				<div id="submit_buttons" style="width:800px; margin:auto;">
+					<div id="back_button" style="width:150px; float:left;">
+						<%= f.submit "Back", class: "btn btn-large btn-primary", :name => 'back_button' unless @baseline.first_step? %>
 					</div>
+					<div id="continue_button" style="width:150px; float:right;">	
+						<%= f.submit "Continue", class: "btn btn-large btn-primary", :name => 'next_button' unless @baseline.last_step? %>
+					</div>
+					<div id="submit_button" style="width:200px; margin:auto">
+						<%= f.submit "Quit & Submit Changes", class: "btn btn-large btn-primary", :name => 'submit_button' %>
+					</div>
+					<div style="clear:both"></div>
 				</div>
-				<div style="width:150px; float:left;">
-					<br/><br/><br/><br/><br/><br/><br/>
-					<center><b>Quick Navigation</b></center>
-					<%= f.submit "Status", class: "btn btn-large btn-primary", :name => 'status_link' %>
-					<%= f.submit "General Demo", class: "btn btn-large btn-primary", :name => 'general_demo_link' %>
-					<%= f.submit "FCI", class: "btn btn-large btn-primary", :name => 'fci_link' %>
-					<%= f.submit "Comorbidity", class: "btn btn-large btn-primary", :name => 'comorbidity_link' %>
-					<%= f.submit "SMFA", class: "btn btn-large btn-primary", :name => 'sfmfa_link' %>
-					<%= f.submit "PHQ", class: "btn btn-large btn-primary", :name => 'phq_link' %>
-					<%= f.submit "WHOQOL", class: "btn btn-large btn-primary", :name => 'whoqol_bref_link' %>
-					<%= f.submit "PANAS", class: "btn btn-large btn-primary", :name => 'positive_negative_link' %>
-					<%= f.submit "MSES", class: "btn btn-large btn-primary", :name => 'mses_self_link' %>
-					<%= f.submit "PAM", class: "btn btn-large btn-primary", :name => 'pam_link' %>
-					<%= f.submit "SPSIR", class: "btn btn-large btn-primary", :name => 'spsir_link' %>
-					<%= f.submit "Change", class: "btn btn-large btn-primary", :name => 'change_questionnaire_link' %>
-					<%= f.submit "Prosthesis", class: "btn btn-large btn-primary", :name => 'prosthesis_link' %>
-					<%= f.submit "Pain", class: "btn btn-large btn-primary", :name => 'pain_link' %>
-					<%= f.submit "MSPSS", class: "btn btn-large btn-primary", :name => 'mspss_link' %>
-					<%= f.submit "Audit", class: "btn btn-large btn-primary", :name => 'audit_link' %>
-					<%= f.submit "Cognitive", class: "btn btn-large btn-primary", :name => 'stop_link' %>
-				</div>
-				</br>
 			</div>
-
+			<div style="width:150px; float:left;">
+				<br/><br/><br/><br/><br/><br/><br/>
+				<center><b>Quick Navigation</b></center>
+				<%= f.submit "Status", class: "btn btn-large btn-primary", :name => 'status_link' %>
+				<%= f.submit "General Demo", class: "btn btn-large btn-primary", :name => 'general_demo_link' %>
+				<%= f.submit "FCI", class: "btn btn-large btn-primary", :name => 'fci_link' %>
+				<%= f.submit "Comorbidity", class: "btn btn-large btn-primary", :name => 'comorbidity_link' %>
+				<%= f.submit "SMFA", class: "btn btn-large btn-primary", :name => 'sfmfa_link' %>
+				<%= f.submit "PHQ", class: "btn btn-large btn-primary", :name => 'phq_link' %>
+				<%= f.submit "WHOQOL", class: "btn btn-large btn-primary", :name => 'whoqol_bref_link' %>
+				<%= f.submit "PANAS", class: "btn btn-large btn-primary", :name => 'positive_negative_link' %>
+				<%= f.submit "MSES", class: "btn btn-large btn-primary", :name => 'mses_self_link' %>
+				<%= f.submit "PAM", class: "btn btn-large btn-primary", :name => 'pam_link' %>
+				<%= f.submit "SPSIR", class: "btn btn-large btn-primary", :name => 'spsir_link' %>
+				<%= f.submit "Change", class: "btn btn-large btn-primary", :name => 'change_questionnaire_link' %>
+				<%= f.submit "Prosthesis", class: "btn btn-large btn-primary", :name => 'prosthesis_link' %>
+				<%= f.submit "Pain", class: "btn btn-large btn-primary", :name => 'pain_link' %>
+				<%= f.submit "MSPSS", class: "btn btn-large btn-primary", :name => 'mspss_link' %>
+				<%= f.submit "Audit", class: "btn btn-large btn-primary", :name => 'audit_link' %>
+				<%= f.submit "Cognitive", class: "btn btn-large btn-primary", :name => 'stop_link' %>
+			</div>
 			<% end %>
+			</br>
+		</div>
 	</div>
 </div>
