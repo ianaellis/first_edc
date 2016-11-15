@@ -1,6 +1,11 @@
 <h2>Subject Notes</h2>
 
-<%= form_for @subject do |sub| %>
-	Different Subject <% sub.subject_id %>
+<h2>Subject ID: <%= @subjects.subject_id %></h2>
 
+<%= form_for :subjects do |subject| %>
+	<%= subject.text_field :comments %>
+	<div id="submit_button" style="width:200px; margin:auto">
+		<%= subject.submit "Save Comment", :name => 'submit_button' %>
+	</div>
 <% end %>
+

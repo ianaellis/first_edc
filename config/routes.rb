@@ -36,13 +36,13 @@ FirstEdc::Application.routes.draw do
 
   resources :subjects do
     match '/screening', to: 'subjects#screening'
+    match '/comment', to: 'subjects#comment'
   end
   match '/newsubject', to: 'subjects#new'
   match '/randomize', to: 'subjects#randomize'
   match '/screening_log', to: 'subjects#screening_log'
   match '/screening_crf_data', to: 'subjects#screening_crf_data'
   # resources :comments do
-  #   match '/comment', to: 'subjects#update'
   # end
 
   

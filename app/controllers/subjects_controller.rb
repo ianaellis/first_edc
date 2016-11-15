@@ -17,6 +17,7 @@ class SubjectsController < ApplicationController
   
   def show
     @subject = Subject.find(params[:id])
+
   end
 
   def create
@@ -93,6 +94,21 @@ class SubjectsController < ApplicationController
 
   def comment
     @subjects = Subject.find(params[:subject_id])
+
+    if params[:submit_button]
+      @subjects.update_attributes(params[:subjects])
+      redirect_to subjects_path
+    end
+    # if @subject.update_attributes(params[:subject])
+    #   create_crf_records(@subject)
+    #   flash[:success] = "Comment Updated"
+    #   redirect_to subjects_path
+    # else
+    #   flash[:failure] = "Comment not updated. Error occurred."
+
+    #   format.json { render json: @subject.errors, status: :unprocessable_entity }
+    #   redirect_to subjects_url
+    # end
   end
 
 
