@@ -20,7 +20,8 @@
             <th colspan="13"><center>Chart Review</center></th>
     	</tr>
         <tr>
-            <th>subject_id</th>
+            <th>fu6month_subject_id</th>
+            <th>fu6month_status</th>
             <th>fu6month_administration_method</th>
             <th>fu6month_smfa_1 </th>
             <th>fu6month_smfa_2 </th>
@@ -216,6 +217,7 @@
             <% if current_user.is? :admin %>
         <tr>
             <td><%= sub.subject_id %></td>
+            <td><%= sub.fu6month_crf_status %></td>
             <td><%= sub.administration_method %></td>
             <td><%= sub.fu6month_smfa_1 %></td>
             <td><%= sub.fu6month_smfa_2 %></td>

@@ -20,7 +20,8 @@
     	<th colspan="13"><center>Chart Review</center></th>
   	</tr>
   	<tr>
-		<th>subject_id</th>
+		<th>tc_subject_id</th>
+		<th>tc_status</th>
 		<th>tc_administration_method</th>
 		<th>tc_smfa_1 </th>
 		<th>tc_smfa_2 </th>
@@ -227,6 +228,7 @@
     		<% if current_user.is? :admin %>
 	<tr>
 				<td><%= sub.subject_id %></td>
+				<td><%= sub.tc_crf_status %></td>
 				<td><%= sub.administration_method %></td>
     			<td><%= sub.tc_smfa_1 %></td>
 				<td><%= sub.tc_smfa_2 %></td>

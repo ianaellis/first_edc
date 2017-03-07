@@ -129,9 +129,9 @@
 
 
           <% if current_user.is? :admin %>
-          <td>
-            <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>
-          </td>
+            <td>
+              <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>
+            </td>
           <% end %>
         </tr>
         <% end %> 

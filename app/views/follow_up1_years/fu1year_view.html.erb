@@ -8,8 +8,8 @@
     		<th colspan="13"><center>Chart Review</center></th>
     	</tr>
     	<tr>
-    		<th>subject_id</th>
-
+    		<th>fu1year_subject_id</th>
+            <th>fu1year_status</th>
     		<th>fu1year_fuq_2</th>
             <th>fu1year_fuq_2a</th>
             <th>fu1year_fuq_3</th>
@@ -27,7 +27,8 @@
     	<% FollowUp1Year.order('subject_id').each do |sub| %>
             <% if current_user.is? :admin %>
 		<tr>
-			<td><%= sub.subject_id %></td>
+            <td><%= sub.subject_id %></td>
+			<td><%= sub.fu1year_crf_status %></td>
 			<td><%= sub.fu1year_fuq_2 %></td>
             <td><%= sub.fu1year_fuq_2a %></td>
             <td><%= sub.fu1year_fuq_3 %></td>
