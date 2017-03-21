@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170321211333) do
+ActiveRecord::Schema.define(:version => 20170321213210) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -1184,7 +1184,6 @@ ActiveRecord::Schema.define(:version => 20170321211333) do
     t.integer  "tc_ar_6"
     t.integer  "tc_ar_7"
     t.integer  "tc_ar_8"
-    t.integer  "tc_ar_9"
     t.integer  "tc_ar_9o"
     t.integer  "tc_sat_1"
     t.integer  "tc_sat_2"
@@ -1221,6 +1220,7 @@ ActiveRecord::Schema.define(:version => 20170321211333) do
     t.string   "tc_fuq_5a"
     t.integer  "tc_crf_status"
     t.string   "tc_fuq_7"
+    t.string   "tc_ar_9"
   end
 
   add_index "treatment_completions", ["subject_id"], :name => "index_treatment_completions_on_subject_id"
