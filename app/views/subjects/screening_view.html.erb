@@ -13,6 +13,7 @@
 		<th>screening_eligible</th>
 		<th>screening_eligible_but_not_enrolled_reason</th> 
 		<th>screening_reason_not_eligible</th>
+		<th>screening_enrolled</th>
   	</tr>
 	<% @subjects.order('screening_id').each do |sub| %>
 	<% if current_user.is? :admin %>
@@ -27,6 +28,7 @@
 		<td><%= sub.sc_pe_3 %></td>
 		<td><%= sub.sc_pe_3a %></td>
 		<td><%= sub.sc_pe_5 %></td>
+		<td><%= sub.enrolled %></td>
     </tr>
 
     <% end %>
