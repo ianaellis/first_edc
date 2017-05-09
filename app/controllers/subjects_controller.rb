@@ -17,7 +17,6 @@ class SubjectsController < ApplicationController
   
   def show
     @subject = Subject.find(params[:id])
-
   end
 
   def create
@@ -81,7 +80,11 @@ class SubjectsController < ApplicationController
 
   def screening_log
     @subjects = Subject.paginate(page: params[:page])
-  end  
+  end
+
+  def screening_view
+    @subjects = Subject.paginate(page: params[:page])
+  end
 
   def screening_crf_data
     @subjects = Subject.paginate(page: params[:page])

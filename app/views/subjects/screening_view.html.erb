@@ -3,6 +3,7 @@
 <div class="screening_log_table">
   <table id="screening_log" cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
   	<tr>
+  		<th>screening_id</th>
   		<th>subject_id</th>
   		<th>screening_age</th>
 		<th>screening_gender</th>
@@ -11,12 +12,14 @@
 		<th>screening_marital</th>
 		<th>screening_eligible</th>
 		<th>screening_eligible_but_not_enrolled_reason</th> 
-		<th>screening_not_eligible_reason</th>
+		<th>screening_reason_not_eligible</th>
   	</tr>
 	<% @subjects.order('screening_id').each do |sub| %>
 	<% if current_user.is? :admin %>
     <tr>
-    	<td><%= sub.sc_pd_1 %></td>
+    	<td><%= sub.screening_id %></td>
+    	<td><%= sub.subject_id %></td>
+		<td><%= sub.sc_pd_1 %></td>
 		<td><%= sub.sc_pd_2 %></td>
 		<td><%= sub.sc_pd_3 %></td>
 		<td><%= sub.sc_pd_4 %></td>
