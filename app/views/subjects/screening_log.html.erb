@@ -12,8 +12,11 @@
         <th>Reason Not Eligible</th>
         <th>Enrolled</th>
         <th>Reason Not Enrolled</th>
-        <th>Randomized</th>
+        <% if current_user.is? :admin %>
+          <th>Randomized</th>
+        <% end %>
         <th>Screening CRF</th>
+
         <% if current_user.is? :admin %>
           <th>Delete</th>
         <% end %>
@@ -32,10 +35,8 @@
           <td><%= sub.sc_pe_5 %></td>
           <td><%= sub.enrolled %></td>
           <td><%= sub.sc_pe_3a %></td>
-          <% if sub.treatment_group != nil %>
-            <td>Yes</td>
-          <% else %>
-            <td>No</td>
+          <% if current_user.is? :admin %>
+            <td><%= sub.treatment_group %></td>
           <% end %>
           <td><%= link_to "Screening CRF", subject_screening_path(sub) %></td>
           <% if current_user.is? :admin %>

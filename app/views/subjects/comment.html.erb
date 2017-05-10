@@ -3,7 +3,18 @@
 <h2>Subject ID: <%= @subjects.subject_id %></h2>
 
 <%= form_for :subjects do |subject| %>
-	<%= subject.text_field :comments %>
+	<% if current_user.is? :admin %>
+		<p>What is this subjects radomization assignment?</p>
+		<td>
+			<%= select(:subjects, :treatment_group,
+				[["", nil],
+				["1 VetPals",1],
+				["2 Control",2],
+				["3 Refused", 1000]], {}, :style => "width:auto") %>
+		</td>
+	<% end %>
+	<p>Leave a comment or note about the subject here. You can click and drag the text box to be larger from the bottom right.</p>
+	<%= subject.text_area(:comments) %>
 	<div id="submit_button" style="width:200px; margin:auto">
 		<%= subject.submit "Save Comment", :name => 'submit_button' %>
 	</div>
