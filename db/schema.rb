@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170321213210) do
+ActiveRecord::Schema.define(:version => 20170823164016) do
 
   create_table "baselines", :force => true do |t|
     t.integer  "subject_id"
@@ -783,8 +783,8 @@ ActiveRecord::Schema.define(:version => 20170321213210) do
     t.integer  "fu6month_pu_2_bilateral_left"
     t.integer  "fu6month_pu_3_bilateral_left"
     t.integer  "fu6month_crf_status"
-    t.string   "fu6month_fuq_5a"
     t.string   "fu6month_fuq_7"
+    t.string   "fu6month_fuq_5a"
   end
 
   add_index "follow_up6_months", ["subject_id"], :name => "index_follow_up6_months_on_subject_id"
