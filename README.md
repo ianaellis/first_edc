@@ -2,6 +2,7 @@
 
 Author: Ian Ellis
 Company: Spectrum Research
+This is a test.
 
 This project is the first undertaking by Spectrum Research to create an 
 Electronic Data Capture (EDC) website, for the purpose of hosting our 
