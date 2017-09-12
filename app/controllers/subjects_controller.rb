@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
 
   def index
@@ -20,7 +20,7 @@ class SubjectsController < ApplicationController
   end
 
   def create
-    @subject = Subject.new(params[:subject])
+    @subject = Subject.new(params[:subject].permit(:study_site, :screening_id))
     respond_to do |format|
       if @subject.save
         create_crf_records(@subject)
@@ -40,7 +40,9 @@ class SubjectsController < ApplicationController
   def update
     @subject = Subject.find(params[:id])
 
-    if @subject.update_attributes(params[:subject])
+    # if @subject.update_attributes(params[:subject].permit(:subject_screening_log_params))
+    if @subject.update_attributes!(subject_params)
+
       create_crf_records(@subject)
       flash[:success] = "Subject Screening Log Updated"
       redirect_to screening_log_path
@@ -99,19 +101,9 @@ class SubjectsController < ApplicationController
     @subjects = Subject.find(params[:subject_id])
 
     if params[:submit_button]
-      @subjects.update_attributes(params[:subjects])
+      @subjects.update_attributes!(comment_params)
       redirect_to subjects_path
     end
-    # if @subject.update_attributes(params[:subject])
-    #   create_crf_records(@subject)
-    #   flash[:success] = "Comment Updated"
-    #   redirect_to subjects_path
-    # else
-    #   flash[:failure] = "Comment not updated. Error occurred."
-
-    #   format.json { render json: @subject.errors, status: :unprocessable_entity }
-    #   redirect_to subjects_url
-    # end
   end
 
 
@@ -119,8 +111,18 @@ private
 
   CRF_TO_CREATE = [Baseline, TreatmentCompletion, FollowUp3Week, FollowUp6Week, FollowUp18Week, FollowUp6Month, FollowUp1Year, PsychosocialScale]
 
+  # Task: Refactor params out into individual blocks, for extra security
+  # def subject_screening_log_params
+  #   params.require(:subject).permit(:subject_id, :enrolled)
+  # end
+  def comment_params
+    params.require(:subjects).permit(:treatment_group, :comments)
+  end
+  def subject_params
+    params.require(:subject).permit(:comments, :screening_id, :telehealth, :sc_pe_3a, :treatment_group, :enrolled, :reason_not_enrolled, :reason_not_enrolled_other, :sc_inc_1, :sc_inc_2, :sc_inc_2a, :sc_inc_2b, :sc_inc_3, :sc_inc_4, :sc_inc_5, :sc_exc_1, :sc_exc_2, :sc_exc_3, :sc_exc_4, :sc_pd_1, :sc_pd_2, :sc_pd_3, :sc_pd_4, :sc_pd_4o, :sc_pd_5, :sc_pd_6, :sc_pe_1, :sc_pe_2, :sc_pe_3, :sc_pe_4, :sc_pe_4a, :sc_pe_5, :sc_pe_5o, :sc_pe_5o_reason, :sc_ic_1, :sc_ic_2, :sc_ic_3, :sc_ic_4, :sc_ic_5, :subject_id, :study_site, :sc_smpsq_1, :sc_smpsq_2, :sc_smpsq_3, :sc_smpsq_4, :sc_smpsq_4a, :sc_smpsq_5, :sc_smpsq_6, :sc_smpsq_7, :sc_smpsq_8, :sc_smpsq_9, :sc_smpsq_10)
+  end
+
   # Create all CRF records once a screened subject becomes enrolled and has been assigned a subject ID
-  
   def create_crf_records(sub)
 
     if sub.subject_id != nil and sub.enrolled == 1
@@ -133,4 +135,5 @@ private
        end   
     end
   end
+    
 end

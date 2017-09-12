@@ -4,11 +4,12 @@ class User < ActiveRecord::Base
   # has_and_belongs_to_many :roles
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  attr_accessible :roles, :user_study_site
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :roles_mask
-  attr_accessible :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators
+  # Deprecated
+  # attr_accessible :roles, :user_study_site
+  # attr_accessible :email, :password, :password_confirmation, :remember_me, :roles_mask
+  # attr_accessible :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators
   
   # attr_accessible :title, :body
 

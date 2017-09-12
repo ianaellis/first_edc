@@ -11,12 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require parsley
-//= require jquery_ujs
 //= require jquery-ui
+//= require parsley
 //= require dataTables/jquery.dataTables
-//= require dataTables/jquery.dataTables.bootstrap3
 //= require bootstrap
-//= require bootstrap/dropdown
 //= require_tree .
-

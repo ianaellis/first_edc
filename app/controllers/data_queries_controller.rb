@@ -35,17 +35,20 @@ class DataQueriesController < ApplicationController
 	end
 
 	def destroy
-	if current_user.is? :admin
-	  @data_query = DataQuery.find(params[:id])
-	  @data_query.destroy
+		if current_user.is? :admin
+		  @data_query = DataQuery.find(params[:id])
+		  @data_query.destroy
 
-	  respond_to do |format|
-	    format.html { redirect_to @data_query }
-	    format.json { head :no_content }
-	  end
+		  respond_to do |format|
+		    format.html { redirect_to @data_query }
+		    format.json { head :no_content }
+		  end
+		end
 	end
+
+private
+	def data_query_params
+		params.require(:data_query).permit(:data_manager, :subject_id, :investigator_name, :crf_measure_number, :query_notes, :resolution_notes)
 	end
-
-
 
 end

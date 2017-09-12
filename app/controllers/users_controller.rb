@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  # before_filter :signed_in_user, only: [:index, :edit, :update]
-  # before_filter :correct_user, only: [:edit, :update]
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -33,7 +31,7 @@ class UsersController < ApplicationController
   def update
     authorize! :assign_roles, @user if params[:user][:assign_roles]
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
+    if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       # sign_in @user
       redirect_to @user
@@ -55,21 +53,27 @@ class UsersController < ApplicationController
 
 
 
-  private
+private
 
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_path, notice: "Please sign in."
-      end
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_path, notice: "Please sign in."
     end
+  end
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user_?(@user)
-    end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless current_user_?(@user)
+  end
 
-    def admin_user
-      redirect_to(root_path) unless current_user.admin?
-    end
+  def admin_user
+    redirect_to(root_path) unless current_user.admin?
+  end
+
+  # Add after updating, because attr_accessor has been deprecated
+  def user_params
+    params.require(:user).permit(:roles, :user_study_site, :email, :password, :password_confirmation, :remember_me, :roles_mask, :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators)
+  end
+  
 end

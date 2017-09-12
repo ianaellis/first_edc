@@ -502,7 +502,7 @@
 			<th>base_rbans_re_10</th>
 
     	</tr>
-    	<% @baselines.order('subject_id').each do |sub| %>
+    	<% Baseline.order('subject_id').each do |sub| %>
     	<% if current_user.is? :admin %>	
     		<tr>
     			<td><%= sub.subject_id %></td>

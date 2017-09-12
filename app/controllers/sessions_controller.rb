@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    before_filter :authenticate_user!
+    before_action :authenticate_user!
 	def new
 		# user = User.find_by_email(params[:session][:email])
 		redirect_to root_path
