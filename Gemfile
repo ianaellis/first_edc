@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 #bootstrap
-# gem 'ruby', '1.9.3'
+# gem 'ruby', '2.4.1'
 # gem 'rails', '3.2.15' #3.2.3
 # gem 'heroku', "~> 3.0.1"
 gem 'bootstrap-sass'
