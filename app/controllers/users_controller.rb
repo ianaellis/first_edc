@@ -33,7 +33,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
-      # sign_in @user
       redirect_to @user
     else
       render 'edit'
@@ -74,6 +73,7 @@ private
   # Add after updating, because attr_accessor has been deprecated
   def user_params
     params.require(:user).permit(:roles, :user_study_site, :email, :password, :password_confirmation, :remember_me, :roles_mask, :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators)
+    # params.require(:user).permit(:roles, :user_study_site, :email, :password, :password_confirmation, :remember_me, :roles_mask, :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators)
   end
   
 end

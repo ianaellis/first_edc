@@ -55,7 +55,7 @@
 			["TF",6],
 			["Refused", 1000]], {}, :style => "width:70px", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
 		<li>Was the surgery an initial or revision amputation? <%= select(:baseline, :base_cq_7, [["",nil],["Initial",1],["Revision",2],["Refused", 1000]], {}, :style => "width:auto", :data => {:"parsley-trigger" => 'change'}, :required => '') %></li>
-		<li>Time since amputation: <%= number_field(:baseline, :base_cq_8, :style => "width:70px", :data => {:"parsley-trigger" => 'change', :"parsley-type" => 'integer', :"parsley-range" => '[1,730]'}, :required => '') %> (days)</li>
+		<li>Time since amputation: <%= number_field(:baseline, :base_cq_8, :style => "width:70px", :data => {:"parsley-trigger" => 'change', :"parsley-type" => 'integer', :"parsley-range" => '[1,2600]'}, :required => '') %> (days)</li>
 		<li>Contralateral limb side (limb without recent amputation surgery)
 			<ol type="a">
 				<li>In the limb not awaiting surgery, does the subject have:

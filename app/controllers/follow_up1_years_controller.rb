@@ -1,4 +1,5 @@
 class FollowUp1YearsController < ApplicationController
+
 	def show
 		@followup1year = FollowUp1Year.find(params[:id])
 	end
