@@ -128,15 +128,23 @@
             <% end %>
           </td>
 
-          <td>
-            <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
-              <%= link_to "edit", follow_up1_year_path(FollowUp1Year.where(subject_id: sub.subject_id).first) %>
-            <% else %>
+          <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
+              <% if FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 1 %> 
+                <td bgcolor="#98FB98" >
+              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 7 %>
+                <td bgcolor="#000000" >
+              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 8 %>
+                <td bgcolor="#FF9933" >
+              <% else %>
+                <td>
+              <% end %>
+            <%= link_to "edit", follow_up1_year_path(FollowUp1Year.where(subject_id: sub.subject_id).first) %>
+          <% else %>
+                <td>
               <% FollowUp1Year.create(subject_id: sub.subject_id) %>
-            <% end %>
-          </td>    
-
-
+          <% end %>
+                </td>
+   
           <% if current_user.is? :admin %>
             <td>
               <%= link_to "delete", sub, method: :delete, confirm: "Delete subject?" %>

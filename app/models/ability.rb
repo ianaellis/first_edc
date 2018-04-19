@@ -4,17 +4,19 @@ class Ability
   
   def initialize(user)
     # user ? user_rules : guest_user_rules
-     if user.is? :admin
-        can :manage, :all 
-        can :assign_roles, User
-        can :update, User
-     end
+     # if user.is? :admin
+     #    can :manage, :all 
+     #    can :assign_roles, User
+     #    can :update, User
+     # end
+     can :manage, :all if user.is? :admin
 
      if user.is? :site_study_coordinator
         can :show, Baseline
         can :update, Baseline
         cannot :destroy, Subject
-        cannot :manage, PsychosocialScale
+        # cannot :manage, PsychosocialScale
+        can :manage, PsychosocialScale
 
         can :show, Subject
         can :update, Subject

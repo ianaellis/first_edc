@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  # load_and_authorize_resource
+
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -33,6 +35,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
+      if params[:user][:assign_roles]
+        flash[:success] = "User can assign roles"
+      else
+        flash[:success] = @user.name
+      end
       redirect_to @user
     else
       render 'edit'
@@ -49,8 +56,6 @@ class UsersController < ApplicationController
     # raise User.where(params[:id]).inspect
     @user = User.find(params[:user_id])
   end
-
-
 
 private
 
@@ -76,4 +81,5 @@ private
     # params.require(:user).permit(:roles, :user_study_site, :email, :password, :password_confirmation, :remember_me, :roles_mask, :name, :site_study_coordinator, :project_coordinator, :site_pi, :lead_pi_sc, :vetpals_facilitator, :other_site_investigators)
   end
   
+
 end

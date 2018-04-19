@@ -69,12 +69,16 @@ FirstEdc::Application.routes.draw do
   get "follow_up_log/index"
 
 #User Authentication
+
+
+
   devise_for :users
   resources :users do
     match '/permission', :to => 'users#permission', :via => [:get, :post]
     match '/users', :to => 'users#edit' , :via => [:get, :post]
   end
 
+    # match '/sessions/signout', :to => 'devise/sessions#destroy', via: :delete
   devise_scope :user do
     root to: 'static_pages#home'
     match '/sessions/user', :to => 'devise/sessions#create', :via => [:get, :post]
