@@ -38,7 +38,11 @@
           <% if Baseline.where(subject_id: sub.subject_id).first != nil %> 
               <% if Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
-              <% elsif Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 7 %>
+              <% elsif Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 2 %>
+                <td bgcolor="#befcb0" >
+              <% elsif Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 3 %>
+                <td bgcolor="#818480" >
+              <% elsif Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 6 %>
                 <td bgcolor="#000000" >
               <% elsif Baseline.where(subject_id: sub.subject_id).first.baseline_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
@@ -55,7 +59,11 @@
           <% if FollowUp3Week.where(subject_id: sub.subject_id).first != nil %>
             <% if FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 1 %> 
               <td bgcolor="#98FB98" >
-            <% elsif FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 7 %>
+            <% elsif FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 2 %>
+              <td bgcolor="#befcb0" >
+            <% elsif FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 3 %>
+              <td bgcolor="#818480" >
+            <% elsif FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 6 %>
                 <td bgcolor="#000000" >
             <% elsif FollowUp3Week.where(subject_id: sub.subject_id).first.fu3week_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
@@ -72,7 +80,11 @@
          <% if TreatmentCompletion.where(subject_id: sub.subject_id).first != nil %>
             <% if TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 1 %> 
               <td bgcolor="#98FB98" >
-            <% elsif TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 7 %>
+            <% elsif TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 2 %>
+                <td bgcolor="#befcb0" >
+            <% elsif TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 3 %>
+                <td bgcolor="#818480" >
+            <% elsif TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 6 %>
                 <td bgcolor="#000000" >
             <% elsif TreatmentCompletion.where(subject_id: sub.subject_id).first.tc_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
@@ -89,7 +101,11 @@
          <% if FollowUp18Week.where(subject_id: sub.subject_id).first != nil %>
               <% if FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
-              <% elsif FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 7 %>
+              <% elsif FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 2 %>
+                <td bgcolor="#befcb0" >
+              <% elsif FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 3 %>
+                <td bgcolor="#818480" >
+              <% elsif FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 6 %>
                 <td bgcolor="#000000" >
               <% elsif FollowUp18Week.where(subject_id: sub.subject_id).first.fu18week_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
@@ -106,7 +122,11 @@
          <% if FollowUp6Month.where(subject_id: sub.subject_id).first != nil %>
               <% if FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
-              <% elsif FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 7 %>
+              <% elsif FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 2 %>
+                <td bgcolor="#befcb0" >
+              <% elsif FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 3 %>
+                <td bgcolor="#818480" >
+              <% elsif FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 6 %>
                 <td bgcolor="#000000" >
               <% elsif FollowUp6Month.where(subject_id: sub.subject_id).first.fu6month_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
@@ -131,7 +151,11 @@
           <% if FollowUp1Year.where(subject_id: sub.subject_id).first != nil %>
               <% if FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 1 %> 
                 <td bgcolor="#98FB98" >
-              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 7 %>
+              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 2 %>
+                <td bgcolor="#befcb0" >
+              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 3 %>
+                <td bgcolor="#818480" >
+              <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 6 %>
                 <td bgcolor="#000000" >
               <% elsif FollowUp1Year.where(subject_id: sub.subject_id).first.fu1year_crf_status == 8 %>
                 <td bgcolor="#FF9933" >
